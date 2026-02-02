@@ -4,6 +4,13 @@
       "type": "http",
       "url": "https://mcp.slack.com/mcp"
     },
+    "fashionunited-api": {
+      "type": "http",
+      "url": "https://api.fashionunited.com/graphql",
+      "headers": {
+        "Authorization": "Bearer ${FASHIONUNITED_API_KEY}"
+      }
+    },
     "google-workspace": {
       "type": "stdio",
       "command": "npx",

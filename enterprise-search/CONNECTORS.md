@@ -22,6 +22,7 @@ This plugin uses `~~category` references extensively as source labels in search 
 | Project tracker | `~~project tracker` | GitHub (Issues, Projects) | Jira, Linear, Asana |
 | CRM | `~~CRM` | Vtiger CRM | Salesforce, HubSpot |
 | Data warehouse | `~~data warehouse` | BigQuery | Snowflake, Redshift |
+| Product API | — | FashionUnited GraphQL API | — |
 
 ## FashionUnited-specific integrations
 
@@ -142,5 +143,6 @@ Example queries:
 1. **Google Workspace**: Requires Google Cloud Project with OAuth 2.0 credentials and enabled APIs (Gmail, Calendar, Drive, Docs, Sheets)
 2. **GitHub**: Requires Personal Access Token with repo access to FashionUnited organization repositories
 3. **BigQuery**: Requires Google Cloud Project with BigQuery API enabled and read access to FashionUnited datasets
-4. **Vtiger CRM**: Requires Pipedream account for hosted MCP access
-5. **Slack**: Works with hosted MCP endpoint (no additional setup)
+4. **FashionUnited GraphQL API**: Requires FashionUnited API key (`FASHIONUNITED_API_KEY` environment variable)
+5. **Vtiger CRM**: Requires Pipedream account for hosted MCP access
+6. **Slack**: Works with hosted MCP endpoint (no additional setup)
