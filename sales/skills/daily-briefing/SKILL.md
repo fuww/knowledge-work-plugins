@@ -1,11 +1,31 @@
 ---
 name: daily-briefing
-description: Start your day with a prioritized sales briefing. Works standalone when you tell me your meetings and priorities, supercharged when you connect your calendar, CRM, and email. Trigger with "morning briefing", "daily brief", "what's on my plate today", "prep my day", or "start my day".
+description: Start your day with a prioritized FashionUnited sales briefing. Covers pipeline, meetings, TOP 200 account activity, and progress toward yearly targets. Trigger with "morning briefing", "daily brief", "what's on my plate today", "prep my day", or "start my day".
 ---
 
 # Daily Sales Briefing
 
 Get a clear view of what matters most today. This skill works with whatever you tell me, and gets richer when you connect your tools.
+
+## FashionUnited Sales Context
+
+**Yearly Targets:**
+- Key Account Managers: ~500k EUR yearly target
+- Track progress against monthly/quarterly milestones
+
+**Products to Sell:**
+| Product | Typical Deal Size | Cycle |
+|---------|------------------|-------|
+| Job Board packages | 500-5,000 EUR | Quick |
+| Advertising (banner) | 2,000-20,000 EUR | Medium |
+| Employer Branding | 5,000-50,000 EUR | Long |
+| B2B Marketplace | 1,000-10,000 EUR | Medium |
+
+**Prioritization:**
+1. TOP 200 fashion brands (strategic accounts)
+2. Active renewal opportunities
+3. New business with high potential
+4. Transactional job postings
 
 ## How It Works
 
@@ -74,9 +94,16 @@ Connect your tools to supercharge this skill:
 
 ## Today's Numbers
 
-| Open Pipeline | Closing This Month | Meetings Today | Action Items |
-|---------------|-------------------|----------------|--------------|
-| $[X] | $[X] | [N] | [N] |
+| YTD Closed | Target | Gap | This Month Pipeline | Meetings Today |
+|------------|--------|-----|---------------------|----------------|
+| €[X] | €[X] | €[X] | €[X] | [N] |
+
+### Product Mix
+| Product | YTD | Pipeline |
+|---------|-----|----------|
+| Job Board | €[X] | €[X] |
+| Advertising | €[X] | €[X] |
+| Employer Branding | €[X] | €[X] |
 
 ---
 

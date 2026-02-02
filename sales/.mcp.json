@@ -4,37 +4,22 @@
       "type": "http",
       "url": "https://mcp.slack.com/mcp"
     },
-    "hubspot": {
-      "type": "http",
-      "url": "https://mcp.hubspot.com/anthropic"
+    "google-workspace": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@anthropic/google-workspace-mcp"]
     },
-    "close": {
-      "type": "http",
-      "url": "https://mcp.close.com/mcp"
+    "github": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-github"],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_TOKEN}"
+      }
     },
-    "clay": {
+    "vtiger": {
       "type": "http",
-      "url": "https://api.clay.com/v3/mcp"
-    },
-    "zoominfo": {
-      "type": "http",
-      "url": "https://mcp.zoominfo.com/mcp"
-    },
-    "notion": {
-      "type": "http",
-      "url": "https://mcp.notion.com/mcp"
-    },
-    "atlassian": {
-      "type": "http",
-      "url": "https://mcp.atlassian.com/v1/mcp"
-    },
-    "fireflies": {
-      "type": "http",
-      "url": "https://api.fireflies.ai/mcp"
-    },
-    "ms365": {
-      "type": "http",
-      "url": "https://microsoft365.mcp.claude.com/mcp"
+      "url": "https://mcp.pipedream.com/app/vtiger_crm"
     }
   }
 }

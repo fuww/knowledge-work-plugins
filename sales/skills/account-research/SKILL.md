@@ -1,11 +1,34 @@
 ---
 name: account-research
-description: Research a company or person and get actionable sales intel. Works standalone with web search, supercharged when you connect enrichment tools or your CRM. Trigger with "research [company]", "look up [person]", "intel on [prospect]", "who is [name] at [company]", or "tell me about [company]".
+description: Research fashion industry companies or people for FashionUnited sales intel. Works standalone with web search, supercharged with Vtiger CRM. Trigger with "research [company]", "look up [person]", "intel on [prospect]", or "tell me about [company]".
 ---
 
 # Account Research
 
-Get a complete picture of any company or person before outreach. This skill always works with web search, and gets significantly better with enrichment and CRM data.
+Get a complete picture of any fashion industry company or person before outreach. This skill always works with web search, and gets significantly better with CRM data.
+
+## FashionUnited Research Focus
+
+When researching fashion industry accounts, look for:
+
+**Company Signals:**
+- Hiring activity (expansion = recruitment needs)
+- Store openings or market expansion
+- Leadership changes (new HR/Marketing = new initiatives)
+- Trade fair participation
+- Sustainability initiatives (content opportunity)
+- Financial news (funding, acquisitions)
+
+**Fashion-Specific Qualifiers:**
+| Signal | FashionUnited Opportunity |
+|--------|---------------------------|
+| Hiring campaign | Job board packages |
+| Brand refresh | Advertising + employer branding |
+| Market expansion | Multi-market job postings |
+| Trade fair exhibitor | Event promotion packages |
+| Awards/recognition | PR and advertorial content |
+
+**TOP 200 Account Check**: Flag if company is in FashionUnited's strategic account list
 
 ## How It Works
 

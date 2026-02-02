@@ -1,11 +1,32 @@
 ---
 name: call-prep
-description: Prepare for a sales call with account context, attendee research, and suggested agenda. Works standalone with user input and web research, supercharged when you connect your CRM, email, chat, or transcripts. Trigger with "prep me for my call with [company]", "I'm meeting with [company] prep me", "call prep [company]", or "get me ready for [meeting]".
+description: Prepare for FashionUnited sales calls with account context, attendee research, and suggested agenda. Optimized for fashion industry clients (brands, retailers, trade fairs, federations). Trigger with "prep me for my call with [company]", "I'm meeting with [company] prep me", "call prep [company]", or "get me ready for [meeting]".
 ---
 
 # Call Prep
 
-Get fully prepared for any sales call in minutes. This skill works with whatever context you provide, and gets significantly better when you connect your sales tools.
+Get fully prepared for any FashionUnited sales call in minutes. This skill works with whatever context you provide, and gets significantly better when you connect your sales tools.
+
+## FashionUnited Sales Context
+
+FashionUnited sells to the fashion industry B2B market:
+
+**Products:**
+- **Job Board**: Job posting packages, recruitment solutions
+- **Advertising**: Banner ads, advertorials, sponsored content
+- **Employer Branding**: Company profiles, culture content, branded pages
+- **B2B Marketplace**: Business directory, supplier listings
+
+**Client Types:**
+| Type | Typical Needs | Buying Signals |
+|------|---------------|----------------|
+| Fashion brands | Recruitment, employer branding | Hiring campaigns, expansion |
+| Retailers | Job postings, seasonal hiring | Store openings, seasonal peaks |
+| Trade fairs | Event promotion, exhibitor recruitment | Upcoming show dates |
+| Federations | Industry visibility, member services | Annual planning cycles |
+| Recruitment agencies | Job board access, bulk postings | New client wins |
+
+**TOP 200 Accounts**: Strategic fashion brands with dedicated Key Account Manager focus
 
 ## How It Works
 
@@ -239,6 +260,39 @@ Run **call-follow-up** to:
 - Focus on: Value delivered, expansion opportunities
 - Agenda emphasis: Review wins, surface new needs
 - Key output: Renewal confidence, upsell pipeline
+
+---
+
+## FashionUnited Discovery Questions
+
+**For Job Board Sales:**
+1. How many hires are you planning this year?
+2. What channels are you currently using for recruitment?
+3. What's your biggest challenge in attracting fashion talent?
+4. Are you hiring across multiple markets/countries?
+
+**For Advertising Sales:**
+1. What campaigns do you have planned for upcoming seasons?
+2. How do you currently reach B2B decision-makers in fashion?
+3. What events or launches do you want to promote?
+4. Are you looking for brand awareness or lead generation?
+
+**For Employer Branding:**
+1. How do candidates currently learn about your company culture?
+2. Do you have difficulty competing for talent against larger brands?
+3. What makes your company unique as an employer?
+
+---
+
+## FashionUnited Common Objections
+
+| Objection | Response Strategy |
+|-----------|-------------------|
+| "We only use LinkedIn for recruitment" | Highlight FashionUnited's fashion-specific audience and industry reach |
+| "Our budget is allocated" | Propose smaller trial package, ask about next budget cycle |
+| "We're not actively hiring" | Discuss employer branding for future hiring, awareness campaigns |
+| "We tried job boards before" | Ask about their experience, highlight FashionUnited's industry focus |
+| "Too expensive" | Focus on cost-per-hire, compare to general job boards |
 
 ---
 

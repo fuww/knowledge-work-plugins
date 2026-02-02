@@ -1,6 +1,20 @@
 # Sales Plugin
 
-A sales productivity plugin primarily designed for [Cowork](https://claude.com/product/cowork), Anthropic's agentic desktop application — though it also works in Claude Code. Helps with prospecting, outreach, pipeline management, call preparation, and deal strategy. Works with any sales team — standalone with web search and your input, supercharged when you connect your CRM, email, and other tools.
+A sales plugin for FashionUnited's commercial team, designed for [Cowork](https://claude.com/product/cowork) and Claude Code. Optimized for fashion industry B2B sales: job board packages, advertising campaigns, employer branding, and B2B marketplace listings.
+
+## FashionUnited Configuration
+
+This plugin is customized for FashionUnited's commercial workflows:
+- **Vtiger CRM** for pipeline management and account history
+- **Google Workspace** for email and calendar
+- **GitHub** for sales materials and knowledge base
+- **Slack** for team communication
+
+**Target Clients**: Fashion brands, retailers, trade fairs, federations, recruitment agencies
+
+**Products**: Job board, advertising (banner/advertorial), employer branding, B2B marketplace
+
+**KPIs**: ~500k EUR yearly target for Key Account Managers, TOP 200 strategic accounts
 
 ## Installation
 
@@ -102,16 +116,16 @@ Every command and skill works without any integrations:
 
 > If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](CONNECTORS.md).
 
-Connect your tools for a richer experience:
+**Configured integrations:**
 
-| Category | Examples | What It Enables |
+| Category | Tool | What It Enables |
 |---|---|---|
-| **CRM** | HubSpot, Close | Pipeline data, account history, contact records |
-| **Transcripts** | Fireflies, Gong, Chorus | Call recordings, transcripts, key moments |
-| **Enrichment** | Clay, ZoomInfo, Apollo | Company and contact data enrichment |
-| **Chat** | Slack, Teams | Internal discussions, colleague intel |
+| **CRM** | Vtiger CRM | Pipeline data, account history, contact records |
+| **Email/Calendar** | Google Workspace | Meeting scheduling, email follow-ups |
+| **Project Tracker** | GitHub | Sales materials, knowledge base |
+| **Chat** | Slack | Internal discussions, deal coordination |
 
-See [CONNECTORS.md](CONNECTORS.md) for the full list of supported integrations, including email, calendar, and additional CRM options.
+See [CONNECTORS.md](CONNECTORS.md) for setup requirements.
 
 ## Settings
 
@@ -120,23 +134,43 @@ Create a local settings file at `sales/.claude/settings.local.json` to personali
 ```json
 {
   "name": "Your Name",
-  "title": "Account Executive",
-  "company": "Your Company",
+  "title": "Key Account Manager",
+  "company": "FashionUnited",
   "quota": {
-    "annual": 1000000,
-    "quarterly": 250000
+    "annual": 500000,
+    "quarterly": 125000
   },
-  "product": {
-    "name": "Your Product",
-    "value_props": [
-      "Key value proposition 1",
-      "Key value proposition 2"
-    ],
-    "competitors": [
-      "Competitor A",
-      "Competitor B"
-    ]
-  }
+  "products": [
+    {
+      "name": "Job Board",
+      "value_props": [
+        "Fashion-specific job board with 8M+ monthly visitors",
+        "Multi-market reach across 30+ countries",
+        "Targeted audience of fashion professionals"
+      ]
+    },
+    {
+      "name": "Advertising",
+      "value_props": [
+        "Banner and advertorial campaigns",
+        "B2B fashion industry decision-makers",
+        "Brand awareness and lead generation"
+      ]
+    },
+    {
+      "name": "Employer Branding",
+      "value_props": [
+        "Company profiles and culture content",
+        "Attract fashion talent",
+        "Build employer reputation in fashion"
+      ]
+    }
+  ],
+  "competitors": [
+    "LinkedIn",
+    "Indeed",
+    "Industry-specific recruiters"
+  ]
 }
 ```
 
