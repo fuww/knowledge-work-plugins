@@ -2,7 +2,7 @@
 
 A data analyst plugin primarily designed for [Cowork](https://claude.com/product/cowork), Anthropic's agentic desktop application — though it also works in Claude Code. SQL queries, data exploration, visualization, dashboards, and insight generation.
 
-This plugin is configured for **FashionUnited**, providing data analysis across BigQuery data warehouse, Plausible analytics, and Google Workspace with fashion industry-specific SQL templates and workflows.
+This plugin is configured for **FashionUnited**, providing data analysis across BigQuery data warehouse, Looker Studio dashboards, Plausible analytics, and Google Workspace with fashion industry-specific SQL templates and workflows.
 
 ---
 
@@ -33,6 +33,7 @@ Connect your data sources for comprehensive analysis. The more you connect, the 
 | Source | What it analyzes |
 |--------|------------------|
 | **BigQuery** | Job postings, marketplace catalog, editorial performance, advertising revenue, Top 100 indices |
+| **Looker Studio** | Interactive dashboards, executive reports, trend visualizations, team performance metrics |
 | **Plausible** | Website traffic, user engagement, content performance, referral sources |
 | **Google Sheets** | Ad-hoc data exports, stakeholder reports, collaborative analysis |
 | **GitHub** | Analytics project tracking, SQL query library, data model documentation |
@@ -212,7 +213,7 @@ claude plugins add knowledge-work-plugins/data
 /explore-data jobs.postings
 ```
 
-FashionUnited has pre-configured: BigQuery (data warehouse), Plausible (analytics), Google Sheets (exports), GitHub (documentation).
+FashionUnited has pre-configured: BigQuery (data warehouse), Looker Studio (dashboards), Plausible (analytics), Google Sheets (exports), GitHub (documentation).
 
 ---
 

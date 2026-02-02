@@ -11,6 +11,7 @@ Plugins are **tool-agnostic** — they describe workflows in terms of categories
 | Category | Placeholder | Configured server | Other options |
 |----------|-------------|-------------------|---------------|
 | Data warehouse | `~~data warehouse` | BigQuery | Snowflake, Redshift, Databricks |
+| Dashboards | `~~dashboards` | Looker Studio | Tableau, Power BI, Metabase |
 | Analytics | `~~analytics` | Plausible Analytics | Amplitude, Mixpanel, Google Analytics |
 | Spreadsheets | `~~spreadsheets` | Google Sheets (via Workspace) | Microsoft Excel, Airtable |
 | Project tracker | `~~project tracker` | GitHub | Jira, Linear, Asana |
@@ -80,6 +81,17 @@ Website traffic and engagement analytics for FashionUnited properties:
 
 Used for: content performance monitoring, traffic reporting, editorial decision support.
 
+### Looker Studio
+
+Interactive dashboards and reports for FashionUnited data:
+
+- Pre-built dashboards for jobs, editorial, advertising, and marketplace metrics
+- Self-service report builder connected to BigQuery datasets
+- Scheduled report delivery to stakeholders
+- Embedded dashboards in internal tools
+
+Used for: executive dashboards, team performance reports, client-facing analytics, trend monitoring.
+
 ### Google Sheets
 
 Data export and report distribution via Google Workspace:
@@ -101,9 +113,10 @@ Documentation and project tracking:
 ## Setup requirements
 
 1. **BigQuery**: Requires Google Cloud Project with BigQuery API enabled and read access to FashionUnited datasets
-2. **Plausible**: Requires Plausible API key and site ID for FashionUnited properties
-3. **Google Workspace**: Requires Google Cloud Project with OAuth 2.0 credentials and Sheets API enabled
-4. **GitHub**: Requires Personal Access Token with repo access
+2. **Looker Studio**: Requires Google Cloud Project with Looker Studio API access and viewer/editor permissions on FashionUnited dashboards
+3. **Plausible**: Requires Plausible API key and site ID for FashionUnited properties
+4. **Google Workspace**: Requires Google Cloud Project with OAuth 2.0 credentials and Sheets API enabled
+5. **GitHub**: Requires Personal Access Token with repo access
 
 ## Fashion industry data contexts
 
