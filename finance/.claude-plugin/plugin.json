@@ -1,7 +1,7 @@
 {
   "name": "finance",
   "version": "1.0.0",
-  "description": "Streamline finance and accounting workflows, from journal entries and reconciliation to financial statements and variance analysis. Speed up audit prep, month-end close, and keeping your books clean.",
+  "description": "Streamline finance and accounting workflows for a multi-market fashion media company, from journal entries and reconciliation to financial statements and variance analysis. Handle multi-currency operations across 30+ markets, speed up month-end close, and manage advertising revenue recognition.",
   "author": {
     "name": "FashionUnited"
   }
