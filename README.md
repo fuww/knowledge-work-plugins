@@ -14,18 +14,20 @@ Each plugin bundles the skills, connectors, slash commands, and sub-agents for a
 
 We're open-sourcing 10 plugins built and inspired by our own work:
 
-| Plugin | How it helps | FashionUnited Connectors |
-|--------|-------------|--------------------------|
-| **[productivity](./productivity)** | Manage tasks, calendars, daily workflows, and personal context for fashion industry professionals. | Slack, Google Workspace, GitHub, beads |
-| **[sales](./sales)** | Research advertisers, prep for calls, manage B2B pipeline, draft outreach for fashion brands. | Slack, Vtiger CRM, Google Workspace |
-| **[customer-support](./customer-support)** | Triage tickets from advertisers and employers, research account context, build FAQ content. | Slack, Vtiger CRM, Google Workspace |
-| **[product-management](./product-management)** | Write specs, plan roadmaps, synthesize user research for fashion B2B products. | Slack, GitHub, Google Workspace, Figma, Plausible |
-| **[marketing](./marketing)** | Draft fashion news, plan content campaigns, manage newsletters, track performance across markets. | Slack, Mailchimp, Social Champ, Plausible, Google Search Console, Figma |
-| **[legal](./legal)** | Review advertising agreements, media partnerships, GDPR compliance across 30+ markets. | Google Workspace |
-| **[finance](./finance)** | Advertising revenue, subscription billing, multi-currency operations across markets. | BigQuery, Google Workspace, Vtiger CRM |
-| **[data](./data)** | Query jobs, marketplace, editorial data — SQL templates for FashionUnited metrics. | BigQuery, Looker Studio, Plausible, Google Workspace |
-| **[enterprise-search](./enterprise-search)** | Find anything across email, chat, docs, CRM, code — brand lookup, job history, editorial archives. | Slack, Google Workspace, GitHub, Vtiger CRM, BigQuery |
-| **[cowork-plugin-management](./cowork-plugin-management)** | Create new plugins or customize existing ones with FashionUnited tool stack and domain knowledge. | — |
+| Plugin | How it helps | FashionUnited Connectors | MCP |
+|--------|-------------|--------------------------|-----|
+| **[productivity](./productivity)** | Manage tasks, calendars, daily workflows, and personal context for fashion industry professionals. | Slack, Google Workspace, GitHub, beads | ✓✓✓— |
+| **[sales](./sales)** | Research advertisers, prep for calls, manage B2B pipeline, draft outreach for fashion brands. | Slack, Vtiger CRM, Google Workspace | ✓✓✓ |
+| **[customer-support](./customer-support)** | Triage tickets from advertisers and employers, research account context, build FAQ content. | Slack, Vtiger CRM, Google Workspace | ✓✓✓ |
+| **[product-management](./product-management)** | Write specs, plan roadmaps, synthesize user research for fashion B2B products. | Slack, GitHub, Google Workspace, Figma, Plausible | ✓✓✓✓✓ |
+| **[marketing](./marketing)** | Draft fashion news, plan content campaigns, manage newsletters, track performance across markets. | Slack, Mailchimp, Social Champ, Plausible, Google Search Console, Figma | ✓✓✗✓✓✓ |
+| **[legal](./legal)** | Review advertising agreements, media partnerships, GDPR compliance across 30+ markets. | Google Workspace | ✓ |
+| **[finance](./finance)** | Advertising revenue, subscription billing, multi-currency operations across markets. | BigQuery, Google Workspace, Vtiger CRM | ✓✓✓ |
+| **[data](./data)** | Query jobs, marketplace, editorial data — SQL templates for FashionUnited metrics. | BigQuery, Looker Studio, Plausible, Google Workspace | ✓✓✓✓ |
+| **[enterprise-search](./enterprise-search)** | Find anything across email, chat, docs, CRM, code — brand lookup, job history, editorial archives. | Slack, Google Workspace, GitHub, Vtiger CRM, BigQuery | ✓✓✓✓✓ |
+| **[cowork-plugin-management](./cowork-plugin-management)** | Create new plugins or customize existing ones with FashionUnited tool stack and domain knowledge. | — | — |
+
+*MCP column shows support status per connector in order: ✓ = MCP server available, ✗ = no MCP available, — = not applicable*
 
 Install these directly from Cowork, browse the full collection here on GitHub, or build your own.
 
@@ -74,18 +76,18 @@ As your team builds and shares plugins, Claude becomes a cross-functional expert
 
 All plugins are configured for FashionUnited's integrated tool stack:
 
-| Category | Tool | Usage |
-|----------|------|-------|
-| CRM | Vtiger CRM | Sales, contacts, invoicing |
-| Data Warehouse | BigQuery | Jobs, marketplace, editorial, advertising, Top 100 |
-| Analytics | Plausible | Website traffic, content performance |
-| Dashboards | Looker Studio | Reports, visualizations |
-| Email Marketing | Mailchimp | Newsletter campaigns |
-| Social Media | Social Champ | Multi-platform scheduling |
-| Documents | Google Workspace | Docs, Sheets, Drive |
-| Chat | Slack | Team communication |
-| Code | GitHub | Repositories, issues, projects |
-| SEO | Google Search Console | Search rankings, keywords |
+| Category | Tool | Usage | MCP |
+|----------|------|-------|-----|
+| CRM | Vtiger CRM | Sales, contacts, invoicing | ✓ [Zapier](https://zapier.com/mcp/vtiger), [SyncHub](https://www.synchub.io/connectors/vtigercrm/mcp) |
+| Data Warehouse | BigQuery | Jobs, marketplace, editorial, advertising, Top 100 | ✓ [MCP Toolbox](https://googleapis.github.io/genai-toolbox/), [mcp-bigquery-server](https://github.com/ergut/mcp-bigquery-server) |
+| Analytics | Plausible | Website traffic, content performance | ✓ [plausible-mcp-server](https://mcp.aibase.com/server/1916355517042630657) |
+| Dashboards | Looker Studio | Reports, visualizations | ✓ [Looker MCP](https://cloud.google.com/blog/products/business-intelligence/introducing-looker-mcp-server) |
+| Email Marketing | Mailchimp | Newsletter campaigns | ✓ [mailchimp-mcp](https://glama.ai/mcp/servers/@AgentX-ai/mailchimp-mcp) |
+| Social Media | Social Champ | Multi-platform scheduling | ✗ No MCP available |
+| Documents | Google Workspace | Docs, Sheets, Drive | ✓ [google_workspace_mcp](https://github.com/taylorwilsdon/google_workspace_mcp) |
+| Chat | Slack | Team communication | ✓ [slack-mcp-server](https://github.com/korotovsky/slack-mcp-server) |
+| Code | GitHub | Repositories, issues, projects | ✓ [Official](https://github.com/modelcontextprotocol/servers) |
+| SEO | Google Search Console | Search rankings, keywords | ✓ [mcp-server-gsc](https://github.com/ahonn/mcp-server-gsc) |
 
 ## Contributing
 
