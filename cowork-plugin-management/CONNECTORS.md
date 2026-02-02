@@ -39,3 +39,46 @@ These functions are part of Cowork's core capabilities and don't require separat
 ## First-party integrations
 
 First-party integrations (Gmail, Google Calendar, Google Drive) are connected at the user level and don't need plugin `.mcp.json` entries. They're available automatically when you connect them in Cowork settings.
+
+## FashionUnited tool stack reference
+
+When customizing plugins for FashionUnited, use these standard tool mappings:
+
+| Placeholder | FashionUnited tool | MCP package |
+|-------------|-------------------|-------------|
+| `~~CRM` | Vtiger CRM | `@anthropic/vtiger-mcp` |
+| `~~data warehouse` | BigQuery | Google BigQuery API |
+| `~~analytics` | Plausible Analytics | `@alexanderop/plausible-mcp` |
+| `~~email marketing` | Mailchimp | `@anthropic/mailchimp-mcp` |
+| `~~social scheduling` | Social Champ | `@anthropic/socialchamp-mcp` |
+| `~~chat` | Slack | `@anthropic/slack-mcp` |
+| `~~documents` | Google Workspace | `@anthropic/google-workspace-mcp` |
+| `~~project tracker` | GitHub | `@modelcontextprotocol/server-github` |
+| `~~design tool` | Figma | `@anthropic/figma-mcp` |
+
+### FashionUnited GraphQL API
+
+For plugins that need FashionUnited product data (jobs, marketplace, editorial), configure the GraphQL API:
+
+```json
+{
+  "fashionunited-api": {
+    "type": "http",
+    "url": "https://api.fashionunited.com/graphql",
+    "headers": {
+      "Authorization": "Bearer ${FASHIONUNITED_API_KEY}"
+    }
+  }
+}
+```
+
+### Knowledge sources for FashionUnited
+
+When customizing plugins, Claude searches these FashionUnited sources:
+
+| Source | What it finds |
+|--------|---------------|
+| Slack | Team discussions, tool mentions, #editorial, #sales, #product channels |
+| Google Drive | Handbooks, process docs, style guides |
+| Gmail | Admin notifications, vendor communications |
+| GitHub | Code patterns, README files, documentation |
