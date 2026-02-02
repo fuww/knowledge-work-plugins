@@ -93,7 +93,7 @@ Search for brands across multiple sources:
 - **Product database** (GitHub/BigQuery): Product listings, catalog entries
 - **Editorial archives** (BigQuery): News coverage, press releases, interviews
 
-Example queries:
+Use `/enterprise-search:brand-lookup <brand>` for a comprehensive brand dossier, or search with:
 - "What do we know about [brand name]?"
 - "Find all articles mentioning [brand]"
 - "Who is our contact at [brand]?"
