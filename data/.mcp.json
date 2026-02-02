@@ -4,6 +4,13 @@
       "type": "http",
       "url": "https://bigquery.googleapis.com/mcp"
     },
+    "fashionunited-api": {
+      "type": "http",
+      "url": "https://api.fashionunited.com/graphql",
+      "headers": {
+        "Authorization": "Bearer ${FASHIONUNITED_API_KEY}"
+      }
+    },
     "plausible": {
       "type": "stdio",
       "command": "npx",

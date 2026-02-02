@@ -15,6 +15,7 @@ Plugins are **tool-agnostic** — they describe workflows in terms of categories
 | Analytics | `~~analytics` | Plausible Analytics | Amplitude, Mixpanel, Google Analytics |
 | Spreadsheets | `~~spreadsheets` | Google Sheets (via Workspace) | Microsoft Excel, Airtable |
 | Project tracker | `~~project tracker` | GitHub | Jira, Linear, Asana |
+| Product API | — | FashionUnited GraphQL API | — |
 
 ## FashionUnited-specific integrations
 
@@ -92,6 +93,66 @@ Interactive dashboards and reports for FashionUnited data:
 
 Used for: executive dashboards, team performance reports, client-facing analytics, trend monitoring.
 
+### FashionUnited GraphQL API
+
+FashionUnited's Elixir/Phoenix GraphQL API provides real-time access to product data:
+
+**Endpoint:** `https://api.fashionunited.com/graphql`
+
+**Available Data:**
+
+| Data Type | Description | Example Queries |
+|-----------|-------------|-----------------|
+| Jobs | Fashion industry job postings across 30+ markets | Job listings by market, category, company |
+| News | B2B fashion journalism and editorial content | Articles by topic, author, date |
+| Marketplace | Product catalog with brand and category data | Products by brand, category, price range |
+| Brands | Fashion brand directory with 10,000+ entries | Brand profiles, descriptions, product counts |
+| Companies | Company profiles and employer branding | Company info for job postings, brand relationships |
+
+**Example Queries:**
+
+```graphql
+# Job postings by market
+query JobPostings($market: String!, $limit: Int) {
+  jobs(market: $market, limit: $limit) {
+    id
+    title
+    company
+    location
+    category
+    posted_at
+  }
+}
+
+# Brand lookup
+query BrandProfile($slug: String!) {
+  brand(slug: $slug) {
+    name
+    description
+    website
+    products_count
+  }
+}
+
+# Marketplace products
+query Products($category: String, $brand: String) {
+  products(category: $category, brand: $brand) {
+    id
+    name
+    brand
+    category
+    price
+    image_url
+  }
+}
+```
+
+**Use Cases:**
+- Real-time job market data for reports and analysis
+- Brand research and competitive intelligence
+- Product catalog exploration and trends
+- Fashion industry coverage and news analysis
+
 ### Google Sheets
 
 Data export and report distribution via Google Workspace:
@@ -113,10 +174,11 @@ Documentation and project tracking:
 ## Setup requirements
 
 1. **BigQuery**: Requires Google Cloud Project with BigQuery API enabled and read access to FashionUnited datasets
-2. **Looker Studio**: Requires Google Cloud Project with Looker Studio API access and viewer/editor permissions on FashionUnited dashboards
-3. **Plausible**: Requires Plausible API key and site ID for FashionUnited properties
-4. **Google Workspace**: Requires Google Cloud Project with OAuth 2.0 credentials and Sheets API enabled
-5. **GitHub**: Requires Personal Access Token with repo access
+2. **FashionUnited GraphQL API**: Requires FashionUnited API key (`FASHIONUNITED_API_KEY` environment variable)
+3. **Looker Studio**: Requires Google Cloud Project with Looker Studio API access and viewer/editor permissions on FashionUnited dashboards
+4. **Plausible**: Requires Plausible API key and site ID for FashionUnited properties
+5. **Google Workspace**: Requires Google Cloud Project with OAuth 2.0 credentials and Sheets API enabled
+6. **GitHub**: Requires Personal Access Token with repo access
 
 ## Fashion industry data contexts
 
