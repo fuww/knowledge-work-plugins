@@ -28,6 +28,15 @@
                   pip
                 ]))
               ];
+
+              shellHook = ''
+                if ! command -v bd &> /dev/null; then
+                  echo "📿 Installing beads (bd) for AI agent task tracking..."
+                  go install github.com/steveyegge/beads/cmd/bd@v0.49.1
+                fi
+                echo "  Beads:       $(bd --version 2>/dev/null || echo 'run: go install github.com/steveyegge/beads/cmd/bd@v0.49.1')"
+                echo ""
+              '';
             };
           });
     };
