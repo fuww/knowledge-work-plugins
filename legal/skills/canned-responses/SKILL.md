@@ -335,3 +335,140 @@ When helping users create new templates:
 ### Notes
 [Any special instructions for users of this template]
 ```
+
+## FashionUnited Response Templates
+
+FashionUnited maintains standard templates for common legal inquiries. These are stored in Google Drive and should be used as starting points.
+
+### FashionUnited-Specific Response Categories
+
+#### 8. Advertising Client Inquiries
+
+**Sub-categories:**
+- Campaign contract questions
+- Billing disputes
+- Creative approval requests
+- Performance reporting questions
+- Cancellation requests
+
+**Key template elements:**
+- Reference to applicable insertion order or advertising agreement
+- FashionUnited advertising terms and conditions
+- Campaign performance data (if relevant)
+- Contact information for account manager
+
+**FashionUnited escalation triggers:**
+- Client threatening public complaint
+- Dispute exceeding €10,000
+- Allegations of misleading advertising
+- Request for confidential advertiser data
+
+#### 9. Media Partnership Inquiries
+
+**Sub-categories:**
+- Partnership term questions
+- Content usage rights inquiries
+- Revenue share questions
+- Exclusivity clarifications
+- Renewal discussions
+
+**Key template elements:**
+- Reference to partnership agreement
+- Content deliverable status
+- Revenue/financial summaries (if applicable)
+- Renewal timeline and process
+
+**FashionUnited escalation triggers:**
+- Partner threatening to terminate
+- Dispute over exclusivity interpretation
+- Request for content rights beyond agreement scope
+- Material revenue discrepancy
+
+#### 10. Editorial/Press Inquiries
+
+**Sub-categories:**
+- Right of reply requests
+- Correction requests
+- Source protection inquiries
+- Copyright permission requests
+- Interview authorization requests
+
+**Key template elements:**
+- Reference to FashionUnited editorial policies
+- Relevant publication details
+- Press law requirements (jurisdiction-specific)
+- Editor contact information
+
+**FashionUnited escalation triggers:**
+- Legal threat related to published content
+- Source protection demands from authorities
+- Defamation allegations
+- Court order or subpoena for editorial materials
+
+#### 11. Job Board User Inquiries
+
+**Sub-categories:**
+- Account deletion requests (DSAR)
+- Data access requests (DSAR)
+- Employer profile disputes
+- Job posting content complaints
+- Scraper/feed integration questions
+
+**Key template elements:**
+- GDPR compliance language
+- Response timeline
+- FashionUnited privacy notice reference
+- Support contact information
+
+**FashionUnited escalation triggers:**
+- Large-scale or coordinated DSARs
+- Employer disputing profile information
+- Allegations of discriminatory job postings
+- Regulatory inquiry about job board practices
+
+### FashionUnited Template Library
+
+| Template | Category | Location | Last Updated |
+|----------|----------|----------|--------------|
+| DSAR Acknowledgment (GDPR) | DSR | Google Drive: Legal Templates | [date] |
+| DSAR Fulfillment (GDPR) | DSR | Google Drive: Legal Templates | [date] |
+| Newsletter Unsubscribe Confirmation | DSR | Google Drive: Legal Templates | [date] |
+| Standard NDA Cover Email | NDA | Google Drive: Legal Templates | [date] |
+| Advertising Terms Clarification | Advertising | Google Drive: Legal Templates | [date] |
+| Campaign Cancellation Response | Advertising | Google Drive: Legal Templates | [date] |
+| Partnership Renewal Notice | Partnership | Google Drive: Legal Templates | [date] |
+| Right of Reply Acknowledgment | Editorial | Google Drive: Legal Templates | [date] |
+| Correction Request Response | Editorial | Google Drive: Legal Templates | [date] |
+| Job Posting Removal Confirmation | Job Board | Google Drive: Legal Templates | [date] |
+
+### FashionUnited Contact Information
+
+Templates should use the following contact information:
+
+| Purpose | Contact |
+|---------|---------|
+| General legal | legal@fashionunited.com |
+| Privacy/GDPR | privacy@fashionunited.com |
+| Advertising | advertising@fashionunited.com |
+| Editorial | editor@fashionunited.com |
+| Job board support | jobs@fashionunited.com |
+
+### Multi-Language Considerations
+
+FashionUnited operates in 9 languages. Consider:
+- Respond in the language of the inquiry when templates are available
+- Default to English for legal matters if no local template exists
+- Note if translation is needed for formal legal documents
+- Some jurisdictions require responses in local language (France, Germany for certain matters)
+
+| Language | Template Availability | Notes |
+|----------|----------------------|-------|
+| English | Full set | Default language |
+| German | Core templates | GDPR responses, basic inquiries |
+| French | Core templates | GDPR responses, basic inquiries |
+| Dutch | Core templates | GDPR responses, basic inquiries |
+| Spanish | Limited | GDPR responses only |
+| Italian | Limited | GDPR responses only |
+| Portuguese | Limited | Basic templates |
+| Russian | Limited | Basic templates |
+| Chinese | Limited | Basic templates |

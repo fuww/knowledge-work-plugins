@@ -1,210 +1,156 @@
-# Legal Productivity Plugin
+# Legal Plugin
 
-An AI-powered productivity plugin for in-house legal teams, primarily designed for [Cowork](https://claude.com/product/cowork), Anthropic's agentic desktop application — though it also works in Claude Code. Automates contract review, NDA triage, compliance workflows, legal briefings, and templated responses -- all configurable to your organization's specific playbook and risk tolerances.
+A legal plugin primarily designed for [Cowork](https://claude.com/product/cowork), Anthropic's agentic desktop application — though it also works in Claude Code. Automates contract review, NDA triage, compliance workflows, legal briefings, and templated responses.
+
+This plugin is configured for **FashionUnited** legal operations, including media law, advertising regulations, GDPR/privacy compliance across 30+ markets, employment law for the international team, and IP/content licensing.
 
 > **Disclaimer:** This plugin assists with legal workflows but does not provide legal advice. Always verify conclusions with qualified legal professionals. AI-generated analysis should be reviewed by licensed attorneys before being relied upon for legal decisions.
 
-## Target Personas
+## What It Does
 
-- **Commercial Counsel** -- Contract negotiation, vendor management, deal support
-- **Product Counsel** -- Product reviews, terms of service, privacy policies, IP matters
-- **Privacy / Compliance** -- Data protection regulations, DPA reviews, data subject requests, regulatory monitoring
-- **Litigation Support** -- Discovery holds, document review prep, case briefings
+This plugin gives you an AI-powered legal assistant that can help with:
+
+- **Contract Review** — Review advertising agreements, media partnerships, employer branding contracts, and content licensing deals against FashionUnited's negotiation playbook. Flags deviations, generates redlines, and provides business impact analysis.
+- **NDA Triage** — Rapid screening of incoming NDAs from trade fair partners, advertising clients, and technology vendors. Categorizes as GREEN (standard approval), YELLOW (counsel review), or RED (significant issues).
+- **Compliance** — GDPR compliance across 30+ markets, cookie consent, newsletter compliance, job board privacy, and data subject request handling.
+- **Legal Briefings** — Daily briefs, topic research, and incident response briefings drawing from connected sources.
+- **Templated Responses** — Generate responses for DSARs, advertising inquiries, partnership questions, and editorial matters.
 
 ## Installation
 
-```
+```bash
 claude plugins add knowledge-work-plugins/legal
 ```
-
-## Quick Start
-
-### 1. Install the plugin
-
-```
-claude plugins add knowledge-work-plugins/legal
-```
-
-### 2. Configure your playbook
-
-Create a local settings file to define your organization's standard positions. This is where you encode your team's negotiation playbook, risk tolerances, and standard terms.
-
-In your project's `.claude/` directory, create a `legal.local.md` file:
-
-```markdown
-# Legal Playbook Configuration
-
-## Contract Review Positions
-
-### Limitation of Liability
-- Standard position: Mutual cap at 12 months of fees paid/payable
-- Acceptable range: 6-24 months of fees
-- Escalation trigger: Uncapped liability, consequential damages inclusion
-
-### Indemnification
-- Standard position: Mutual indemnification for IP infringement and data breach
-- Acceptable: Indemnification limited to third-party claims only
-- Escalation trigger: Unilateral indemnification obligations, uncapped indemnification
-
-### IP Ownership
-- Standard position: Each party retains pre-existing IP; customer owns customer data
-- Escalation trigger: Broad IP assignment clauses, work-for-hire provisions for pre-existing IP
-
-### Data Protection
-- Standard position: Require DPA for any personal data processing
-- Requirements: Sub-processor notification, data deletion on termination, breach notification within 72 hours
-- Escalation trigger: No DPA offered, cross-border transfer without safeguards
-
-### Term and Termination
-- Standard position: Annual term with 30-day termination for convenience
-- Acceptable: Multi-year with termination for convenience after initial term
-- Escalation trigger: Auto-renewal without notice period, no termination for convenience
-
-### Governing Law
-- Preferred: [Your jurisdiction]
-- Acceptable: Major commercial jurisdictions (NY, DE, CA, England & Wales)
-- Escalation trigger: Non-standard jurisdictions, mandatory arbitration in unfavorable venue
-
-## NDA Defaults
-- Mutual obligations required
-- Term: 2-3 years standard, 5 years for trade secrets
-- Standard carveouts: independently developed, publicly available, rightfully received from third party
-- Residuals clause: acceptable if narrowly scoped
-
-## Response Templates
-Configure paths to your template files or define inline templates for common inquiries.
-```
-
-### 3. Connect your tools
-
-The plugin works best when connected to your existing tools via MCP. Pre-configured servers include Slack, Box, Egnyte, Atlassian, and Microsoft 365. See [CONNECTORS.md](CONNECTORS.md) for the full list of supported categories and options.
 
 ## Commands
 
-### `/review-contract` -- Contract Review Against Playbook
-
-Review a contract against your organization's negotiation playbook. Flags deviations, generates redlines, and provides business impact analysis.
-
-```
-/review-contract
-```
-
-Accepts: file upload, URL, or pasted contract text. Will ask for context (your side, deadline, focus areas) and review clause-by-clause against your configured playbook.
-
-### `/triage-nda` -- NDA Pre-Screening
-
-Rapid triage of incoming NDAs against standard criteria. Categorizes as GREEN (standard approval), YELLOW (counsel review), or RED (significant issues).
-
-```
-/triage-nda
-```
-
-### `/vendor-check` -- Vendor Agreement Status
-
-Check the status of existing agreements with a vendor across your connected systems.
-
-```
-/vendor-check [vendor name]
-```
-
-Reports on existing NDAs, MSAs, DPAs, expiration dates, and key terms.
-
-### `/brief` -- Legal Team Briefing
-
-Generate contextual briefings for your legal work.
-
-```
-/brief daily          # Morning brief of legal-relevant items
-/brief topic [query]  # Research brief on a specific legal question
-/brief incident       # Rapid brief on a developing situation
-```
-
-### `/respond` -- Generate Templated Response
-
-Generate a response from your configured templates for common inquiry types.
-
-```
-/respond [inquiry-type]
-```
-
-Supported inquiry types include: data subject request, discovery hold, vendor question, NDA request, and custom categories you define.
+| Command | Description |
+|---|---|
+| `/review-contract` | Review advertising, partnership, employer branding, or licensing contracts against FashionUnited playbook |
+| `/triage-nda` | Rapid NDA screening for trade fair, advertising, or vendor relationships |
+| `/vendor-check` | Check agreement status with a vendor across connected systems |
+| `/brief` | Generate daily briefs, topic research, or incident response briefings |
+| `/respond` | Generate templated responses for DSARs, advertising inquiries, and common questions |
 
 ## Skills
 
 | Skill | Description |
-|-------|-------------|
-| `contract-review` | Playbook-based contract analysis, deviation classification, redline generation |
-| `nda-triage` | NDA screening criteria, classification rules, routing recommendations |
-| `compliance` | Privacy regulations (GDPR, CCPA), DPA review, data subject requests |
-| `canned-responses` | Template management, response categories, escalation triggers |
-| `legal-risk-assessment` | Risk severity framework, classification levels, escalation criteria |
-| `meeting-briefing` | Meeting prep methodology, context gathering, action item tracking |
+|---|---|
+| `contract-review` | FashionUnited contract types, playbook positions, redline generation |
+| `nda-triage` | NDA screening for media partnerships, advertising clients, technology vendors |
+| `compliance` | GDPR across 30+ markets, cookie consent, newsletter compliance, job board privacy |
+| `canned-responses` | Templates for DSARs, advertising inquiries, editorial matters, partnership questions |
+| `legal-risk-assessment` | Media law, advertising, privacy, employment, and IP risk frameworks |
+| `meeting-briefing` | Briefings for trade fair partnerships, advertising negotiations, vendor evaluations |
 
 ## Example Workflows
 
-### Contract Review
+### Reviewing an Advertising Agreement
 
-1. Receive a vendor contract via email
-2. Run `/review-contract` and upload the document
-3. Provide context: "We are the customer, need to close by end of quarter, focus on data protection and liability"
-4. Receive clause-by-clause analysis with GREEN/YELLOW/RED flags
-5. Get specific redline language for YELLOW and RED items
-6. Share the analysis with your deal team
+```
+> /review-contract
+Type: Advertising agreement
+Counterparty: Major fashion brand
+Your side: FashionUnited (publisher)
+Focus: Payment terms, creative approval, exclusivity
+```
 
-### NDA Triage
+Claude will review the agreement against FashionUnited's advertising playbook, flag deviations from standard terms, and generate redlines for negotiation.
 
-1. Sales team sends an NDA from a new prospect
-2. Run `/triage-nda` and paste or upload the NDA
-3. Get instant classification: GREEN (route for signature), YELLOW (specific issues to review), or RED (needs full counsel review)
-4. For GREEN NDAs, approve directly; for YELLOW/RED, address flagged issues
+### Triaging a Trade Fair Partnership NDA
 
-### Daily Brief
+```
+> /triage-nda
+[paste or upload NDA from trade fair organizer]
+```
 
-1. Start your morning with `/brief daily`
-2. Get a summary of overnight contract requests, compliance questions, upcoming deadlines, and calendar items needing legal prep
-3. Prioritize your day based on urgency and deadlines
+Claude will classify the NDA as GREEN (use standard delegation), YELLOW (specific issues to review), or RED (requires full legal review or counterproposal with FashionUnited standard form).
 
-### Vendor Check
+### GDPR Data Subject Request
 
-1. Business team asks about a new engagement with an existing vendor
-2. Run `/vendor-check Acme Corp`
-3. See existing agreements, expiration dates, and key terms at a glance
-4. Know immediately whether you need a new NDA or can proceed under existing terms
+```
+> /respond dsr
+Type: Deletion request
+Requester: Newsletter subscriber
+Market: Germany
+```
 
-## MCP Integration
+Claude will generate a GDPR-compliant response acknowledging the request, with appropriate language for the German market and FashionUnited's standard response timeline.
+
+### Daily Legal Brief
+
+```
+> /brief daily
+```
+
+Claude will scan connected sources (Google Workspace, Slack, Vtiger CRM, GitHub) for contract requests, compliance questions, approaching deadlines, and meetings needing legal prep.
+
+## Configuration
+
+### Connect your tools
+
+The plugin works best when connected to FashionUnited's tools via MCP. Pre-configured servers include Slack, Google Workspace, Vtiger CRM, and GitHub. See [CONNECTORS.md](CONNECTORS.md) for the full list of supported categories and options.
+
+## Data Sources
 
 > If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](CONNECTORS.md).
 
-The plugin connects to your tools through MCP (Model Context Protocol) servers:
+This plugin is configured for FashionUnited's legal tool stack:
 
-| Category | Examples | Purpose |
-|----------|----------|---------|
-| Chat | Slack, Teams | Team requests, notifications, triage |
-| Cloud storage | Box, Egnyte | Playbooks, templates, precedents |
-| Office suite | Microsoft 365 | Email, calendar, documents |
-| Project tracker | Atlassian (Jira/Confluence) | Matter tracking, tasks |
+**Included MCP connections:**
+- Chat (Slack) for team communication and contract request channels
+- Google Workspace for documents (contracts, templates, legal memos), email, and calendar
+- Vtiger CRM for partner and advertiser relationship context
+- GitHub for matter tracking and legal knowledge base
 
-See [CONNECTORS.md](CONNECTORS.md) for the full list of supported integrations, including CLM, CRM, e-signature, and additional options.
+**Additional options:**
+- See [CONNECTORS.md](CONNECTORS.md) for alternative tools in each category
 
-Configure connections in `.mcp.json`. The plugin gracefully degrades when tools are unavailable -- it will note gaps and suggest manual checks.
+## FashionUnited Legal Context
 
-## Customization
+This plugin includes context for FashionUnited's legal operations:
 
-### Playbook Configuration
+| Area | Purpose | Key Activities |
+|------|---------|----------------|
+| Media Law | Publishing rights, editorial liability | Press law compliance, right of reply, source protection |
+| Advertising | Ad standards, native content | Advertising agreement review, disclosure compliance |
+| GDPR/Privacy | Data protection across 30+ markets | Cookie consent, DSARs, newsletter compliance, job board privacy |
+| Employment | International team management | Employment contracts, contractor agreements, works council |
+| IP/Content | Content licensing, image rights | Photography licenses, syndication, user-generated content |
 
-Your playbook is the heart of the contract review system. Define your positions in `legal.local.md`:
+### Primary Contract Types
 
-- **Standard positions**: Your preferred contract terms
-- **Acceptable ranges**: What you can agree to without escalation
-- **Escalation triggers**: Terms that require senior review or outside counsel
+| Contract Type | Description | Review Focus |
+|---------------|-------------|--------------|
+| Advertising Agreements | Display ads, sponsored content, native advertising | Payment, creative approval, exclusivity, make-goods |
+| Media Partnerships | Trade fair coverage, federation relationships | Exclusivity, content rights, revenue share |
+| Employer Branding | Company profiles, recruitment packages | Content approval, performance metrics, duration |
+| Content Licensing | Photography, editorial syndication, API access | Scope, territory, attribution, indemnification |
+| Employment Contracts | Full-time, contractors, freelancers | Jurisdiction, IP assignment, non-compete |
+| Data Processing Agreements | Vendor and partner DPAs | GDPR Article 28, SCCs, breach notification |
 
-### Response Templates
+### Multi-Market Compliance
 
-Define templates for common inquiries. Templates support variable substitution and include built-in escalation triggers for situations that should not use a templated response.
+FashionUnited operates in 30+ markets with an EU focus:
 
-### Risk Framework
+| Region | Key Jurisdictions | Primary Legal Considerations |
+|--------|-------------------|------------------------------|
+| EU Core | Netherlands (HQ), Germany, France, UK | GDPR, Digital Services Act, local press law |
+| EU Extended | Italy, Spain, Belgium, Austria, Switzerland | Advertising codes, consumer protection |
+| Americas | US, Brazil | CCPA/CPRA, LGPD |
+| Asia Pacific | China, India, Japan | PIPL, local data protection |
 
-Customize the risk assessment matrix to match your organization's risk appetite and classification scheme.
+### Standard Playbook Positions
+
+FashionUnited's default negotiating positions (configured in skills):
+
+| Term | Standard Position | Escalation Trigger |
+|------|------------------|-------------------|
+| Liability Cap | 12 months fees | Uncapped liability |
+| Indemnification | Mutual IP and data breach | Unilateral broad indemnification |
+| Payment | Net 30 | Prepayment requirements |
+| Governing Law | Netherlands | Non-standard jurisdictions |
+| Data Protection | GDPR-compliant DPA required | No DPA when personal data processed |
 
 ## File Structure
 
@@ -213,6 +159,7 @@ legal/
 ├── .claude-plugin/plugin.json
 ├── .mcp.json
 ├── README.md
+├── CONNECTORS.md
 ├── commands/
 │   ├── review-contract.md
 │   ├── triage-nda.md

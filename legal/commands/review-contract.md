@@ -21,7 +21,7 @@ Review a contract against your organization's negotiation playbook. Analyze each
 
 Accept the contract in any of these formats:
 - **File upload**: PDF, DOCX, or other document format
-- **URL**: Link to a contract in your CLM, cloud storage (e.g., Box, Egnyte, SharePoint), or other document system
+- **URL**: Link to a contract in ~~cloud storage (e.g., Google Drive), or other document system
 - **Pasted text**: Contract text pasted directly into the conversation
 
 If no contract is provided, prompt the user to supply one.
@@ -116,14 +116,16 @@ Provide a summary section covering:
 - **Negotiation strategy**: Recommended approach (which issues to lead with, what to concede)
 - **Timeline considerations**: Any urgency factors affecting the negotiation approach
 
-### Step 8: CLM Routing (If Connected)
+### Step 8: Document Filing and Routing
 
-If a Contract Lifecycle Management system is connected via MCP:
-- Recommend the appropriate approval workflow based on contract type and risk level
-- Suggest the correct routing path (e.g., standard approval, senior counsel, outside counsel)
-- Note any required approvals based on contract value or risk flags
-
-If no CLM is connected, skip this step.
+After completing the review:
+- **File the contract**: Save to the appropriate folder in ~~cloud storage (e.g., Google Drive) based on contract type and counterparty
+- **Create matter tracking**: If not already tracked, create an issue in ~~project tracker (e.g., GitHub Issues) for the contract negotiation
+- **Route for approval**: Based on contract type and risk level, recommend the appropriate approval path:
+  - GREEN contracts: Can proceed to signature per delegation of authority
+  - YELLOW contracts: Route to designated reviewer with flagged issues
+  - RED contracts: Escalate to senior counsel or outside counsel
+- **Update CRM**: If the counterparty is in ~~CRM (e.g., Vtiger), note the contract status
 
 ## Output Format
 

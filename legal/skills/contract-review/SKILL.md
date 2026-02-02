@@ -220,3 +220,213 @@ Issues that improve the position but can be conceded strategically:
 - Insurance certificate requirements
 
 **Negotiation strategy**: Lead with Tier 1 items. Trade Tier 3 concessions to secure Tier 2 wins. Never concede on Tier 1 without escalation.
+
+## FashionUnited Contract Types
+
+FashionUnited's primary contract types require specific review focus areas:
+
+### Advertising Agreements
+
+**Contract structure**: Insertion orders, media buying agreements, programmatic advertising terms.
+
+**Key review points:**
+- **Placement and inventory**: Specific placement guarantees (homepage, section pages, newsletters), viewability standards, above-the-fold requirements
+- **Creative approval**: FashionUnited right to reject creative that conflicts with editorial standards or brand guidelines
+- **Performance metrics**: CPM/CPC guarantees, reporting frequency, discrepancy resolution procedures
+- **Cancellation terms**: Notice periods for campaign changes, make-good policies for underdelivery
+- **Content restrictions**: Competitor exclusivity, category exclusivity, editorial adjacency requirements
+- **Payment terms**: Net 30 standard, late payment interest, currency specifications for international clients
+
+**FashionUnited standard positions:**
+| Term | Standard | Acceptable | Escalation |
+|------|----------|------------|------------|
+| Payment | Net 30 | Net 14-45 | Prepayment for new clients |
+| Cancellation | 5 business days | 3-10 days | No cancellation rights |
+| Make-goods | Pro-rata credit | Extended run | Cash refunds |
+| Exclusivity | Category level | Broad category | Site-wide exclusivity |
+
+### Media Partnership Agreements
+
+**Contract structure**: Trade fair coverage agreements, federation partnership contracts, content syndication deals.
+
+**Key review points:**
+- **Exclusivity scope**: Official media partner status, competitor exclusions, territory limitations
+- **Content deliverables**: Article commitments, newsletter inclusions, social media coverage, video content
+- **Branding requirements**: Logo placement, "official partner" designation, co-branding guidelines
+- **Access and credentials**: Press access, interview opportunities, exclusive content rights
+- **Revenue arrangements**: Fixed fees, revenue share on leads, advertising commitments
+- **Term alignment**: Multi-year terms common; ensure alignment with event calendars and renewal cycles
+
+**FashionUnited standard positions:**
+| Term | Standard | Acceptable | Escalation |
+|------|----------|------------|------------|
+| Exclusivity | Category-specific | Narrow exclusivity | Broad competitor exclusions |
+| Term | Annual, aligned with event | Multi-year with exit | Perpetual or auto-renew without notice |
+| Content ownership | FashionUnited owns editorial | License back to partner | Partner owns FashionUnited content |
+| Revenue share | Fixed fee | Revenue share with floor | Pure revenue share |
+
+### Employer Branding Agreements
+
+**Contract structure**: Company profile packages, recruitment advertising, employer brand campaigns.
+
+**Key review points:**
+- **Profile content**: Company-provided content vs. FashionUnited editorial content, approval workflows
+- **Job posting integration**: Credit systems, featured placement, syndication to job boards
+- **Performance reporting**: Metrics provided, reporting frequency, benchmark comparisons
+- **Logo and brand usage**: Client brand in FashionUnited context, FashionUnited badge on client careers page
+- **Duration and renewal**: Annual standard, pro-rata for partial years, renewal terms
+
+**FashionUnited standard positions:**
+| Term | Standard | Acceptable | Escalation |
+|------|----------|------------|------------|
+| Payment | Annual upfront | Quarterly | Monthly with late payment history |
+| Content approval | FashionUnited final editorial | Joint approval | Client final approval |
+| Performance guarantee | None (best efforts) | Minimum impressions | Guaranteed applications |
+| Term | Annual | Multi-year with discount | Month-to-month |
+
+### Content Licensing Agreements
+
+**Contract structure**: Photography licenses, editorial syndication, API access, data licensing.
+
+**Key review points for inbound licenses (FashionUnited as licensee):**
+- **Scope of rights**: Editorial use, commercial use, social media, derivative works
+- **Territory**: Worldwide preferred for global operations; flag territorial restrictions
+- **Duration**: Perpetual preferred for archival; time-limited acceptable for news
+- **Attribution**: Required attribution format, placement requirements
+- **Exclusivity**: Non-exclusive strongly preferred; exclusive only for premium content
+- **Indemnification**: Licensor indemnifies for IP ownership and third-party rights
+
+**Key review points for outbound licenses (FashionUnited as licensor):**
+- **Scope limitations**: Specific use cases, no modification without approval, no sublicensing
+- **Attribution**: FashionUnited credit required, link-back requirements
+- **Fees and royalties**: Upfront fees, usage-based fees, revenue share
+- **Audit rights**: Right to audit usage for compliance
+
+**FashionUnited standard positions:**
+| Term | Standard | Acceptable | Escalation |
+|------|----------|------------|------------|
+| Scope (inbound) | Editorial + social | Editorial only | Commercial resale |
+| Territory | Worldwide | Regional | Single market |
+| Attribution | Required | Best efforts | No attribution |
+| Indemnification | Licensor indemnifies | Mutual | Licensee indemnifies licensor |
+
+## Fashion Industry-Specific Considerations
+
+### Advertising Regulation Compliance
+
+Review advertising-related contracts for compliance with:
+
+**EU Advertising Standards:**
+- Unfair Commercial Practices Directive (2005/29/EC)
+- Audiovisual Media Services Directive (native advertising disclosure)
+- National advertising self-regulatory codes (ARPP France, ASA UK, Deutscher Werberat Germany)
+
+**Key compliance points:**
+- Clear labeling of sponsored/native content ("Advertisement", "Sponsored", "Paid Partnership")
+- Influencer disclosure requirements when content features influencer partnerships
+- Prohibition of misleading claims in fashion advertising (sustainability claims, origin claims)
+- Price advertising rules (reference prices, "sale" claims)
+
+**Contract language to include:**
+- Client responsibility for substantiation of advertising claims
+- FashionUnited right to require disclosure labeling
+- Client indemnification for misleading advertising claims
+
+### Editorial Independence
+
+FashionUnited maintains editorial independence from commercial relationships.
+
+**Contract provisions to protect:**
+- No advertiser influence on editorial content
+- Clear separation of advertising and editorial teams
+- Right to decline advertising adjacent to related editorial
+- No quid pro quo arrangements (advertising in exchange for coverage)
+
+**Red flags in contracts:**
+- Requirements to provide "editorial coverage" as part of advertising package
+- Approval rights over editorial content
+- Exclusion of negative coverage
+- "Advertorial" requirements presented as editorial
+
+### Image Rights and Photography
+
+Fashion industry photography involves complex rights chains.
+
+**Review considerations:**
+- Model releases: Confirm licensor has obtained necessary model releases
+- Designer/brand rights: Fashion designs may have trademark and trade dress protection
+- Event photography: Confirm authorization to photograph at fashion shows and events
+- Street style: Confirm compliance with personality rights and privacy laws
+
+**FashionUnited standard requirements:**
+- Licensor represents and warrants all necessary releases obtained
+- Indemnification for claims arising from personality rights, model releases, or third-party IP
+- Clear chain of title for user-generated content
+
+## Multi-Jurisdiction Compliance
+
+FashionUnited operates across 30+ markets. Contract review must consider:
+
+### Governing Law Selection
+
+**Preferred jurisdictions (in order):**
+1. Netherlands (HQ jurisdiction)
+2. England & Wales (common for international contracts)
+3. Germany, France (major EU markets)
+4. New York, Delaware (US counterparties)
+
+**Flag for review:**
+- Jurisdictions with mandatory local law requirements
+- Jurisdictions with unfavorable procedural rules
+- Jurisdictions with translation requirements
+
+### Cross-Border Data Transfers
+
+For contracts involving personal data:
+- EU-to-EU: No restrictions
+- EU-to-UK: UK adequacy decision in place (monitor for changes)
+- EU-to-US: Data Privacy Framework or SCCs required
+- EU-to-other: SCCs + transfer impact assessment
+
+**Standard DPA requirements:**
+- GDPR-compliant processing terms
+- Current EU SCCs (2021 version) for transfers
+- UK International Data Transfer Addendum where UK data in scope
+- Notification of sub-processor changes
+
+### Local Language Requirements
+
+Some jurisdictions require contracts in local language:
+- France: Consumer-facing contracts must be in French
+- Germany: Employment contracts typically in German
+- Quebec: Contracts with Quebec consumers must be in French
+
+For cross-border contracts, consider governing language clause (English governs in case of conflict).
+
+## FashionUnited Escalation Criteria
+
+Beyond standard escalation triggers, escalate to senior counsel when:
+
+### Media Law Issues
+- Potential defamation or libel concerns in contract context
+- Indemnification for editorial content
+- Right of reply or correction obligations
+- Journalist source protection implications
+
+### Advertising Compliance Issues
+- Sustainability or environmental claims ("greenwashing" risk)
+- Health or safety claims in fashion/beauty advertising
+- Influencer partnerships with disclosure requirements
+- Comparative advertising against competitors
+
+### Employment Law Issues
+- Contractor vs. employee classification questions
+- Non-compete provisions (may be unenforceable in many EU jurisdictions)
+- IP assignment provisions in employment context
+- Cross-border employment arrangements
+
+### Data Protection Issues
+- Joint controller arrangements
+- Large-scale profiling or automated decision-making
+- Special category data (e.g., health data in fashion/wellness content)
+- Children's data (youth fashion content, internship programs)

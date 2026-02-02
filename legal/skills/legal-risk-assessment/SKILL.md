@@ -263,3 +263,182 @@ When recommending outside counsel engagement, suggest the user consider:
 - Budget expectations and fee arrangements (hourly, fixed fee, blended rates, success fees)
 - Diversity and inclusion considerations
 - Existing relationships (panel firms, prior engagements)
+
+## FashionUnited Risk Categories
+
+FashionUnited's legal risk landscape includes media-specific, advertising-specific, and international employment risks.
+
+### Media and Publishing Risks
+
+| Risk Type | Description | Typical Severity | Typical Likelihood |
+|-----------|-------------|------------------|-------------------|
+| Defamation/Libel | Claims arising from editorial content | High (4) | Unlikely (2) |
+| Right of Reply | Mandatory correction or reply requests | Low (2) | Possible (3) |
+| Source Protection | Pressure to reveal confidential sources | Moderate (3) | Remote (1) |
+| Copyright Infringement | Unauthorized use of third-party content | Moderate (3) | Possible (3) |
+| Image Rights | Unauthorized use of photographs/likenesses | Moderate (3) | Possible (3) |
+| Trademark Issues | Use of brand names in editorial context | Low (2) | Unlikely (2) |
+
+**Media Risk Escalation Triggers:**
+- Any legal threat or pre-litigation communication
+- Regulatory inquiry from media authority
+- Cease and desist from major brand
+- Journalist privilege issues
+- Cross-border defamation claims
+
+### Advertising and Commercial Risks
+
+| Risk Type | Description | Typical Severity | Typical Likelihood |
+|-----------|-------------|------------------|-------------------|
+| Misleading Advertising | Claims about ad content accuracy | Moderate (3) | Unlikely (2) |
+| Native Advertising Disclosure | Regulatory action for inadequate labeling | Low (2) | Possible (3) |
+| Advertiser Non-Payment | Bad debt from advertising clients | Low (2) | Possible (3) |
+| Campaign Disputes | Disagreements over campaign performance | Low (2) | Likely (4) |
+| Competitor Advertising | Comparative advertising challenges | Moderate (3) | Unlikely (2) |
+| Sustainability Claims | "Greenwashing" allegations in ads | High (4) | Possible (3) |
+
+**Advertising Risk Escalation Triggers:**
+- Regulatory inquiry from advertising authority (ASA, ARPP, etc.)
+- Consumer protection authority involvement
+- Advertiser threatening public dispute
+- Large-value contract disputes
+- Systematic compliance failures
+
+### Data Protection and Privacy Risks
+
+| Risk Type | Description | Typical Severity | Typical Likelihood |
+|-----------|-------------|------------------|-------------------|
+| GDPR Enforcement | Regulatory action for privacy violations | Critical (5) | Unlikely (2) |
+| Data Breach | Unauthorized access to personal data | High (4) | Possible (3) |
+| Cookie Compliance | Consent mechanism failures | Moderate (3) | Possible (3) |
+| DSAR Response Failure | Failure to respond to data subject requests | Moderate (3) | Unlikely (2) |
+| Cross-Border Transfer | Invalid data transfer mechanisms | High (4) | Possible (3) |
+| Job Applicant Data | Mishandling of candidate information | High (4) | Unlikely (2) |
+
+**Data Protection Risk Escalation Triggers:**
+- Any data breach involving personal data
+- Regulatory inquiry from any supervisory authority
+- Large-scale DSAR that may be coordinated
+- Ad tech partner data incident
+- Third-party processor breach affecting FashionUnited data
+
+### Employment and Contractor Risks
+
+| Risk Type | Description | Typical Severity | Typical Likelihood |
+|-----------|-------------|------------------|-------------------|
+| Contractor Misclassification | Worker classification challenges | High (4) | Possible (3) |
+| Wrongful Termination | Unfair dismissal claims | High (4) | Unlikely (2) |
+| Discrimination Claims | Employment discrimination allegations | Critical (5) | Remote (1) |
+| Works Council Issues | Employee representation matters | Moderate (3) | Unlikely (2) |
+| Cross-Border Employment | Multi-jurisdiction employment issues | Moderate (3) | Possible (3) |
+| Remote Work Compliance | Tax/employment law for remote workers | Moderate (3) | Likely (4) |
+
+**Employment Risk Escalation Triggers:**
+- Any employment litigation or tribunal filing
+- Labor authority inquiry
+- Works council formal dispute
+- Whistleblower complaint
+- Executive departure with potential claims
+
+### Intellectual Property Risks
+
+| Risk Type | Description | Typical Severity | Typical Likelihood |
+|-----------|-------------|------------------|-------------------|
+| Content Infringement (Inbound) | Claims FashionUnited infringed third-party IP | Moderate (3) | Possible (3) |
+| Content Infringement (Outbound) | Third parties infringing FashionUnited content | Low (2) | Likely (4) |
+| Trademark Disputes | Brand name/logo usage issues | Low (2) | Unlikely (2) |
+| Photography Rights | Image licensing chain issues | Moderate (3) | Possible (3) |
+| User-Generated Content | IP issues with contributed content | Moderate (3) | Possible (3) |
+| AI/ML Training Data | Use of content for AI training | Moderate (3) | Possible (3) |
+
+**IP Risk Escalation Triggers:**
+- Any IP litigation threat
+- Systematic infringement allegation
+- Major brand trademark dispute
+- AI training data controversy
+- Photographer/model rights claims
+
+### FashionUnited Risk Tolerance Thresholds
+
+**Financial Exposure Thresholds:**
+| Level | Amount | Approval Required |
+|-------|--------|------------------|
+| Low | < €10,000 | Team lead |
+| Medium | €10,000 - €50,000 | Head of Legal |
+| High | €50,000 - €250,000 | CEO/Executive team |
+| Critical | > €250,000 | Board notification |
+
+**Reputational Risk Assessment:**
+| Factor | Weight |
+|--------|--------|
+| Industry media coverage likely | High |
+| Consumer media coverage likely | Critical |
+| Social media amplification risk | High |
+| Regulatory public action | Critical |
+| Partner/advertiser relationship impact | High |
+
+### FashionUnited Multi-Market Risk Considerations
+
+When assessing risks, consider the multi-market dimension:
+
+**Jurisdiction Selection:**
+- Assess risk in each affected jurisdiction
+- Use highest-risk jurisdiction for overall rating
+- Document jurisdiction-specific variations
+
+**Regulatory Landscape:**
+| Market | Regulatory Intensity | Key Risk Areas |
+|--------|---------------------|----------------|
+| Germany | High | Privacy, employment, press law |
+| France | High | Advertising, consumer protection |
+| UK | Medium-High | Data protection, competition |
+| Netherlands | Medium | Privacy, employment |
+| US | Variable | State-specific privacy, advertising |
+| Italy | Medium | Advertising, consumer protection |
+
+**Language and Cultural Factors:**
+- Content risks may vary by language/market
+- Local advertising standards may differ
+- Employment law varies significantly by country
+- Press law and defamation standards vary
+
+### FashionUnited Risk Register Categories
+
+For FashionUnited risk register entries, use these category codes:
+
+| Code | Category | Description |
+|------|----------|-------------|
+| MED | Media/Editorial | Content, defamation, press law, source protection |
+| ADV | Advertising | Advertising compliance, native content, campaigns |
+| DAT | Data/Privacy | GDPR, cookies, DSARs, breaches |
+| EMP | Employment | Employment, contractors, HR matters |
+| IPR | Intellectual Property | Copyright, trademark, licensing |
+| COM | Commercial | Contracts, disputes, bad debt |
+| REG | Regulatory | Regulatory inquiries, compliance |
+| COR | Corporate | Corporate governance, M&A |
+
+### FashionUnited Outside Counsel Panel
+
+For matters requiring outside counsel, consider FashionUnited's existing relationships:
+
+**By Specialty:**
+- Media law: [to be configured]
+- Employment law (Netherlands): [to be configured]
+- Employment law (Germany): [to be configured]
+- Data protection: [to be configured]
+- IP/Copyright: [to be configured]
+- Corporate/M&A: [to be configured]
+
+**By Jurisdiction:**
+- Netherlands: [to be configured]
+- Germany: [to be configured]
+- UK: [to be configured]
+- France: [to be configured]
+- US: [to be configured]
+
+**Engagement Procedure:**
+1. Check for conflicts with existing matters
+2. Obtain budget approval per financial thresholds
+3. Use FashionUnited standard engagement letter template
+4. Set up matter in tracking system
+5. Establish reporting cadence

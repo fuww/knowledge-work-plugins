@@ -218,3 +218,175 @@ After the meeting:
 - **Medium priority items**: Check at next team sync or weekly review
 - **Low priority items**: Check at next scheduled meeting or monthly review
 - **Overdue items**: Escalate to the owner and their manager; flag in next relevant meeting
+
+## FashionUnited Meeting Types
+
+FashionUnited legal team commonly prepares briefings for these meeting types:
+
+### Trade Fair Partnership Meetings
+
+**Context**: Meetings with trade fair organizers (Première Vision, Texworld, ISPO, etc.) to discuss or renew media partnership agreements.
+
+**Key prep elements:**
+- Current partnership agreement status and term
+- Prior event coverage and performance metrics
+- Revenue/lead generation from partnership
+- Competitor media partner landscape
+- Upcoming event calendar
+- Exclusivity terms and any conflicts
+
+**Typical participants:**
+| Role | Typical Interests |
+|------|-------------------|
+| Trade fair marketing director | Reach, brand alignment, media coverage |
+| FashionUnited partnerships lead | Content deliverables, revenue, exclusivity |
+| FashionUnited editorial | Coverage scope, editorial independence |
+| Legal | Contract terms, liability, IP rights |
+
+**Legal considerations:**
+- Exclusivity scope and competitor definitions
+- Content ownership and licensing
+- Revenue share or fixed fee structures
+- Event cancellation/force majeure provisions
+- Data sharing for lead generation
+
+### Advertising Client Contract Negotiations
+
+**Context**: Meetings with advertising clients or agencies to negotiate terms for advertising campaigns, sponsored content, or employer branding packages.
+
+**Key prep elements:**
+- Client relationship history (Vtiger CRM data)
+- Prior advertising spend and campaign performance
+- Current proposal or insertion order terms
+- Standard FashionUnited advertising terms
+- Any special requests or custom terms
+- Credit/payment history
+
+**Typical participants:**
+| Role | Typical Interests |
+|------|-------------------|
+| Client marketing/brand team | Reach, ROI, creative flexibility |
+| Media agency | Terms, pricing, performance guarantees |
+| FashionUnited sales | Deal closure, relationship maintenance |
+| Legal | Payment terms, liability, content approval |
+
+**Legal considerations:**
+- Payment terms and credit risk
+- Native advertising disclosure requirements
+- Content approval and rejection rights
+- Performance guarantees and make-goods
+- Exclusivity and competitor restrictions
+
+### Federation and Association Meetings
+
+**Context**: Meetings with national fashion federations, industry associations, or trade bodies regarding partnerships, content collaborations, or industry initiatives.
+
+**Key prep elements:**
+- Federation background and membership
+- Current relationship and any existing agreements
+- Proposed collaboration scope
+- Member data considerations
+- Industry-wide initiatives relevant to FashionUnited
+- Antitrust considerations for industry-wide data
+
+**Typical participants:**
+| Role | Typical Interests |
+|------|-------------------|
+| Federation leadership | Member value, industry visibility |
+| Federation communications | Content reach, media coverage |
+| FashionUnited partnerships | Content, audience access, revenue |
+| Legal | Data protection, antitrust, IP |
+
+**Legal considerations:**
+- Member personal data handling (GDPR)
+- Industry data and potential antitrust issues
+- Content licensing and ownership
+- Exclusivity and competing federation relationships
+
+### Technology Vendor Evaluations
+
+**Context**: Meetings with technology vendors for platform services, integrations, or tools (CMS, ad tech, ATS integrations, analytics, etc.).
+
+**Key prep elements:**
+- Vendor evaluation criteria and scoring
+- Technical requirements from IT team
+- Pricing and commercial terms
+- Security and compliance requirements
+- Integration requirements with existing systems
+- Competitor vendor options
+
+**Typical participants:**
+| Role | Typical Interests |
+|------|-------------------|
+| Vendor sales/account team | Deal closure, solution fit |
+| Vendor technical team | Integration feasibility |
+| FashionUnited IT | Technical requirements, security |
+| FashionUnited business sponsor | Functionality, timeline |
+| Legal | Contract terms, data protection, liability |
+
+**Legal considerations:**
+- Data processing agreement requirements
+- Service levels and remedies
+- Intellectual property (especially for AI/ML vendors)
+- Exit provisions and data portability
+- Security certifications and audit rights
+
+### Cross-Border Employment Discussions
+
+**Context**: Meetings regarding employment matters involving multiple jurisdictions, contractor arrangements, or international hiring.
+
+**Key prep elements:**
+- Relevant jurisdictions and their employment law requirements
+- Current employment arrangements in those jurisdictions
+- Contractor vs. employee classification considerations
+- Works council or employee representation requirements
+- Tax and social security implications
+
+**Typical participants:**
+| Role | Typical Interests |
+|------|-------------------|
+| HR leadership | Compliance, cost, talent acquisition |
+| Hiring manager | Team needs, timeline |
+| Finance | Tax, cost structure |
+| Legal | Employment law compliance, risk |
+
+**Legal considerations:**
+- Contractor classification risks
+- Mandatory employment law provisions
+- Works council consultation requirements
+- Non-compete enforceability by jurisdiction
+- IP assignment in employment context
+
+### FashionUnited Meeting Sources
+
+When preparing briefings, pull context from these FashionUnited-specific sources:
+
+| Source | Type | What to Look For |
+|--------|------|------------------|
+| Vtiger CRM | Account records | Relationship history, prior deals, contacts |
+| Google Drive | Documents | Prior agreements, meeting notes, proposals |
+| Gmail | Email | Recent correspondence, negotiation threads |
+| Slack | Chat | Team discussions, quick decisions |
+| GitHub Issues | Matter tracking | Open legal matters related to counterparty |
+| Google Calendar | Calendar | Prior meetings, related upcoming meetings |
+
+### FashionUnited Briefing Distribution
+
+After preparing a briefing:
+
+| Audience | Distribution Method | Timing |
+|----------|--------------------| -------|
+| Meeting participants | Email + shared Drive link | 24 hours before |
+| Internal legal team | Slack #legal channel | Same as above |
+| Executive summary | Email to leadership (if significant) | As needed |
+| Post-meeting notes | Email + Drive filing | Within 24 hours |
+
+### FashionUnited Action Item Tracking
+
+FashionUnited uses GitHub Issues for legal matter tracking. After meetings:
+
+1. Create or update GitHub Issue for the matter
+2. Add action items as comments or linked issues
+3. Set appropriate labels (legal, contract, compliance, etc.)
+4. Assign owners and set milestones
+5. Cross-reference in Vtiger CRM if client-facing

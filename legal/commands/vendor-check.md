@@ -34,14 +34,7 @@ Ask the user to clarify if the vendor name is ambiguous.
 
 Search for the vendor across all available connected systems, in priority order:
 
-#### CLM (Contract Lifecycle Management) -- If Connected
-Search for all contracts involving the vendor:
-- Active agreements
-- Expired agreements (last 3 years)
-- Agreements in negotiation or pending signature
-- Amendments and addenda
-
-#### CRM -- If Connected
+#### ~~CRM -- If Connected
 Search for the vendor/account record:
 - Account status and relationship type
 - Associated opportunities or deals
@@ -53,7 +46,7 @@ Search for recent relevant correspondence:
 - NDA or agreement attachments
 - Negotiation threads
 
-#### Documents (e.g., Box, Egnyte, SharePoint) -- If Connected
+#### ~~cloud storage (e.g., Google Drive) -- If Connected
 Search for:
 - Executed agreements
 - Redlines and drafts
@@ -143,10 +136,9 @@ Output a consolidated report:
 
 If key systems are not connected via MCP:
 
-- **No CLM**: Note that no CLM is connected. Suggest the user check their CLM manually. Report what was found in other systems.
 - **No CRM**: Skip CRM context. Note the gap.
 - **No Email**: Note that email was not searched. Suggest the user search their email for "[vendor name] agreement" or "[vendor name] NDA".
-- **No Documents**: Note that document storage was not searched.
+- **No Documents**: Note that cloud storage was not searched. Suggest checking Google Drive manually.
 
 Always clearly state which sources were checked and which were not, so the user knows the completeness of the report.
 

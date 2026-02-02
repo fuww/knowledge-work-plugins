@@ -162,3 +162,144 @@ For YELLOW and RED classifications:
 - Identify the specific person or role that should review (if the organization has defined routing rules)
 - Include a brief summary of issues suitable for the reviewer to quickly understand the key points
 - If the organization has a standard form NDA, recommend sending it as a counterproposal for RED-classified NDAs
+
+## FashionUnited NDA Context
+
+FashionUnited regularly handles NDAs in connection with media partnerships, advertising relationships, and business development discussions.
+
+### Common FashionUnited NDA Scenarios
+
+| Scenario | NDA Type | Key Considerations |
+|----------|----------|-------------------|
+| Trade fair partnership discussions | Mutual NDA | Pre-partnership exploration; standard terms acceptable |
+| Advertising client onboarding | Usually not needed | Standard advertising terms cover confidentiality |
+| Federation partnership exploration | Mutual NDA | May involve member data; flag data protection |
+| Content syndication discussions | Mutual NDA | Editorial content confidentiality; IP considerations |
+| Technology vendor evaluation | Mutual NDA or vendor's form | Vendor access to FashionUnited systems |
+| M&A or investment discussions | Mutual NDA | Higher scrutiny; may need standstill |
+| Freelance/contributor relationships | Usually not separate NDA | Covered in contributor agreement |
+
+### FashionUnited Standard NDA Positions
+
+**Term:**
+- Agreement term: 2 years standard
+- Confidentiality survival: 3 years from disclosure
+
+**Governing law:**
+- Preferred: Netherlands
+- Acceptable: England & Wales, Germany, France, New York, Delaware
+- Flag: Non-EU/US jurisdictions, unusual venues
+
+**Definition scope:**
+- Should cover business and technical information disclosed for the stated purpose
+- Should NOT capture editorial content (which is intended for publication)
+- Should NOT restrict FashionUnited's journalistic activities
+
+### Media Industry-Specific Issues
+
+**Editorial vs. Confidential Information:**
+
+FashionUnited's core business involves gathering and publishing information. NDAs must not restrict legitimate editorial activities.
+
+**Red flags:**
+- Definitions that could capture publicly announced news
+- Restrictions on reporting about the counterparty
+- Confidentiality obligations that conflict with journalistic privilege
+- Requirements to seek approval before publication
+
+**Standard position:**
+- Carve out information that is "intended for publication or public announcement"
+- Carve out information received from third parties in the ordinary course of journalism
+- Preserve FashionUnited's editorial independence
+
+**Example carveout language:**
+> "Confidential Information shall not include information that (a) the Disclosing Party has designated for public release or publication, or (b) the Receiving Party obtains from third parties in the ordinary course of its news gathering and editorial activities."
+
+### Advertising Partner NDAs
+
+**Common issues:**
+- Advertisers requesting NDAs for standard campaign information
+- Media agencies using overly broad templates
+- Confusion between campaign confidentiality and general business confidentiality
+
+**FashionUnited position:**
+- Standard advertising insertion orders contain sufficient confidentiality provisions
+- Separate NDAs typically not required for advertising relationships
+- If requested, use FashionUnited standard form or carefully review scope
+
+**Red flags:**
+- NDAs requiring confidentiality of campaign performance data FashionUnited needs for optimization
+- Restrictions on discussing the advertising relationship
+- Confidentiality provisions that conflict with advertising disclosure requirements
+
+### Trade Fair and Event Partner NDAs
+
+**Common scenarios:**
+- Pre-partnership discussions with trade fair organizers
+- Media partner negotiations with event producers
+- Exhibitor list and attendee data discussions
+
+**Key considerations:**
+- Attendee/exhibitor data may be personal data (GDPR considerations)
+- Partnership terms often include revenue or lead sharing
+- Multi-year partnerships may have renewal confidentiality
+- Event calendars and planning may be legitimately confidential
+
+**FashionUnited position:**
+- Mutual NDA appropriate for partnership exploration
+- Carve out publicly announced event information
+- Flag any provisions affecting editorial coverage of the event
+
+### Federation and Association NDAs
+
+**Common scenarios:**
+- Discussions with national fashion federations
+- Membership organization partnerships
+- Industry association data sharing
+
+**Key considerations:**
+- Member data confidentiality
+- Association governance information
+- Industry statistics and research
+- Potential antitrust sensitivities for industry-wide data
+
+**FashionUnited position:**
+- Mutual NDA appropriate
+- Clear purpose limitation (partnership exploration, not competitive intelligence)
+- Data protection provisions for any member personal data
+
+### Technology and Vendor NDAs
+
+**Common scenarios:**
+- Evaluating SaaS vendors for FashionUnited platform
+- Discussing integrations (ATS systems, ad tech, analytics)
+- RFP processes for technology procurement
+
+**Key considerations:**
+- FashionUnited may disclose system architecture and security information
+- Vendors may share product roadmaps and pricing
+- Integration discussions may involve access to production systems
+
+**FashionUnited position:**
+- Accept vendor standard NDAs if they meet basic criteria
+- Ensure FashionUnited can disclose to internal IT and external consultants
+- Flag any provisions requiring FashionUnited to indemnify vendor
+
+### FashionUnited NDA Delegation of Authority
+
+| NDA Type | GREEN | YELLOW | RED |
+|----------|-------|--------|-----|
+| FashionUnited standard form | Self-service | N/A | N/A |
+| Counterparty standard form - advertising | Sales team with checklist | Legal review | Legal review |
+| Counterparty standard form - partnership | Business development | Legal review | Legal review |
+| Counterparty standard form - technology | IT/procurement | Legal review | Legal review |
+| M&A or investment related | Always legal review | Legal review | Senior counsel |
+
+### FashionUnited Standard NDA Template
+
+FashionUnited maintains a standard mutual NDA template in Google Drive. Use this template as the default for:
+- Partnership exploration discussions
+- Vendor evaluations
+- Business development discussions
+
+When counterparties insist on their form, evaluate against the criteria above and propose FashionUnited's form as a counter if the counterparty's form is RED-classified.

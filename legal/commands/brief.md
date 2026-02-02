@@ -52,12 +52,12 @@ Check each connected source for legal-relevant items:
 - Mentions of legal-relevant topics (contract, compliance, privacy, NDA, terms)
 - Escalations or urgent requests
 
-**CLM (if connected):**
-- Contracts awaiting review or signature
-- Approaching expiration dates (next 30 days)
-- Newly executed agreements
+**~~project tracker (if connected):**
+- Open legal matters and contract negotiations
+- Approaching deadlines and milestones
+- Recently closed items
 
-**CRM (if connected):**
+**~~CRM (if connected):**
 - Deals moving to stages that require legal involvement
 - New opportunities flagged for legal review
 
@@ -100,10 +100,10 @@ Research and brief on a specific legal question or topic across available source
 
 1. Accept the topic query from the user
 2. Search across connected sources:
-   - **Documents**: Internal memos, prior analyses, playbooks, precedent
-   - **Email**: Prior communications on the topic
-   - **Chat**: Team discussions about the topic
-   - **CLM**: Related contracts or clauses
+   - **~~cloud storage**: Internal memos, prior analyses, playbooks, precedent
+   - **~~email**: Prior communications on the topic
+   - **~~chat**: Team discussions about the topic
+   - **~~project tracker**: Related matters or issues
 3. Synthesize findings into a structured brief
 
 #### Output Format
@@ -148,11 +148,11 @@ Rapid briefing for developing situations that require immediate legal attention 
 
 1. Accept the incident topic or description
 2. Rapidly scan all connected sources for relevant context:
-   - **Email**: Communications about the incident
-   - **Chat**: Real-time discussions and escalations
-   - **Documents**: Relevant policies, response plans, insurance coverage
-   - **Calendar**: Scheduled response meetings
-   - **CLM**: Affected contracts, indemnification provisions, insurance requirements
+   - **~~email**: Communications about the incident
+   - **~~chat**: Real-time discussions and escalations
+   - **~~cloud storage**: Relevant policies, response plans, insurance coverage, affected contracts
+   - **~~calendar**: Scheduled response meetings
+   - **~~CRM**: Affected relationships and account context
 3. Compile into an actionable incident brief
 
 #### Output Format

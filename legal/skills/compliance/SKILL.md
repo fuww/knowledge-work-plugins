@@ -212,3 +212,207 @@ Escalate regulatory developments to senior counsel or leadership when:
 - A compliance deadline is approaching that requires organizational changes
 - A data transfer mechanism the organization relies on is challenged or invalidated
 - A regulatory authority initiates an inquiry or investigation involving the organization
+
+## FashionUnited Privacy Compliance Context
+
+FashionUnited operates as an international media company with data processing activities across 30+ markets. This section provides FashionUnited-specific compliance guidance.
+
+### FashionUnited Data Processing Activities
+
+| Processing Activity | Data Categories | Data Subjects | Lawful Basis |
+|---------------------|-----------------|---------------|--------------|
+| News platform | Device identifiers, browsing behavior, preferences | Website visitors | Legitimate interest (analytics), Consent (personalization) |
+| Newsletter subscriptions | Email, name, language preference, subscription preferences | Subscribers | Consent |
+| Job board - job seekers | Name, email, CV, work history, profile information | Job applicants | Contract (job application), Consent (job alerts) |
+| Job board - employers | Contact details, company information, billing data | Business contacts | Contract (service provision) |
+| Employer branding | Company profiles, employee testimonials, brand content | Business contacts, featured employees | Contract, Consent (testimonials) |
+| Advertising | Device identifiers, browsing behavior, ad interactions | Website visitors | Consent (personalized ads), Legitimate interest (contextual ads) |
+| B2B marketplace | Business contact details, transaction data | Business users | Contract |
+
+### Multi-Market Supervisory Authorities
+
+FashionUnited's primary supervisory authority relationships:
+
+| Market | Supervisory Authority | Key Contact Points |
+|--------|----------------------|-------------------|
+| Netherlands (Lead SA) | Autoriteit Persoonsgegevens (AP) | Primary regulator for FashionUnited B.V. |
+| Germany | State DPAs (LfD) | High enforcement activity; strict cookie/consent interpretation |
+| France | CNIL | Strict cookie enforcement; newsletter consent requirements |
+| UK | ICO | Post-Brexit UK GDPR; separate DPA requirements |
+| Italy | Garante | Active in advertising and marketing enforcement |
+| Spain | AEPD | Focus on cookie compliance and direct marketing |
+
+### FashionUnited-Specific DPA Considerations
+
+When reviewing DPAs for FashionUnited vendors and partners:
+
+**Advertising Technology Partners:**
+- Confirm lawful basis for personalized advertising (consent required in EU)
+- Verify ad tech vendor's role (processor vs. independent controller)
+- Check sub-processor chain for major ad networks
+- Ensure cookie consent platform integration requirements
+
+**Analytics Providers:**
+- Confirm privacy-focused analytics options (e.g., Plausible) vs. full tracking
+- Verify data retention periods align with FashionUnited policies
+- Check for cross-device tracking and profile building
+
+**Job Board Integrations:**
+- ATS system DPAs must cover job applicant data
+- Verify retention periods for unsuccessful applications
+- Confirm data portability support for candidate data
+- Check scraper/aggregator terms for job posting data
+
+**Newsletter and Email Marketing:**
+- Mailchimp/email platform DPA required
+- Verify subscriber data handling and list segmentation
+- Confirm unsubscribe mechanism compliance
+- Check data location for email delivery
+
+### FashionUnited Cookie and Consent Compliance
+
+**Cookie Categories:**
+
+| Category | Examples | Consent Required |
+|----------|----------|------------------|
+| Strictly necessary | Authentication, security, load balancing | No |
+| Functional | Language preference, login state | Recommended |
+| Analytics | Plausible, Google Analytics | Yes (EU) |
+| Advertising | Ad networks, retargeting | Yes |
+| Social media | Share buttons, embeds | Yes |
+
+**Consent Management:**
+- Cookie consent banner required before non-essential cookies
+- Granular consent options (accept all, reject all, customize)
+- Consent withdrawal must be as easy as giving consent
+- Consent records maintained for audit purposes
+- Market-specific consent language requirements
+
+**Country-Specific Considerations:**
+- **Germany**: Planet49 ruling requires active opt-in; pre-ticked boxes invalid
+- **France**: CNIL guidelines require "refuse all" button as prominent as "accept all"
+- **UK**: ICO guidance similar to EU; monitor for divergence
+- **US**: No cookie consent requirement (CCPA focuses on sale opt-out, not cookies)
+
+### FashionUnited Newsletter Compliance
+
+**Subscription Requirements:**
+- Double opt-in required for EU markets
+- Clear disclosure of newsletter frequency and content type
+- Market-specific newsletter subscription (not global blanket consent)
+- Easy unsubscribe in every newsletter
+- Honor unsubscribe within 10 business days maximum
+
+**Subscriber Data:**
+| Data Point | Required/Optional | Retention |
+|------------|-------------------|-----------|
+| Email address | Required | Until unsubscribe + 30 days |
+| Name | Optional | Until unsubscribe + 30 days |
+| Language/market | Required | Until unsubscribe + 30 days |
+| Subscription date | Required | Until unsubscribe + 30 days |
+| Consent record | Required | 3 years after unsubscribe |
+
+### FashionUnited Job Board Privacy
+
+**Job Seeker Data Handling:**
+
+| Stage | Data Collected | Retention Period |
+|-------|----------------|------------------|
+| Account creation | Email, password, name | Until account deletion |
+| Profile creation | CV, work history, preferences | Until account deletion |
+| Job application | Application data, cover letter | 1 year from application |
+| Job alerts | Preferences, search criteria | Until unsubscribe |
+
+**Employer Data Handling:**
+- Business contact data retained for duration of relationship + 7 years (tax/accounting)
+- Job posting data retained indefinitely (public content)
+- Billing data retained per statutory requirements
+
+**Job Applicant Rights:**
+- Right to access application history
+- Right to deletion of profile and application data
+- Right to data portability (CV export)
+- Right to withdraw consent for job alerts
+
+### FashionUnited Cross-Border Transfers
+
+**Transfer Map:**
+
+| Data Flow | Transfer Mechanism | Notes |
+|-----------|-------------------|-------|
+| EU to UK | UK adequacy decision | Monitor for adequacy review |
+| EU to US (general) | EU-US Data Privacy Framework | Verify vendor DPF certification |
+| EU to US (ad tech) | SCCs + supplementary measures | High-risk transfer; TIA required |
+| EU to Brazil | SCCs | LGPD alignment |
+| EU to China | Not recommended | Strict PIPL requirements; avoid if possible |
+
+**Standard FashionUnited Position:**
+- Prefer EU/EEA-based vendors where possible
+- Require DPF certification for US vendors
+- SCCs (2021 version) + TIA for non-adequacy countries
+- UK IDTA addendum for UK personal data
+
+### FashionUnited DSAR Response Procedures
+
+**Common DSAR Sources:**
+1. Newsletter subscribers (unsubscribe = deletion request)
+2. Job board users (profile deletion, data access)
+3. Website visitors (cookie-related requests)
+4. Business contacts (B2B relationship data)
+
+**Response Workflow:**
+1. Receive request via privacy@fashionunited.com or in-product mechanism
+2. Log in tracking system with deadline calculation
+3. Verify identity (email confirmation for registered users; additional verification for sensitive data)
+4. Search systems: CRM, email platform, job board database, analytics, ad platforms
+5. Compile response or execute deletion
+6. Document completion and notify requester
+7. Retain request record for 3 years
+
+**System-Specific DSAR Procedures:**
+- **Mailchimp**: Use subscriber export/deletion functions
+- **Vtiger CRM**: Export contact record; manual deletion may be required
+- **Job Board Database**: Automated profile deletion with confirmation
+- **Plausible Analytics**: No personal data stored; no action required
+- **Google Workspace**: Search email and Drive for requester data
+
+### FashionUnited Data Breach Response
+
+**Breach Assessment:**
+
+| Severity | Examples | Notification Required |
+|----------|----------|----------------------|
+| Low | Misdirected internal email, limited scope | Document only |
+| Medium | Unauthorized access to non-sensitive data | Regulator notification |
+| High | Breach of sensitive data, large scale | Regulator + individuals |
+| Critical | Job applicant CVs exposed, payment data | Immediate notification |
+
+**Response Timeline:**
+- Hour 0-4: Contain breach, begin investigation
+- Hour 4-24: Assess scope, severity, and affected individuals
+- Hour 24-72: Prepare and submit regulator notification (if required)
+- Post-72 hours: Individual notification (if high risk)
+
+**FashionUnited Breach Contacts:**
+- Internal: Legal team, IT security, executive team
+- External: Autoriteit Persoonsgegevens (lead SA), local SAs for affected markets
+- Insurance: Notify cyber insurance carrier
+
+### Advertising Compliance
+
+**GDPR and e-Privacy:**
+- Consent required for personalized advertising in EU
+- Contextual advertising permitted without consent
+- TCF 2.0 compliance for programmatic advertising
+- Legitimate interest rejected for ad tracking by most EU DPAs
+
+**Native Advertising and Sponsored Content:**
+- Clear labeling required ("Advertisement", "Sponsored")
+- Disclosure must be prominent and unambiguous
+- Cannot be disguised as editorial content
+- Influencer disclosure requirements for partnerships
+
+**Children's Data:**
+- COPPA (US): Parental consent for under-13
+- GDPR: Member state flexibility (13-16 years)
+- FashionUnited: Not directed at children; age-gate if youth content
