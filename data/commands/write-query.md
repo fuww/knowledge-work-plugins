@@ -30,18 +30,17 @@ Parse the user's description to identify:
 
 ### 2. Determine SQL Dialect
 
-If the user's SQL dialect is not already known, ask which they use:
+FashionUnited uses **BigQuery** (Google Cloud) as the primary data warehouse. All queries default to BigQuery SQL syntax unless otherwise specified.
 
+For other environments, supported dialects include:
 - **PostgreSQL** (including Aurora, RDS, Supabase, Neon)
 - **Snowflake**
-- **BigQuery** (Google Cloud)
 - **Redshift** (Amazon)
 - **Databricks SQL**
 - **MySQL** (including Aurora MySQL, PlanetScale)
 - **SQL Server** (Microsoft)
 - **DuckDB**
 - **SQLite**
-- **Other** (ask for specifics)
 
 Remember the dialect for future queries in the same session.
 
@@ -100,22 +99,31 @@ If a data warehouse is connected, offer to run the query and analyze the results
 
 **Simple aggregation:**
 ```
-/write-query Count of orders by status for the last 30 days
+/write-query Count of job postings by market for the last 30 days
 ```
 
 **Complex analysis:**
 ```
-/write-query Cohort retention analysis -- group users by their signup month, then show what percentage are still active (had at least one event) at 1, 3, 6, and 12 months after signup
+/write-query Employer retention analysis -- group employers by their first posting month, then show what percentage posted again at 1, 3, 6, and 12 months later
 ```
 
 **Performance-critical:**
 ```
-/write-query We have a 500M row events table partitioned by date. Find the top 100 users by event count in the last 7 days with their most recent event type.
+/write-query The jobs.postings table has 2M+ rows partitioned by posted_at. Find the top 100 employers by posting count in Q4 2025 with their most common job category.
+```
+
+**FashionUnited-specific examples:**
+```
+/write-query Monthly job posting volume by market with YoY comparison
+/write-query Top 20 articles by pageviews in the last 7 days with author and category
+/write-query Advertiser revenue breakdown by campaign type for Q4
+/write-query Products by brand in the shoes category with average price
+/write-query FashionUnited Global index values for the past 12 months
 ```
 
 ## Tips
 
-- Mention your SQL dialect upfront to get the right syntax immediately
-- If you know the table names, include them -- otherwise Claude will help you find them
-- Specify if you need the query to be idempotent (safe to re-run) or one-time
+- FashionUnited uses BigQuery -- queries default to BigQuery SQL syntax
+- Key datasets: `jobs`, `marketplace`, `editorial`, `advertising`, `analytics`, `top100`
+- BigQuery tables are partitioned by date -- always filter on date columns for performance
 - For recurring queries, mention if it should be parameterized for date ranges

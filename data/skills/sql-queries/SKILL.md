@@ -1,6 +1,6 @@
 ---
 name: sql-queries
-description: Write correct, performant SQL across all major data warehouse dialects (Snowflake, BigQuery, Databricks, PostgreSQL, etc.). Use when writing queries, optimizing slow SQL, translating between dialects, or building complex analytical queries with CTEs, window functions, or aggregations.
+description: Write correct, performant BigQuery SQL for FashionUnited data analysis. Includes templates for job posting metrics, editorial analytics, advertising performance, marketplace catalog, and Top 100 indices. Also supports other SQL dialects when needed.
 ---
 
 # SQL Queries Skill
@@ -425,3 +425,194 @@ When a query fails:
 4. **Division by zero**: Use `NULLIF(denominator, 0)` or dialect-specific safe division
 5. **Ambiguous columns**: Always qualify column names with table alias in JOINs
 6. **Group by errors**: All non-aggregated columns must be in GROUP BY (except in BigQuery which allows grouping by alias)
+
+---
+
+## FashionUnited SQL Templates
+
+FashionUnited uses BigQuery as the primary data warehouse. Below are common query patterns for FashionUnited datasets.
+
+### Job Posting Metrics
+
+```sql
+-- Job posting volume by market and month
+SELECT
+    market,
+    DATE_TRUNC(posted_at, MONTH) as month,
+    COUNT(*) as postings,
+    COUNT(DISTINCT employer_id) as unique_employers
+FROM jobs.postings
+WHERE posted_at >= DATE_SUB(CURRENT_DATE(), INTERVAL 12 MONTH)
+GROUP BY market, month
+ORDER BY month DESC, postings DESC;
+
+-- Top employers by posting volume
+SELECT
+    employer_name,
+    market,
+    COUNT(*) as total_postings,
+    COUNT(DISTINCT category) as categories,
+    MIN(posted_at) as first_posting,
+    MAX(posted_at) as latest_posting
+FROM jobs.postings
+WHERE posted_at >= DATE_SUB(CURRENT_DATE(), INTERVAL 90 DAY)
+GROUP BY employer_name, market
+ORDER BY total_postings DESC
+LIMIT 50;
+
+-- Job category distribution by market
+SELECT
+    market,
+    category,
+    COUNT(*) as postings,
+    ROUND(100.0 * COUNT(*) / SUM(COUNT(*)) OVER (PARTITION BY market), 1) as pct_of_market
+FROM jobs.postings
+WHERE posted_at >= DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY)
+GROUP BY market, category
+ORDER BY market, postings DESC;
+```
+
+### Editorial Analytics (News Traffic)
+
+```sql
+-- Top articles by pageviews
+SELECT
+    a.id,
+    a.title,
+    a.category,
+    a.author,
+    a.published_at,
+    p.pageviews,
+    p.unique_visitors,
+    p.avg_time_on_page
+FROM editorial.articles a
+JOIN analytics.performance p ON a.id = p.article_id
+WHERE a.published_at >= DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY)
+ORDER BY p.pageviews DESC
+LIMIT 20;
+
+-- Content performance by category
+SELECT
+    category,
+    COUNT(*) as articles,
+    SUM(p.pageviews) as total_pageviews,
+    AVG(p.pageviews) as avg_pageviews,
+    AVG(p.avg_time_on_page) as avg_time_on_page
+FROM editorial.articles a
+JOIN analytics.performance p ON a.id = p.article_id
+WHERE a.published_at >= DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY)
+GROUP BY category
+ORDER BY total_pageviews DESC;
+
+-- Traffic by source
+SELECT
+    source,
+    DATE_TRUNC(date, WEEK) as week,
+    SUM(sessions) as sessions,
+    SUM(pageviews) as pageviews,
+    ROUND(100.0 * SUM(sessions) / SUM(SUM(sessions)) OVER (PARTITION BY DATE_TRUNC(date, WEEK)), 1) as pct_of_traffic
+FROM analytics.sources
+WHERE date >= DATE_SUB(CURRENT_DATE(), INTERVAL 12 WEEK)
+GROUP BY source, week
+ORDER BY week DESC, sessions DESC;
+```
+
+### Advertising Performance
+
+```sql
+-- Revenue by advertiser
+SELECT
+    advertiser,
+    SUM(revenue) as total_revenue,
+    COUNT(DISTINCT campaign_id) as campaigns,
+    SUM(impressions) as total_impressions,
+    SAFE_DIVIDE(SUM(revenue), SUM(impressions)) * 1000 as cpm
+FROM advertising.revenue
+WHERE date >= DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY)
+GROUP BY advertiser
+ORDER BY total_revenue DESC;
+
+-- Monthly revenue trend
+SELECT
+    DATE_TRUNC(date, MONTH) as month,
+    SUM(revenue) as revenue,
+    COUNT(DISTINCT advertiser) as active_advertisers,
+    LAG(SUM(revenue)) OVER (ORDER BY DATE_TRUNC(date, MONTH)) as prev_month_revenue,
+    ROUND(100.0 * (SUM(revenue) - LAG(SUM(revenue)) OVER (ORDER BY DATE_TRUNC(date, MONTH))) /
+          NULLIF(LAG(SUM(revenue)) OVER (ORDER BY DATE_TRUNC(date, MONTH)), 0), 1) as mom_growth
+FROM advertising.revenue
+WHERE date >= DATE_SUB(CURRENT_DATE(), INTERVAL 12 MONTH)
+GROUP BY month
+ORDER BY month DESC;
+```
+
+### Marketplace Catalog
+
+```sql
+-- Products by brand and category
+SELECT
+    brand,
+    category,
+    COUNT(*) as products,
+    AVG(price) as avg_price,
+    MIN(price) as min_price,
+    MAX(price) as max_price
+FROM marketplace.products
+WHERE status = 'active'
+GROUP BY brand, category
+ORDER BY products DESC;
+
+-- Catalog growth over time
+SELECT
+    DATE_TRUNC(created_at, MONTH) as month,
+    COUNT(*) as new_products,
+    COUNT(DISTINCT brand) as new_brands,
+    SUM(COUNT(*)) OVER (ORDER BY DATE_TRUNC(created_at, MONTH)) as cumulative_products
+FROM marketplace.products
+WHERE created_at >= DATE_SUB(CURRENT_DATE(), INTERVAL 12 MONTH)
+GROUP BY month
+ORDER BY month;
+```
+
+### Top 100 Indices
+
+```sql
+-- Index trend over time
+SELECT
+    index_name,
+    date,
+    value,
+    LAG(value) OVER (PARTITION BY index_name ORDER BY date) as prev_value,
+    value - LAG(value) OVER (PARTITION BY index_name ORDER BY date) as change,
+    ROUND(100.0 * (value - LAG(value) OVER (PARTITION BY index_name ORDER BY date)) /
+          NULLIF(LAG(value) OVER (PARTITION BY index_name ORDER BY date), 0), 2) as change_pct
+FROM top100.indices
+WHERE index_name = 'FashionUnited_Global'
+  AND date >= DATE_SUB(CURRENT_DATE(), INTERVAL 12 MONTH)
+ORDER BY date DESC;
+
+-- Brand rankings in segment
+SELECT
+    brand,
+    segment,
+    rank,
+    score,
+    LAG(rank) OVER (PARTITION BY brand ORDER BY date) as prev_rank,
+    rank - LAG(rank) OVER (PARTITION BY brand ORDER BY date) as rank_change
+FROM top100.brands
+WHERE segment = 'luxury'
+  AND date = (SELECT MAX(date) FROM top100.brands)
+ORDER BY rank;
+
+-- Market segment comparison
+SELECT
+    segment,
+    AVG(score) as avg_score,
+    COUNT(*) as brands,
+    MIN(score) as min_score,
+    MAX(score) as max_score
+FROM top100.brands
+WHERE date = (SELECT MAX(date) FROM top100.brands)
+GROUP BY segment
+ORDER BY avg_score DESC;
+```

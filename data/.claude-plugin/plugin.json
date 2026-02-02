@@ -1,8 +1,8 @@
 {
   "name": "data",
   "version": "1.0.0",
-  "description": "Write SQL, explore datasets, and generate insights faster. Build visualizations and dashboards, and turn raw data into clear stories for stakeholders.",
+  "description": "Write SQL, explore datasets, and generate insights faster. Build visualizations and dashboards, and turn raw data into clear stories for stakeholders. Configured for FashionUnited with BigQuery data warehouse, Looker Studio dashboards, and Plausible analytics.",
   "author": {
-    "name": "Anthropic"
+    "name": "FashionUnited"
   }
 }

@@ -97,21 +97,31 @@ When a chart would communicate results more effectively than a table:
 
 **Quick answer:**
 ```
-/analyze How many new users signed up in December?
+/analyze How many job postings did we have in the UK market last month?
 ```
 
 **Full analysis:**
 ```
-/analyze What's causing the increase in support ticket volume over the past 3 months? Break down by category and priority.
+/analyze What's driving the growth in luxury brand job postings in Europe? Break down by country, category, and employer.
 ```
 
 **Formal report:**
 ```
-/analyze Prepare a data quality assessment of our customer table -- completeness, consistency, and any issues we should address.
+/analyze Prepare a quarterly job market report for the fashion industry -- posting volume by market, top employers, category trends, and YoY comparisons.
+```
+
+**FashionUnited-specific examples:**
+```
+/analyze Top 10 articles by pageviews this week
+/analyze Revenue by advertiser for Q4 2025
+/analyze Product catalog growth by category over the past year
+/analyze Which markets are seeing the most design job postings?
+/analyze FashionUnited Global index trend over the past 6 months
 ```
 
 ## Tips
 
+- FashionUnited uses BigQuery -- key datasets: `jobs`, `marketplace`, `editorial`, `advertising`, `analytics`, `top100`
 - Be specific about time ranges, segments, or metrics when possible
 - If you know the table names, mention them to speed up the process
 - For complex questions, Claude may break them into multiple queries
