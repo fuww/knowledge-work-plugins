@@ -119,17 +119,17 @@ Sources:
 
 ### Attribution Rules
 
-- Always name the source type (~~chat, ~~email, ~~cloud storage, ~~CRM, ~~data warehouse, etc.)
+- Always name the source type (Slack, Gmail, Google Drive, Vtiger CRM, BigQuery, etc.)
 - Include the specific location (channel, folder, thread, dataset, repository)
 - Include the date or relative time
 - Include the author when relevant
 - Include document/thread titles when available
-- For ~~chat, note the channel name
-- For ~~email, note the subject line and sender
-- For ~~cloud storage, note the document title
-- For ~~CRM, note the record type (Account, Contact, Opportunity)
-- For ~~data warehouse, note the dataset and query type
-- For ~~code repositories, note the repository and file/path
+- For Slack, note the channel name
+- For Gmail, note the subject line and sender
+- For Google Drive, note the document title
+- For Vtiger CRM, note the record type (Account, Contact, Opportunity)
+- For BigQuery, note the dataset and query type
+- For GitHub, note the repository and file/path
 
 ## Confidence Levels
 
