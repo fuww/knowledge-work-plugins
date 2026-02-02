@@ -145,3 +145,39 @@ Provide:
 4. Action items for items requiring follow-up
 5. Comparison to prior period reconciliation (if available)
 6. Sign-off section for preparer and reviewer
+
+## FashionUnited Configuration
+
+For FashionUnited, use the following defaults:
+
+**Bank Accounts:**
+- EUR Operating Account (1001)
+- USD Account (1002)
+- GBP Account (1003)
+- CHF Account (1004)
+
+**Key Reconciliations:**
+
+| Account | GL Code | Reconcile To | Frequency |
+|---------|---------|--------------|-----------|
+| Cash - EUR | 1001 | ING/ABN AMRO statement | Monthly |
+| Cash - USD | 1002 | Bank statement (USD) | Monthly |
+| Cash - GBP | 1003 | Bank statement (GBP) | Monthly |
+| Accounts Receivable | 1100 | Vtiger AR aging report | Monthly |
+| Deferred Revenue | 2300 | Vtiger contract schedule | Monthly |
+| VAT Payable | 2200 | VAT return workpaper | Monthly |
+| VAT Receivable | 1500 | VAT return workpaper | Monthly |
+
+**Common Reconciling Items:**
+- SEPA transfers in transit (1-2 days)
+- International wire transfers (2-5 days)
+- Bank fees (record when statement received)
+- Payment processor settlements (Stripe, Mollie)
+- FX revaluation differences
+
+**Escalation Thresholds:**
+- Individual item > EUR 5,000: Finance Manager investigation
+- Individual item > EUR 10,000: Leadership notification
+- Total unreconciled > EUR 10,000: Cannot close period
+
+**Workpaper Location:** Finance/Close/[YYYY-MM]/[Account] Rec

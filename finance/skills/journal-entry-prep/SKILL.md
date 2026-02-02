@@ -183,3 +183,113 @@ Before approving a journal entry, the reviewer should verify:
 10. **Missing intercompany elimination:** Entries between entities without corresponding elimination
 11. **Capitalization errors:** Expenses that should be capitalized, or capitalized items that should be expensed
 12. **Cut-off errors:** Transactions recorded in the wrong period based on delivery or service date
+
+## FashionUnited Journal Entry Types
+
+FashionUnited uses Google Sheets for journal entry preparation with entries recorded in the trial balance workbook.
+
+### FashionUnited Revenue Recognition Entries
+
+**Display Advertising Revenue:**
+- Debit: 1100 Accounts Receivable
+- Credit: 4100 Advertising Revenue
+- Timing: Recognize over impression delivery period
+- Support: Ad server delivery report matched to Vtiger invoice
+
+**Sponsored Content Revenue:**
+- Debit: 1100 Accounts Receivable
+- Credit: 4100 Advertising Revenue
+- Timing: Recognize on publication date
+- Support: CMS publication confirmation, Vtiger invoice
+
+**Job Posting Revenue:**
+- Debit: 1100 Accounts Receivable
+- Credit: 4200 Job Posting Revenue (portion earned)
+- Credit: 2300 Deferred Revenue (unearned portion)
+- Timing: Recognize over posting duration (typically 30 days)
+- Support: Job board posting dates, Vtiger invoice
+- Calculation: Invoice amount × (days posted in period / total posting days)
+
+**Employer Branding Revenue:**
+- Debit: 1100 Accounts Receivable (or 2300 Deferred Revenue if prepaid)
+- Credit: 4300 Employer Branding Revenue
+- Timing: Recognize ratably over contract term
+- Support: Vtiger contract, billing schedule
+- Calculation: Annual contract value / 12 months
+
+**Subscription Revenue:**
+- Debit: 2300 Deferred Revenue
+- Credit: 4400 Subscription Revenue
+- Timing: Recognize ratably over subscription period
+- Support: Vtiger subscription record, payment date
+- Calculation: Monthly subscription value for period
+
+**Media Partnership Revenue:**
+- Debit: 1100 Accounts Receivable
+- Credit: 4500 Partnership Revenue
+- Timing: Per deliverable or ratably over term
+- Support: Partnership contract, deliverable confirmation
+
+### FashionUnited FX Revaluation Entry
+
+At month-end, revalue all foreign currency monetary items:
+
+- Debit/Credit: 1000 Cash (per currency account)
+- Debit/Credit: 1100 Accounts Receivable (foreign currency)
+- Debit/Credit: 2000 Accounts Payable (foreign currency)
+- Offset: 7100 FX Gains/Losses
+
+**Process:**
+1. Export all foreign currency balances from Google Sheets TB
+2. Apply closing FX rate (ECB rates for EUR cross-rates)
+3. Calculate difference from book rate
+4. Post single entry for net FX gain/loss
+
+### FashionUnited VAT Entries
+
+**VAT on Sales (within EU):**
+- Debit: 1100 Accounts Receivable (gross)
+- Credit: 4XXX Revenue (net)
+- Credit: 2200 VAT Payable (VAT amount)
+
+**Reverse Charge (B2B cross-border services):**
+- Debit: 1500 VAT Receivable
+- Credit: 2200 VAT Payable
+- (Self-assessed VAT nets to zero)
+
+**VAT Payment:**
+- Debit: 2200 VAT Payable
+- Credit: 1000 Cash
+
+### FashionUnited Common Accruals
+
+**Hosting/Infrastructure Accrual:**
+- Debit: 5100 Hosting Costs
+- Credit: 2100 Accrued Expenses
+- Frequency: Monthly (reverse in following period)
+- Basis: Estimated usage from cloud provider dashboards
+
+**Freelance Content Accrual:**
+- Debit: 5200 Content Costs
+- Credit: 2100 Accrued Expenses
+- Frequency: Monthly
+- Basis: Articles delivered but not yet invoiced
+
+**Partner Revenue Share Accrual:**
+- Debit: 5300 Partner Revenue Share
+- Credit: 2100 Accrued Expenses
+- Frequency: Monthly/Quarterly per contract
+- Basis: Calculated share of partnership revenue
+
+### FashionUnited Approval Matrix
+
+| Entry Type | Amount Threshold | Approver |
+|-----------|-----------------|----------|
+| Standard recurring (depreciation, amortization) | Any | Finance Manager self-review |
+| Revenue recognition | Any | Finance Manager |
+| Accruals | < EUR 5,000 | Finance Manager |
+| Accruals | > EUR 5,000 | Finance Manager + Leadership review |
+| FX revaluation | Any | Finance Manager |
+| Manual adjustments | < EUR 1,000 | Finance Manager |
+| Manual adjustments | > EUR 1,000 | Finance Manager + Leadership review |
+| Out-of-period adjustments | Any | Finance Manager + Leadership review |

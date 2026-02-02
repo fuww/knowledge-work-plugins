@@ -156,3 +156,40 @@ Provide:
 5. Unexplained variance flag with investigation suggestions
 6. Trend context (is this variance new, growing, or consistent with recent periods?)
 7. Suggested actions or follow-ups
+
+## FashionUnited Configuration
+
+For FashionUnited, use the following defaults:
+
+**Revenue Variance Drivers:**
+- Display Advertising: impressions, CPM, fill rate, new vs existing advertisers
+- Job Postings: volume, average price, customer mix, market demand
+- Employer Branding: new contracts, renewals, churn, contract value
+- Subscriptions: new subscribers, churn, ARPU, market mix
+- Media Partnerships: event timing, deliverables, contract terms
+
+**OpEx Variance Drivers:**
+- Personnel: headcount, salary, bonus, contractor
+- Content: freelance, translation, photography
+- Hosting: traffic-driven, infrastructure, optimization
+- Marketing: events, campaigns, sponsorships
+- Professional services: legal, accounting, consulting
+
+**Market-Level Analysis:**
+Analyze revenue by market: Netherlands, Germany, UK, France, US, Other
+
+**FX Analysis:**
+Isolate FX impact for:
+- EUR/USD, EUR/GBP, EUR/CHF transactions
+- Budget vs actual exchange rates
+
+**Materiality Thresholds:**
+
+| Category | EUR Threshold | % Threshold |
+|----------|--------------|-------------|
+| Total Revenue | EUR 10,000 | 5% |
+| Revenue by Stream | EUR 5,000 | 10% |
+| OpEx Category | EUR 5,000 | 15% |
+| Individual Line | EUR 2,500 | 20% |
+
+**Currency:** EUR

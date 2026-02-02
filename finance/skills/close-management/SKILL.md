@@ -218,3 +218,91 @@ After each close, ask:
 3. What blockers did we encounter and how can we prevent them?
 4. Were there any surprises in the financial results we should have caught earlier?
 5. What can we automate or streamline for next month?
+
+## FashionUnited Close Procedures
+
+FashionUnited operates a streamlined 5-day close managed primarily by the Finance Manager using Google Sheets and Vtiger CRM.
+
+### FashionUnited Close Calendar
+
+| Day | Key Activities | Tools | Owner |
+|-----|---------------|-------|-------|
+| **T+1** | Cash entries, bank reconciliation start, preliminary AR review from Vtiger | Google Sheets, Bank portal, Vtiger | Finance Manager |
+| **T+2** | Revenue recognition (advertising, jobs, subscriptions), AP accruals, VAT reconciliation | Vtiger, Google Sheets | Finance Manager |
+| **T+3** | FX revaluation (30+ currencies), intercompany reconciliation, prepaid amortization | Google Sheets, BigQuery | Finance Manager |
+| **T+4** | Trial balance review, flux analysis, draft P&L by market and revenue stream | Google Sheets, BigQuery | Finance Manager |
+| **T+5** | Final adjustments, close period, distribute reports via email | Google Sheets, Gmail | Finance Manager |
+
+### FashionUnited Revenue Close Activities
+
+| Revenue Type | Close Activity | Data Source | Timing |
+|--------------|---------------|-------------|--------|
+| Display Advertising | Match delivered impressions to invoices, recognize over delivery period | Ad server reports, Vtiger | T+2 |
+| Sponsored Content | Verify publication dates, recognize on publication | CMS, Vtiger | T+2 |
+| Job Postings | Calculate posting days in period, allocate deferred revenue | Job board system, Vtiger | T+2 |
+| Employer Branding | Recognize ratable portion of annual contracts | Vtiger contracts | T+2 |
+| Subscriptions | Recognize ratable portion based on billing date | Vtiger subscriptions | T+2 |
+| Media Partnerships | Match deliverables to contract terms | Partnership contracts, Vtiger | T+2 |
+
+### FashionUnited Multi-Currency Close
+
+FashionUnited operates in 30+ markets with revenue in multiple currencies:
+
+1. **Daily**: Record transactions at transaction-date spot rate
+2. **Month-end**: Revalue all monetary balances (AR, AP, Cash) to closing rate
+3. **FX gain/loss**: Record in P&L (account 7100 - FX Gains/Losses)
+4. **Translation**: Translate subsidiary results at average rate (P&L) and closing rate (BS)
+
+**Key currencies requiring revaluation:**
+- EUR (functional currency)
+- USD, GBP, CHF (major markets)
+- BRL, INR, CNY (emerging markets)
+
+### FashionUnited VAT Close
+
+EU VAT requires careful attention during close:
+
+1. **Reconcile VAT collected** (2200 - VAT Payable) to sales by country
+2. **Reconcile VAT paid** (1500 - VAT Receivable) to purchases by country
+3. **Prepare VAT returns** for each EU country with nexus
+4. **Reverse charge verification** for B2B cross-border services
+5. **OSS reconciliation** for B2C digital services
+
+### FashionUnited Close Checklist
+
+**Pre-close (month-end minus 2 days):**
+- [ ] Confirm all advertising campaigns have accurate delivery data
+- [ ] Verify job posting counts are current in Vtiger
+- [ ] Send reminder to sales team for any pending invoices
+- [ ] Review pipeline for any revenue that should be recognized
+
+**T+1:**
+- [ ] Download bank statements for all accounts (EUR, USD, GBP, CHF)
+- [ ] Record cash receipts from Vtiger payment records
+- [ ] Begin bank reconciliation in Google Sheets
+
+**T+2:**
+- [ ] Export Vtiger invoice data for revenue recognition
+- [ ] Match ad delivery reports to invoices
+- [ ] Calculate job posting deferred revenue
+- [ ] Post revenue entries to Google Sheets TB
+- [ ] Reconcile VAT by country
+
+**T+3:**
+- [ ] Run FX revaluation for all foreign currency balances
+- [ ] Reconcile intercompany balances (if applicable)
+- [ ] Post prepaid amortization (hosting, software, insurance)
+- [ ] Complete AR aging review
+
+**T+4:**
+- [ ] Generate trial balance from Google Sheets
+- [ ] Run flux analysis vs prior month and budget
+- [ ] Prepare draft P&L with market and revenue stream breakdown
+- [ ] Review with leadership
+
+**T+5:**
+- [ ] Post any final adjustments
+- [ ] Finalize monthly P&L and balance sheet
+- [ ] Distribute reports via email to stakeholders
+- [ ] Update cash flow forecast
+- [ ] Archive close workpapers in Google Drive

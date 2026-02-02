@@ -136,3 +136,30 @@ Provide:
 3. Material variance listing with investigation flags
 4. Suggested follow-up questions for unexplained variances
 5. Offer to drill into any specific variance with `/flux`
+
+## FashionUnited Configuration
+
+For FashionUnited, use the following defaults:
+
+**Data Sources:**
+- Trial balance data from Google Sheets (Finance/Close/[YYYY-MM]/Trial Balance)
+- Revenue detail from Vtiger CRM export
+- Budget from Finance/Budget/[Year] Budget workbook
+
+**Revenue Categories:**
+- Display Advertising (4100)
+- Sponsored Content (4100)
+- Job Postings (4200)
+- Employer Branding (4300)
+- Media Partnerships (4500)
+- Subscriptions (4400)
+
+**Materiality Thresholds:**
+- EUR 5,000 or 10% for revenue line items
+- EUR 2,500 or 15% for expense line items
+
+**Currency:** EUR (present in thousands)
+
+**Comparisons:**
+- Monthly: Current month vs prior month vs budget vs prior year same month
+- Include market-level revenue breakdown (Netherlands, Germany, UK, France, US, Other)

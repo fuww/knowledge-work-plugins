@@ -259,3 +259,160 @@ For each material variance:
 4. Provide a narrative explanation of the business reason
 5. Assess whether the variance is temporary or represents a trend change
 6. Note any actions required (further investigation, forecast update, process change)
+
+## FashionUnited Financial Statements
+
+FashionUnited prepares monthly financial statements in Google Sheets with data aggregated from Vtiger CRM and BigQuery.
+
+### FashionUnited Income Statement Format
+
+```
+FASHIONUNITED B.V.
+INCOME STATEMENT
+Period: [Month Year]
+(in EUR thousands)
+
+                                    Current    Prior      Budget    Prior
+                                    Month      Month      Month     Year
+                                    --------   --------   --------  --------
+REVENUE
+  Display Advertising               EUR X,XXX  EUR X,XXX  EUR X,XXX EUR X,XXX
+  Sponsored Content                 EUR X,XXX  EUR X,XXX  EUR X,XXX EUR X,XXX
+  Job Postings                      EUR X,XXX  EUR X,XXX  EUR X,XXX EUR X,XXX
+  Employer Branding                 EUR X,XXX  EUR X,XXX  EUR X,XXX EUR X,XXX
+  Media Partnerships                EUR X,XXX  EUR X,XXX  EUR X,XXX EUR X,XXX
+  Subscriptions                     EUR X,XXX  EUR X,XXX  EUR X,XXX EUR X,XXX
+                                    --------   --------   --------  --------
+TOTAL REVENUE                       EUR X,XXX  EUR X,XXX  EUR X,XXX EUR X,XXX
+
+COST OF REVENUE
+  Content Costs                     EUR X,XXX  EUR X,XXX  EUR X,XXX EUR X,XXX
+  Hosting & Infrastructure          EUR X,XXX  EUR X,XXX  EUR X,XXX EUR X,XXX
+  Payment Processing                EUR X,XXX  EUR X,XXX  EUR X,XXX EUR X,XXX
+  Partner Revenue Share             EUR X,XXX  EUR X,XXX  EUR X,XXX EUR X,XXX
+                                    --------   --------   --------  --------
+TOTAL COST OF REVENUE               EUR X,XXX  EUR X,XXX  EUR X,XXX EUR X,XXX
+
+GROSS PROFIT                        EUR X,XXX  EUR X,XXX  EUR X,XXX EUR X,XXX
+  Gross Margin %                    XX.X%      XX.X%      XX.X%     XX.X%
+
+OPERATING EXPENSES
+  Personnel                         EUR X,XXX  EUR X,XXX  EUR X,XXX EUR X,XXX
+  Marketing & Events                EUR X,XXX  EUR X,XXX  EUR X,XXX EUR X,XXX
+  Professional Services             EUR X,XXX  EUR X,XXX  EUR X,XXX EUR X,XXX
+  Office & Administrative           EUR X,XXX  EUR X,XXX  EUR X,XXX EUR X,XXX
+  Depreciation & Amortization       EUR X,XXX  EUR X,XXX  EUR X,XXX EUR X,XXX
+                                    --------   --------   --------  --------
+TOTAL OPERATING EXPENSES            EUR X,XXX  EUR X,XXX  EUR X,XXX EUR X,XXX
+
+OPERATING INCOME (EBITDA)           EUR X,XXX  EUR X,XXX  EUR X,XXX EUR X,XXX
+  EBITDA Margin %                   XX.X%      XX.X%      XX.X%     XX.X%
+
+OTHER INCOME (EXPENSE)
+  Interest Income                   EUR X,XXX  EUR X,XXX  EUR X,XXX EUR X,XXX
+  FX Gains (Losses)                 EUR X,XXX  EUR X,XXX  EUR X,XXX EUR X,XXX
+                                    --------   --------   --------  --------
+TOTAL OTHER INCOME (EXPENSE)        EUR X,XXX  EUR X,XXX  EUR X,XXX EUR X,XXX
+
+INCOME BEFORE TAXES                 EUR X,XXX  EUR X,XXX  EUR X,XXX EUR X,XXX
+  Corporate Income Tax              EUR X,XXX  EUR X,XXX  EUR X,XXX EUR X,XXX
+                                    --------   --------   --------  --------
+
+NET INCOME (LOSS)                   EUR X,XXX  EUR X,XXX  EUR X,XXX EUR X,XXX
+  Net Margin %                      XX.X%      XX.X%      XX.X%     XX.X%
+```
+
+### FashionUnited Revenue by Market
+
+Supplement the P&L with market-level detail:
+
+| Market | Current Month | YTD | YoY Growth | % of Total |
+|--------|--------------|-----|------------|------------|
+| Netherlands | EUR X,XXX | EUR X,XXX | X.X% | XX% |
+| Germany | EUR X,XXX | EUR X,XXX | X.X% | XX% |
+| UK | EUR X,XXX | EUR X,XXX | X.X% | XX% |
+| France | EUR X,XXX | EUR X,XXX | X.X% | XX% |
+| US | EUR X,XXX | EUR X,XXX | X.X% | XX% |
+| Other Markets | EUR X,XXX | EUR X,XXX | X.X% | XX% |
+| **Total** | **EUR X,XXX** | **EUR X,XXX** | **X.X%** | **100%** |
+
+### FashionUnited Balance Sheet Format
+
+```
+FASHIONUNITED B.V.
+BALANCE SHEET
+As of [Month End Date]
+(in EUR thousands)
+
+ASSETS
+Current Assets
+  Cash and Cash Equivalents - EUR     EUR X,XXX
+  Cash and Cash Equivalents - USD     EUR X,XXX
+  Cash and Cash Equivalents - GBP     EUR X,XXX
+  Cash and Cash Equivalents - Other   EUR X,XXX
+  Accounts Receivable, net            EUR X,XXX
+  VAT Receivable                      EUR X,XXX
+  Prepaid Expenses                    EUR X,XXX
+                                      --------
+Total Current Assets                  EUR X,XXX
+
+Non-Current Assets
+  Property and Equipment, net         EUR X,XXX
+  Intangible Assets (Website Dev)     EUR X,XXX
+  Right-of-Use Assets                 EUR X,XXX
+                                      --------
+Total Non-Current Assets              EUR X,XXX
+
+TOTAL ASSETS                          EUR X,XXX
+
+LIABILITIES AND EQUITY
+Current Liabilities
+  Accounts Payable                    EUR X,XXX
+  Accrued Expenses                    EUR X,XXX
+  Deferred Revenue                    EUR X,XXX
+  VAT Payable                         EUR X,XXX
+  Corporate Tax Payable               EUR X,XXX
+  Current Lease Liability             EUR X,XXX
+                                      --------
+Total Current Liabilities             EUR X,XXX
+
+Non-Current Liabilities
+  Long-term Lease Liability           EUR X,XXX
+                                      --------
+Total Non-Current Liabilities         EUR X,XXX
+
+Total Liabilities                     EUR X,XXX
+
+Stockholders' Equity
+  Share Capital                       EUR X,XXX
+  Retained Earnings                   EUR X,XXX
+                                      --------
+Total Stockholders' Equity            EUR X,XXX
+
+TOTAL LIABILITIES AND EQUITY          EUR X,XXX
+```
+
+### FashionUnited Key Metrics Dashboard
+
+| Metric | Current Month | Prior Month | YTD | Target |
+|--------|--------------|-------------|-----|--------|
+| Total Revenue | EUR X,XXX | EUR X,XXX | EUR X,XXX | EUR X,XXX |
+| Revenue Growth (YoY) | X.X% | X.X% | X.X% | 10-15% |
+| Gross Margin | XX.X% | XX.X% | XX.X% | 70-80% |
+| EBITDA | EUR X,XXX | EUR X,XXX | EUR X,XXX | EUR X,XXX |
+| EBITDA Margin | XX.X% | XX.X% | XX.X% | 15-25% |
+| DSO | XX days | XX days | XX days | < 45 days |
+| Cash | EUR X,XXX | EUR X,XXX | — | — |
+| Recurring Revenue % | XX% | XX% | XX% | > 60% |
+| Headcount | XX | XX | — | — |
+
+### FashionUnited Reporting Calendar
+
+| Report | Timing | Audience | Distribution |
+|--------|--------|----------|--------------|
+| Flash Revenue | Weekly (Monday AM) | Leadership | Slack + Email |
+| Monthly P&L | T+5 | Leadership, Dept Heads | Email |
+| Cash Flow Forecast | Weekly | Finance Manager | Google Sheets |
+| AR Aging | Weekly | Finance, Sales | Google Sheets |
+| Budget vs Actual | Monthly | Leadership | Email |
+| Board Package | Quarterly (T+10) | Board | Email + Meeting |

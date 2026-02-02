@@ -1,13 +1,15 @@
 ---
-description: Generate SOX sample selections, testing workpapers, and control assessments
+description: Generate internal control testing workpapers, sample selections, and control assessments
 argument-hint: "<control area> [period]"
 ---
 
-# SOX Compliance Testing
+# Internal Control Testing
 
 > If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../CONNECTORS.md).
 
-**Important**: This command assists with SOX compliance workflows but does not provide audit or legal advice. All testing workpapers and assessments should be reviewed by qualified financial professionals before use in audit documentation.
+**Important**: This command assists with internal control testing and audit support but does not provide audit or legal advice. All testing workpapers and assessments should be reviewed by qualified financial professionals.
+
+> **FashionUnited Note:** As a private company, FashionUnited is not subject to SOX 404 requirements. This command supports internal control documentation and statutory audit preparation under Dutch law. The control framework is proportionate to FashionUnited's size and risk profile.
 
 Generate sample selections, create testing workpapers, document control assessments, and provide testing templates for SOX 404 internal controls over financial reporting.
 
@@ -215,3 +217,49 @@ Provide:
 4. Results documentation template
 5. Deficiency evaluation framework (if exceptions are identified)
 6. Suggested remediation actions for any noted deficiencies
+
+## FashionUnited Configuration
+
+For FashionUnited, use the following control framework:
+
+**Key Control Areas:**
+
+| Area | Key Controls | Frequency | Owner |
+|------|-------------|-----------|-------|
+| Revenue | Invoice-to-contract matching | Per transaction | Finance Manager |
+| Revenue | Customer credit approval | Per new customer | Finance Manager |
+| Cash | Bank reconciliation | Monthly | Finance Manager |
+| Cash | Payment dual authorization (> EUR 5,000) | Per payment | Finance Manager + Leadership |
+| Expenses | Invoice approval (> EUR 1,000) | Per transaction | Finance Manager |
+| Financial Close | Reconciliation review | Monthly | Finance Manager |
+| Financial Close | Flux analysis review | Monthly | Finance Manager |
+| IT Access | Google Workspace access review | Quarterly | Finance Manager |
+| IT Access | Vtiger CRM access review | Quarterly | Finance Manager |
+
+**FashionUnited Control Testing Priorities:**
+
+1. **Revenue recognition** — Verify invoices match contracts and delivery
+2. **Cash controls** — Bank reconciliation, payment authorization
+3. **AR management** — Aging review, credit approval
+4. **Financial close** — Reconciliation completeness, JE approval
+
+**Sample Sizes for FashionUnited:**
+Given smaller transaction volumes, use reduced sample sizes:
+
+| Control Frequency | Sample Size |
+|------------------|-------------|
+| Monthly | 2-3 |
+| Per-transaction (< 100 items) | 10-15 |
+| Per-transaction (100+ items) | 15-25 |
+
+**Documentation Location:**
+- Control documentation: Finance/Controls/
+- Testing workpapers: Finance/Audit/[Year]/Control Testing/
+- Evidence: Finance/Audit/[Year]/Evidence/
+
+**Statutory Audit Support:**
+This command also supports annual statutory audit under Dutch law:
+- Prepare PBC (Prepared by Client) schedules
+- Document key controls for auditor walkthrough
+- Compile evidence for substantive testing
+- Respond to management letter points

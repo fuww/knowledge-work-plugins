@@ -263,3 +263,143 @@ Track how variances evolve over the year to identify systematic bias:
 - **Growing unfavorable:** Deteriorating performance or unrealistic targets
 - **Shrinking variance:** Forecast accuracy improving through the year (normal pattern)
 - **Volatile:** Unpredictable business or poor forecasting methodology
+
+## FashionUnited Variance Analysis
+
+FashionUnited performs monthly variance analysis comparing actuals to budget and prior year, with focus on revenue by market and revenue stream.
+
+### FashionUnited Materiality Thresholds
+
+| Category | EUR Threshold | % Threshold | Action |
+|----------|--------------|-------------|--------|
+| Total Revenue | EUR 10,000 | 5% | Leadership discussion |
+| Revenue by Stream | EUR 5,000 | 10% | Finance investigation |
+| OpEx Category | EUR 5,000 | 15% | Finance investigation |
+| Individual Line | EUR 2,500 | 20% | Document explanation |
+
+### FashionUnited Revenue Variance Drivers
+
+When analyzing revenue variances, decompose by:
+
+**Display Advertising:**
+- Impression volume (traffic changes, new ad inventory)
+- CPM rates (market pricing, premium placements)
+- Fill rate (sold vs available inventory)
+- New vs existing advertisers
+
+**Job Postings:**
+- Number of postings sold
+- Average price per posting (single vs bundle, featured vs standard)
+- Customer mix (direct vs agency, large vs SMB)
+- Market-specific demand (fashion industry hiring trends)
+
+**Employer Branding:**
+- New contracts signed
+- Renewals vs churn
+- Contract value (package tier, add-ons)
+- Timing (annual contracts, payment timing)
+
+**Subscriptions:**
+- New subscriber acquisition
+- Churn/cancellations
+- ARPU changes (plan tier, usage-based pricing)
+- Market mix
+
+### FashionUnited OpEx Variance Drivers
+
+| Category | Key Drivers |
+|----------|-------------|
+| Personnel | Headcount changes, salary adjustments, bonus accruals, contractor spend |
+| Content | Freelance rates, translation volume, photography licensing |
+| Hosting | Traffic-driven costs, new infrastructure, cloud optimization |
+| Marketing | Events, campaigns, sponsorships (often discretionary/timing) |
+| Professional Services | Legal, accounting, consulting (project-based, timing variable) |
+
+### FashionUnited Market-Level Analysis
+
+For multi-market revenue analysis:
+
+```
+REVENUE VARIANCE BY MARKET — [Month] Actual vs Budget
+
+Market          Budget      Actual      Var (EUR)   Var (%)   YoY Growth
+-----------     --------    --------    ---------   -------   ----------
+Netherlands     EUR X,XXX   EUR X,XXX   EUR X,XXX   X.X%      X.X%
+Germany         EUR X,XXX   EUR X,XXX   EUR X,XXX   X.X%      X.X%
+UK              EUR X,XXX   EUR X,XXX   EUR X,XXX   X.X%      X.X%
+France          EUR X,XXX   EUR X,XXX   EUR X,XXX   X.X%      X.X%
+US              EUR X,XXX   EUR X,XXX   EUR X,XXX   X.X%      X.X%
+Other           EUR X,XXX   EUR X,XXX   EUR X,XXX   X.X%      X.X%
+-----------     --------    --------    ---------   -------   ----------
+TOTAL           EUR X,XXX   EUR X,XXX   EUR X,XXX   X.X%      X.X%
+```
+
+### FashionUnited Waterfall Example
+
+```
+WATERFALL: Total Revenue — [Month] Actual vs Budget
+
+Budget Revenue                                       EUR XXX,XXX
+  |
+  |--[+] Display Advertising - higher CPMs           +EUR X,XXX
+  |--[+] Job Postings - increased volume             +EUR X,XXX
+  |--[-] Employer Branding - delayed renewal         -EUR X,XXX
+  |--[+] Media Partnership - event coverage          +EUR X,XXX
+  |--[-] FX impact (GBP weakness)                    -EUR X,XXX
+  |
+Actual Revenue                                       EUR XXX,XXX
+
+Net Variance: +EUR X,XXX (+X.X% favorable)
+```
+
+### FashionUnited FX Variance
+
+Given FashionUnited's multi-currency operations, isolate FX impact:
+
+1. **Transaction FX**: Revenue invoiced in foreign currency translated at different rates than budget
+2. **Translation FX**: Subsidiary results translated at different rates than budget
+3. **Revaluation FX**: Month-end mark-to-market of monetary balances
+
+**FX Variance Calculation:**
+```
+FX Impact = Actual Revenue at Budget FX Rates - Actual Revenue at Actual FX Rates
+
+Budget FX Rates (annual budget):
+  EUR/USD: 1.10
+  EUR/GBP: 0.86
+  EUR/CHF: 0.95
+
+Actual Average Rates (month):
+  EUR/USD: [actual]
+  EUR/GBP: [actual]
+  EUR/CHF: [actual]
+```
+
+### FashionUnited Variance Narrative Template
+
+```
+[Revenue Stream/Market]: [Favorable/Unfavorable] variance of EUR [amount] ([X]%)
+vs budget for [month]
+
+Driver: [Primary driver]
+[2-3 sentences with specific quantification. Reference number of customers,
+campaigns, or transactions affected. Note any one-time items.]
+
+Outlook: [One-time / Continuing trend / Seasonal pattern / Action being taken]
+Action: [None / Monitor / Investigate / Update forecast / Escalate]
+```
+
+**Example:**
+```
+Job Posting Revenue - Germany: Favorable variance of EUR 12,500 (+8%)
+vs budget for January
+
+Driver: Increased hiring activity in fashion retail sector
+Strong Q1 hiring by German fashion retailers, with 45 additional job postings
+sold vs budget. Average price per posting stable at EUR 295. Three new
+enterprise customers added, contributing EUR 4,200 in bundle sales.
+
+Outlook: Continuing trend - German retail hiring expected to remain strong
+through Q1 based on customer conversations and market indicators.
+Action: Monitor - consider increasing Q2 forecast if trend continues.
+```

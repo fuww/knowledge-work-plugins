@@ -128,3 +128,36 @@ Provide:
 3. Comparison to prior period entry of the same type (if available)
 4. Any items flagged for review or follow-up
 5. Instructions for posting (manual entry or upload format for the user's ERP)
+
+## FashionUnited Configuration
+
+For FashionUnited, use the following defaults:
+
+**Account Codes:**
+- 1000-1999: Assets
+- 2000-2999: Liabilities
+- 3000-3999: Equity
+- 4000-4999: Revenue
+- 5000-5999: Cost of Revenue
+- 6000-6999: Operating Expenses
+- 7000-7999: Other Income/Expense
+
+**Common Entry Types:**
+
+| Type | Accounts | Notes |
+|------|----------|-------|
+| Advertising Revenue | DR 1100 / CR 4100 | Match to Vtiger invoice |
+| Job Posting Revenue | DR 1100 / CR 4200, CR 2300 | Split earned/deferred |
+| Subscription Revenue | DR 2300 / CR 4400 | Monthly recognition |
+| Hosting Accrual | DR 5100 / CR 2100 | Auto-reverse next month |
+| FX Revaluation | DR/CR various / DR/CR 7100 | Month-end revaluation |
+| Depreciation | DR 6500 / CR 1800 | IT equipment 3yr, furniture 5yr |
+
+**Currency:** EUR
+
+**Approval Thresholds:**
+- EUR 0-1,000: Finance Manager self-review
+- EUR 1,000-5,000: Finance Manager
+- EUR 5,000+: Finance Manager + Leadership review
+
+**Posting Location:** Google Sheets trial balance workbook

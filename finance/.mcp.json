@@ -1,24 +1,21 @@
 {
   "mcpServers": {
-    "snowflake": {
-      "type": "http",
-      "url": ""
-    },
-    "databricks": {
-      "type": "http",
-      "url": ""
-    },
-    "bigquery": {
-      "type": "http",
-      "url": "https://bigquery.googleapis.com/mcp"
-    },
     "slack": {
       "type": "http",
       "url": "https://mcp.slack.com/mcp"
     },
-    "ms365": {
+    "google-workspace": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@anthropic/google-workspace-mcp"]
+    },
+    "vtiger": {
       "type": "http",
-      "url": "https://microsoft365.mcp.claude.com/mcp"
+      "url": "https://mcp.pipedream.com/app/vtiger_crm"
+    },
+    "bigquery": {
+      "type": "http",
+      "url": "https://bigquery.googleapis.com/mcp"
     }
   }
 }

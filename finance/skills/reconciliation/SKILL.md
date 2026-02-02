@@ -172,3 +172,124 @@ Define escalation triggers based on your organization's risk tolerance:
 6. **Root cause analysis:** For recurring reconciling items, investigate and fix the underlying process issue
 7. **Standardization:** Use consistent templates and procedures across all accounts
 8. **Retention:** Maintain reconciliations and supporting detail per your organization's document retention policy
+
+## FashionUnited Reconciliation Procedures
+
+FashionUnited performs reconciliations in Google Sheets with supporting data from Vtiger CRM and bank portals.
+
+### FashionUnited Bank Reconciliation
+
+FashionUnited maintains bank accounts in multiple currencies:
+
+| Account | Currency | Bank | Reconciliation Frequency |
+|---------|----------|------|-------------------------|
+| Operating Account | EUR | ING / ABN AMRO | Monthly |
+| USD Account | USD | ING / ABN AMRO | Monthly |
+| GBP Account | GBP | ING / ABN AMRO | Monthly |
+| CHF Account | CHF | ING / ABN AMRO | Monthly |
+
+**Process:**
+1. Download bank statement PDF and transaction CSV from bank portal
+2. Import transactions to bank rec template in Google Sheets
+3. Match to GL cash entries (1000 series accounts)
+4. Identify outstanding items
+5. Post adjusting entries for bank fees, interest, FX differences
+
+**Common reconciling items:**
+- SEPA transfers in transit (1-2 business days)
+- International wire transfers (2-5 business days)
+- Bank fees (monthly, record when statement received)
+- FX conversion fees on multi-currency transactions
+- Payment processor settlements (Stripe, Mollie)
+
+### FashionUnited AR Reconciliation (Vtiger to GL)
+
+**Process:**
+1. Export AR aging report from Vtiger CRM
+2. Compare total to GL account 1100 (Accounts Receivable)
+3. Reconcile differences
+
+**Common reconciling items:**
+- Invoices created in Vtiger not yet posted to GL
+- Payments received and recorded in GL not yet applied in Vtiger
+- Credit notes pending posting
+- FX revaluation differences (Vtiger in transaction currency, GL in EUR)
+
+**Aging buckets for FashionUnited:**
+
+| Bucket | Days | Action | DSO Impact |
+|--------|------|--------|------------|
+| Current | 0-30 | Monitor | Expected |
+| 30 days | 31-45 | Email reminder via Vtiger | Watch |
+| 45 days | 46-60 | Phone follow-up | Concern |
+| 60 days | 61-90 | Escalate to sales, formal demand | At risk |
+| 90+ days | 90+ | Collections process, provision review | Write-off candidate |
+
+### FashionUnited Deferred Revenue Reconciliation
+
+Job postings, subscriptions, and annual contracts create deferred revenue that must be reconciled:
+
+**Process:**
+1. Export active contracts/postings from Vtiger
+2. Calculate unearned portion for each item
+3. Compare to GL account 2300 (Deferred Revenue)
+4. Investigate differences
+
+**Calculation by revenue type:**
+
+| Type | Calculation |
+|------|-------------|
+| Job Posting | Invoice amount × (remaining days / total posting days) |
+| Subscription | Monthly value × remaining months in prepaid period |
+| Employer Branding | Annual value × (remaining months / 12) |
+| Partnership | Contract value × (remaining deliverables / total deliverables) |
+
+### FashionUnited VAT Reconciliation
+
+Reconcile VAT collected and paid across EU markets:
+
+**VAT Payable Reconciliation (2200):**
+1. Export sales by country from Vtiger
+2. Calculate expected VAT by country and rate
+3. Compare to GL balance
+4. Reconcile to VAT returns filed
+
+**VAT Receivable Reconciliation (1500):**
+1. Export purchases with VAT from expense records
+2. Calculate recoverable VAT by category
+3. Compare to GL balance
+4. Reconcile to VAT returns filed
+
+**Key VAT rates by market:**
+
+| Country | Standard Rate | Reduced Rate | Notes |
+|---------|--------------|--------------|-------|
+| Netherlands | 21% | 9% | Digital services at standard rate |
+| Germany | 19% | 7% | B2B reverse charge for cross-border |
+| France | 20% | 10% / 5.5% | |
+| UK | 20% | 5% | Post-Brexit, separate VAT registration |
+| Belgium | 21% | 6% / 12% | |
+
+### FashionUnited Reconciliation Templates
+
+All reconciliation templates are maintained in Google Drive:
+
+| Template | Location | Frequency |
+|----------|----------|-----------|
+| Bank Reconciliation | Finance/Close/[Month]/Bank Recs | Monthly |
+| AR Reconciliation | Finance/Close/[Month]/AR Rec | Monthly |
+| Deferred Revenue | Finance/Close/[Month]/Deferred Rev | Monthly |
+| VAT Reconciliation | Finance/Close/[Month]/VAT | Monthly |
+| Prepaid Schedule | Finance/Close/[Month]/Prepaids | Monthly |
+| Intercompany | Finance/Close/[Month]/IC Rec | Monthly (if applicable) |
+
+### FashionUnited Escalation Thresholds
+
+| Trigger | Threshold | Escalation |
+|---------|-----------|------------|
+| Individual reconciling item | > EUR 5,000 | Finance Manager investigates |
+| Individual reconciling item | > EUR 10,000 | Leadership notification |
+| Total unreconciled | > EUR 10,000 | Cannot close period |
+| AR item age | > 60 days | Collections escalation |
+| AR item age | > 90 days | Bad debt provision review |
+| Unexplained difference | Any amount | Must resolve before close |

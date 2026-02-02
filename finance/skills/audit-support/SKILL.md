@@ -371,3 +371,101 @@ Broad controls that operate at the organizational level and affect multiple proc
 - Entity-level controls can mitigate but typically cannot replace process-level controls
 - Ineffective entity-level controls (especially audit committee oversight and tone at the top) are strong indicators of a material weakness
 - Effective entity-level controls may reduce the extent of testing needed for process-level controls
+
+## FashionUnited Control Environment
+
+As a smaller private company, FashionUnited is not subject to formal SOX 404 requirements. However, the Finance Manager maintains appropriate internal controls proportionate to the organization's size and risk profile.
+
+### FashionUnited Control Framework
+
+FashionUnited's control environment focuses on key risk areas with compensating controls rather than formal SOX compliance:
+
+| Control Area | Key Controls | Frequency | Owner |
+|--------------|-------------|-----------|-------|
+| Revenue | Invoice-to-contract matching, customer credit approval | Per transaction | Finance Manager |
+| Cash | Bank reconciliation, payment dual authorization | Monthly / Per payment | Finance Manager |
+| Expenses | Invoice approval, vendor verification | Per transaction | Finance Manager |
+| Financial Reporting | Reconciliation review, flux analysis | Monthly | Finance Manager |
+| IT Access | Google Workspace admin review, Vtiger access review | Quarterly | Finance Manager |
+
+### FashionUnited Revenue Controls
+
+| Control | Description | Evidence |
+|---------|-------------|----------|
+| Contract matching | Verify invoice terms match signed contract in Vtiger | Contract reference on invoice |
+| Pricing verification | Check invoice pricing against rate card or contract | Rate card / contract terms |
+| Delivery confirmation | Verify ad delivery, job posting, or content publication | Delivery reports, CMS records |
+| Customer credit | Review new customer credit before extending terms | Credit check, payment history |
+| AR aging review | Weekly review of overdue accounts | Aging report with follow-up notes |
+
+### FashionUnited Cash Controls
+
+| Control | Description | Evidence |
+|---------|-------------|----------|
+| Bank reconciliation | Monthly reconciliation of all bank accounts | Signed reconciliation workpaper |
+| Dual authorization | Two approvers for payments > EUR 5,000 | Bank approval records |
+| Payment verification | Verify vendor bank details before payment | Vendor master confirmation |
+| Cash forecast review | Weekly cash forecast review | Forecast workpaper |
+
+### FashionUnited Expense Controls
+
+| Control | Description | Evidence |
+|---------|-------------|----------|
+| Invoice approval | Finance Manager approval for all invoices > EUR 1,000 | Approval email or Vtiger record |
+| Budget comparison | Compare expense to budget before approval | Budget worksheet |
+| Vendor verification | Verify vendor legitimacy before new vendor setup | Vendor registration documents |
+| Duplicate check | Review for duplicate invoices before payment | Invoice log check |
+
+### FashionUnited Periodic Reviews
+
+| Review | Frequency | Scope | Documentation |
+|--------|-----------|-------|---------------|
+| User access review | Quarterly | Google Workspace, Vtiger, bank access | Access listing with review notes |
+| Vendor master review | Semi-annually | All active vendors | Vendor listing with verification |
+| Contract review | Annually | All active customer contracts | Contract register |
+| Policy review | Annually | Finance policies and procedures | Updated policy documents |
+
+### FashionUnited External Audit Support
+
+FashionUnited undergoes annual statutory audit under Dutch law. Key audit support activities:
+
+**Year-End:**
+- Prepare auditor-requested schedules (AR aging, AP listing, bank confirmations)
+- Compile trial balance and financial statements
+- Prepare supporting workpapers for significant balances
+- Respond to auditor inquiries
+
+**Audit Documentation:**
+- Reconciliation workpapers with supporting detail
+- Revenue recognition analysis with contract samples
+- Expense accrual documentation
+- Bank confirmations and reconciliations
+- VAT reconciliation and filings
+
+### FashionUnited Control Documentation Location
+
+All control documentation is maintained in Google Drive:
+
+```
+Finance/
+├── Controls/
+│   ├── Revenue Controls/
+│   │   ├── Contract Templates
+│   │   └── Pricing Rate Cards
+│   ├── Cash Controls/
+│   │   ├── Bank Reconciliations/
+│   │   └── Payment Approvals/
+│   ├── Expense Controls/
+│   │   └── Vendor Master/
+│   └── Access Reviews/
+├── Close/
+│   └── [YYYY-MM]/
+│       ├── Trial Balance
+│       ├── Reconciliations/
+│       └── Journal Entries/
+└── Audit/
+    └── [Year]/
+        ├── Auditor Requests/
+        ├── PBC Schedules/
+        └── Management Letter/
+```
