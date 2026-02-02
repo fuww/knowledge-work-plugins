@@ -1,8 +1,8 @@
 {
   "name": "customer-support",
   "version": "1.0.0",
-  "description": "Triage tickets, draft responses, escalate issues, and build your knowledge base. Research customer context and turn resolved issues into self-service content.",
+  "description": "Customer support for FashionUnited's job board, employer branding, and advertising clients. Triage job posting issues, research XML feed problems, escalate to product/engineering, and build knowledge base content for the fashion recruitment platform.",
   "author": {
-    "name": "Anthropic"
+    "name": "FashionUnited"
   }
 }

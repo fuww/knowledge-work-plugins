@@ -7,7 +7,7 @@ argument-hint: "<situation description>"
 
 > If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../CONNECTORS.md).
 
-Draft a professional, customer-facing response tailored to the situation, customer relationship, and communication context.
+Draft a professional, customer-facing response tailored to the situation, customer relationship, and communication context. Optimized for FashionUnited's job board, employer branding, and advertising clients.
 
 ## Usage
 
@@ -16,10 +16,11 @@ Draft a professional, customer-facing response tailored to the situation, custom
 ```
 
 Examples:
-- `/draft-response Acme Corp is asking when the new dashboard feature will ship`
-- `/draft-response Customer escalation — their integration has been down for 2 days`
-- `/draft-response Responding to a feature request we won't be building`
-- `/draft-response Customer hit a billing error and wants a resolution ASAP`
+- `/draft-response Recruitment agency asking when their XML feed will be fixed — been 3 days`
+- `/draft-response Fashion brand escalation — employer branding page still shows old content`
+- `/draft-response Responding to a feature request for bulk job editing we won't be building`
+- `/draft-response Client asking why their banner campaign underperformed compared to forecast`
+- `/draft-response New client onboarding — explaining how XML feed validation works`
 
 ## Workflow
 
@@ -27,36 +28,31 @@ Examples:
 
 Parse the user's input to determine:
 
-- **Customer**: Who is the communication for? Look up account context if available.
+- **Client**: Who is the communication for? Fashion brand, retailer, recruitment agency?
+- **Product area**: Job posting, XML feed, scraper, employer branding, or advertising?
 - **Situation type**: Question, issue, escalation, announcement, negotiation, bad news, good news, follow-up
-- **Urgency**: Is this time-sensitive? How long has the customer been waiting?
+- **Urgency**: Is this time-sensitive? Jobs not appearing? Campaign deadline?
 - **Channel**: Email, support ticket, chat, or other (adjust formality accordingly)
-- **Relationship stage**: New customer, established, frustrated/escalated
-- **Stakeholder level**: End user, manager, executive, technical, business
+- **Relationship stage**: New client, established, frustrated/escalated
 
 ### 2. Research Context
 
 Gather relevant background from available sources:
 
 **~~email:**
-- Previous correspondence with this customer on this topic
+- Previous correspondence with this client on this topic
 - Any commitments or timelines previously shared
 - Tone and style of the existing thread
 
 **~~chat:**
-- Internal discussions about this customer or topic
-- Any guidance from product, engineering, or leadership
+- Internal discussions about this client or topic
+- Any guidance from product or engineering
 - Similar situations and how they were handled
 
 **~~CRM (if connected):**
 - Account details and plan level
 - Contact information and key stakeholders
 - Previous escalations or sensitive issues
-
-**~~support platform (if connected):**
-- Related tickets and their resolution
-- Known issues or workarounds
-- SLA status and response time commitments
 
 **~~knowledge base:**
 - Official documentation or help articles to reference
@@ -70,7 +66,7 @@ Produce a response tailored to the situation:
 ```
 ## Draft Response
 
-**To:** [Customer contact name]
+**To:** [Client contact name]
 **Re:** [Subject/topic]
 **Channel:** [Email / Ticket / Chat]
 **Tone:** [Empathetic / Professional / Technical / Celebratory / Candid]
@@ -91,16 +87,16 @@ Produce a response tailored to the situation:
 
 ### 4. Situation-Specific Approaches
 
-**Answering a product question:**
+**Answering a platform question:**
 - Lead with the direct answer
 - Provide relevant documentation links
 - Offer to connect them with the right resource if needed
 - If you don't know the answer: say so honestly, commit to finding out, give a timeline
 
-**Responding to an issue or bug:**
-- Acknowledge the impact on their work
+**Responding to a job posting issue:**
+- Acknowledge the impact on their recruitment
 - State what you know about the issue and its status
-- Provide workaround if available
+- Provide workaround if available (manual posting, temporary feed fix)
 - Set expectations for resolution timeline
 - Commit to updates at regular intervals
 
@@ -111,20 +107,20 @@ Produce a response tailored to the situation:
 - Identify the person accountable for resolution
 - Offer a meeting or call if appropriate for the severity
 
-**Delivering bad news (feature sunset, delay, can't-fix):**
+**Delivering bad news (feature not planned, feed limitation):**
 - Be direct — don't bury the news
 - Explain the reasoning honestly
 - Acknowledge the impact on them specifically
 - Offer alternatives or mitigation
 - Provide a clear path forward
 
-**Sharing good news (feature launch, milestone, recognition):**
+**Sharing good news (issue resolved, feature launched):**
 - Lead with the positive outcome
 - Connect it to their specific goals or use case
 - Suggest next steps to capitalize on the good news
 - Express genuine enthusiasm
 
-**Declining a request (feature request, discount, exception):**
+**Declining a request (custom development, exception):**
 - Acknowledge the request and its reasoning
 - Be honest about the decision
 - Explain the why without being dismissive
@@ -140,7 +136,7 @@ Before presenting the draft, verify:
 - [ ] No product roadmap details that shouldn't be shared externally
 - [ ] Accurate references to previous conversations
 - [ ] Clear next steps and ownership
-- [ ] Appropriate for the stakeholder level (not too technical for executives, not too vague for engineers)
+- [ ] Appropriate for the stakeholder level
 - [ ] Length is appropriate for the channel (shorter for chat, fuller for email)
 
 ### 6. Offer Iterations

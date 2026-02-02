@@ -7,7 +7,7 @@ argument-hint: "<ticket or issue description>"
 
 > If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../CONNECTORS.md).
 
-Categorize, prioritize, and route an incoming support ticket or customer issue. Produces a structured triage assessment with a suggested initial response.
+Categorize, prioritize, and route an incoming support ticket or customer issue. Produces a structured triage assessment with a suggested initial response. Optimized for FashionUnited's job board, employer branding, and advertising support.
 
 ## Usage
 
@@ -16,10 +16,11 @@ Categorize, prioritize, and route an incoming support ticket or customer issue. 
 ```
 
 Examples:
-- `/triage Customer says their dashboard has been showing a blank page since this morning`
-- `/triage "I was charged twice for my subscription this month"`
-- `/triage User can't connect their SSO — getting a 403 error on the callback URL`
-- `/triage Feature request: they want to export reports as PDF`
+- `/triage Client says their XML feed jobs aren't appearing — submitted 50 jobs but only 12 showing`
+- `/triage Employer branding page shows old logo despite updating it twice this week`
+- `/triage Recruitment agency can't log into the job posting dashboard — getting a 403 error`
+- `/triage Banner campaign not delivering impressions — client spent their budget but low reach`
+- `/triage Feature request: they want to export job performance metrics as CSV`
 
 ## Workflow
 
@@ -27,17 +28,17 @@ Examples:
 
 Read the input and extract:
 
-- **Core problem**: What is the customer actually experiencing?
-- **Symptoms**: What specific behavior or error are they seeing?
-- **Customer context**: Who is this? Any account details, plan level, or history available?
-- **Urgency signals**: Are they blocked? Is this production? How many users affected?
+- **Core problem**: What is the client actually experiencing?
+- **Product area**: Dashboard, XML feed, scraper, employer branding, or advertising?
+- **Client context**: Who is this? Account type, plan level, or history available?
+- **Urgency signals**: Are jobs not appearing? Is a campaign deadline approaching?
 - **Emotional state**: Frustrated, confused, matter-of-fact, escalating?
 
 ### 2. Categorize and Prioritize
 
 Using the category taxonomy and priority framework from the **ticket-triage** skill:
 
-- Assign a **primary category** (bug, how-to, feature request, billing, account, integration, security, data, performance) and an optional secondary category
+- Assign a **primary category** (job posting, feed/integration, employer branding, advertising, account, billing) and an optional secondary category
 - Assign a **priority** (P1–P4) based on impact and urgency
 - Identify the **product area** the issue maps to
 
@@ -45,7 +46,7 @@ Using the category taxonomy and priority framework from the **ticket-triage** sk
 
 Before routing, check available sources:
 
-- **~~support platform**: Search for similar open or recently resolved tickets
+- **~~CRM**: Search for similar open or recently resolved tickets for this client
 - **~~knowledge base**: Check for known issues or existing documentation
 - **~~project tracker**: Check if there's an existing bug report or feature request
 
@@ -60,14 +61,14 @@ Using the routing rules from the **ticket-triage** skill, recommend which team o
 
 **Category:** [Primary] / [Secondary if applicable]
 **Priority:** [P1-P4] — [Brief justification]
-**Product area:** [Area/team]
+**Product area:** [Dashboard / XML Feed / Scraper / Employer Branding / Advertising]
 
 ### Issue Summary
-[2-3 sentence summary of what the customer is experiencing]
+[2-3 sentence summary of what the client is experiencing]
 
 ### Key Details
-- **Customer:** [Name/account if known]
-- **Impact:** [Who and what is affected]
+- **Client:** [Name/account if known]
+- **Impact:** [Jobs affected, campaign status, page visibility]
 - **Workaround:** [Available / Not available / Unknown]
 - **Related tickets:** [Links to similar issues if found]
 - **Known issue:** [Yes — link / No / Checking]
@@ -77,21 +78,21 @@ Using the routing rules from the **ticket-triage** skill, recommend which team o
 **Why:** [Brief reasoning]
 
 ### Suggested Initial Response
-[Draft first response to the customer — acknowledge the issue,
+[Draft first response to the client — acknowledge the issue,
 set expectations, provide workaround if available.
 Use the auto-response templates from the ticket-triage skill
 as a starting point.]
 
 ### Internal Notes
 - [Any additional context for the agent picking this up]
-- [Reproduction hints if it's a bug]
+- [Feed URL, scraper config, or account details if relevant]
 - [Escalation triggers to watch for]
 ```
 
 ### 6. Offer Next Steps
 
 After presenting the triage:
-- "Want me to draft a full response to the customer?"
+- "Want me to draft a full response to the client?"
 - "Should I search for more context on this issue?"
-- "Want me to check if this is a known bug in the tracker?"
+- "Want me to check if this is a known issue in the tracker?"
 - "Should I escalate this? I can package it with /escalate."
