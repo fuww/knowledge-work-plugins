@@ -1,5 +1,5 @@
 ---
-description: Run a comprehensive SEO audit — keyword research, on-page analysis, content gaps, technical checks, and competitor comparison
+description: Run an SEO audit with keyword research, content gaps, and competitor comparison
 argument-hint: "<url or topic> [audit type]"
 ---
 
@@ -7,30 +7,44 @@ argument-hint: "<url or topic> [audit type]"
 
 > If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../CONNECTORS.md).
 
-Audit a website's SEO health, research keyword opportunities, identify content gaps, and benchmark against competitors. Produces a prioritized action plan a marketer can execute immediately.
+Audit SEO health, research keyword opportunities, identify content gaps, and benchmark against competitors. Uses Google Search Console for ranking data and Plausible Analytics for traffic insights. Produces a prioritized action plan.
 
 ## Trigger
 
 User runs `/seo-audit` or asks for an SEO audit, keyword research, content gap analysis, technical SEO check, or competitor SEO comparison.
 
+## FashionUnited SEO Context
+
+FashionUnited SEO focuses on:
+- **Fashion industry keywords**: news, jobs, brands, trends, trade fairs
+- **Multi-market optimization**: SEO across 30+ market domains
+- **Content types**: news articles, job listings, company profiles, trend reports
+- **Competitors**: Fashion media sites, industry job boards, B2B platforms
+
+Common audit scopes:
+- Single market domain (e.g., fashionunited.de)
+- Cross-market comparison
+- Content category (news, jobs, marketplace)
+- Competitor benchmarking
+
 ## Inputs
 
 Gather the following from the user. If not provided, ask before proceeding:
 
-1. **URL or domain** — the site to audit, or a topic/keyword if running in keyword research mode
+1. **URL or domain** — the site to audit (e.g., fashionunited.com, fashionunited.de), or a topic/keyword if running in keyword research mode
 
 2. **Audit type** — one of:
    - **Full site audit** — end-to-end SEO review covering all sections below
-   - **Keyword research** — identify keyword opportunities for a topic or domain
-   - **Content gap analysis** — find topics competitors rank for that you don't
+   - **Keyword research** — identify keyword opportunities for fashion industry topics
+   - **Content gap analysis** — find topics competitors rank for that FashionUnited doesn't
    - **Technical SEO check** — crawlability, speed, structured data, and infrastructure issues
-   - **Competitor SEO comparison** — head-to-head SEO benchmarking against specific competitors
+   - **Competitor SEO comparison** — head-to-head SEO benchmarking against fashion media competitors
 
    If not specified, default to **full site audit**.
 
-3. **Target keywords or topics** (optional) — specific keywords the user is already targeting or wants to rank for
+3. **Target keywords or topics** (optional) — specific keywords or fashion industry topics (e.g., "sustainable fashion", "fashion jobs", "trade fair calendar")
 
-4. **Competitors** (optional) — domains or companies to compare against. If not provided and the audit type requires competitor data, use web search to identify 2-3 likely competitors based on the user's domain and keyword space.
+4. **Competitors** (optional) — domains to compare against. Common fashion media competitors include WWD, Business of Fashion, Drapers, TextilWirtschaft (by market).
 
 ## Process
 
@@ -38,16 +52,18 @@ Gather the following from the user. If not provided, ask before proceeding:
 
 Research keywords related to the user's domain, topic, or target keywords.
 
-**If ~~SEO tools are connected:**
-- Pull keyword data, search volume, keyword difficulty scores, and ranking positions automatically
+**If Google Search Console is connected:**
+- Pull ranking data, impressions, clicks, and CTR for existing keywords
 - Identify keywords the site currently ranks for and where it's gaining or losing ground
+- Review index coverage and crawl issues
 
-**If ~~product analytics are connected:**
-- Cross-reference keyword targets with actual organic traffic data to validate which keywords are driving visits and conversions
+**If Plausible Analytics is connected:**
+- Cross-reference keyword targets with actual organic traffic data
+- Identify which content is driving the most visits and engagement
 
 **If tools are not connected:**
 - Use web search to research the keyword landscape
-- Note: "For more precise volume and difficulty data, connect an SEO tool like Ahrefs or Semrush via MCP. The audit will auto-populate with ranking data."
+- Note: "Connect Google Search Console for precise ranking data and Plausible Analytics for traffic insights."
 
 For each keyword opportunity, assess:
 - **Primary keywords** — high-intent terms directly tied to the user's product or service
@@ -185,5 +201,6 @@ After presenting the audit, ask:
 - Draft content briefs for the top keyword opportunities?
 - Create optimized title tags and meta descriptions for your key pages?
 - Build a content calendar based on the gap analysis?
-- Dive deeper into any specific section of the audit?
-- Run this same analysis for a different competitor or domain?"
+- Run this analysis for a different FashionUnited market domain?
+- Compare SEO performance across multiple FashionUnited markets?
+- Dive deeper into any specific section of the audit?"

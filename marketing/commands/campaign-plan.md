@@ -1,36 +1,55 @@
 ---
-description: Generate a full campaign brief with objectives, channels, content calendar, and success metrics
-argument-hint: "<campaign objective or product>"
+description: Generate a campaign brief for trade fair coverage, partnership announcements, or seasonal content
+argument-hint: "<campaign objective or event>"
 ---
 
 # Campaign Plan
 
 > If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../CONNECTORS.md).
 
-Generate a comprehensive marketing campaign brief with objectives, audience, messaging, channel strategy, content calendar, and success metrics.
+Generate a comprehensive marketing campaign brief with objectives, audience, messaging, channel strategy, content calendar, and success metrics. This command is configured for FashionUnited's content campaigns including trade fair coverage, media partnerships, and seasonal fashion content.
 
 ## Trigger
 
 User runs `/campaign-plan` or asks to plan, design, or build a marketing campaign.
 
+## FashionUnited Campaign Types
+
+Common campaign types for FashionUnited:
+
+| Campaign Type | Description | Typical Duration |
+|---------------|-------------|------------------|
+| Trade Fair Coverage | Comprehensive event coverage (Première Vision, Texworld, ISPO) | 2-3 weeks |
+| Fashion Week | Fashion week coverage and analysis | 1-2 weeks |
+| Partnership Launch | New federation, school, or advertiser partnership | 1 week |
+| Seasonal Content | Season-specific trend content (SS, AW collections) | 4-6 weeks |
+| Product Launch | New FashionUnited feature or service announcement | 2-4 weeks |
+| Newsletter Growth | Subscriber acquisition campaign | Ongoing |
+
 ## Inputs
 
 Gather the following from the user. If not provided, ask before proceeding:
 
-1. **Campaign goal** — the primary objective (e.g., drive signups, increase awareness, launch a product, generate leads, re-engage churned users)
+1. **Campaign goal** — the primary objective (e.g., drive traffic to event coverage, grow newsletter subscribers, launch partnership content, promote job board to recruiters)
 
-2. **Target audience** — who the campaign is aimed at (demographics, roles, industries, pain points, buying stage)
+2. **Target audience** — who the campaign is aimed at:
+   - Fashion professionals (brands, retailers, buyers)
+   - Recruiters and HR teams
+   - Job seekers
+   - Trade fair exhibitors/attendees
+   - Federation members
+   - Fashion students
 
-3. **Timeline** — campaign duration and any fixed dates (launch date, event date, seasonal deadline)
+3. **Timeline** — campaign duration and any fixed dates (event dates, embargo lifts, publication deadlines)
 
-4. **Budget range** — approximate budget or budget tier (optional; if not provided, generate a channel-agnostic plan and note where budget allocation would matter)
+4. **Markets/Languages** — which FashionUnited markets and languages the campaign will cover (optional; default is all applicable markets)
 
 5. **Additional context** (optional):
-   - Product or service being promoted
-   - Key differentiators or value propositions
-   - Previous campaign performance or learnings
-   - Brand guidelines or constraints
-   - Geographic focus
+   - Partner organizations involved
+   - Exclusive content or access agreements
+   - Previous campaign performance
+   - Advertiser requirements
+   - Geographic focus beyond standard markets
 
 ## Campaign Brief Structure
 
@@ -60,12 +79,14 @@ Recommend channels based on audience and goal. For each channel, include:
 - Why this channel fits the audience and objective
 - Content format recommendations
 - Estimated effort level (low, medium, high)
-- Budget allocation suggestion (if budget was provided)
+- Market/language coverage
 
-Consider channels from:
-- Owned: blog, email, website, social media profiles
-- Earned: PR, influencer partnerships, guest posts, community engagement
-- Paid: search ads, social ads, display, sponsored content, events
+FashionUnited channels:
+- **Website**: News articles, trend reports, event coverage on fashionunited.com domains
+- **Newsletters**: Market-specific newsletters via Mailchimp (daily for major markets, weekly for others)
+- **Social Media**: LinkedIn (B2B focus), Instagram (visual content), Facebook (community), X (news) via Social Champ
+- **Partner Channels**: Federation newsletters, trade fair communications, school networks
+- **Job Board**: Recruitment-focused content on FashionUnited Jobs
 
 ### 5. Content Calendar
 Create a week-by-week (or day-by-day for short campaigns) content calendar:
@@ -90,10 +111,15 @@ List every content asset required for the campaign:
 Define KPIs aligned to the campaign objective:
 - Primary KPI with target number
 - Secondary KPIs (3-5)
-- How each metric will be tracked
+- How each metric will be tracked (Plausible Analytics for traffic, Mailchimp for email, Social Champ for social)
 - Reporting cadence recommendation
 
-If ~~product analytics is connected, reference any available historical performance benchmarks to inform targets.
+FashionUnited campaign metrics typically include:
+- **Traffic**: Pageviews, unique visitors, time on page (Plausible Analytics)
+- **Newsletter**: Open rate, click-through rate, new subscribers (Mailchimp)
+- **Social**: Engagement rate, reach, link clicks (Social Champ)
+- **SEO**: Search impressions, click-through rate, ranking positions (Google Search Console)
+- **Partnership**: Partner satisfaction, content volume, referral traffic
 
 ### 8. Budget Allocation (if budget provided)
 - Breakdown by channel or activity
@@ -116,5 +142,6 @@ Present the full campaign brief with clear headings and formatting. After the br
 "Would you like me to:
 - Dive deeper into any section?
 - Draft specific content pieces from the calendar?
-- Create a competitive analysis to inform the messaging?
-- Adjust the plan for a different budget or timeline?"
+- Create social media posts and schedule via Social Champ?
+- Design the newsletter sequence for this campaign?
+- Adapt the plan for additional markets/languages?"

@@ -1,5 +1,5 @@
 ---
-description: Build a marketing performance report with key metrics, trends, and optimization recommendations
+description: Build a performance report with traffic, SEO, and engagement metrics from Plausible and Google Search Console
 argument-hint: "<time period or campaign>"
 ---
 
@@ -7,30 +7,48 @@ argument-hint: "<time period or campaign>"
 
 > If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../CONNECTORS.md).
 
-Generate a marketing performance report with key metrics, trend analysis, insights, and optimization recommendations.
+Generate a marketing performance report with key metrics, trend analysis, insights, and optimization recommendations. Configured for FashionUnited's analytics stack: Plausible Analytics, Google Search Console, Mailchimp, and Social Champ.
 
 ## Trigger
 
 User runs `/performance-report` or asks for a marketing report, performance analysis, campaign results, or metrics summary.
 
+## FashionUnited Report Types
+
+Common report types for FashionUnited:
+
+| Report Type | Data Sources | Typical Frequency |
+|-------------|--------------|-------------------|
+| Website Traffic | Plausible Analytics | Weekly/Monthly |
+| SEO Performance | Google Search Console | Monthly |
+| Newsletter Analytics | Mailchimp | Weekly |
+| Social Media | Social Champ | Weekly |
+| Campaign Report | All sources | Per campaign |
+| Market Report | All sources (by market) | Monthly |
+
 ## Inputs
 
 1. **Report type** — determine which type of report the user needs:
-   - **Campaign report** — performance of a specific campaign
-   - **Channel report** — performance across a specific channel (email, social, paid, SEO, etc.)
-   - **Content performance** — how content pieces are performing
-   - **Overall marketing report** — cross-channel summary (weekly, monthly, quarterly)
-   - **Custom** — user-defined scope
+   - **Website traffic report** — pageviews, visitors, engagement from Plausible Analytics
+   - **SEO report** — search rankings, impressions, clicks from Google Search Console
+   - **Newsletter report** — email performance from Mailchimp
+   - **Social media report** — engagement and reach from Social Champ
+   - **Campaign report** — cross-channel performance for a specific campaign
+   - **Market report** — performance for a specific language/market
+   - **Overall marketing report** — cross-channel summary
 
 2. **Time period** — the reporting window (last week, last month, last quarter, custom date range)
 
-3. **Data source**:
-   - If ~~product analytics is connected: pull performance data automatically
-   - If not connected: ask the user to provide metrics. Prompt with: "Please paste or share your performance data. I can work with spreadsheets, CSV data, dashboard screenshots described in text, or just the key numbers."
+3. **Market/Language** (optional) — filter by specific FashionUnited market (e.g., fashionunited.de, fashionunited.fr)
 
-4. **Comparison period** (optional) — prior period or year-over-year for trend context
+4. **Data source**:
+   - If Plausible Analytics is connected: pull traffic data automatically
+   - If Mailchimp is connected: pull newsletter metrics automatically
+   - If not connected: ask the user to provide metrics
 
-5. **Stakeholder audience** (optional) — who will read this report (executive summary style vs. detailed analyst view)
+5. **Comparison period** (optional) — prior period or year-over-year for trend context
+
+6. **Stakeholder audience** (optional) — who will read this report (executive summary vs. detailed analyst view)
 
 ## Report Structure
 
@@ -53,57 +71,57 @@ Status indicators:
 
 #### Metrics by Report Type
 
-**Campaign Report:**
-- Impressions and reach
-- Click-through rate (CTR)
-- Conversion rate
-- Cost per acquisition (CPA)
-- Return on ad spend (ROAS) or ROI
-- Total conversions/signups/leads
+**Website Traffic Report (Plausible Analytics):**
+- Unique visitors and pageviews
+- Bounce rate
+- Visit duration
+- Top pages and top referrers
+- Geographic distribution (by market)
+- Device and browser breakdown
 
-**Channel Report (Email):**
+**SEO Report (Google Search Console):**
+- Total impressions and clicks
+- Average click-through rate (CTR)
+- Average position
+- Top queries and pages
+- Ranking changes for target keywords
+- Index coverage status
+
+**Newsletter Report (Mailchimp):**
 - Emails sent, delivered, bounced
-- Open rate
+- Open rate (by market/list)
 - Click-through rate
 - Unsubscribe rate
-- Conversion rate
+- List growth (new subscribers minus unsubscribes)
+- Top-clicked links
 
-**Channel Report (Social):**
+**Social Media Report (Social Champ):**
 - Impressions and reach
 - Engagement rate (likes, comments, shares)
 - Follower growth
 - Click-through rate
-- Top-performing posts
+- Top-performing posts by platform
 
-**Channel Report (Paid):**
-- Spend
-- Impressions and clicks
-- CTR
-- CPC and CPM
-- Conversions and CPA
-- ROAS
+**Campaign Report (Cross-Channel):**
+- Website traffic driven (Plausible)
+- Newsletter performance (Mailchimp)
+- Social engagement (Social Champ)
+- SEO impact (Google Search Console)
+- Campaign-specific landing page performance
 
-**Channel Report (SEO/Organic):**
-- Organic sessions
-- Keyword rankings (movement)
-- Pages indexed
-- Backlinks acquired
-- Top-performing pages
+**Market Report:**
+- All metrics filtered by specific market domain (e.g., fashionunited.de)
+- Market-specific newsletter performance
+- Local SEO rankings
+- Regional traffic trends
 
 **Content Performance:**
-- Pageviews and unique visitors
+- Pageviews and unique visitors per article
 - Time on page
-- Bounce rate
 - Social shares
-- Conversions attributed to content
-- Top and bottom performers
-
-**Overall Marketing Report:**
-- Total leads generated
-- Marketing qualified leads (MQLs)
-- Pipeline contribution
-- Customer acquisition cost (CAC)
-- Channel-by-channel summary
+- Newsletter inclusion performance
+- SEO ranking for article keywords
+- Top and bottom performers by category (news, jobs, marketplace)
 
 ### 3. Trend Analysis
 - Performance trend over the period (week-over-week or month-over-month)
@@ -159,5 +177,7 @@ Prioritize recommendations in a 2x2 matrix format:
 Ask: "Would you like me to:
 - Create a slide-ready summary of these results?
 - Draft a stakeholder email with the key takeaways?
-- Dive deeper into any specific metric or channel?
+- Dive deeper into any specific metric, channel, or market?
+- Compare performance across multiple FashionUnited markets?
+- Generate SEO recommendations based on the Google Search Console data?
 - Set up a reporting template you can reuse next period?"

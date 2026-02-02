@@ -4,37 +4,31 @@
       "type": "http",
       "url": "https://mcp.slack.com/mcp"
     },
-    "canva": {
-      "type": "http",
-      "url": "https://mcp.canva.com/mcp"
-    },
     "figma": {
       "type": "http",
       "url": "https://mcp.figma.com/mcp"
     },
-    "hubspot": {
-      "type": "http",
-      "url": "https://mcp.hubspot.com/anthropic"
+    "google-workspace": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@anthropic/google-workspace-mcp"]
     },
-    "amplitude": {
+    "mailchimp": {
       "type": "http",
-      "url": "https://mcp.amplitude.com/mcp"
+      "url": "https://actions.zapier.com/mcp/mailchimp/v1"
     },
-    "notion": {
+    "social-champ": {
       "type": "http",
-      "url": "https://mcp.notion.com/mcp"
+      "url": "https://actions.zapier.com/mcp/social-champ/v1"
     },
-    "ahrefs": {
-      "type": "http",
-      "url": "https://api.ahrefs.com/mcp/mcp"
-    },
-    "similarweb": {
-      "type": "http",
-      "url": "https://mcp.similarweb.com"
-    },
-    "klaviyo": {
-      "type": "http",
-      "url": "https://mcp.klaviyo.com/mcp"
+    "plausible": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@alexanderop/plausible-mcp"],
+      "env": {
+        "PLAUSIBLE_API_KEY": "${PLAUSIBLE_API_KEY}",
+        "PLAUSIBLE_SITE_ID": "${PLAUSIBLE_SITE_ID}"
+      }
     }
   }
 }

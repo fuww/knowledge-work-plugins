@@ -1,11 +1,39 @@
 ---
 name: content-creation
-description: Draft marketing content across channels — blog posts, social media, email newsletters, landing pages, press releases, and case studies. Use when writing any marketing content, when you need channel-specific formatting, SEO-optimized copy, headline options, or calls to action.
+description: Draft fashion industry content — news articles, newsletters, social media, press releases, and partnership stories. Use when writing any marketing content, when you need channel-specific formatting, SEO-optimized copy, headline options, or calls to action.
 ---
 
 # Content Creation Skill
 
-Guidelines and frameworks for creating effective marketing content across channels.
+Guidelines and frameworks for creating effective marketing content across channels. Pre-configured with FashionUnited content types, editorial standards, and multi-language considerations.
+
+## FashionUnited Content Types
+
+### News Article Structure
+1. **Headline** — newsworthy, factual, includes key details (aim for 60-80 characters)
+2. **Lead paragraph** — who, what, when, where, why in 2-3 sentences
+3. **Body sections** — supporting details, context, quotes from sources
+4. **Expert perspective** — industry expert quotes or analysis where relevant
+5. **Background context** — relevant history or industry context
+6. **Related content** — links to related articles or topics
+7. **Meta description** — under 160 characters, news-focused, compels the click
+
+### Trade Fair Coverage Structure
+1. **Headline** — event name, key finding or announcement
+2. **Event context** — dates, location, significance
+3. **Key highlights** — major announcements, trends observed
+4. **Exhibitor stories** — notable exhibitor features or innovations
+5. **Trend analysis** — what this means for the industry
+6. **Photo gallery** — visual documentation with proper credits
+7. **Next event information** — upcoming dates, early registration
+
+### Partnership Content Structure
+1. **Partnership label** — clear "In partnership with [Partner]" disclosure
+2. **Value proposition** — what the partnership offers readers
+3. **Partner introduction** — relevant background on the partner organization
+4. **Content body** — valuable information that serves the reader
+5. **Clear CTA** — action relevant to the partnership
+6. **Disclosure** — transparent about the commercial relationship
 
 ## Content Type Templates
 
@@ -115,7 +143,16 @@ Guidelines and frameworks for creating effective marketing content across channe
 
 ## Headline and Hook Formulas
 
-### Headline Formulas
+### Fashion Industry Headline Formulas
+- **[Brand/Company] [action] [impact]** — "H&M Launches Circular Fashion Initiative Across European Markets"
+- **[Event] [key finding]** — "Première Vision Report: Sustainable Materials Dominate Sourcing Trends"
+- **[Number] [trend/finding] at [event/period]** — "5 Key Takeaways from Paris Fashion Week SS26"
+- **[Topic]: What [audience] needs to know** — "EU Textile Regulations: What Brands Need to Know"
+- **[Interview subject] on [topic]** — "Stella McCartney on Why Luxury Must Lead Sustainability"
+- **The future of [topic] according to [source]** — "The Future of Fashion Retail According to Industry Leaders"
+- **[Statistic] reveals [insight]** — "Survey Reveals 70% of Brands Accelerating Sustainability Goals"
+
+### General Headline Formulas
 - **How to [achieve result] [without common obstacle]** — "How to Double Your Email Open Rates Without Sending More Emails"
 - **[Number] [adjective] ways to [achieve result]** — "7 Proven Ways to Reduce Customer Churn"
 - **Why [common belief] is wrong (and what to do instead)** — "Why More Content Is Not the Answer (And What to Do Instead)"

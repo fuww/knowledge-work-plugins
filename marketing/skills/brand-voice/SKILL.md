@@ -1,11 +1,39 @@
 ---
 name: brand-voice
-description: Apply and enforce brand voice, style guide, and messaging pillars across content. Use when reviewing content for brand consistency, documenting a brand voice, adapting tone for different audiences, or checking terminology and style guide compliance.
+description: Apply and enforce FashionUnited brand voice, editorial ethics, and style guide across content. Use when reviewing content for brand consistency, adapting tone for different audiences, checking terminology, or ensuring editorial standards compliance.
 ---
 
 # Brand Voice Skill
 
-Frameworks for documenting, applying, and enforcing brand voice and style guidelines across marketing content.
+Frameworks for documenting, applying, and enforcing brand voice and style guidelines across marketing content. Pre-configured with FashionUnited brand voice, editorial ethics, and multi-language content standards.
+
+## FashionUnited Brand Voice
+
+### Brand Personality
+FashionUnited is the trusted voice of the fashion industry — a knowledgeable insider who explains industry developments clearly, celebrates innovation while maintaining journalistic objectivity, and treats all readers as respected professionals.
+
+### Voice Attributes
+
+| Attribute | We Are | We Are Not | Example |
+|-----------|--------|------------|---------|
+| Authoritative | Expert, well-researched, industry-leading | Arrogant, dismissive, inaccessible | "Industry data shows a 15% increase in sustainable material sourcing." |
+| Accessible | Clear, jargon-free, welcoming | Dumbed-down, simplistic, condescending | "Here's what the new EU textile regulations mean for your business." |
+| Professional | Business-appropriate, polished, reliable | Stuffy, overly formal, impersonal | "The collaboration brings together expertise in design and manufacturing." |
+| Global | Culturally aware, inclusive, internationally minded | Regionally biased, insensitive, parochial | "Fashion weeks across Milan, Paris, and New York revealed common themes." |
+| Timely | Current, news-driven, relevant | Stale, dated, out of touch | "Breaking: Major brand announces sustainability commitment ahead of COP." |
+
+### Editorial Ethics Code
+
+All FashionUnited content must adhere to these standards:
+
+| Standard | Requirement |
+|----------|-------------|
+| Objectivity | Fact-based reporting, balanced coverage, no promotional bias in editorial |
+| Attribution | Clear sourcing for all quotes, data, and claims |
+| Separation | Clear distinction between editorial and sponsored/partner content |
+| Embargoes | Respect for agreed publication dates with partners and sources |
+| Conflicts | Disclosure of any relationships that could bias coverage |
+| Accuracy | Verification of facts before publication, prompt corrections when needed |
 
 ## Brand Voice Documentation Framework
 
@@ -80,18 +108,18 @@ Example:
 
 The brand voice stays consistent, but tone adapts to context. Tone is the emotional inflection applied to the voice.
 
-### Tone by Channel
+### FashionUnited Tone by Channel
 
 | Channel | Tone Adaptation | Example |
 |---------|----------------|---------|
-| Blog | Informative, conversational, educational | "Let's walk through how this works and why it matters for your team." |
-| Social media (LinkedIn) | Professional, thought-provoking, concise | "Three things we learned from running 50 campaigns this quarter." |
-| Social media (Twitter/X) | Punchy, direct, sometimes witty | "Your landing page has 3 seconds. Make them count." |
-| Email marketing | Personal, helpful, action-oriented | "We put together something we think you'll find useful." |
-| Sales collateral | Confident, benefit-driven, specific | "Teams using our platform reduce reporting time by 40%." |
-| Support/Help docs | Clear, patient, step-by-step | "If you see this error, here's how to fix it." |
-| Press release | Formal, factual, newsworthy | "The company today announced the launch of..." |
-| Error messages | Empathetic, helpful, blame-free | "Something went wrong on our end. We're looking into it." |
+| News article | Journalistic, factual, objective | "The partnership brings together two industry leaders in sustainable manufacturing." |
+| Newsletter | Curated, helpful, engaging | "This week's top stories: Fashion Week highlights and sustainability news." |
+| Social (LinkedIn) | Professional, industry-focused, insightful | "Three takeaways from Première Vision that signal what's next for sustainable sourcing." |
+| Social (Instagram) | Visual-first, trend-aware, engaging | "Behind the scenes at Milan Fashion Week. Swipe for our top moments." |
+| Social (X/Twitter) | News-driven, concise, timely | "Breaking: Major brand announces circular fashion initiative." |
+| Partnership content | Collaborative, value-focused, clearly labeled | "In partnership with [Partner]: How the industry is adapting to new regulations." |
+| Press release | Formal, factual, newsworthy | "FashionUnited today announced the launch of..." |
+| Job board content | Helpful, career-focused, encouraging | "Discover fashion industry careers that match your skills." |
 
 ### Tone by Situation
 
@@ -144,15 +172,27 @@ Document and enforce these choices consistently:
 
 ## Terminology Management
 
-### Preferred Terms
+### FashionUnited Preferred Terms
 
-Maintain a list of preferred terms and their incorrect alternatives:
+| Use This | Not This | Notes |
+|----------|----------|-------|
+| fashion industry | fashion sector | Industry is preferred |
+| sustainable fashion | eco-fashion, green fashion | Sustainable is the standard term |
+| circular fashion | circular economy (in fashion context) | More specific |
+| FashionUnited | Fashion United, fashionunited | One word, capital F and U |
+| trade fair | trade show | European standard |
+| collection | line | More formal/professional |
+| brand | label | Brand is preferred for companies |
+| retailer | store | More professional |
+| job seeker | candidate | More inclusive |
+| recruiter | hiring manager | When referring to HR professionals |
+
+### General Preferred Terms
 
 | Use This | Not This | Notes |
 |----------|----------|-------|
 | sign up (verb) | signup (verb) | "signup" is the noun form |
 | log in (verb) | login (verb) | "login" is the noun/adjective form |
-| set up (verb) | setup (verb) | "setup" is the noun/adjective form |
 | email | e-mail | No hyphen |
 | website | web site | One word |
 | data is (singular) | data are | Unless the publication requires plural |

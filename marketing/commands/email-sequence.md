@@ -1,5 +1,5 @@
 ---
-description: Design and draft multi-email sequences for nurture flows, onboarding, drip campaigns, and more
+description: Design newsletter sequences for subscriber onboarding, re-engagement, or event follow-up
 argument-hint: "[sequence type]"
 ---
 
@@ -7,42 +7,59 @@ argument-hint: "[sequence type]"
 
 > If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../CONNECTORS.md).
 
-Design and draft complete email sequences with full copy, timing, branching logic, and performance benchmarks for any lifecycle or campaign use case.
+Design and draft complete email sequences with full copy, timing, branching logic, and performance benchmarks. Configured for FashionUnited's multi-language newsletter operations via Mailchimp.
 
 ## Trigger
 
 User runs `/email-sequence` or asks to create, design, build, or draft an email sequence, drip campaign, nurture flow, or onboarding series.
+
+## FashionUnited Newsletter Context
+
+FashionUnited operates market-specific newsletters in 9 languages:
+- **Daily newsletters**: English, German, French, Spanish, Italian, Dutch
+- **Weekly newsletters**: Portuguese, Russian, Chinese
+
+Common sequence types for FashionUnited:
+- **Subscriber onboarding**: Welcome new subscribers and drive engagement
+- **Re-engagement**: Win back inactive subscribers
+- **Event follow-up**: Post-trade fair or fashion week engagement
+- **Partnership welcome**: Onboard new federation or school partnership subscribers
+- **Job board promotion**: Introduce job seeker features to newsletter subscribers
 
 ## Inputs
 
 Gather the following from the user. If not provided, ask before proceeding:
 
 1. **Sequence type** — one of:
-   - Onboarding
-   - Lead nurture
+   - Subscriber onboarding
    - Re-engagement
-   - Product launch
-   - Event follow-up
-   - Upgrade/upsell
-   - Win-back
-   - Educational drip
+   - Event follow-up (trade fair, fashion week)
+   - Partnership welcome
+   - Job board promotion
+   - Product launch (new FashionUnited feature)
+   - Educational drip (fashion industry insights)
 
-2. **Goal** — what the sequence should achieve (e.g., activate new users, convert leads to customers, reduce churn, drive event attendance, upsell to a higher tier)
+2. **Goal** — what the sequence should achieve (e.g., increase newsletter engagement, drive traffic to job board, convert to premium subscription)
 
-3. **Audience** — who receives this sequence, what stage they are at, and any relevant segmentation details (role, industry, behavior triggers, lifecycle stage)
+3. **Audience** — who receives this sequence:
+   - New subscribers (by market/language)
+   - Inactive subscribers (define inactivity threshold)
+   - Trade fair attendees
+   - Federation members
+   - Fashion students
+   - Recruiters/HR professionals
 
-4. **Number of emails** (optional) — if not specified, recommend a count based on the sequence type using the templates in the Sequence Type Templates section below
+4. **Market/Language** — which FashionUnited markets and languages (affects subject line localization, send times, content focus)
 
-5. **Timing/cadence preferences** (optional) — desired spacing between emails (e.g., "every 3 days", "weekly", "aggressive first week then taper off")
+5. **Number of emails** (optional) — if not specified, recommend based on sequence type
 
-6. **Brand voice** — if configured in local settings, apply automatically and inform the user. If not configured, ask: "Do you have brand voice guidelines I should follow? If not, I'll use a clear, conversational professional tone."
+6. **Timing/cadence preferences** (optional) — default is optimized for newsletter subscriber expectations
 
 7. **Additional context** (optional):
-   - Specific offers, discounts, or incentives to include
-   - CTAs or landing pages to link to
-   - Content assets available (blog posts, case studies, videos, guides)
-   - Product features to highlight
-   - Competitor differentiators to reference
+   - Partner organizations involved
+   - Event or campaign tie-in
+   - Featured content or articles to promote
+   - Job board features to highlight
 
 ## Process
 
@@ -144,24 +161,27 @@ Introduction and what they will learn -- Lesson 1: foundational concept -- Lesso
 
 ## Tool Integration
 
-### If ~~email marketing is connected (e.g., Klaviyo, Mailchimp, Customer.io)
-- Reference how to set up the sequence as a flow or automation in the platform
-- Note any platform-specific features to use (e.g., smart send time, conditional splits, A/B testing)
-- Map the branching logic to the platform's visual flow builder concepts
+### Mailchimp (FashionUnited's email marketing platform)
+- Reference how to set up the sequence as a Customer Journey in Mailchimp
+- Use Mailchimp's features: send time optimization, conditional content, A/B testing
+- Map branching logic to Mailchimp's journey builder
+- Note list/audience segmentation by market and language
+- Reference merge tags for personalization: `*|FNAME|*`, `*|LANGUAGE|*`, etc.
 
-### If ~~marketing automation or ~~CRM is connected (e.g., HubSpot, Marketo)
-- Reference lead scoring data to inform segmentation and exit conditions
-- Use lifecycle stage data to tailor messaging per segment
-- Note how to set enrollment triggers based on CRM properties or list membership
+### Multi-Language Considerations
+- Subject lines may need localization for each market
+- Consider send time optimization per timezone
+- Content may need market-specific adaptations (local events, market news)
+- Use Mailchimp segments to manage multi-language audiences
 
-### If no tools are connected
-- Deliver all email content in copy-paste-ready format
-- Include a setup checklist the user can follow in any email platform:
-  1. Create the automation or flow
-  2. Set the enrollment trigger
-  3. Add each email with the specified delays
-  4. Configure branching and exit conditions
-  5. Set up tracking for the recommended metrics
+### Mailchimp Setup Checklist
+1. Create new Customer Journey in Mailchimp
+2. Select audience and entry trigger
+3. Add emails with specified delays
+4. Configure conditional splits for engagement-based branching
+5. Set up A/B tests for subject lines
+6. Enable send time optimization
+7. Set up tracking and reporting
 
 ## Output
 
@@ -214,6 +234,7 @@ Summary of all conditions, exits, and suppressions in a reference list.
 Ask: "Would you like me to:
 - Revise the copy or tone for any specific email?
 - Add a branching path for a specific scenario?
-- Create a variation of this sequence for a different audience segment?
+- Create a localized variation for another market/language?
 - Draft the A/B test variants for the subject lines?
-- Build a companion sequence (e.g., a post-purchase follow-up after this lead nurture converts)?"
+- Build a companion sequence (e.g., re-engagement for subscribers who don't convert)?
+- Generate the Mailchimp setup instructions for this sequence?"

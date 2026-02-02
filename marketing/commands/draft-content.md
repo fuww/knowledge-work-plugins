@@ -1,5 +1,5 @@
 ---
-description: Draft blog posts, social media, email newsletters, landing pages, press releases, and case studies
+description: Draft fashion news articles, newsletters, social media posts, press releases, and case studies
 argument-hint: "<content type and topic>"
 ---
 
@@ -7,7 +7,7 @@ argument-hint: "<content type and topic>"
 
 > If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../CONNECTORS.md).
 
-Generate marketing content drafts tailored to a specific content type, audience, and brand voice.
+Generate marketing content drafts tailored to a specific content type, audience, and brand voice. This command is configured for FashionUnited's editorial standards and multi-language content operations.
 
 ## Trigger
 
@@ -18,30 +18,63 @@ User runs `/draft-content` or asks to draft, write, or create marketing content.
 Gather the following from the user. If not provided, ask before proceeding:
 
 1. **Content type** — one of:
-   - Blog post
+   - News article (fashion industry news, trend reports, company announcements)
    - Social media post (specify platform: LinkedIn, Twitter/X, Instagram, Facebook)
-   - Email newsletter
-   - Landing page copy
+   - Newsletter (market-specific editorial digest)
    - Press release
-   - Case study
+   - Case study (partnership success story, advertiser spotlight)
+   - Trade fair coverage (event preview, daily recap, trend report)
 
 2. **Topic** — the subject or theme of the content
 
-3. **Target audience** — who this content is for (role, industry, seniority, pain points)
+3. **Target audience** — who this content is for (fashion professionals, recruiters, brands, retailers, buyers, job seekers)
 
 4. **Key messages** — 2-4 main points or takeaways to communicate
 
-5. **Tone** — e.g., authoritative, conversational, inspirational, technical, witty (optional if brand voice is configured)
+5. **Tone** — FashionUnited brand voice is authoritative yet accessible by default. Specify if different tone needed.
 
-6. **Length** — target word count or format constraint (e.g., "1000 words", "280 characters", "3 paragraphs")
+6. **Length** — target word count or format constraint (e.g., "800 words", "280 characters", "newsletter section")
+
+7. **Language/Market** (optional) — specify if content is for a specific market (e.g., German, French, Spanish) for localization guidance
 
 ## Brand Voice
 
-- If the user has a brand voice configured in their local settings file, apply it automatically. Inform the user that brand voice settings are being applied.
-- If no brand voice is configured, ask: "Do you have brand voice guidelines you'd like me to follow? If not, I'll use a neutral professional tone."
-- Apply the specified or default tone consistently throughout the draft.
+FashionUnited brand voice is pre-configured with these attributes:
+- **Authoritative**: Expert industry knowledge, well-researched content
+- **Accessible**: Clear language, avoiding unnecessary jargon
+- **Professional**: Business-appropriate tone for B2B audience
+- **Global**: Culturally aware, inclusive language
+- **Timely**: Current, relevant, news-driven
+
+Apply FashionUnited brand voice automatically unless the user specifies different requirements.
+
+## Editorial Ethics
+
+All content must adhere to FashionUnited editorial standards:
+- Journalistic objectivity and fact-based reporting
+- Clear attribution of sources and quotes
+- Separation of news and sponsored content (clearly label sponsored/partner content)
+- Respect for embargoes and exclusive access agreements
+- No conflicts of interest
 
 ## Content Generation by Type
+
+### News Article
+- Newsworthy headline (provide 2-3 options) — factual, specific, action-oriented
+- Lead paragraph answering who, what, when, where, why
+- Body sections with supporting details, quotes, context
+- Industry expert perspectives where relevant
+- Clear attribution of all sources
+- Related articles or context links
+- SEO considerations: primary keyword in headline and lead, fashion industry terminology
+
+### Trade Fair Coverage
+- Event name, dates, location in the headline or subhead
+- Event context and significance to the fashion industry
+- Key exhibitors, trends, or announcements
+- Quotes from organizers, exhibitors, or attendees
+- Photo gallery recommendations
+- Next event dates or call to action
 
 ### Blog Post
 - Engaging headline (provide 2-3 options)
@@ -54,21 +87,25 @@ Gather the following from the user. If not provided, ask before proceeding:
 ### Social Media Post
 - Platform-appropriate format and length
 - Hook in the first line
-- Hashtag suggestions (3-5 relevant hashtags)
+- Hashtag suggestions (3-5 relevant fashion industry hashtags)
 - Call to action or engagement prompt
-- Emoji usage appropriate to brand and platform
-- If LinkedIn: professional framing, paragraph breaks for readability
-- If Twitter/X: concise, punchy, within character limit
-- If Instagram: visual-first language, story-driven, hashtag block
+- Emoji usage appropriate to brand and platform (minimal for FashionUnited)
+- If LinkedIn: professional framing, industry insights, paragraph breaks for readability
+- If Twitter/X: concise, punchy, news-driven, within character limit
+- If Instagram: visual-first language, fashion imagery focus, hashtag block
+- Schedule via Social Champ for optimal posting times
 
-### Email Newsletter
+### Newsletter (Mailchimp)
 - Subject line (provide 2-3 options with open-rate considerations)
-- Preview text
-- Greeting
-- Body sections with clear hierarchy
-- Call to action button text
-- Sign-off
-- Unsubscribe note reminder
+- Preview text (compelling, not repeating subject line)
+- Market-specific greeting appropriate to the language/region
+- Featured story with compelling headline and brief summary
+- Additional story links with one-line descriptions
+- Job board highlights (if relevant to that market's newsletter)
+- Partner content section (clearly labeled)
+- Social media follow links
+- Unsubscribe and preference management links
+- Note: Content will be distributed via Mailchimp to market-specific subscriber lists
 
 ### Landing Page Copy
 - Headline and subheadline
@@ -88,14 +125,15 @@ Gather the following from the user. If not provided, ask before proceeding:
 - Media contact placeholder
 - Standard press release formatting
 
-### Case Study
-- Title emphasizing the result
-- Customer overview (industry, size, challenge)
-- Challenge section
-- Solution section (what was implemented)
-- Results section with metrics (prompt user for data)
-- Customer quote placeholder
-- Call to action
+### Case Study / Partnership Success Story
+- Title emphasizing the result or partnership value
+- Partner overview (company type, market position, goals)
+- Challenge or opportunity section
+- Solution section (partnership details, content produced, campaigns run)
+- Results section with metrics (traffic, engagement, leads, brand awareness)
+- Partner quote placeholder
+- Call to action (become a partner, advertise with FashionUnited)
+- Suitable for trade fair partnerships, federation collaborations, advertiser spotlights
 
 ## SEO Considerations (for web content)
 
@@ -109,8 +147,13 @@ For blog posts, landing pages, and other web-facing content:
 ## Output
 
 Present the draft with clear formatting. After the draft, include:
-- A brief note on what brand voice and tone were applied
+- A brief note on FashionUnited brand voice application
 - Any SEO recommendations (for web content)
-- Suggestions for next steps (e.g., "Review with your team", "Add customer quotes", "Pair with a visual")
+- Multi-language considerations if applicable (key terms that may need localization)
+- Suggestions for next steps (e.g., "Review with editor", "Add source quotes", "Pair with imagery from photo archive")
 
-Ask: "Would you like me to revise any section, adjust the tone, or create a variation for a different channel?"
+Ask: "Would you like me to:
+- Revise any section or adjust the tone?
+- Create a variation for a different channel (newsletter, social)?
+- Adapt this content for a different language market?
+- Schedule social promotion via Social Champ?"

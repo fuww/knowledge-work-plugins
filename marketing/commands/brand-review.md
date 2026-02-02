@@ -1,5 +1,5 @@
 ---
-description: Review content against your brand voice, style guide, and messaging pillars
+description: Review content against FashionUnited brand voice, style guide, and editorial ethics
 argument-hint: "<content to review>"
 ---
 
@@ -7,7 +7,7 @@ argument-hint: "<content to review>"
 
 > If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../CONNECTORS.md).
 
-Review marketing content against brand voice, style guidelines, and messaging standards. Flag deviations and provide specific improvement suggestions.
+Review marketing content against FashionUnited brand voice, style guidelines, editorial ethics, and messaging standards. Flag deviations and provide specific improvement suggestions.
 
 ## Trigger
 
@@ -17,13 +17,30 @@ User runs `/brand-review` or asks to review, check, or audit content against bra
 
 1. **Content to review** — accept content in any of these forms:
    - Pasted directly into the conversation
-   - A file path or ~~knowledge base reference (e.g. Notion page, shared doc)
+   - A file path or Google Workspace document reference
    - A URL to a published page
    - Multiple pieces for batch review
 
-2. **Brand guidelines source** (determined automatically):
-   - If a brand style guide is configured in local settings, use it automatically
-   - If not configured, ask: "Do you have a brand style guide or voice guidelines I should review against? You can paste them, share a file, or describe your brand voice. Otherwise, I'll do a general review for clarity, consistency, and professionalism."
+2. **Content type** (helps calibrate review):
+   - News article
+   - Newsletter
+   - Social media post
+   - Press release
+   - Partnership content
+
+3. **Market/Language** (optional) — specify if reviewing for a specific market (e.g., German, French)
+
+## FashionUnited Brand Guidelines
+
+FashionUnited brand voice is pre-configured with these attributes:
+
+| Attribute | We Are | We Are Not |
+|-----------|--------|------------|
+| Authoritative | Expert, well-researched, industry-leading | Arrogant, dismissive, inaccessible |
+| Accessible | Clear, jargon-free, welcoming | Dumbed-down, simplistic, condescending |
+| Professional | Business-appropriate, polished, reliable | Stuffy, overly formal, impersonal |
+| Global | Culturally aware, inclusive, internationally minded | Regionally biased, insensitive, parochial |
+| Timely | Current, news-driven, relevant | Stale, dated, out of touch |
 
 ## Review Process
 
@@ -74,15 +91,27 @@ Evaluate the content for:
 - Is the tone appropriate for the intended audience?
 - Are claims supported or substantiated?
 
+### FashionUnited Editorial Ethics (Always Checked)
+
+All content must adhere to FashionUnited editorial standards:
+
+| Standard | Check For |
+|----------|-----------|
+| Objectivity | Balanced coverage, fact-based reporting, no promotional bias in news content |
+| Attribution | Clear sourcing for all quotes and data, proper credit for images |
+| Separation | Clear distinction between editorial and sponsored/partner content |
+| Embargoes | Respect for agreed publication dates with partners and sources |
+| Conflicts | No undisclosed relationships that could bias coverage |
+
 ### Legal and Compliance Flags (Always Checked)
 
-Regardless of whether brand guidelines are configured, flag:
+Regardless of content type, flag:
 - **Unsubstantiated claims** — superlatives ("best", "fastest", "only") without evidence or qualification
-- **Missing disclaimers** — financial claims, health claims, or guarantees that may need legal disclaimers
+- **Missing attribution** — quotes, data, or images without proper sourcing
 - **Comparative claims** — comparisons to competitors that could be challenged
-- **Regulatory language** — content that may need compliance review (financial services, healthcare, etc.)
+- **Sponsored content labeling** — partner or advertiser content not clearly labeled
 - **Testimonial issues** — quotes or endorsements without attribution or disclosure
-- **Copyright concerns** — content that appears to be closely paraphrased from other sources
+- **Copyright concerns** — content that appears to be closely paraphrased from other sources or images without proper licensing
 
 ## Output Format
 
@@ -119,4 +148,5 @@ Ask: "Would you like me to:
 - Revise the full content with these suggestions applied?
 - Focus on fixing just the high-severity issues?
 - Review additional content against the same guidelines?
-- Help you document your brand voice for future reviews?"
+- Adapt this content for a different language market?
+- Check if this content is suitable for both editorial and newsletter distribution?"

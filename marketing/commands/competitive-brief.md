@@ -1,5 +1,5 @@
 ---
-description: Research competitors and generate a positioning and messaging comparison
+description: Research competitors in fashion media and generate positioning analysis
 argument-hint: "<competitor or market segment>"
 ---
 
@@ -7,11 +7,22 @@ argument-hint: "<competitor or market segment>"
 
 > If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../CONNECTORS.md).
 
-Research competitors and generate a structured competitive analysis comparing positioning, messaging, content strategy, and market presence.
+Research competitors in the fashion media industry and generate a structured competitive analysis comparing positioning, messaging, content strategy, and market presence.
 
 ## Trigger
 
 User runs `/competitive-brief` or asks for a competitive analysis, competitor research, or market comparison.
+
+## FashionUnited Competitive Landscape
+
+FashionUnited competes across multiple segments:
+
+| Segment | Competitors | Comparison Focus |
+|---------|-------------|------------------|
+| Fashion News | WWD, Business of Fashion, Drapers, TextilWirtschaft | Editorial approach, content depth, audience |
+| Fashion Jobs | LinkedIn, Indeed, specialized job boards | Job listings, employer features, reach |
+| B2B Marketplace | Trade fair platforms, wholesale marketplaces | Brand discovery, buyer tools |
+| Company Directory | LinkedIn, Crunchbase, industry databases | Profile depth, discoverability |
 
 ## Inputs
 
@@ -19,18 +30,20 @@ Gather the following from the user:
 
 1. **Competitor name(s)** — one or more competitors to analyze (required)
 
-2. **Your company/product context** (optional but recommended):
-   - What you sell and to whom
-   - Your positioning or value proposition
-   - Key differentiators you want to highlight
+2. **FashionUnited product focus** (optional):
+   - News platform
+   - Job board
+   - B2B marketplace
+   - Company directory
+   - Overall positioning
 
 3. **Focus areas** (optional — if not specified, cover all):
    - Messaging and positioning
-   - Product and feature comparison
-   - Content and thought leadership strategy
+   - Content and editorial strategy
+   - Audience and market reach
    - Recent announcements and news
-   - Pricing and packaging (if publicly available)
-   - Market presence and audience
+   - Pricing and business model (if relevant)
+   - SEO and content gaps
 
 ## Research Process
 
@@ -128,7 +141,8 @@ Present the full competitive brief with clear formatting. Note the date of the r
 After the brief, ask:
 
 "Would you like me to:
-- Create a battlecard for your sales team based on this analysis?
-- Draft messaging that exploits the positioning gaps identified?
+- Draft content that addresses the gaps identified?
+- Create a competitive positioning summary for internal use?
 - Dive deeper into any specific competitor?
-- Set up a competitive monitoring plan?"
+- Analyze a different FashionUnited product segment vs. competitors?
+- Compare competitive landscape across different geographic markets?"

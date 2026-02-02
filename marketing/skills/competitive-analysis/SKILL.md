@@ -1,11 +1,33 @@
 ---
 name: competitive-analysis
-description: Research competitors and compare positioning, messaging, content strategy, and market presence. Use when analyzing a competitor, building battlecards, identifying content gaps, comparing feature messaging, or preparing competitive positioning recommendations.
+description: Research competitors in fashion media and compare positioning, messaging, content strategy, and market presence. Use when analyzing a competitor, identifying content gaps, comparing editorial approach, or preparing competitive positioning recommendations.
 ---
 
 # Competitive Analysis Skill
 
-Frameworks and methodologies for researching competitors, comparing positioning, and identifying market opportunities.
+Frameworks and methodologies for researching competitors, comparing positioning, and identifying market opportunities. Pre-configured with FashionUnited competitive landscape.
+
+## FashionUnited Competitive Landscape
+
+FashionUnited competes across multiple segments:
+
+| Segment | Key Competitors | FashionUnited Strengths |
+|---------|----------------|------------------------|
+| Fashion News | WWD, Business of Fashion, Drapers | Global reach, multi-language, industry focus |
+| Fashion Jobs | LinkedIn, Indeed, industry-specific boards | Fashion industry specialization, employer branding |
+| B2B Marketplace | Trade fair platforms, wholesale marketplaces | Integrated platform, editorial credibility |
+| Company Directory | LinkedIn, Crunchbase | Fashion industry focus, editorial integration |
+
+### Competitive Positioning by Market
+
+| Market | Key Local Competitors |
+|--------|----------------------|
+| Global/English | WWD, Business of Fashion, Glossy |
+| Germany | TextilWirtschaft, Fashion Network DE |
+| France | Fashion Network FR, Journal du Textile |
+| Spain | Modaes, Fashion Network ES |
+| Italy | Pambianco, Fashion Network IT |
+| Netherlands | Retailtrends, Fashionchick |
 
 ## Competitive Research Methodology
 

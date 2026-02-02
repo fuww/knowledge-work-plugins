@@ -1,11 +1,22 @@
 ---
 name: campaign-planning
-description: Plan marketing campaigns with objectives, audience segmentation, channel strategy, content calendars, and success metrics. Use when launching a campaign, planning a product launch, building a content calendar, allocating budget across channels, or defining campaign KPIs.
+description: Plan marketing campaigns for trade fairs, fashion weeks, partnership announcements, and seasonal content. Use when launching a campaign, planning event coverage, building a content calendar, or defining campaign KPIs.
 ---
 
 # Campaign Planning Skill
 
-Frameworks and guidance for planning, structuring, and executing marketing campaigns.
+Frameworks and guidance for planning, structuring, and executing marketing campaigns. Pre-configured with FashionUnited campaign types and channels.
+
+## FashionUnited Campaign Types
+
+| Campaign Type | Description | Typical Duration | Key Metrics |
+|---------------|-------------|------------------|-------------|
+| Trade Fair Coverage | Première Vision, Texworld, ISPO coverage | 2-3 weeks | Traffic, social engagement, newsletter signups |
+| Fashion Week | Fashion week coverage and analysis | 1-2 weeks | Traffic, time on page, social shares |
+| Partnership Launch | Federation, school, advertiser partnership | 1 week | Traffic from partner, engagement |
+| Seasonal Content | SS/AW collection trends, seasonal guides | 4-6 weeks | SEO rankings, organic traffic |
+| Product Launch | New FashionUnited feature announcement | 2-4 weeks | Signups, feature adoption |
+| Newsletter Growth | Subscriber acquisition | Ongoing | New subscribers, list growth rate |
 
 ## Campaign Framework: Objective, Audience, Message, Channel, Measure
 
@@ -59,7 +70,17 @@ Define how you will know the campaign worked. See Success Metrics by Campaign Ty
 
 ## Channel Selection Guide
 
-### Owned Channels
+### FashionUnited Owned Channels
+
+| Channel | Best For | Typical Metrics | Effort |
+|---------|----------|----------------|--------|
+| News Platform | Industry news, trend reports, event coverage | Traffic, time on page, SEO rankings | Medium |
+| Newsletters (Mailchimp) | Daily/weekly digests, campaign announcements | Open rate, CTR, list growth | Low-Medium |
+| Social (Social Champ) | News distribution, engagement, brand building | Engagement, reach, follower growth | Medium |
+| Job Board | Recruitment content, employer branding | Job applications, employer signups | Medium |
+| Company Directory | Brand profiles, discovery | Profile views, leads | Low |
+
+### General Owned Channels
 
 | Channel | Best For | Typical Metrics | Effort |
 |---------|----------|----------------|--------|

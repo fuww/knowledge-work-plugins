@@ -1,11 +1,31 @@
 ---
 name: performance-analytics
-description: Analyze marketing performance with key metrics, trend analysis, and optimization recommendations. Use when building performance reports, reviewing campaign results, analyzing channel metrics (email, social, paid, SEO), or identifying what's working and what needs improvement.
+description: Analyze marketing performance using Plausible Analytics, Google Search Console, Mailchimp, and Social Champ data. Use when building performance reports, reviewing campaign results, analyzing channel metrics, or identifying what's working and what needs improvement.
 ---
 
 # Performance Analytics Skill
 
-Frameworks for measuring, reporting, and optimizing marketing performance across channels and campaigns.
+Frameworks for measuring, reporting, and optimizing marketing performance across channels and campaigns. Pre-configured with FashionUnited analytics stack: Plausible Analytics, Google Search Console, Mailchimp, and Social Champ.
+
+## FashionUnited Data Sources
+
+| Data Source | Metrics Available | Use For |
+|-------------|-------------------|---------|
+| Plausible Analytics | Visitors, pageviews, bounce rate, referrers, geo | Website traffic analysis, content performance |
+| Google Search Console | Impressions, clicks, CTR, rankings, index status | SEO performance, keyword analysis |
+| Mailchimp | Opens, clicks, unsubscribes, list growth | Newsletter performance, subscriber engagement |
+| Social Champ | Reach, engagement, clicks, follower growth | Social media performance, content resonance |
+
+## FashionUnited Key Performance Indicators
+
+| KPI | Definition | Target Range | Data Source |
+|-----|------------|--------------|-------------|
+| Daily unique visitors | Distinct users per day | Varies by market | Plausible |
+| Newsletter open rate | Opens / delivered | 25-40% | Mailchimp |
+| Organic CTR | Clicks / impressions | 3-8% | Google Search Console |
+| Social engagement rate | Engagements / reach | 2-5% | Social Champ |
+| Article performance | Pageviews per article | Varies by topic | Plausible |
+| Market performance | Traffic by country/domain | Varies | Plausible |
 
 ## Key Marketing Metrics by Channel
 
