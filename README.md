@@ -1,5 +1,7 @@
 # Knowledge Work Plugins
 
+> **FashionUnited Fork** — This is a customized version of [Anthropic's knowledge-work-plugins](https://github.com/anthropics/knowledge-work-plugins), adapted for FashionUnited's tools, workflows, and fashion industry context. Licensed under Apache 2.0.
+
 Plugins that turn Claude into a specialist for your role, team, and company. Built for [Claude Cowork](https://claude.com/product/cowork), also compatible with [Claude Code](https://claude.com/product/claude-code).
 
 ## Why Plugins
@@ -12,18 +14,18 @@ Each plugin bundles the skills, connectors, slash commands, and sub-agents for a
 
 We're open-sourcing 10 plugins built and inspired by our own work:
 
-| Plugin | How it helps | Connectors |
-|--------|-------------|------------|
-| **[productivity](./productivity)** | Manage tasks, calendars, daily workflows, and personal context so you spend less time repeating yourself. | Slack, Notion, Asana, Linear, Jira, Monday, ClickUp, Microsoft 365 |
-| **[sales](./sales)** | Research prospects, prep for calls, review your pipeline, draft outreach, and build competitive battlecards. | Slack, HubSpot, Close, Clay, ZoomInfo, Notion, Jira, Fireflies, Microsoft 365 |
-| **[customer-support](./customer-support)** | Triage tickets, draft responses, package escalations, research customer context, and turn resolved issues into knowledge base articles. | Slack, Intercom, HubSpot, Guru, Jira, Notion, Microsoft 365 |
-| **[product-management](./product-management)** | Write specs, plan roadmaps, synthesize user research, keep stakeholders updated, and track the competitive landscape. | Slack, Linear, Asana, Monday, ClickUp, Jira, Notion, Figma, Amplitude, Pendo, Intercom, Fireflies |
-| **[marketing](./marketing)** | Draft content, plan campaigns, enforce brand voice, brief on competitors, and report on performance across channels. | Slack, Canva, Figma, HubSpot, Amplitude, Notion, Ahrefs, SimilarWeb, Klaviyo |
-| **[legal](./legal)** | Review contracts, triage NDAs, navigate compliance, assess risk, prep for meetings, and draft templated responses. | Slack, Box, Egnyte, Jira, Microsoft 365 |
-| **[finance](./finance)** | Prep journal entries, reconcile accounts, generate financial statements, analyze variances, manage close, and support audits. | Snowflake, Databricks, BigQuery, Slack, Microsoft 365 |
-| **[data](./data)** | Query, visualize, and interpret datasets — write SQL, run statistical analysis, build dashboards, and validate your work before sharing. | Snowflake, Databricks, BigQuery, Hex, Amplitude, Jira |
-| **[enterprise-search](./enterprise-search)** | Find anything across email, chat, docs, and wikis — one query across all your company's tools. | Slack, Notion, Guru, Jira, Asana, Microsoft 365 |
-| **[cowork-plugin-management](./cowork-plugin-management)** | Create new plugins or customize existing ones for your organization's specific tools and workflows. | — |
+| Plugin | How it helps | FashionUnited Connectors |
+|--------|-------------|--------------------------|
+| **[productivity](./productivity)** | Manage tasks, calendars, daily workflows, and personal context for fashion industry professionals. | Slack, Google Workspace, GitHub, beads |
+| **[sales](./sales)** | Research advertisers, prep for calls, manage B2B pipeline, draft outreach for fashion brands. | Slack, Vtiger CRM, Google Workspace |
+| **[customer-support](./customer-support)** | Triage tickets from advertisers and employers, research account context, build FAQ content. | Slack, Vtiger CRM, Google Workspace |
+| **[product-management](./product-management)** | Write specs, plan roadmaps, synthesize user research for fashion B2B products. | Slack, GitHub, Google Workspace, Figma, Plausible |
+| **[marketing](./marketing)** | Draft fashion news, plan content campaigns, manage newsletters, track performance across markets. | Slack, Mailchimp, Social Champ, Plausible, Google Search Console, Figma |
+| **[legal](./legal)** | Review advertising agreements, media partnerships, GDPR compliance across 30+ markets. | Google Workspace |
+| **[finance](./finance)** | Advertising revenue, subscription billing, multi-currency operations across markets. | BigQuery, Google Workspace, Vtiger CRM |
+| **[data](./data)** | Query jobs, marketplace, editorial data — SQL templates for FashionUnited metrics. | BigQuery, Looker Studio, Plausible, Google Workspace |
+| **[enterprise-search](./enterprise-search)** | Find anything across email, chat, docs, CRM, code — brand lookup, job history, editorial archives. | Slack, Google Workspace, GitHub, Vtiger CRM, BigQuery |
+| **[cowork-plugin-management](./cowork-plugin-management)** | Create new plugins or customize existing ones with FashionUnited tool stack and domain knowledge. | — |
 
 Install these directly from Cowork, browse the full collection here on GitHub, or build your own.
 
@@ -68,6 +70,27 @@ These plugins are generic starting points. They become much more useful when you
 
 As your team builds and shares plugins, Claude becomes a cross-functional expert. The context you define gets baked into every relevant interaction, so leaders and admins can spend less time enforcing processes and more time improving them.
 
+## FashionUnited Tool Stack
+
+All plugins are configured for FashionUnited's integrated tool stack:
+
+| Category | Tool | Usage |
+|----------|------|-------|
+| CRM | Vtiger CRM | Sales, contacts, invoicing |
+| Data Warehouse | BigQuery | Jobs, marketplace, editorial, advertising, Top 100 |
+| Analytics | Plausible | Website traffic, content performance |
+| Dashboards | Looker Studio | Reports, visualizations |
+| Email Marketing | Mailchimp | Newsletter campaigns |
+| Social Media | Social Champ | Multi-platform scheduling |
+| Documents | Google Workspace | Docs, Sheets, Drive |
+| Chat | Slack | Team communication |
+| Code | GitHub | Repositories, issues, projects |
+| SEO | Google Search Console | Search rankings, keywords |
+
 ## Contributing
 
 Plugins are just markdown files. Fork the repo, make your changes, and submit a PR.
+
+## License
+
+This fork is licensed under Apache 2.0, same as the [original Anthropic repository](https://github.com/anthropics/knowledge-work-plugins). See [LICENSE](LICENSE) for details.

@@ -28,18 +28,38 @@ Display Connect buttons to let users install/connect MCPs.
 
 | Category | Search Keywords |
 |----------|-----------------|
-| `project-management` | `["asana", "jira", "linear", "monday", "tasks"]` |
+| `project-management` | `["asana", "jira", "linear", "monday", "tasks", "github issues"]` |
 | `software-coding` | `["github", "gitlab", "bitbucket", "code"]` |
 | `chat` | `["slack", "teams", "discord"]` |
-| `documents` | `["google docs", "notion", "confluence"]` |
+| `documents` | `["google docs", "notion", "confluence", "google workspace"]` |
 | `calendar` | `["google calendar", "calendar"]` |
 | `email` | `["gmail", "outlook", "email"]` |
 | `design-graphics` | `["figma", "sketch", "design"]` |
-| `analytics-bi` | `["datadog", "grafana", "analytics"]` |
-| `crm` | `["salesforce", "hubspot", "crm"]` |
+| `analytics-bi` | `["plausible", "datadog", "grafana", "analytics"]` |
+| `crm` | `["vtiger", "salesforce", "hubspot", "crm"]` |
 | `wiki-knowledge-base` | `["notion", "confluence", "outline", "wiki"]` |
 | `data-warehouse` | `["bigquery", "snowflake", "redshift"]` |
+| `email-marketing` | `["mailchimp", "klaviyo", "newsletter", "campaigns"]` |
+| `social-media` | `["social champ", "buffer", "hootsuite", "social scheduling"]` |
+| `seo` | `["search console", "seo", "rankings", "keywords"]` |
 | `conversation-intelligence` | `["gong", "chorus", "call recording"]` |
+
+## FashionUnited Tool Mappings
+
+For FashionUnited customizations, use these standard mappings:
+
+| Placeholder | Tool | MCP Keywords |
+|-------------|------|--------------|
+| `~~CRM` | Vtiger CRM | `["vtiger", "crm"]` |
+| `~~data warehouse` | BigQuery | `["bigquery", "data warehouse"]` |
+| `~~analytics` | Plausible | `["plausible", "analytics"]` |
+| `~~email marketing` | Mailchimp | `["mailchimp", "email marketing"]` |
+| `~~social scheduling` | Social Champ | `["social champ", "social media"]` |
+| `~~chat` | Slack | `["slack", "chat"]` |
+| `~~documents` | Google Workspace | `["google workspace", "documents"]` |
+| `~~project tracker` | GitHub | `["github", "issues"]` |
+| `~~design tool` | Figma | `["figma", "design"]` |
+| `~~SEO` | Google Search Console | `["search console", "seo"]` |
 
 ## Workflow
 

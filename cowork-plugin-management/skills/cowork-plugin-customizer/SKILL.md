@@ -127,4 +127,5 @@ If no knowledge MCPs were available in Phase 1, and the user had to answer at le
 
 - **`references/mcp-servers.md`** — MCP discovery workflow, category-to-keywords mapping, config file locations
 - **`references/search-strategies.md`** — Knowledge MCP query patterns for finding tool names and org values
-- **`examples/customized-mcp.json`** — Example fully configured `.mcp.json`
+- **`references/fashionunited-tools.md`** — FashionUnited tool stack, GraphQL API, and fashion industry domain knowledge
+- **`examples/customized-mcp.json`** — Example fully configured `.mcp.json` for FashionUnited

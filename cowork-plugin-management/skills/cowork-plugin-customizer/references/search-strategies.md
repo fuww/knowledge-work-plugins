@@ -10,7 +10,7 @@ Query patterns for gathering organizational context during plugin customization.
 - Look for: repository links, CI/CD mentions
 
 **Project management:**
-- Search: "Asana" OR "Jira" OR "Linear" OR "Monday"
+- Search: "Asana" OR "Jira" OR "Linear" OR "Monday" OR "GitHub Issues"
 - Search: "sprint" AND "tickets"
 - Look for: task links, project board mentions
 
@@ -19,8 +19,8 @@ Query patterns for gathering organizational context during plugin customization.
 - Look for: channel mentions, integration discussions
 
 **Analytics:**
-- Search: "Datadog" OR "Grafana" OR "Mixpanel"
-- Search: "monitoring" OR "observability"
+- Search: "Plausible" OR "Datadog" OR "Grafana" OR "Mixpanel"
+- Search: "monitoring" OR "observability" OR "page views"
 - Look for: dashboard links, alert configurations
 
 **Design:**
@@ -28,8 +28,21 @@ Query patterns for gathering organizational context during plugin customization.
 - Look for: design file links, handoff discussions
 
 **CRM:**
-- Search: "Salesforce" OR "HubSpot"
-- Look for: deal mentions, customer record links
+- Search: "Vtiger" OR "Salesforce" OR "HubSpot"
+- Look for: deal mentions, customer record links, invoice references
+
+**Email marketing:**
+- Search: "Mailchimp" OR "Klaviyo" OR "newsletter"
+- Look for: campaign mentions, subscriber lists
+
+**Social media:**
+- Search: "Social Champ" OR "Buffer" OR "Hootsuite"
+- Look for: scheduling discussions, social posts
+
+**Data warehouse:**
+- Search: "BigQuery" OR "Snowflake" OR "Redshift"
+- Search: "dataset" OR "data warehouse" OR "SQL"
+- Look for: query discussions, data pipeline mentions
 
 ## Finding Organization Values
 
@@ -45,6 +58,30 @@ Query patterns for gathering organizational context during plugin customization.
 **Channel/team names:**
 - Search: "standup" OR "engineering" OR "releases"
 - Look for channel naming patterns
+
+## FashionUnited-Specific Patterns
+
+When customizing plugins for FashionUnited, also search for:
+
+**Industry context:**
+- Search: "fashion week" OR "trade fair" OR "collection"
+- Search: "B2B" OR "marketplace" OR "job board"
+- Look for: seasonal planning, event coverage
+
+**Product data:**
+- Search: "GraphQL" OR "API" OR "jobs endpoint"
+- Search: "marketplace" OR "Top 100" OR "editorial"
+- Look for: data source discussions, API usage
+
+**Markets:**
+- Search: market names (e.g., "fashionunited.de", "fashionunited.uk")
+- Look for: localization discussions, market-specific content
+
+**Key Slack channels:**
+- `#editorial` — News coverage, content planning
+- `#sales` — Advertising, partnerships
+- `#product` — Product development, technical
+- `#marketing` — Marketing campaigns, social media
 
 ## When Knowledge MCPs Are Unavailable
 
