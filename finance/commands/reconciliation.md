@@ -34,13 +34,13 @@ Reconcile GL account balances to subledger, bank, or third-party balances. Ident
 
 ### 1. Gather Both Sides of the Reconciliation
 
-If ~~erp or ~~data warehouse is connected:
+If Google Sheets or BigQuery is connected:
 - Pull the GL balance for the specified account(s) as of period end
 - Pull the subledger, bank statement, or third-party balance for comparison
 - Pull prior period reconciliation (if available) for outstanding item carryforward
 
 If no data source is connected:
-> Connect ~~erp or ~~data warehouse to pull account balances automatically. To reconcile manually, provide:
+> Connect Google Sheets or BigQuery to pull account balances automatically. To reconcile manually, provide:
 > 1. **GL side:** The general ledger balance for the account as of period end
 > 2. **Other side:** The subledger balance, bank statement balance, or third-party confirmation balance
 > 3. **Prior period outstanding items** (optional): Any reconciling items from the prior period reconciliation

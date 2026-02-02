@@ -31,14 +31,14 @@ Prepare journal entries with proper debits, credits, supporting detail, and revi
 
 ### 1. Gather Source Data
 
-If ~~erp or ~~data warehouse is connected:
+If Google Sheets or BigQuery is connected:
 - Pull the trial balance for the specified period
 - Pull subledger detail for the relevant accounts
 - Pull prior period entries of the same type for reference
 - Identify the current GL balances for affected accounts
 
 If no data source is connected:
-> Connect ~~erp or ~~data warehouse to pull GL data automatically. You can also paste trial balance data or upload a spreadsheet.
+> Connect Google Sheets or BigQuery to pull GL data automatically. You can also paste trial balance data or upload a spreadsheet.
 
 Prompt the user to provide:
 - Trial balance or GL balances for affected accounts

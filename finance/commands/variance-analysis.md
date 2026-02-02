@@ -39,14 +39,14 @@ Decompose variances into underlying drivers, provide narrative explanations for 
 
 ### 1. Gather Data
 
-If ~~erp or ~~data warehouse is connected:
+If Google Sheets or BigQuery is connected:
 - Pull actuals for both comparison periods at the detail level
 - Pull budget/forecast data if comparing to plan
 - Pull supporting operational metrics (headcount, volumes, rates)
 - Pull prior variance analyses for context
 
 If no data source is connected:
-> Connect ~~erp or ~~data warehouse to pull financial data automatically. To analyze manually, provide:
+> Connect Google Sheets or BigQuery to pull financial data automatically. To analyze manually, provide:
 > 1. Actual data for both comparison periods (at account or line-item detail)
 > 2. Budget/forecast data (if comparing to plan)
 > 3. Any operational metrics that drive the financial results (headcount, volumes, pricing, etc.)

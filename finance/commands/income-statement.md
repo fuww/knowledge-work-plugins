@@ -30,13 +30,13 @@ Generate an income statement with period-over-period comparison and variance ana
 
 ### 1. Gather Financial Data
 
-If ~~erp or ~~data warehouse is connected:
+If Google Sheets or BigQuery is connected:
 - Pull trial balance or income statement data for the specified period
 - Pull comparison period data (prior period, prior year, budget/forecast)
 - Pull account hierarchy and groupings for presentation
 
 If no data source is connected:
-> Connect ~~erp or ~~data warehouse to pull financial data automatically. You can also paste trial balance data, upload a spreadsheet, or provide income statement data for analysis.
+> Connect Google Sheets or BigQuery to pull financial data automatically. You can also paste trial balance data, upload a spreadsheet, or provide income statement data for analysis.
 
 Prompt the user to provide:
 - Current period revenue and expense data (by account or category)
