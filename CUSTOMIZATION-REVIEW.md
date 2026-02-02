@@ -76,7 +76,7 @@ All `plugin.json` files updated:
 | product-management | 6 commands | `~~project tracker`, `~~design`, `~~knowledge base` |
 | finance | 4 commands | `~~erp`, `~~data warehouse` |
 | legal | 3 commands | `~~CLM`, `~~e-signature` |
-| productivity | 2 files | `~~project tracker`, `~~Task~~` |
+| productivity | 1 file | `~~project tracker` (note: `~~Task~~` is markdown strikethrough, not a placeholder) |
 | sales | 2 files | `~~chat` |
 | data | 1 file | General references |
 | marketing | 1 file | General references |
