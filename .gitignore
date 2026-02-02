@@ -22,6 +22,9 @@ __pycache__/
 # Ralph (session logs)
 .ralph/
 
+# Claude loop (symlinked via nix develop from prompts/ralph_wiggum)
+loop.sh
+
 # Beads runtime
 .beads/bd.sock.startlock
 
