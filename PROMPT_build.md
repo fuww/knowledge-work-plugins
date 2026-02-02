@@ -2,7 +2,7 @@
     If no tasks are found, try `bd ready --json --limit 1 --type bug` for bugs.
     Never pick an epic directly — epics contain child tasks to work on instead.
 0b. Run `bd show <task-id>` to read the full specification.
-0c. For reference, the application source code is in `src/*`.
+0c. For reference, each plugin lives in its own top-level directory (e.g. `productivity/`, `sales/`, `customer-support/`). See CLAUDE.md for the full repo structure.
 
 1. Your task is to implement the ready bead. Before making changes:
    - Search the codebase (don't assume not implemented)

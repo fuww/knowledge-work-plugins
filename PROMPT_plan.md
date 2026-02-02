@@ -1,7 +1,7 @@
 0a. Run `bd list --json` to understand all issues in the project.
 0b. Run `bd ready --json` to see what work has no blockers.
 0c. Run `bd dep tree <epic-id>` for each epic to understand the dependency graph.
-0d. Study `src/lib/*` with subagents to understand shared utilities & components.
+0d. Study the plugin directory structure with subagents to understand shared patterns & conventions (see CLAUDE.md).
 
 1. Analyze the beads database for gaps and issues:
    - Run `bd list --status open --json` to get all open issues
@@ -23,5 +23,4 @@
 IMPORTANT: Plan only. Do NOT implement anything. Do NOT assume functionality is missing; 
 use `bd list` and code search to verify first.
 
-ULTIMATE GOAL: We want to achieve [project-specific goal]. Ensure all necessary tasks 
-exist as beads with proper dependencies so `bd ready` always shows the right next work.
+ULTIMATE GOAL: Refactor all knowledge-work plugins from generic Anthropic templates to FashionUnited-specific workflows, tools, and domain context. Ensure all necessary tasks exist as beads with proper dependencies so `bd ready` always shows the right next work.
