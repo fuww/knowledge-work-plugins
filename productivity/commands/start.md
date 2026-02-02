@@ -49,10 +49,12 @@ The best source of workplace language is the user's actual task list. Real tasks
 
 **Ask the user:**
 ```
-Where do you keep your todos or task list? This could be:
-- A local file (e.g., TASKS.md, todo.txt)
-- An app (e.g. Asana, Linear, Jira, Notion, Todoist)
-- A notes file
+Where do you keep your todos or task list? At FashionUnited, this is typically:
+- GitHub Issues (development tasks)
+- beads (bd ready to see current issues)
+- Vtiger CRM (sales and client tasks)
+- A local TASKS.md file
+- Google Tasks or Calendar
 
 I'll use your tasks to learn your workplace shorthand.
 ```
@@ -92,10 +94,12 @@ Or we can stick with what we have and add context later.
 **If they choose comprehensive scan:**
 
 Gather data from available MCP sources:
-- **Chat:** Recent messages, channels, DMs
-- **Email:** Sent messages, recipients
-- **Documents:** Recent docs, collaborators
-- **Calendar:** Meetings, attendees
+- **Slack:** Recent messages, channels (#editorial, #sales, #product, etc.)
+- **Gmail:** Sent messages, recipients
+- **Google Drive:** Recent docs, collaborators
+- **Google Calendar:** Meetings, attendees
+- **GitHub:** Issues, PRs, project boards
+- **Vtiger:** Contacts, tasks, deals
 
 Build a braindump of people, projects, and terms found. Present findings grouped by confidence:
 - **Ready to add** (high confidence) — offer to add directly
@@ -149,9 +153,34 @@ Productivity system ready:
 Use /productivity:update to keep things current (add --comprehensive for a deep scan).
 ```
 
+### 9. FashionUnited-Specific Onboarding (First Run)
+
+After the general bootstrap, ask FashionUnited-specific questions:
+
+```
+A few FashionUnited-specific questions:
+
+1. **Your role:** Are you primarily Editorial, Sales, Product, or Engineering?
+
+2. **Markets:** Which markets do you work with? (NL, DE, UK, US, etc.)
+
+3. **Typical week:** What's your weekly rhythm?
+   - Editorial deadlines
+   - Sales calls/meetings
+   - Sprint cycles
+
+4. **Timezone:** Where are you based? (CET is default)
+```
+
+Add answers to memory:
+- Role and markets → CLAUDE.md "Me" section
+- Weekly rhythm → memory/context/calendar.md
+- Timezone → CLAUDE.md Preferences
+
 ## Notes
 
 - If memory is already initialized, this just opens the dashboard
 - Nicknames are critical — always capture how people are actually referred to
 - If a source isn't available, skip it and note the gap
 - Memory grows organically through natural conversation after bootstrap
+- FashionUnited-specific context (markets, products, fashion terms) is pre-loaded in memory templates

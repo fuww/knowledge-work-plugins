@@ -1,18 +1,63 @@
 ---
 name: task-management
-description: Simple task management using a shared TASKS.md file. Reference this when the user asks about their tasks, wants to add/complete tasks, or needs help tracking commitments.
+description: Task management for FashionUnited using TASKS.md for personal tasks, GitHub Projects for team roadmaps, and beads for development issues. Reference this when the user asks about tasks, wants to track commitments, or needs day planning around editorial deadlines and sales cycles.
 ---
 
 # Task Management
 
-Tasks are tracked in a simple `TASKS.md` file that both you and the user can edit.
+Tasks are tracked across three systems optimized for different workflows:
 
-## File Location
+1. **TASKS.md** - Personal tasks and commitments (quick capture, local file)
+2. **GitHub Projects** - Team roadmap using Now-Next-Later columns
+3. **beads** - Development issues and bugs (`bd` CLI)
+
+## FashionUnited Context
+
+FashionUnited operates across 30+ markets and 9 languages with key coordination patterns:
+
+- **Editorial deadlines**: Content publishes in European morning (CET) for maximum reach
+- **Sales cycles**: Monthly advertising deadlines, quarterly campaign planning
+- **Multi-timezone**: Amsterdam HQ leads, coordinate with global markets
+- **Weekly rhythm**: Monday planning, Thursday reviews, Friday async-only
+
+## Local Tasks (TASKS.md)
 
 **Always use `TASKS.md` in the current working directory.**
 
 - If it exists, read/write to it
 - If it doesn't exist, create it with the template below
+
+## GitHub Projects Integration
+
+For team-level work, use GitHub Projects with the **Now-Next-Later** roadmap structure:
+
+| Column | Purpose | Typical items |
+|--------|---------|---------------|
+| **Now** | Currently in progress (this sprint/week) | Active features, urgent fixes |
+| **Next** | Committed for next cycle | Prioritized backlog items |
+| **Later** | Future consideration | Ideas, improvements, tech debt |
+
+**Commands:**
+- Check roadmap via `~~project tracker` (GitHub)
+- Move items between columns as priorities shift
+- Link issues to projects for tracking
+
+## beads Integration
+
+For development issues, use the `bd` CLI:
+
+```bash
+bd ready              # Find unblocked work
+bd show <id>          # Full issue details
+bd create "Title"     # New issue
+bd close <id>         # Complete work
+bd sync               # Sync with git
+```
+
+**Workflow:**
+- Personal tasks in TASKS.md
+- Development issues in beads
+- Team roadmap in GitHub Projects
 
 ## Dashboard Setup (First Run)
 
@@ -79,6 +124,13 @@ Task format:
 - Include "since [date]" for waiting items
 - Sub-bullets for additional context
 - Keep Done section for ~1 week, then clear old items
+
+### FashionUnited-specific conventions
+
+- Tag editorial tasks with market codes (e.g., `[NL]`, `[DE]`, `[UK]`, `[US]`)
+- Note timezone for cross-market deadlines (CET is default)
+- Link to GitHub issues when task relates to development: `(#123)`
+- Mark sales tasks with client/advertiser name
 
 ## Extracting Tasks
 

@@ -28,8 +28,10 @@ Read `TASKS.md` and `memory/` directory. If they don't exist, suggest `/producti
 ### 2. Sync Tasks from External Sources
 
 Check for available task sources:
-- **Project tracker** (e.g. Asana, Linear, Jira) (if MCP available)
-- **GitHub Issues** (if in a repo): `gh issue list --assignee=@me`
+- **GitHub Issues** — via `~~project tracker` MCP: `gh issue list --assignee=@me`
+- **GitHub Projects** — roadmap items in Now-Next-Later columns
+- **beads** — development issues: `bd ready`
+- **Vtiger CRM** — sales tasks and follow-ups via `~~CRM` MCP
 
 If no sources are available, skip to Step 3.
 
@@ -95,7 +97,7 @@ Tasks often contain richer context than memory. Extract and update:
 
 ```
 Update complete:
-- Tasks: +3 from project tracker (e.g. Asana), 1 completed, 2 triaged
+- Tasks: +3 from GitHub Issues, 1 from beads, 2 triaged
 - Memory: 2 gaps filled, 1 project enriched
 - All tasks decoded ✓
 ```
@@ -107,10 +109,12 @@ Everything in Default Mode, plus a deep scan of recent activity.
 ### Extra Step: Scan Activity Sources
 
 Gather data from available MCP sources:
-- **Chat:** Search recent messages, read active channels
-- **Email:** Search sent messages
-- **Documents:** List recently touched docs
-- **Calendar:** List recent + upcoming events
+- **Slack:** Search recent messages, read active channels (#editorial, #sales, #product)
+- **Gmail:** Search sent messages
+- **Google Drive:** List recently touched docs
+- **Google Calendar:** List recent + upcoming events
+- **GitHub:** Recent commits, PR reviews, issue comments
+- **Vtiger:** Recent deals, contacts, activities
 
 ### Extra Step: Flag Missed Todos
 

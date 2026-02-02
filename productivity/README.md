@@ -1,6 +1,15 @@
 # Productivity Plugin
 
-A productivity plugin primarily designed for [Cowork](https://claude.com/product/cowork), Anthropic's agentic desktop application — though it also works in Claude Code. Task management, workplace memory, and a visual dashboard — Claude learns your people, projects, and terminology so it can act like a colleague, not a chatbot.
+A productivity plugin for FashionUnited, designed for [Cowork](https://claude.com/product/cowork) and Claude Code. Task management across GitHub/beads/Vtiger, workplace memory with fashion industry context, and day planning around editorial deadlines and sales cycles.
+
+## FashionUnited Configuration
+
+This plugin is customized for FashionUnited's tool stack and workflows:
+- **Google Workspace** for email, calendar, and documents
+- **GitHub** for issues, projects (Now-Next-Later roadmap), and code
+- **beads** for development issue tracking (`bd` CLI)
+- **Vtiger CRM** for sales tasks and client management
+- **Slack** for team communication
 
 ## Installation
 
@@ -83,14 +92,13 @@ No clarifying questions. No round trips.
 
 > If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](CONNECTORS.md).
 
-Connect your communication and project management tools for the best experience. Without them, manage tasks and memory manually.
+**Configured MCP connections:**
+- **Slack** for team context and message scanning
+- **Google Workspace** for email, calendar, and documents
+- **GitHub** for issues, projects, and code repository
+- **Vtiger CRM** for sales tasks and client management
 
-**Included MCP connections:**
-- Chat (Slack) for team context and message scanning
-- Email and calendar (Microsoft 365) for action item discovery
-- Knowledge base (Notion) for reference documents
-- Project tracker (Asana, Linear, Atlassian, monday.com, ClickUp) for task syncing
-- Office suite (Microsoft 365) for documents
+**Local tools:**
+- **beads** (`bd` CLI) for development issue tracking
 
-**Additional options:**
-- See [CONNECTORS.md](CONNECTORS.md) for alternative tools in each category
+See [CONNECTORS.md](CONNECTORS.md) for setup requirements and alternative tools.

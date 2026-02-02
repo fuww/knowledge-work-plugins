@@ -1,11 +1,20 @@
 ---
 name: memory-management
-description: Two-tier memory system that makes Claude a true workplace collaborator. Decodes shorthand, acronyms, nicknames, and internal language so Claude understands requests like a colleague would. CLAUDE.md for working memory, memory/ directory for the full knowledge base.
+description: Two-tier memory system for FashionUnited that decodes shorthand, acronyms, market codes, and internal language. Understands fashion industry terminology, team structure across global markets, and editorial/sales workflows. CLAUDE.md for working memory, memory/ directory for the full knowledge base.
 ---
 
 # Memory Management
 
 Memory makes Claude your workplace collaborator - someone who speaks your internal language.
+
+## FashionUnited Context
+
+FashionUnited is a global B2B fashion industry platform operating in 30+ markets. Key memory patterns:
+
+- **Markets**: NL, DE, UK, US, FR, IT, ES, MX, IN, etc.
+- **Products**: News platform, job board, B2B marketplace, company directory
+- **Teams**: Editorial, Sales, Product, Engineering (Amsterdam HQ)
+- **Tech stack**: Elixir/Phoenix, Next.js, Kubernetes/GCP
 
 ## The Goal
 
@@ -200,22 +209,67 @@ $1.2M budget, 6-month timeline. Critical path for Horizon project.
 | Tool | Used for | Internal name |
 |------|----------|---------------|
 | Slack | Communication | - |
-| Asana | Engineering tasks | - |
-| Salesforce | CRM | "SF" or "the CRM" |
-| Notion | Docs/wiki | - |
+| GitHub | Code, issues, roadmap | - |
+| Vtiger | CRM | "the CRM" |
+| Google Workspace | Docs, email, calendar | - |
 
 ## Teams
 | Team | What they do | Key people |
 |------|--------------|------------|
-| Platform | Infrastructure | Sarah (lead) |
-| Finance | Money stuff | Todd (lead) |
-| Sales | Revenue | Greg |
+| Editorial | Content across markets | [names] |
+| Sales | Advertising, partnerships | [names] |
+| Product | Platform development | [names] |
+| Engineering | Technical implementation | [names] |
 
 ## Processes
 | Process | What it means |
 |---------|---------------|
-| Weekly sync | Monday 10am all-hands |
-| Ship review | Thursday deploy approval |
+| Weekly sync | Monday planning |
+| Thursday review | Sprint review |
+| Friday async | No meetings |
+```
+
+### FashionUnited-Specific Context
+
+**memory/context/markets.md:**
+```markdown
+# Markets
+
+## Active Markets
+| Code | Market | Language | Timezone |
+|------|--------|----------|----------|
+| NL | Netherlands | Dutch | CET |
+| DE | Germany | German | CET |
+| UK | United Kingdom | English | GMT |
+| US | United States | English | EST/PST |
+| FR | France | French | CET |
+| IT | Italy | Italian | CET |
+| ES | Spain | Spanish | CET |
+| MX | Mexico | Spanish | CST |
+| IN | India | English | IST |
+
+## Content Flow
+- Editorial publishes in CET morning (9-11am)
+- US content adapted for EST morning
+- Global stories coordinate across markets
+```
+
+**memory/context/fashion-terms.md:**
+```markdown
+# Fashion Industry Terms
+
+| Term | Meaning |
+|------|---------|
+| SS25 | Spring/Summer 2025 |
+| AW25 | Autumn/Winter 2025 |
+| PFW | Paris Fashion Week |
+| MFW | Milan Fashion Week |
+| LFW | London Fashion Week |
+| NYFW | New York Fashion Week |
+| B2B | Business-to-business |
+| DTC | Direct-to-consumer |
+| fast fashion | Quick-turnaround trend-driven retail |
+| sustainable fashion | Eco-conscious/ethical fashion |
 ```
 
 ## How to Interact
