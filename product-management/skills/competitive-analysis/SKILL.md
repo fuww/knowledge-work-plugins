@@ -199,3 +199,78 @@ For each significant trend:
 - **Ignore**: Explicitly decide this trend is not relevant to your strategy. Document why.
 
 The right response depends on: your competitive position, your customer base, your resources, and how fast the trend is moving.
+
+## FashionUnited Competitive Landscape
+
+FashionUnited operates in a unique intersection of fashion media, recruitment, and B2B services. The competitive landscape varies by product line.
+
+### News Platform Competitors
+
+| Competitor | Type | Strengths | Gaps |
+|------------|------|-----------|------|
+| Business of Fashion (BoF) | Direct | Premium content, strong brand, paid subscription model | Premium pricing, limited job/B2B integration |
+| WWD (Women's Wear Daily) | Direct | Legacy brand, deep fashion industry coverage | Dated digital experience, less Europe focus |
+| Fashionista | Direct | Strong digital presence, younger audience | Less B2B focus, weaker in Europe |
+| Drapers (UK) | Regional | Strong UK market position, retail focus | Limited geographic scope |
+| TextilWirtschaft (DE) | Regional | Strong DACH market, trade focus | Language barrier, limited digital reach |
+
+**FashionUnited differentiation**: Multi-market coverage, integrated platform (news + jobs + marketplace), industry-wide vs segment-specific
+
+### Job Board Competitors
+
+| Competitor | Type | Strengths | Gaps |
+|------------|------|-----------|------|
+| Indeed/LinkedIn | Indirect | Scale, brand recognition, ATS integrations | Not fashion-specific, diluted quality |
+| Joblift | Aggregator | Broad reach, aggregation model | Commodity positioning, no employer branding |
+| Fashion-specific job boards (local) | Direct | Local market expertise | Limited scale, fragmented |
+| Company career pages | Substitute | Direct relationship, owned channel | Limited reach, discovery challenge |
+
+**FashionUnited differentiation**: Fashion industry specialization, international reach, employer branding integration, industry context (news/directory)
+
+### B2B Marketplace Competitors
+
+| Competitor | Type | Strengths | Gaps |
+|------------|------|-----------|------|
+| NuOrder/Joor | Direct | Established B2B platforms, wholesale features | Transaction focus, less discovery |
+| Faire | Adjacent | Growing wholesale platform, easy onboarding | Not fashion-specialized, mass market |
+| Trade shows (physical) | Substitute | In-person relationships, product touch/feel | Infrequent, expensive, limited reach |
+| Brand websites | Substitute | Direct relationship | Discovery challenge, no ecosystem |
+
+**FashionUnited differentiation**: Discovery focus (vs transaction), media-driven traffic, company directory integration, lower barrier to entry
+
+### Company Directory Competitors
+
+| Competitor | Type | Strengths | Gaps |
+|------------|------|-----------|------|
+| LinkedIn Company Pages | Indirect | Scale, professional network, hiring | Not fashion-specific |
+| Fashion industry associations | Indirect | Authority, member networks | Limited digital presence |
+| Google My Business | Substitute | Discovery via search, maps integration | Not B2B focused, not industry-specific |
+
+**FashionUnited differentiation**: Fashion industry focus, integration with jobs and marketplace, editorial context
+
+### Fashion Industry Trends to Monitor
+
+| Trend | Impact on FashionUnited | Response Strategy |
+|-------|------------------------|-------------------|
+| **AI in fashion** | Content creation, job matching, personalization | Lead (AI-first strategy in progress) |
+| **Sustainability transparency** | Company profiles, content coverage | Fast follow |
+| **Direct-to-consumer shift** | B2B marketplace dynamics changing | Monitor |
+| **Fashion week digitization** | Content opportunity, brand visibility | Lead for content, fast follow for tools |
+| **Recruitment automation** | ATS integrations, matching algorithms | Fast follow |
+
+### Competitive Intelligence Sources
+
+**For ongoing monitoring**:
+- Competitor changelogs and release notes
+- Industry publication coverage (BoF, WWD coverage of tech/platforms)
+- Trade fair exhibitor lists and event programming
+- Fashion tech funding announcements (Crunchbase, TechCrunch)
+- Social media activity (competitor brand accounts)
+- Job postings (signals strategic investment areas)
+
+**For deep-dive analysis**:
+- Customer win/loss interviews (via sales team)
+- Churned customer feedback (via customer success)
+- Sales objection tracking (Vtiger CRM)
+- Competitive mentions in support tickets
+- G2/Capterra reviews for applicable products

@@ -261,3 +261,131 @@ For each: what was it, why was it rejected?
 - Frame feedback collection: "What feedback do you have on X?" is better than "Any thoughts?"
 - Capture feedback visibly and commit to addressing it (or explaining why not)
 - Set expectations about what kind of feedback is actionable at this stage
+
+## FashionUnited Stakeholder Communication
+
+FashionUnited has distinct internal and external stakeholder groups with different communication needs.
+
+### Internal Stakeholders
+
+| Stakeholder | Primary Interests | Preferred Format | Cadence |
+|-------------|------------------|------------------|---------|
+| Leadership | Strategic alignment, metrics, risks | Slack + brief doc | Weekly |
+| Engineering | Priorities, blockers, technical decisions | GitHub Issues/Projects, Slack | Daily/weekly |
+| Sales | Client-facing features, timelines, competitive context | Slack, Google Docs | As needed |
+| Customer Service | Feature changes affecting clients, known issues | Slack, email | Before launches |
+| Editorial | News platform features, publishing workflow | Slack, direct chat | As needed |
+
+### Communication Channels
+
+| Channel | Best For | Avoid For |
+|---------|----------|-----------|
+| Slack (#product) | Quick updates, questions, async discussion | Long documents, decisions needing record |
+| Google Docs | Specs, analysis, decisions needing history | Quick questions, time-sensitive info |
+| GitHub Issues | Technical implementation, bug tracking | Non-technical stakeholders |
+| GitHub Projects | Roadmap visibility, status tracking | Detailed discussion |
+| Email | External communication, formal updates | Internal quick updates |
+
+### External Stakeholders
+
+**B2B Clients** (recruiters, brands, advertisers):
+- Communication via: Account managers, jobs@fashionunited.com, newsletters
+- Focus: Feature benefits, timelines, how-to guidance
+- Avoid: Technical jargon, internal roadmap details
+
+**Publishers/Partners**:
+- Communication via: Direct relationships, partner newsletters
+- Focus: Platform improvements, content opportunities, integration updates
+- Avoid: Unannounced changes that affect their workflow
+
+**Job Seekers/Readers**:
+- Communication via: Product UI, blog posts, newsletters
+- Focus: New features, improved experience, value delivery
+- Avoid: B2B-focused features they don't use
+
+### FashionUnited Update Templates
+
+**Weekly Product Update (Internal Slack)**:
+```
+Product Update - Week of [Date]
+
+Shipped:
+• [Feature] - [Brief description] - [Link to release]
+
+In Progress:
+• [Feature] - [Status] - ETA [Date]
+
+Metrics Watch:
+• [Key metric] - [Current value] ([Change])
+
+Needs Attention:
+• [Issue/blocker] - [What we need]
+```
+
+**Client Feature Announcement**:
+```
+Subject: New on FashionUnited: [Feature Name]
+
+Hi [Name],
+
+We've launched [Feature Name] to help you [benefit].
+
+What's new:
+• [Key capability 1]
+• [Key capability 2]
+
+How to use it:
+[Brief instructions or link to help article]
+
+Questions? Reply to this email or reach out to your account manager.
+
+Best,
+[Name]
+```
+
+**Launch Announcement (Cross-team)**:
+```
+Subject: [Feature] launching [Date] - Action required
+
+Hi team,
+
+We're launching [Feature] on [Date]. Here's what you need to know:
+
+What's launching:
+[Brief description]
+
+Who it affects:
+• [User segment 1]: [How it affects them]
+• [User segment 2]: [How it affects them]
+
+Action required:
+• Sales: [What to tell clients]
+• Support: [What to expect]
+• Editorial: [Any content needs]
+
+Timeline:
+• [Date]: Soft launch
+• [Date]: Full rollout
+• [Date]: Client communication
+
+Questions? Ask in #product-[feature]
+```
+
+### Handling FashionUnited-Specific Situations
+
+**Feed/scraper issues affecting clients**:
+1. Acknowledge immediately in support channel
+2. Provide ETA for resolution
+3. Proactive communication to affected clients via account managers
+4. Post-mortem if significant impact
+
+**Multi-market feature rollouts**:
+- Plan rollout by market (NL, DE, UK, etc.)
+- Coordinate with local editorial/sales teams
+- Consider language and localization needs
+- Stagger announcements by market timezone
+
+**Strategic initiative updates**:
+- Link updates to 2025-2026 initiatives (Subscriptions, Store Locator, AI-first)
+- Show progress against goals
+- Connect tactical work to strategic context

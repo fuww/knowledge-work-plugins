@@ -273,3 +273,139 @@ Set alerts for metrics that require immediate attention:
 - Review and tune alerts regularly. Too many false positives and people ignore all alerts.
 - Define an owner for each alert. Who responds when it fires?
 - Set appropriate severity levels. Not everything is P0.
+
+## FashionUnited Product Metrics
+
+FashionUnited operates multiple interconnected products. Each has distinct metrics while contributing to platform-wide health.
+
+### News Platform Metrics
+
+**North Star**: Weekly engaged reading time (minutes of content consumption)
+
+**L1 Metrics**:
+
+| Metric | Definition | Target Benchmark |
+|--------|-----------|------------------|
+| MAU (readers) | Unique visitors reading content monthly | Growth trend |
+| Pageviews per session | Average pages read per visit | >2.0 |
+| Article completion rate | % of readers who scroll to article end | >40% |
+| Newsletter open rate | % of subscribers opening newsletter | >25% |
+| Subscriber conversion | Free reader → paid subscriber rate | Track vs baseline |
+
+**L2 Metrics**:
+- Traffic by source (organic, social, direct, referral)
+- Content performance by category/topic
+- Geographic distribution (by market: NL, DE, UK, US, etc.)
+- Mobile vs desktop engagement
+- Paywall hit rate and conversion
+
+### Job Board Metrics
+
+**North Star**: Monthly qualified applications submitted
+
+**L1 Metrics**:
+
+| Metric | Definition | Target Benchmark |
+|--------|-----------|------------------|
+| Active job listings | Jobs currently live on platform | Volume trend |
+| Applications per job | Average applications per listing | 10-20 for quality |
+| Application completion rate | Started → submitted applications | >60% |
+| Job seeker activation | Searchers who apply within 30 days | Track vs baseline |
+| Client retention | % of clients renewing/reposting | >70% annually |
+
+**L2 Metrics**:
+- Jobs by posting method (dashboard, XML feed, scraper)
+- Application quality score (if measurable)
+- Job seeker search-to-apply funnel
+- Employer branding page engagement
+- Feed/scraper health (jobs synced, errors)
+
+**Job Board Specific Funnels**:
+1. Recruiter funnel: Visit → Post job → Receive applications → Fill role
+2. Job seeker funnel: Visit → Search → View job → Apply → Get hired
+
+### B2B Marketplace Metrics
+
+**North Star**: Monthly qualified leads generated (buyer-seller connections)
+
+**L1 Metrics**:
+
+| Metric | Definition | Target Benchmark |
+|--------|-----------|------------------|
+| Active brand profiles | Brands with complete, active listings | Growth trend |
+| Buyer search volume | Unique buyers searching marketplace | Growth trend |
+| Profile views | Brand profile page visits | Volume trend |
+| Contact requests | Buyer inquiries to brands | Volume and quality |
+| Conversion to lead | Visitor → contact request rate | Track vs baseline |
+
+**L2 Metrics**:
+- Brand profile completeness score
+- Search result click-through rate
+- Product category distribution
+- Geographic matching (buyer-seller region alignment)
+- Trade show/event related traffic spikes
+
+### Company Directory Metrics
+
+**North Star**: Monthly profile views (discovery and engagement)
+
+**L1 Metrics**:
+
+| Metric | Definition | Target Benchmark |
+|--------|-----------|------------------|
+| Active company profiles | Companies with claimed, updated profiles | Coverage trend |
+| Profile completeness | Average % of fields filled | >70% |
+| Profile views | Monthly views across all profiles | Volume trend |
+| Cross-product referrals | Clicks to jobs/marketplace from directory | Growth trend |
+| Search satisfaction | Searches with click (vs abandonment) | >50% |
+
+**L2 Metrics**:
+- Profile update frequency
+- Store locator usage (when launched)
+- Company news integration engagement
+- Inbound links from external sources
+
+### Platform-Wide Metrics
+
+Metrics that span all FashionUnited products:
+
+| Metric | Definition | Purpose |
+|--------|-----------|---------|
+| Total MAU | Unique users across all products | Overall platform health |
+| Cross-product usage | Users engaging with 2+ products | Ecosystem stickiness |
+| Registered user growth | New account registrations | Audience building |
+| Revenue per product | MRR/ARR by product line | Business health |
+| Support ticket volume | Tickets by product and category | Quality signal |
+
+### FashionUnited OKR Examples
+
+**News Platform Objective**: Build a sustainable content business
+
+Key Results:
+- Launch subscription paywall with 1,000 paying subscribers in Q1
+- Increase newsletter subscriber base from X to Y
+- Achieve 30% of new subscribers from organic search
+
+**Job Board Objective**: Become the #1 fashion industry job platform in EU
+
+Key Results:
+- Increase active job listings by 25%
+- Improve application completion rate from X% to Y%
+- Achieve 50% of new clients from organic/referral channels
+
+**Marketplace Objective**: Prove B2B marketplace value proposition
+
+Key Results:
+- Generate 500 qualified buyer-seller connections
+- Achieve 80% brand profile completeness for active listings
+- Launch self-serve brand onboarding with X signups
+
+### Data Sources for FashionUnited Metrics
+
+| Data Source | Metrics It Powers | Access Method |
+|-------------|------------------|---------------|
+| Google Analytics | Traffic, engagement, funnels | GA4 dashboard, BigQuery |
+| PostgreSQL | User data, transactions, content | Direct query, internal tools |
+| Elasticsearch | Search analytics, content performance | Kibana, API |
+| Vtiger CRM | Customer data, support history | Vtiger reports, Pipedream |
+| Email platform | Newsletter metrics, campaign performance | Provider dashboard |

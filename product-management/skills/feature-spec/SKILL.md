@@ -174,3 +174,108 @@ Scope creep happens when:
 - Review the spec against the original problem statement — does everything serve it?
 - Time-box investigations: "If we cannot figure out X in 2 days, we cut it"
 - Create a "parking lot" for good ideas that are not in scope
+
+## FashionUnited Feature Spec Templates
+
+When writing specs for FashionUnited products, consider these product-specific templates and considerations:
+
+### News Platform Features
+
+**User personas**:
+- Fashion publisher/editor (content creation, editorial workflow)
+- Fashion professional (content consumption, industry insights)
+- Subscriber (premium content access, personalized experience)
+
+**Key considerations**:
+- Content delivery and SEO impact
+- Subscription/paywall integration
+- Multi-language and regional support (NL, DE, UK, US, FR, ES, IT, MX, etc.)
+- Editorial workflow and CMS integration
+- Real-time content performance metrics
+
+**Example user stories**:
+- "As a fashion publisher, I want to schedule articles for publication so that I can maintain consistent publishing cadence across time zones"
+- "As a subscriber, I want personalized content recommendations so that I discover relevant fashion industry news"
+- "As a fashion professional, I want to save articles for later so that I can build a reference library of industry insights"
+
+### Job Board Features
+
+**User personas**:
+- Recruiter (job posting, candidate management, employer branding)
+- Job seeker (job search, application, career content)
+- HR manager (bulk posting, ATS integration, analytics)
+
+**Key considerations**:
+- ATS/XML feed integration (Workday, Greenhouse, Lever, etc.)
+- Job scraper reliability and data quality
+- Application funnel optimization
+- Employer branding page management
+- Job matching and recommendation algorithms
+- Credit system and pricing model impact
+
+**Example user stories**:
+- "As a recruiter, I want to sync jobs from our ATS so that I do not manually duplicate job postings"
+- "As a job seeker, I want to filter jobs by location, salary, and experience level so that I find relevant opportunities quickly"
+- "As an HR manager, I want to see application analytics so that I can optimize our job descriptions and posting strategy"
+
+### B2B Marketplace Features
+
+**User personas**:
+- Fashion brand (wholesale listings, buyer connections, product showcase)
+- Retailer/buyer (supplier discovery, product sourcing, trend research)
+- Trade professional (network building, market intelligence)
+
+**Key considerations**:
+- Product catalog management and media assets
+- Buyer-seller communication and lead generation
+- Trade show and showroom integration
+- Minimum order quantities and pricing visibility
+- Geographic and seasonal relevance
+
+**Example user stories**:
+- "As a fashion brand, I want to showcase my wholesale collection so that retailers can discover and connect with us"
+- "As a retailer, I want to search suppliers by product category and price range so that I can find brands that fit my store concept"
+- "As a brand, I want to see which retailers viewed my profile so that I can follow up with interested buyers"
+
+### Company Directory Features
+
+**User personas**:
+- Fashion brand (company profile, visibility, recruitment)
+- Retailer (supplier research, industry connections)
+- Job seeker (employer research, company discovery)
+
+**Key considerations**:
+- Profile completeness and verification
+- Integration with job board and marketplace
+- Company news and social feed integration
+- Store locator functionality
+- Brand-retailer relationship mapping
+
+**Example user stories**:
+- "As a fashion brand, I want to maintain our company profile so that potential employees and partners can learn about us"
+- "As a job seeker, I want to see company reviews and culture information so that I can evaluate potential employers"
+- "As a retailer, I want to find brands by location and product category so that I can source from local suppliers"
+
+### Technical Considerations for FashionUnited
+
+When writing specs, account for the technical architecture:
+
+**GraphQL API patterns**:
+- Design queries and mutations that align with existing schema patterns
+- Consider pagination and filtering requirements for list views
+- Plan for real-time updates where applicable (LiveView/Phoenix Channels)
+
+**Elixir/Phoenix considerations**:
+- Leverage Phoenix contexts for domain boundaries
+- Consider background job processing (Oban) for async operations
+- Plan for multi-tenant data isolation where applicable
+
+**Data and search**:
+- Elasticsearch indexing requirements for new searchable content
+- PostgreSQL schema design and migration planning
+- CDN caching strategy for static assets
+
+**Integration points**:
+- External API dependencies (ATS systems, payment providers, etc.)
+- Webhook requirements for real-time integrations
+- OAuth/authentication requirements for third-party connections

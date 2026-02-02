@@ -2,6 +2,8 @@
 
 A product management plugin primarily designed for [Cowork](https://claude.com/product/cowork), Anthropic's agentic desktop application — though it also works in Claude Code. Covers the full PM workflow: writing feature specs, managing roadmaps, communicating with stakeholders, synthesizing user research, analyzing competitors, and tracking product metrics.
 
+This plugin is configured for **FashionUnited** product workflows, including the news platform, job board, B2B marketplace, and company directory.
+
 ## Installation
 
 ```
@@ -12,12 +14,12 @@ claude plugins add knowledge-work-plugins/product-management
 
 This plugin gives you an AI-powered product management partner that can help with:
 
-- **Feature Specs & PRDs** — Generate structured product requirements documents from a problem statement or feature idea. Includes user stories, requirements prioritization, success metrics, and scope management.
-- **Roadmap Planning** — Create, update, and reprioritize your product roadmap. Supports Now/Next/Later, quarterly themes, and OKR-aligned formats with dependency mapping.
-- **Stakeholder Updates** — Generate status updates tailored to your audience (executives, engineering, customers). Pulls context from connected tools to save you the weekly update grind.
-- **User Research Synthesis** — Turn interview notes, survey data, and support tickets into structured insights. Identifies themes, builds personas, and surfaces opportunity areas with supporting evidence.
-- **Competitive Analysis** — Research competitors and generate briefs with feature comparisons, positioning analysis, and strategic implications.
-- **Metrics Review** — Analyze product metrics, identify trends, compare against targets, and surface actionable insights.
+- **Feature Specs & PRDs** — Generate structured product requirements documents from a problem statement or feature idea. Includes FashionUnited-specific templates for news, jobs, marketplace, and directory features.
+- **Roadmap Planning** — Create, update, and reprioritize your product roadmap. Integrates with GitHub Projects (Now/Next/Later) and beads issue tracking.
+- **Stakeholder Updates** — Generate status updates tailored to your audience (leadership, engineering, sales, customers). Pulls context from GitHub, Slack, and Google Workspace.
+- **User Research Synthesis** — Turn interview notes, survey data, and support tickets into structured insights. Includes fashion industry stakeholder personas (publishers, recruiters, brands, job seekers, retailers).
+- **Competitive Analysis** — Research competitors and generate briefs with feature comparisons, positioning analysis, and strategic implications. Includes FashionUnited competitive landscape context.
+- **Metrics Review** — Analyze product metrics, identify trends, compare against targets. Includes FashionUnited product-specific metrics frameworks.
 
 ## Commands
 
@@ -34,43 +36,43 @@ This plugin gives you an AI-powered product management partner that can help wit
 
 | Skill | What It Covers |
 |---|---|
-| `feature-spec` | PRD structure, user stories, requirements categorization, acceptance criteria |
-| `roadmap-management` | Prioritization frameworks (RICE, MoSCoW), roadmap formats, dependency mapping |
-| `stakeholder-comms` | Update templates by audience, risk communication, decision documentation |
-| `user-research-synthesis` | Thematic analysis, affinity mapping, persona development, opportunity sizing |
-| `competitive-analysis` | Feature comparison matrices, positioning analysis, win/loss analysis |
-| `metrics-tracking` | Product metrics hierarchy, goal setting (OKRs), dashboard design, review cadences |
+| `feature-spec` | PRD structure, user stories, requirements categorization, FashionUnited product templates |
+| `roadmap-management` | Prioritization frameworks, GitHub Projects integration, beads workflow, dependency mapping |
+| `stakeholder-comms` | Update templates by audience, FashionUnited communication channels, decision documentation |
+| `user-research-synthesis` | Thematic analysis, fashion industry personas, opportunity sizing |
+| `competitive-analysis` | Feature comparison matrices, FashionUnited competitive landscape, win/loss analysis |
+| `metrics-tracking` | Product metrics by FashionUnited product line, OKRs, dashboard design |
 
 ## Example Workflows
 
-### Writing a PRD
+### Writing a Feature Spec for the Job Board
 
 ```
 You: /write-spec
 Claude: What feature or problem are you speccing out?
-You: We need to add SSO support for enterprise customers
-Claude: [Asks about target users, constraints, success metrics]
-Claude: [Generates full PRD with problem statement, user stories, requirements, success metrics, open questions]
+You: We need to improve the job application completion rate
+Claude: [Asks about target users, current funnel data, constraints]
+Claude: [Generates full PRD with job seeker personas, requirements, success metrics, technical considerations for Phoenix/GraphQL]
 ```
 
-### Preparing a Stakeholder Update
+### Updating the Roadmap
 
 ```
-You: /stakeholder-update
-Claude: What type of update? (weekly, monthly, launch, ad-hoc)
-You: Weekly update for the exec team
-Claude: [Pulls context from project management tool, chat, and docs]
-Claude: [Generates executive summary with progress, decisions, risks, and next milestones]
+You: /roadmap-update
+Claude: What do you want to update?
+You: Move the Store Locator feature from Next to Now, and add the subscription paywall analytics to Next
+Claude: [Pulls current roadmap from GitHub Projects]
+Claude: [Shows before/after, identifies dependencies, updates GitHub Projects]
 ```
 
-### Synthesizing User Research
+### Synthesizing Recruiter Research
 
 ```
 You: /synthesize-research
-Claude: What research do you want to synthesize? You can paste interview notes, upload files, or I can pull from connected sources.
-You: [Pastes 8 interview transcripts]
-Claude: [Identifies themes, patterns, and insights across interviews]
-Claude: [Generates synthesis with key findings, personas, opportunity areas, and evidence]
+Claude: What research do you want to synthesize?
+You: [Pastes 6 recruiter interview transcripts]
+Claude: [Identifies themes around ATS integration pain, employer branding needs]
+Claude: [Generates synthesis with recruiter persona refinement, opportunity areas, recommendations]
 ```
 
 ### Competitive Analysis
@@ -78,25 +80,42 @@ Claude: [Generates synthesis with key findings, personas, opportunity areas, and
 ```
 You: /competitive-brief
 Claude: Which competitor(s) or feature area do you want to analyze?
-You: Compare our onboarding flow to [competitor A] and [competitor B]
-Claude: [Researches competitor onboarding approaches]
-Claude: [Generates brief with feature comparison, strengths/weaknesses, and strategic implications]
+You: Compare our job board to Indeed and LinkedIn for fashion industry recruitment
+Claude: [Researches competitor positioning and features]
+Claude: [Generates brief with FashionUnited differentiation strategy]
 ```
 
 ## Data Sources
 
 > If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](CONNECTORS.md).
 
-Connect your project management and communication tools for the best experience. Without them, provide context manually.
+This plugin is configured for FashionUnited's tool stack:
 
 **Included MCP connections:**
-- Chat (Slack) for team context and stakeholder threads
-- Project tracker (Linear, Asana, monday.com, ClickUp, Atlassian) for roadmap integration, ticket context, and status tracking
-- Knowledge base (Notion) for existing specs, research, and meeting notes
-- Design (Figma) for design context and handoff
-- Product analytics (Amplitude, Pendo) for usage data, metrics, and behavioral analysis
-- User feedback (Intercom) for support tickets, feature requests, and user conversations
-- Meeting transcription (Fireflies) for meeting notes and discussion context
+- Chat (Slack) for team communication and stakeholder channels
+- Google Workspace for documents (specs, research), spreadsheets (metrics), presentations, and email
+- GitHub for project tracking (Issues + Projects), knowledge base (Wiki, Discussions), and code context
+- Vtiger CRM for customer context and feedback history
+
+**Issue tracking:**
+- beads (`bd`) for granular task tracking that syncs with git
+- GitHub Projects for high-level roadmap (Now/Next/Later)
 
 **Additional options:**
 - See [CONNECTORS.md](CONNECTORS.md) for alternative tools in each category
+
+## FashionUnited Product Context
+
+This plugin includes context for FashionUnited's products:
+
+| Product | Purpose | Key Stakeholders |
+|---------|---------|------------------|
+| News Platform | Fashion industry news and editorial | Publishers, fashion professionals |
+| Job Board | Fashion industry recruitment | Recruiters, job seekers, HR |
+| B2B Marketplace | Fashion wholesale and trade | Brands, retailers, buyers |
+| Company Directory | Fashion company profiles | Brands, retailers, professionals |
+
+Strategic initiatives (2025-2026):
+- Subscriptions/Paywall for News Platform
+- Store Locator for retail discovery
+- AI-First Strategy across all products

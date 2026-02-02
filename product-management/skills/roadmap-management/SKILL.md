@@ -166,3 +166,89 @@ Common triggers for roadmap changes:
 - Batch roadmap updates at natural cadences (monthly, quarterly) unless something is truly urgent.
 - Distinguish between "roadmap change" (strategic reprioritization) and "scope adjustment" (normal execution refinement).
 - Track how often the roadmap changes. Frequent changes may signal unclear strategy, not good responsiveness.
+
+## FashionUnited Roadmap Workflow
+
+FashionUnited uses GitHub Projects with a Now-Next-Later format, integrated with beads for issue tracking.
+
+### GitHub Projects Setup
+
+The roadmap is managed in GitHub Projects with three columns:
+
+| Column | Purpose | Typical Items |
+|--------|---------|---------------|
+| **Now** | Active development (current sprint/cycle) | Epics and tasks in progress, committed deliverables |
+| **Next** | Planned for next cycle (1-3 months) | Scoped initiatives, prioritized backlog |
+| **Later** | Strategic direction (3-6+ months) | Future bets, exploratory work, long-term goals |
+
+**Working with GitHub Projects**:
+- Each card represents an initiative, epic, or significant feature
+- Link cards to GitHub Issues for detailed tracking
+- Use labels for categorization (product area, strategic initiative, type)
+- Add custom fields for priority, effort estimate, and owner
+
+### Beads Integration
+
+Beads (`bd`) is used for granular issue tracking that syncs with git:
+
+**Roadmap to beads flow**:
+1. Strategic initiatives live in GitHub Projects (Now/Next/Later)
+2. When an initiative moves to "Now", create an epic in beads
+3. Break down epics into tasks using `bd create`
+4. Track dependencies between tasks with `bd dep add`
+5. Use `bd ready` to find unblocked work
+6. Sync beads with git at session end using `bd sync`
+
+**Beads commands for roadmap work**:
+```
+bd ready                    # Find unblocked work to pick up
+bd create "Task" -t task    # Create a new task
+bd show <id>               # View full task details
+bd update <id> --status in_progress  # Start work
+bd close <id>              # Complete work
+bd sync                    # Sync with git (run at session end)
+```
+
+### FashionUnited Strategic Context
+
+When planning roadmap items, consider alignment with 2025-2026 strategic initiatives:
+
+| Initiative | Focus Areas | Roadmap Considerations |
+|------------|-------------|----------------------|
+| **Subscriptions/Paywall** | News Platform monetization, premium content | User segmentation, paywall logic, subscription management |
+| **Store Locator** | Retail discovery, brand visibility | Geographic data, brand-retailer connections, search/filter |
+| **AI-First Strategy** | Content creation, job matching, search | ML infrastructure, data pipelines, user experience |
+
+### Cross-Product Dependencies
+
+FashionUnited operates multiple interconnected products. When planning, map dependencies:
+
+| Product | Depends On | Provides To |
+|---------|-----------|-------------|
+| News Platform | Company Directory (brand profiles) | Traffic to Job Board, Marketplace |
+| Job Board | Company Directory (employer profiles) | Candidate data for brands |
+| B2B Marketplace | Company Directory (brand/retailer profiles) | Lead data for sales |
+| Company Directory | All products (profile completeness) | Identity layer for ecosystem |
+
+**Common cross-product dependencies**:
+- User identity and authentication (shared across products)
+- Company profiles (used by job board, marketplace, news)
+- Search infrastructure (powers discovery across products)
+- Notification system (shared communication layer)
+
+### Roadmap Communication at FashionUnited
+
+**Internal stakeholders**:
+- Engineering team: detailed GitHub Projects view with linked issues
+- Leadership: Now/Next/Later summary with strategic alignment
+- Sales/Customer Service: customer-facing features with timing
+
+**Formats for different audiences**:
+- Slack updates: brief bullet points on significant changes
+- Google Docs: detailed quarterly planning documents
+- GitHub Projects: live source of truth for execution
+
+**Cadence**:
+- Weekly: status check on "Now" items
+- Monthly: review and adjust "Next" priorities
+- Quarterly: strategic planning, "Later" refinement

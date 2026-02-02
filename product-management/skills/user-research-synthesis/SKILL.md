@@ -194,3 +194,146 @@ Score opportunities on a simple matrix:
 - Show the math: "Based on support ticket volume, approximately 2,000 users per month encounter this issue. Interview data suggests 60% of them consider it a significant blocker."
 - Use ranges rather than false precision: "This affects 1,500-2,500 users monthly" not "This affects 2,137 users monthly"
 - Compare opportunities against each other to create a relative ranking, not just absolute scores
+
+## FashionUnited Stakeholder Personas
+
+When conducting user research for FashionUnited, consider these key stakeholder groups and their distinct characteristics:
+
+### Fashion Publishers & Editors
+
+**Who they are**:
+- Editorial staff at fashion publications, both FashionUnited and external
+- Content creators focusing on industry news, trends, and business coverage
+- Often juggling multiple roles: writing, editing, social media
+
+**Research focus areas**:
+- Editorial workflow efficiency (content creation to publication)
+- Content performance and audience engagement metrics
+- Multi-channel publishing needs (web, newsletter, social)
+- Monetization and subscription model impact on content strategy
+
+**Key questions to explore**:
+- How do you discover and validate news stories?
+- What tools do you use alongside FashionUnited for content creation?
+- How do you measure success for your content?
+- What friction do you experience in the publishing workflow?
+
+**Attribution format**: "Fashion editor, [publication type/size]"
+
+### Recruiters & HR Professionals
+
+**Who they are**:
+- In-house recruiters at fashion brands and retailers
+- External recruitment agencies specializing in fashion
+- HR managers handling both recruitment and employer branding
+
+**Research focus areas**:
+- Job posting workflow and ATS integration
+- Candidate quality and application volume
+- Employer branding effectiveness
+- Competition for talent in fashion industry
+
+**Key questions to explore**:
+- How do you currently source fashion industry candidates?
+- What makes a job posting successful on FashionUnited vs other platforms?
+- How do you measure ROI on your recruitment spend?
+- What integration challenges do you face with your ATS?
+
+**Attribution format**: "Recruiter, [company type], [team size]"
+
+### Fashion Brands (B2B)
+
+**Who they are**:
+- Brand managers and marketing teams at fashion labels
+- Wholesale/sales directors managing B2B relationships
+- E-commerce and digital teams managing online presence
+
+**Research focus areas**:
+- Brand visibility and discovery on the platform
+- B2B lead generation and wholesale connections
+- Company profile management and content
+- Integration with existing sales and marketing tools
+
+**Key questions to explore**:
+- How do retailers currently discover your brand?
+- What information do buyers need to make wholesale decisions?
+- How do you manage your brand presence across industry platforms?
+- What would make FashionUnited more valuable for B2B?
+
+**Attribution format**: "Brand manager, [brand segment: luxury/premium/fast fashion], [company size]"
+
+### Job Seekers
+
+**Who they are**:
+- Fashion professionals seeking new opportunities
+- Career changers entering the fashion industry
+- Students and recent graduates exploring fashion careers
+
+**Research focus areas**:
+- Job search and discovery experience
+- Application process and conversion
+- Career content consumption and value
+- Employer research and company evaluation
+
+**Key questions to explore**:
+- How do you search for fashion industry jobs?
+- What information do you need before applying?
+- What makes you choose one job board over another?
+- How do you research potential employers?
+
+**Attribution format**: "Job seeker, [experience level], [role type]"
+
+### Retailers & Buyers
+
+**Who they are**:
+- Retail buyers sourcing products for stores
+- Independent boutique owners
+- E-commerce merchandisers
+
+**Research focus areas**:
+- Supplier and brand discovery
+- Product sourcing and evaluation
+- Trade show and showroom alternatives
+- Trend research and market intelligence
+
+**Key questions to explore**:
+- How do you currently discover new brands to stock?
+- What information do you need to evaluate a potential supplier?
+- How has your buying process changed (trade shows vs digital)?
+- What would make online wholesale sourcing more effective?
+
+**Attribution format**: "Buyer, [store type: department/boutique/online], [location]"
+
+### Fashion Industry Research Themes
+
+When synthesizing research across FashionUnited stakeholders, look for these recurring themes:
+
+**Industry-specific context**:
+- Seasonality (fashion weeks, buying seasons, trade shows)
+- Geographic fragmentation (different markets have different dynamics)
+- Traditional vs digital transformation tension
+- Sustainability and transparency pressures
+
+**Cross-stakeholder connections**:
+- Brand-retailer relationships (wholesale dynamics)
+- Recruiter-job seeker matching (talent marketplace)
+- Publisher-audience engagement (content ecosystem)
+- How improvements for one stakeholder affect others
+
+**Platform ecosystem effects**:
+- Network effects between products (news, jobs, marketplace, directory)
+- Data sharing and profile consistency across products
+- Cross-product user journeys and conversion paths
+
+### FashionUnited Research Data Sources
+
+When synthesizing research, leverage these FashionUnited-specific data sources:
+
+| Source | What It Reveals | Stakeholder Coverage |
+|--------|----------------|---------------------|
+| Vtiger CRM | Customer feedback, support history, account context | All B2B clients |
+| Google Analytics | User behavior, traffic patterns, conversion funnels | All users |
+| Job board analytics | Application rates, job performance, search patterns | Recruiters, job seekers |
+| Support tickets (jobs@) | Common issues, pain points, feature requests | Job board clients |
+| Sales call notes | Purchase drivers, objections, competitive context | B2B prospects |
+| NPS surveys | Satisfaction trends, segment differences | Active users |
