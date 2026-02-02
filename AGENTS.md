@@ -18,7 +18,6 @@ For full workflow details: `bd prime`
 ## Project overview
 
 - 11 independent, role-focused plugins (productivity, sales, customer-support, product-management, marketing, legal, finance, data, enterprise-search, bio-research, cowork-plugin-management)
-- No code — everything is markdown and JSON. No build, no tests, no linting, no CI.
 - Licensed under Apache 2.0
 
 ## Repository structure
