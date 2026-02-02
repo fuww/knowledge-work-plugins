@@ -14,7 +14,7 @@ Transform this:
 ~~chat result: "Sarah said in #eng: 'let's go with REST, GraphQL is overkill for our use case'"
 ~~email result: "Subject: API Decision — Sarah's email confirming REST approach with rationale"
 ~~cloud storage result: "API Design Doc v3 — updated section 2 to reflect REST decision"
-~~project tracker result: "Task: Finalize API approach — marked complete by Sarah"
+~~project tracker result: "Issue: Finalize API approach — marked complete by Sarah"
 ```
 
 Into this:
@@ -22,13 +22,43 @@ Into this:
 The team decided to go with REST over GraphQL for the API redesign. Sarah made the
 call, noting that GraphQL was overkill for the current use case. This was discussed
 in #engineering on Tuesday, confirmed via email Wednesday, and the design doc has
-been updated to reflect the decision. The related ~~project tracker task is marked complete.
+been updated to reflect the decision. The related GitHub issue is marked complete.
 
 Sources:
 - ~~chat: #engineering thread (Jan 14)
 - ~~email: "API Decision" from Sarah (Jan 15)
 - ~~cloud storage: "API Design Doc v3" (updated Jan 15)
 - ~~project tracker: "Finalize API approach" (completed Jan 15)
+```
+
+## FashionUnited Example: Brand Lookup
+
+Transform this:
+```
+~~CRM result: "Gucci - Account Status: Active Advertiser, Contract: Annual display package"
+~~data warehouse/editorial: "47 articles mentioning Gucci in 2024, including Milan Fashion Week coverage"
+~~data warehouse/marketplace: "1,247 Gucci products in marketplace catalog"
+~~data warehouse/jobs: "12 Gucci job postings in last 6 months"
+~~email result: "Latest correspondence: Invoice discussion with marketing team, Dec 2024"
+```
+
+Into this:
+```
+Gucci is an active advertiser with FashionUnited on an annual display package.
+
+**Relationship summary:**
+- Active advertising customer with annual contract
+- 47 articles published mentioning Gucci in 2024 (including Milan Fashion Week coverage)
+- 1,247 products in the marketplace catalog
+- 12 job postings in the last 6 months
+
+**Recent activity:**
+- Latest correspondence in December 2024 regarding invoicing
+
+Sources:
+- ~~CRM: Account record (Vtiger)
+- ~~data warehouse: Editorial dataset (47 articles), Marketplace dataset (1,247 products), Jobs dataset (12 postings)
+- ~~email: December 2024 correspondence
 ```
 
 ## Deduplication
@@ -41,7 +71,7 @@ The same information often appears in multiple places. Identify and merge duplic
 - Same or very similar text content
 - Same author/sender
 - Timestamps within a short window (same day or adjacent days)
-- References to the same entity (project name, document, decision)
+- References to the same entity (project name, document, decision, brand name)
 - One source references another ("as discussed in ~~chat", "per the email", "see the doc")
 
 **How to merge:**
@@ -89,14 +119,17 @@ Sources:
 
 ### Attribution Rules
 
-- Always name the source type (~~chat, ~~email, ~~cloud storage, etc.)
-- Include the specific location (channel, folder, thread)
+- Always name the source type (~~chat, ~~email, ~~cloud storage, ~~CRM, ~~data warehouse, etc.)
+- Include the specific location (channel, folder, thread, dataset, repository)
 - Include the date or relative time
 - Include the author when relevant
 - Include document/thread titles when available
 - For ~~chat, note the channel name
 - For ~~email, note the subject line and sender
 - For ~~cloud storage, note the document title
+- For ~~CRM, note the record type (Account, Contact, Opportunity)
+- For ~~data warehouse, note the dataset and query type
+- For ~~code repositories, note the repository and file/path
 
 ## Confidence Levels
 
@@ -120,30 +153,43 @@ For status queries, heavily weight freshness. For policy/factual queries, freshn
 | Official wiki / knowledge base | Highest — curated, maintained |
 | Shared documents (final versions) | High — intentionally published |
 | Email announcements | High — formal communication |
+| CRM records | High — official business data |
+| BigQuery datasets | High — structured, validated data |
 | Meeting notes | Moderate-high — may be incomplete |
 | Chat messages (thread conclusions) | Moderate — informal but real-time |
 | Chat messages (mid-thread) | Lower — may not reflect final position |
 | Draft documents | Low — not finalized |
-| Task comments | Contextual — depends on commenter |
+| GitHub issue comments | Contextual — depends on commenter |
+
+### FashionUnited-Specific Authority
+
+| Query Type | Authority Hierarchy |
+|------------|-------------------|
+| Brand/Account info | CRM > Email > Editorial > Chat |
+| Job market data | BigQuery jobs > CRM > Integrations > Email |
+| Editorial content | BigQuery editorial > Drive > Chat |
+| Product/Catalog | BigQuery marketplace > product-database > CRM |
+| Technical/API | GitHub (api repo) > Slack #engineering > Email |
+| Company policy | GitHub (about repo) > Drive > Email > Chat |
 
 ### Expressing Confidence
 
 When confidence is high (multiple fresh, authoritative sources agree):
 ```
-The team decided to use REST for the API redesign. [direct statement]
+Gucci is an active advertiser with an annual display contract. [direct statement]
 ```
 
 When confidence is moderate (single source or somewhat dated):
 ```
-Based on the discussion in #engineering last month, the team was leaning
-toward REST for the API redesign. This may have evolved since then.
+Based on CRM records, Gucci's last contract renewal was in Q3 2024.
+The current status may have changed — recommend checking with the sales team.
 ```
 
 When confidence is low (old data, informal source, or conflicting signals):
 ```
-I found a reference to an API migration discussion from three months ago
-in ~~chat, but I couldn't find a formal decision document. The information
-may be outdated. You might want to check with the team for current status.
+I found references to Gucci discussions from six months ago in Slack,
+but couldn't find current account data in the CRM. The information
+may be outdated. You might want to check with the sales team for current status.
 ```
 
 ### Conflicting Information
@@ -206,6 +252,38 @@ Top sources:
 
 Found [total count] results across [source list].
 Want me to dig deeper into any specific aspect?
+```
+
+### FashionUnited: Summarizing Brand Results
+
+For brand lookup queries with multiple data sources:
+```
+## [Brand Name] Overview
+
+**Relationship Status:** [Active/Inactive] [Customer Type]
+**Contract:** [Contract details from CRM]
+
+### Editorial Coverage
+- [X] articles in [year]
+- Key topics: [list main themes]
+- Recent: [most recent article]
+
+### Marketplace Presence
+- [X] products in catalog
+- Categories: [product categories]
+
+### Job Activity
+- [X] job postings in last [period]
+- Roles: [common job types]
+
+### Recent Communications
+- [Summary of email/chat activity]
+
+Sources:
+- ~~CRM: [Account record]
+- ~~data warehouse: Editorial ([X] articles), Marketplace ([X] products), Jobs ([X] postings)
+- ~~email: [Recent correspondence]
+- ~~chat: [Relevant discussions]
 ```
 
 ### Summarization Rules

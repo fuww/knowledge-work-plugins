@@ -40,15 +40,19 @@ Classify the user's question to determine search strategy:
 | **Factual** | "What's our policy on X?" | Prioritize wiki, official docs, then confirmatory conversations |
 | **Temporal** | "When did X happen?" | Search with broad date range, look for timestamps |
 | **Exploratory** | "What do we know about X?" | Broad search across all sources, synthesize |
+| **Brand** | "What do we know about [brand]?" | Search brand directory, CRM, editorial archives, marketplace |
+| **Job market** | "Job postings for [company]" | Search jobs dataset, employer CRM records, API integrations |
+| **Editorial** | "Articles about [topic]" | Search editorial archives, GraphQL API, Drive |
+| **Catalog** | "Products from [brand]" | Search marketplace dataset, product database, GraphQL API |
 
 ### Step 2: Extract Search Components
 
 From the query, extract:
 
 - **Keywords**: Core terms that must appear in results
-- **Entities**: People, projects, teams, tools (use memory system if available)
+- **Entities**: People, projects, teams, tools, brands, markets (use memory system if available)
 - **Intent signals**: Decision words, status words, temporal markers
-- **Constraints**: Time ranges, source hints, author filters
+- **Constraints**: Time ranges, source hints, author filters, market/region filters
 - **Negations**: Things to exclude
 
 ### Step 3: Generate Sub-Queries Per Source
@@ -61,7 +65,7 @@ For each available source, create one or more targeted queries:
 - Exploratory queries
 
 **Prefer keyword search** for:
-- Known terms, project names, acronyms
+- Known terms, project names, acronyms, brand names
 - Exact phrases the user quoted
 - Filter-heavy queries (from:, in:, after:)
 
@@ -97,7 +101,7 @@ query: "from:<@UserID> aurora"
 | `type:thread` | `is:thread` |
 | `type:file` | `has:file` |
 
-### ~~knowledge base (Wiki)
+### ~~knowledge base (Wiki / GitHub)
 
 **Semantic search** — Use for conceptual queries:
 ```
@@ -110,22 +114,145 @@ query: "API migration"
 query: "\"API migration timeline\""  (exact phrase)
 ```
 
-### ~~project tracker
+### ~~code repositories (GitHub)
+
+**File search:**
+```
+path:src/components filename:Button
+```
+
+**Code search:**
+```
+language:typescript "interface Product"
+repo:fashionunited/api "GraphQL schema"
+```
+
+**README/doc search:**
+```
+path:README.md OR path:docs "deployment"
+```
+
+**Repository-specific searches for FashionUnited:**
+| Query Intent | Repository | Search Pattern |
+|--------------|------------|----------------|
+| API endpoints | `api` | path:src filename:resolver OR schema |
+| UI components | `frontend` | path:src/components |
+| Data pipelines | `integrations` | path:feeds OR path:sync |
+| Product schema | `product-database` | path:models OR schema |
+| Deploy procedures | `deploy` | path:docs OR README |
+| Company policies | `about` | path:handbook OR policies |
+
+### ~~project tracker (GitHub Issues/Projects)
 
 **Task search:**
 ```
 text: "API migration"
-workspace: [workspace_id]
-completed: false  (for status queries)
-assignee_any: "me"  (for "my tasks" queries)
+is:issue is:open
+assignee:username
+label:priority-high
 ```
 
 **Filter mapping:**
-| Enterprise filter | ~~project tracker parameter |
-|------------------|----------------|
-| `from:sarah` | `assignee_any` or `created_by_any` |
-| `after:2025-01-01` | `modified_on_after: "2025-01-01"` |
-| `type:milestone` | `resource_subtype: "milestone"` |
+| Enterprise filter | GitHub syntax |
+|------------------|---------------|
+| `from:sarah` | `author:sarah` or `assignee:sarah` |
+| `after:2025-01-01` | `created:>2025-01-01` |
+| `type:milestone` | `milestone:"Milestone Name"` |
+| `status:open` | `is:open` |
+
+### ~~data warehouse (BigQuery)
+
+**Dataset-specific queries for FashionUnited:**
+
+| Query Type | Dataset | Example Query |
+|------------|---------|---------------|
+| Editorial content | `editorial` | Articles, publication dates, authors |
+| Job market | `jobs` | Job postings, employer data, market trends |
+| Marketplace | `marketplace` | Product listings, brand catalogs |
+| Traffic/analytics | `analytics` | Page views, engagement, traffic sources |
+| Ad performance | `advertising` | Campaign metrics, impression data |
+
+**Query patterns:**
+```sql
+-- Editorial archives
+SELECT * FROM editorial.articles WHERE title LIKE '%sustainable fashion%'
+
+-- Job posting history
+SELECT * FROM jobs.postings WHERE company = 'Brand Name' AND posted_date > '2024-01-01'
+
+-- Marketplace catalog
+SELECT * FROM marketplace.products WHERE brand = 'Brand Name'
+```
+
+### ~~CRM (Vtiger)
+
+**Record search:**
+```
+module: Accounts, Contacts, Opportunities, Invoices
+search: "Brand Name" OR "Company Name"
+```
+
+**Filter mapping:**
+| Enterprise filter | Vtiger query |
+|------------------|--------------|
+| `type:account` | module=Accounts |
+| `type:contact` | module=Contacts |
+| `status:active` | accountstatus=Active |
+| `owner:username` | assigned_user_id=username |
+
+## Fashion Industry Query Patterns
+
+### Brand Lookup
+
+When the query mentions a brand name, search across multiple sources:
+
+```
+User: "What do we know about Gucci?"
+
+1. ~~CRM: Search Accounts for "Gucci" (customer relationship, billing)
+2. BigQuery/editorial: Search articles mentioning "Gucci" (news coverage)
+3. BigQuery/marketplace: Search products from "Gucci" (catalog presence)
+4. BigQuery/jobs: Search job postings from "Gucci" (employer data)
+5. GraphQL API: Search brand directory for "Gucci" (official profile)
+```
+
+### Job Market Queries
+
+When the query is about jobs or employers:
+
+```
+User: "Design jobs in London this month"
+
+1. BigQuery/jobs: Query postings WHERE category='design' AND location='London' AND posted_date > 30 days ago
+2. ~~CRM: Check employer accounts in London with active subscriptions
+3. GraphQL API: Real-time job search for design roles in London
+```
+
+### Editorial Archive Queries
+
+When the query is about news, articles, or content:
+
+```
+User: "Coverage of Paris Fashion Week 2025"
+
+1. BigQuery/editorial: Query articles WHERE topic='Paris Fashion Week' AND year=2025
+2. GraphQL API: Full-text search for "Paris Fashion Week 2025"
+3. ~~cloud storage: Check Drive for editorial calendars, photo archives
+4. ~~chat: Search #editorial channel for PFW discussions
+```
+
+### Marketplace/Catalog Queries
+
+When the query is about products or catalog:
+
+```
+User: "Products from Zara in the women's category"
+
+1. BigQuery/marketplace: Query products WHERE brand='Zara' AND category='women'
+2. GitHub/product-database: Check product schema and feed specs
+3. GraphQL API: Real-time product search
+4. ~~CRM: Check Zara account status for catalog integration
+```
 
 ## Result Ranking
 
@@ -133,12 +260,12 @@ assignee_any: "me"  (for "my tasks" queries)
 
 Score each result on these factors (weighted by query type):
 
-| Factor | Weight (Decision) | Weight (Status) | Weight (Document) | Weight (Factual) |
-|--------|-------------------|------------------|--------------------|-------------------|
-| Keyword match | 0.3 | 0.2 | 0.4 | 0.3 |
-| Freshness | 0.3 | 0.4 | 0.2 | 0.1 |
-| Authority | 0.2 | 0.1 | 0.3 | 0.4 |
-| Completeness | 0.2 | 0.3 | 0.1 | 0.2 |
+| Factor | Weight (Decision) | Weight (Status) | Weight (Document) | Weight (Factual) | Weight (Brand) |
+|--------|-------------------|------------------|-------------------|-------------------|----------------|
+| Keyword match | 0.3 | 0.2 | 0.4 | 0.3 | 0.4 |
+| Freshness | 0.3 | 0.4 | 0.2 | 0.1 | 0.2 |
+| Authority | 0.2 | 0.1 | 0.3 | 0.4 | 0.3 |
+| Completeness | 0.2 | 0.3 | 0.1 | 0.2 | 0.1 |
 
 ### Authority Hierarchy
 
@@ -157,6 +284,16 @@ Meeting notes > Thread conclusions > Email confirmations > Chat messages
 **For status questions:**
 ```
 Task tracker > Recent chat > Status docs > Email updates
+```
+
+**For brand/entity questions (FashionUnited specific):**
+```
+CRM (official relationship) > Brand directory > Editorial coverage > Marketplace data > Chat mentions
+```
+
+**For job market questions:**
+```
+BigQuery jobs dataset > CRM employer records > API integrations > Email correspondence
 ```
 
 ## Handling Ambiguity
@@ -211,8 +348,8 @@ Always execute searches across sources in parallel, never sequentially. The tota
 ```
 [User query]
      ↓ decompose
-[~~chat query] [~~email query] [~~cloud storage query] [Wiki query] [~~project tracker query]
-     ↓            ↓            ↓              ↓            ↓
+[~~chat query] [~~email query] [~~cloud storage query] [GitHub query] [BigQuery query] [~~CRM query]
+     ↓            ↓            ↓              ↓            ↓            ↓
   (parallel execution)
      ↓
 [Merge + Rank + Deduplicate]

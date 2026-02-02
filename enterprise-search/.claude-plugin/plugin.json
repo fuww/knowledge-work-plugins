@@ -1,8 +1,8 @@
 {
   "name": "enterprise-search",
   "version": "1.0.0",
-  "description": "Search across all of your company's tools in one place. Find anything across email, chat, documents, and wikis without switching between apps.",
+  "description": "Search across all FashionUnited tools in one place. Find anything across email, chat, documents, code repositories, CRM, and data warehouse — brand information, editorial archives, job market data, and marketplace catalogs.",
   "author": {
-    "name": "Anthropic"
+    "name": "FashionUnited"
   }
 }

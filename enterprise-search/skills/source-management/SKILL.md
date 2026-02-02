@@ -18,11 +18,48 @@ Determine which MCP sources are connected by checking available tools. Each sour
 | **~~chat** | Search messages, read channels and threads |
 | **~~email** | Search messages, read individual emails |
 | **~~cloud storage** | Search files, fetch document contents |
-| **~~project tracker** | Search tasks, typeahead search |
+| **~~code repositories** | Search code, read files, query issues/PRs |
+| **~~project tracker** | Search tasks, issues, projects |
 | **~~CRM** | Query records (accounts, contacts, opportunities) |
 | **~~knowledge base** | Semantic search, keyword search |
+| **~~data warehouse** | Query datasets, run analytics |
 
 If a tool prefix is available, the source is connected and searchable.
+
+## FashionUnited Source Configuration
+
+FashionUnited's enterprise search is configured with these specific sources:
+
+| Source | Tool | What It Searches |
+|--------|------|------------------|
+| **~~chat** | Slack | Team channels, DMs, threads, editorial discussions |
+| **~~email** | Google Workspace (Gmail) | Advertiser correspondence, partner emails, internal comms |
+| **~~cloud storage** | Google Workspace (Drive) | Editorial guidelines, contracts, policies, reports |
+| **~~code repositories** | GitHub | api, frontend, integrations, product-database, deploy, about repos |
+| **~~project tracker** | GitHub Issues/Projects | Feature requests, bugs, roadmap items |
+| **~~CRM** | Vtiger CRM | Advertiser accounts, contacts, opportunities, billing |
+| **~~data warehouse** | BigQuery | Editorial archives, job postings, marketplace, analytics |
+
+### FashionUnited GitHub Repositories
+
+| Repository | Purpose | Search For |
+|------------|---------|------------|
+| `api` | Backend services, GraphQL | API docs, schema, endpoints |
+| `frontend` | Web application | Components, features, UI |
+| `integrations` | Data pipelines, feeds | Partner integrations, sync logic |
+| `product-database` | Product catalog | Product schema, brand data |
+| `deploy` | Infrastructure | Deploy procedures, configs |
+| `about` | Company handbook | Policies, onboarding, team info |
+
+### FashionUnited BigQuery Datasets
+
+| Dataset | Contents | Query Use Cases |
+|---------|----------|-----------------|
+| `editorial` | Articles, authors, dates | Editorial history, content search |
+| `jobs` | Job postings, employers | Job market data, employer history |
+| `marketplace` | Products, brands | Catalog search, product data |
+| `analytics` | Traffic, engagement | Performance data, audience insights |
+| `advertising` | Campaigns, impressions | Ad performance, revenue data |
 
 ## Guiding Users to Connect Sources
 
@@ -35,9 +72,10 @@ To expand your search, you can connect additional sources in your MCP settings:
 - ~~chat — messages, threads, channels
 - ~~email — emails, conversations, attachments
 - ~~cloud storage — docs, sheets, slides
+- ~~code repositories — code, README files, issues
 - ~~project tracker — tasks, projects, milestones
 - ~~CRM — accounts, contacts, opportunities
-- ~~knowledge base — wiki pages, knowledge base articles
+- ~~data warehouse — analytics, historical data
 
 The more sources you connect, the more complete your search results.
 ```
@@ -64,32 +102,32 @@ Different query types benefit from searching certain sources first. Use these pr
 1. ~~chat (conversations where decisions happen)
 2. ~~email (decision confirmations, announcements)
 3. ~~cloud storage (meeting notes, decision logs)
-4. Wiki (if decisions are documented)
-5. Task tracker (if decisions are captured in tasks)
+4. ~~knowledge base (if decisions are documented)
+5. ~~project tracker (if decisions are captured in tasks)
 ```
 
 **Status queries** ("What's the status of..."):
 ```
-1. Task tracker (~~project tracker — authoritative status)
+1. ~~project tracker (GitHub Issues — authoritative status)
 2. ~~chat (real-time discussion)
 3. ~~cloud storage (status docs, reports)
 4. ~~email (status update emails)
-5. Wiki (project pages)
+5. ~~knowledge base (project pages)
 ```
 
 **Document queries** ("Where's the doc for..."):
 ```
 1. ~~cloud storage (primary doc storage)
-2. Wiki / ~~knowledge base (knowledge base)
+2. ~~knowledge base (GitHub wiki, README files)
 3. ~~email (docs shared via email)
 4. ~~chat (docs shared in channels)
-5. Task tracker (docs linked to tasks)
+5. ~~project tracker (docs linked to issues)
 ```
 
 **People queries** ("Who works on..." / "Who knows about..."):
 ```
 1. ~~chat (message authors, channel members)
-2. Task tracker (task assignees)
+2. ~~project tracker (issue assignees)
 3. ~~cloud storage (doc authors, collaborators)
 4. ~~CRM (account owners, contacts)
 5. ~~email (email participants)
@@ -97,10 +135,43 @@ Different query types benefit from searching certain sources first. Use these pr
 
 **Factual/Policy queries** ("What's our policy on..."):
 ```
-1. Wiki / ~~knowledge base (official documentation)
+1. ~~knowledge base (GitHub about repo, handbook)
 2. ~~cloud storage (policy docs, handbooks)
 3. ~~email (policy announcements)
 4. ~~chat (policy discussions)
+```
+
+**Brand queries** ("What do we know about [brand]...") — FashionUnited specific:
+```
+1. ~~CRM (official customer relationship)
+2. ~~data warehouse (editorial coverage, marketplace presence)
+3. ~~code repositories (integration status, feed specs)
+4. ~~email (correspondence history)
+5. ~~chat (mentions and discussions)
+```
+
+**Job market queries** ("Jobs at [company]...") — FashionUnited specific:
+```
+1. ~~data warehouse (jobs dataset - historical postings)
+2. ~~CRM (employer account status)
+3. ~~code repositories (job feed integrations)
+4. ~~email (employer correspondence)
+```
+
+**Editorial queries** ("Articles about...") — FashionUnited specific:
+```
+1. ~~data warehouse (editorial dataset - article archive)
+2. ~~cloud storage (editorial calendars, style guides)
+3. ~~chat (#editorial channel discussions)
+4. ~~email (editorial correspondence)
+```
+
+**Catalog queries** ("Products from...") — FashionUnited specific:
+```
+1. ~~data warehouse (marketplace dataset)
+2. ~~code repositories (product-database schema)
+3. ~~CRM (catalog integration status)
+4. ~~chat (product discussions)
 ```
 
 ### Default Priority (General Queries)
@@ -110,9 +181,11 @@ When query type is unclear:
 1. ~~chat (highest volume, most real-time)
 2. ~~email (formal communications)
 3. ~~cloud storage (documents and files)
-4. Wiki / ~~knowledge base (structured knowledge)
-5. Task tracker (work items)
-6. CRM (customer data)
+4. ~~knowledge base (structured knowledge)
+5. ~~code repositories (code and documentation)
+6. ~~project tracker (work items)
+7. ~~CRM (customer data)
+8. ~~data warehouse (analytics and historical data)
 ```
 
 ## Rate Limiting Awareness
@@ -146,18 +219,29 @@ Note: [Source] is temporarily rate limited. Results below are from
 - For digests, batch requests where the API supports it
 - Cache awareness: if a search was just run, avoid re-running the same query immediately
 
+### Source-Specific Rate Limits
+
+| Source | Rate Limit Notes |
+|--------|------------------|
+| Slack | Generally generous, watch for large channel scans |
+| Google Workspace | Quota per API, per user |
+| GitHub | 5000 requests/hour authenticated, search API has stricter limits |
+| BigQuery | Query quotas, bytes scanned limits |
+| Vtiger (Pipedream) | Varies by plan tier |
+
 ## Source Health
 
 Track source availability during a session:
 
 ```
 Source Status:
-  ~~chat:        ✓ Available
-  ~~email:        ✓ Available
-  ~~cloud storage:  ✓ Available
-  ~~project tracker:        ✗ Not connected
-  ~~CRM:   ✗ Not connected
-  ~~knowledge base:      ⚠ Rate limited (retry in 2 min)
+  ~~chat (Slack):        ✓ Available
+  ~~email (Gmail):       ✓ Available
+  ~~cloud storage (Drive): ✓ Available
+  ~~code repositories (GitHub): ✓ Available
+  ~~project tracker (GitHub): ✓ Available
+  ~~CRM (Vtiger):        ✓ Available
+  ~~data warehouse (BigQuery): ✓ Available
 ```
 
 When reporting search results, include which sources were searched so the user knows the scope of the answer.
@@ -170,3 +254,17 @@ To add a new source:
 1. Add the MCP server configuration to `.mcp.json`
 2. Authenticate if required
 3. The source will be included in subsequent searches automatically
+
+### Adding a GitHub Repository
+
+To include an additional FashionUnited repository in searches:
+1. Ensure the GitHub MCP server has access (token permissions)
+2. Update search patterns in the search-strategy skill if needed
+3. The repository will be searchable via code search, file search, and issue search
+
+### Adding a BigQuery Dataset
+
+To include an additional BigQuery dataset:
+1. Ensure BigQuery MCP server has read access to the dataset
+2. Update dataset patterns in the search-strategy skill
+3. The dataset will be queryable via SQL searches
