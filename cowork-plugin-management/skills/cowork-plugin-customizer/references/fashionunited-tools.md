@@ -11,8 +11,8 @@ Standard tool mappings for customizing plugins at FashionUnited.
 | Analytics | Plausible Analytics | `@alexanderop/plausible-mcp` | Privacy-focused web analytics |
 | Email marketing | Mailchimp | `@anthropic/mailchimp-mcp` | Newsletter campaigns |
 | Social scheduling | Social Champ | `@anthropic/socialchamp-mcp` | Multi-platform scheduling |
-| Chat | Google Chat | `@anthropic/google-workspace-mcp` | Team communication |
-| Documents | Google Workspace | `@anthropic/google-workspace-mcp` | Docs, Sheets, Drive |
+| Chat | Google Chat | `workspace-mcp` | Team communication |
+| Documents | Google Workspace | `workspace-mcp` | Docs, Sheets, Drive |
 | Project tracker | GitHub | `@modelcontextprotocol/server-github` | Issues, PRs, Projects |
 | Design | Figma | `@anthropic/figma-mcp` | Brand assets, visual content |
 | SEO | Google Search Console | `@anthropic/searchconsole-mcp` | Search rankings, keywords |

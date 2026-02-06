@@ -51,8 +51,8 @@ This reference defines the canonical mapping from generic `~~` placeholders to F
   "mcpServers": {
     "google-workspace": {
       "type": "stdio",
-      "command": "npx",
-      "args": ["-y", "@anthropic/google-workspace-mcp"]
+      "command": "uvx",
+      "args": ["workspace-mcp"]
     }
   }
 }
@@ -239,7 +239,7 @@ These tools have existing hosted MCP endpoints and remain unchanged:
 
 | Tool | Placeholder | MCP Endpoint |
 |------|-------------|--------------|
-| Google Chat | `~~chat` | `@anthropic/google-workspace-mcp` (part of Google Workspace) |
+| Google Chat | `~~chat` | `workspace-mcp` (part of Google Workspace) |
 | Figma | `~~design` | `https://mcp.figma.com/mcp` |
 | Notion | `~~knowledge base` (alt) | `https://mcp.notion.com/mcp` |
 | Canva | `~~design` (alt) | `https://mcp.canva.com/mcp` |

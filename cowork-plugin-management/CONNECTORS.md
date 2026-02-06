@@ -51,8 +51,8 @@ When customizing plugins for FashionUnited, use these standard tool mappings:
 | `~~analytics` | Plausible Analytics | `@alexanderop/plausible-mcp` |
 | `~~email marketing` | Mailchimp | `@anthropic/mailchimp-mcp` |
 | `~~social scheduling` | Social Champ | `@anthropic/socialchamp-mcp` |
-| `~~chat` | Google Chat | `@anthropic/google-workspace-mcp` |
-| `~~documents` | Google Workspace | `@anthropic/google-workspace-mcp` |
+| `~~chat` | Google Chat | `workspace-mcp` |
+| `~~documents` | Google Workspace | `workspace-mcp` |
 | `~~project tracker` | GitHub | `@modelcontextprotocol/server-github` |
 | `~~design tool` | Figma | `@anthropic/figma-mcp` |
 

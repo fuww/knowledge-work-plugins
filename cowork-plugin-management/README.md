@@ -115,8 +115,8 @@ When creating or customizing plugins for FashionUnited, use these standard tool 
 | Analytics | Plausible | `@alexanderop/plausible-mcp` | Website traffic, content performance |
 | Email Marketing | Mailchimp | `@anthropic/mailchimp-mcp` | Newsletter campaigns |
 | Social Media | Social Champ | `@anthropic/socialchamp-mcp` | Social scheduling |
-| Documents | Google Workspace | `@anthropic/google-workspace-mcp` | Docs, Sheets, Drive |
-| Chat | Google Chat | `@anthropic/google-workspace-mcp` | Team communication (via Google Workspace) |
+| Documents | Google Workspace | `workspace-mcp` | Docs, Sheets, Drive |
+| Chat | Google Chat | `workspace-mcp` | Team communication (via Google Workspace) |
 | Code | GitHub | `@modelcontextprotocol/server-github` | Repositories, issues |
 | Search | Google Search Console | `@anthropic/searchconsole-mcp` | SEO data |
 

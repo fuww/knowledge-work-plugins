@@ -22,8 +22,8 @@
     },
     "google-workspace": {
       "type": "stdio",
-      "command": "npx",
-      "args": ["-y", "@anthropic/google-workspace-mcp"]
+      "command": "uvx",
+      "args": ["workspace-mcp"]
     },
     "github": {
       "type": "stdio",
