@@ -2,7 +2,7 @@
 
 An enterprise search plugin primarily designed for [Cowork](https://claude.com/product/cowork), Anthropic's agentic desktop application — though it also works in Claude Code. Search across all your company's tools in one place — email, chat, documents, code, CRM, and data warehouse — without switching between apps.
 
-This plugin is configured for **FashionUnited**, providing unified search across Google Workspace, Slack, GitHub repositories, Vtiger CRM, and BigQuery datasets with fashion industry-specific search contexts.
+This plugin is configured for **FashionUnited**, providing unified search across Google Workspace, Google Chat, GitHub repositories, Vtiger CRM, and BigQuery datasets with fashion industry-specific search contexts.
 
 ---
 
@@ -37,7 +37,7 @@ Connect any combination of sources. The more you connect, the more complete your
 
 | Source | What it finds |
 |--------|---------------|
-| **Slack** | Messages, threads, channels, DMs |
+| **Google Chat** | Messages, threads, spaces, DMs |
 | **Gmail** | Emails, attachments, conversations |
 | **Google Drive** | Docs, sheets, slides, PDFs |
 | **GitHub** | Code, README files, issues, PRs, wiki |
@@ -118,7 +118,7 @@ Three skills power the search experience:
 
 **Search Strategy** — Query decomposition and source-specific translation. Breaks your natural language question into targeted searches per source, handles ambiguity, and falls back gracefully when sources are unavailable. Includes fashion industry query patterns for brand lookup, job market, editorial, and catalog searches.
 
-**Source Management** — Knows which MCP sources are available, guides you to connect new ones, manages source priority, and handles rate limits. Configured for FashionUnited's specific source stack: Slack, Google Workspace, GitHub, Vtiger CRM, and BigQuery.
+**Source Management** — Knows which MCP sources are available, guides you to connect new ones, manages source priority, and handles rate limits. Configured for FashionUnited's specific source stack: Google Chat, Google Workspace, GitHub, Vtiger CRM, and BigQuery.
 
 **Knowledge Synthesis** — Combines results from multiple sources into coherent answers. Deduplicates cross-source information, attributes sources, scores confidence based on freshness and authority, and summarizes large result sets.
 
@@ -150,7 +150,7 @@ Result: "Zara is an active advertiser with a quarterly display package.
 You: /enterprise-search:search when did we decide to switch to Postgres?
 
 Claude searches:
-  Slack → #engineering, #infrastructure for "postgres" "switch" "decision"
+  Google Chat → #engineering, #infrastructure for "postgres" "switch" "decision"
   Gmail → threads with "postgres" in subject
   Drive → docs mentioning database migration
   GitHub → issues and PRs related to database migration
@@ -166,7 +166,7 @@ Result: "The decision was made March 3 in #infrastructure (link).
 You: /enterprise-search:digest --weekly
 
 Claude scans:
-  Slack → channels you're in, DMs, mentions
+  Google Chat → spaces you're in, DMs, mentions
   Gmail → inbox activity
   Drive → docs shared with you or modified
   GitHub → PRs and issues assigned to you
@@ -188,7 +188,7 @@ Claude searches:
   GitHub/integrations → feed implementation code
   GitHub/api → job-related endpoints
   Drive → integration documentation
-  Slack → #engineering discussions about job feeds
+  Google Chat → #engineering discussions about job feeds
 
 Result: "Job feeds are processed by the integrations service.
          Here's the main handler (link to code).
@@ -211,13 +211,13 @@ claude plugins add knowledge-work-plugins/enterprise-search
 /enterprise-search:digest --daily
 ```
 
-The more sources you connect via MCP, the more complete your search results. FashionUnited has pre-configured: Slack, Google Workspace, GitHub, Vtiger CRM, and BigQuery.
+The more sources you connect via MCP, the more complete your search results. FashionUnited has pre-configured: Google Chat, Google Workspace, GitHub, Vtiger CRM, and BigQuery.
 
 ---
 
 ## Philosophy
 
-Knowledge workers spend hours every week hunting for information scattered across tools. The answer exists somewhere — in a Slack thread, an email chain, a doc, a CRM record, a BigQuery table — but finding it means searching each tool individually, cross-referencing results, and hoping you checked the right place.
+Knowledge workers spend hours every week hunting for information scattered across tools. The answer exists somewhere — in a Google Chat thread, an email chain, a doc, a CRM record, a BigQuery table — but finding it means searching each tool individually, cross-referencing results, and hoping you checked the right place.
 
 Enterprise Search treats all your tools as one searchable knowledge base. One query, all sources, synthesized results. Your company's knowledge shouldn't be locked in silos. Search everything at once.
 

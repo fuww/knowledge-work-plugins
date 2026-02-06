@@ -11,7 +11,7 @@ Plugins are **tool-agnostic** — they describe workflows in terms of categories
 | Category | Placeholder | Configured server | Other options |
 |----------|-------------|-------------------|---------------|
 | Calendar | `~~calendar` | Google Workspace | Microsoft 365 |
-| Chat | `~~chat` | Slack | Microsoft Teams |
+| Chat | `~~chat` | Google Chat | Microsoft Teams |
 | CRM | `~~CRM` | Vtiger CRM | HubSpot, Salesforce, Close |
 | Email | `~~email` | Google Workspace (Gmail) | Microsoft 365 |
 | Knowledge base | `~~knowledge base` | GitHub (Wiki, Discussions) | Notion, Confluence |
@@ -24,14 +24,14 @@ This plugin is configured for FashionUnited's commercial team workflows:
 - **Vtiger CRM** provides pipeline management, contact tracking, and deal history
 - **Google Workspace** provides email (Gmail) and calendar for scheduling and follow-ups
 - **GitHub** provides project tracking and knowledge base for sales materials
-- **Slack** provides team communication and deal discussions
+- **Google Chat** provides team communication and deal discussions
 
 ## Setup requirements
 
 1. **Vtiger CRM**: Requires Pipedream account for hosted MCP access
 2. **Google Workspace**: Requires Google Cloud Project with OAuth 2.0 credentials
 3. **GitHub**: Requires Personal Access Token with repo access
-4. **Slack**: Works with hosted MCP endpoint (no additional setup)
+4. **Google Chat**: Accessed via Google Workspace MCP (included in google-workspace configuration)
 
 ## FashionUnited commercial context
 

@@ -23,7 +23,7 @@ All 10 plugins have `.mcp.json` files configured with FashionUnited's tool stack
 
 | Tool | MCP Server | Used In |
 |------|------------|---------|
-| Slack | `https://mcp.slack.com/mcp` | All plugins |
+| Google Chat | `@anthropic/google-workspace-mcp` | All plugins |
 | Google Workspace | `@anthropic/google-workspace-mcp` | All plugins |
 | Vtiger CRM | `https://mcp.pipedream.com/app/vtiger_crm` | productivity, sales, customer-support, legal, finance, enterprise-search |
 | GitHub | `@modelcontextprotocol/server-github` | productivity, sales, customer-support, product-management, data, enterprise-search, legal |

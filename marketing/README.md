@@ -103,7 +103,7 @@ Configure your brand voice, style guide, and target personas in a local settings
 This plugin is configured for FashionUnited's marketing tool stack:
 
 **Included MCP connections:**
-- Chat (Slack) for team communication
+- Chat (Google Chat) for team communication
 - Google Workspace for documents (articles, research), spreadsheets (editorial calendar), and email
 - Mailchimp for newsletter campaigns and subscriber management
 - Social Champ for social media scheduling across platforms

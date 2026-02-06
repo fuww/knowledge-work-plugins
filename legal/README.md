@@ -83,13 +83,13 @@ Claude will generate a GDPR-compliant response acknowledging the request, with a
 > /brief daily
 ```
 
-Claude will scan connected sources (Google Workspace, Slack, Vtiger CRM, GitHub) for contract requests, compliance questions, approaching deadlines, and meetings needing legal prep.
+Claude will scan connected sources (Google Workspace, Google Chat, Vtiger CRM, GitHub) for contract requests, compliance questions, approaching deadlines, and meetings needing legal prep.
 
 ## Configuration
 
 ### Connect your tools
 
-The plugin works best when connected to FashionUnited's tools via MCP. Pre-configured servers include Slack, Google Workspace, Vtiger CRM, and GitHub. See [CONNECTORS.md](CONNECTORS.md) for the full list of supported categories and options.
+The plugin works best when connected to FashionUnited's tools via MCP. Pre-configured servers include Google Chat, Google Workspace, Vtiger CRM, and GitHub. See [CONNECTORS.md](CONNECTORS.md) for the full list of supported categories and options.
 
 ## Data Sources
 
@@ -98,7 +98,7 @@ The plugin works best when connected to FashionUnited's tools via MCP. Pre-confi
 This plugin is configured for FashionUnited's legal tool stack:
 
 **Included MCP connections:**
-- Chat (Slack) for team communication and contract request channels
+- Chat (Google Chat) for team communication and contract request spaces
 - Google Workspace for documents (contracts, templates, legal memos), email, and calendar
 - Vtiger CRM for partner and advertiser relationship context
 - GitHub for matter tracking and legal knowledge base

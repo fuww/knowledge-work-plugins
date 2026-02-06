@@ -33,7 +33,7 @@ Classify the user's question to determine search strategy:
 
 | Query Type | Example | Strategy |
 |-----------|---------|----------|
-| **Decision** | "What did we decide about X?" | Prioritize conversations (Slack, Gmail), look for conclusion signals |
+| **Decision** | "What did we decide about X?" | Prioritize conversations (Google Chat, Gmail), look for conclusion signals |
 | **Status** | "What's the status of Project Y?" | Prioritize recent activity, task trackers, status updates |
 | **Document** | "Where's the spec for Z?" | Prioritize Drive, wiki, shared docs |
 | **Person** | "Who's working on X?" | Search task assignments, message authors, doc collaborators |
@@ -77,7 +77,7 @@ Queries: "Kubernetes", "k8s", "cluster", "container orchestration"
 
 ## Source-Specific Query Translation
 
-### ~~chat (Slack)
+### ~~chat (Google Chat)
 
 **Semantic search** (natural language questions):
 ```
@@ -92,7 +92,7 @@ query: "from:<@UserID> aurora"
 ```
 
 **Filter mapping:**
-| Enterprise filter | Slack syntax |
+| Enterprise filter | Google Chat syntax |
 |------------------|--------------|
 | `from:sarah` | `from:sarah` or `from:<@USERID>` |
 | `in:engineering` | `in:engineering` |
@@ -348,7 +348,7 @@ Always execute searches across sources in parallel, never sequentially. The tota
 ```
 [User query]
      ↓ decompose
-[Slack query] [Gmail query] [Google Drive query] [GitHub query] [BigQuery query] [Vtiger query]
+[Google Chat query] [Gmail query] [Google Drive query] [GitHub query] [BigQuery query] [Vtiger query]
      ↓            ↓            ↓              ↓            ↓            ↓
   (parallel execution)
      ↓

@@ -15,7 +15,7 @@ Query patterns for gathering organizational context during plugin customization.
 - Look for: task links, project board mentions
 
 **Chat:**
-- Search: "Slack" OR "Teams" OR "Discord"
+- Search: "Google Chat" OR "Teams" OR "Discord"
 - Look for: channel mentions, integration discussions
 
 **Analytics:**
@@ -77,7 +77,7 @@ When customizing plugins for FashionUnited, also search for:
 - Search: market names (e.g., "fashionunited.de", "fashionunited.uk")
 - Look for: localization discussions, market-specific content
 
-**Key Slack channels:**
+**Key Google Chat spaces:**
 - `#editorial` — News coverage, content planning
 - `#sales` — Advertising, partnerships
 - `#product` — Product development, technical

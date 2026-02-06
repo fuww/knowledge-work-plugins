@@ -10,7 +10,7 @@ Plugins are **tool-agnostic** — they describe workflows in terms of categories
 
 | Category | Placeholder | Configured server | Other options |
 |----------|-------------|-------------------|---------------|
-| Chat | `~~chat` | Slack | Microsoft Teams |
+| Chat | `~~chat` | Google Chat | Microsoft Teams |
 | Email | `~~email` | Google Workspace (Gmail) | Microsoft 365 |
 | Calendar | `~~calendar` | Google Workspace | Microsoft 365 |
 | Office suite | `~~office suite` | Google Workspace (Docs, Sheets, Slides) | Microsoft 365 |
@@ -27,14 +27,14 @@ This plugin is configured for FashionUnited's finance operations across media, a
 - **Google Workspace** provides spreadsheet-based financial management (Sheets for workpapers, reconciliations, budgets), document storage (Drive for invoices, contracts, reports), and email/calendar for Finance Manager workflows
 - **BigQuery** provides financial data warehouse for revenue analytics, multi-currency reporting, and historical trend analysis across 30+ markets
 - **Vtiger CRM** provides billing and invoicing workflows, customer/advertiser account management, revenue pipeline tracking, and accounts receivable management
-- **Slack** provides team communication, finance approval workflows, and close status coordination
+- **Google Chat** provides team communication, finance approval workflows, and close status coordination
 
 ## Setup requirements
 
 1. **Google Workspace**: Requires Google Cloud Project with OAuth 2.0 credentials and enabled APIs (Gmail, Calendar, Drive, Docs, Sheets)
 2. **BigQuery**: Requires Google Cloud Project with BigQuery API enabled and appropriate IAM permissions
 3. **Vtiger CRM**: Requires Pipedream account for hosted MCP access
-4. **Slack**: Works with hosted MCP endpoint (no additional setup)
+4. **Google Chat**: Accessed via Google Workspace MCP (included in google-workspace configuration)
 
 ## FashionUnited finance context
 

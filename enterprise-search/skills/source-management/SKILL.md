@@ -32,7 +32,7 @@ FashionUnited's enterprise search is configured with these specific sources:
 
 | Source | Tool | What It Searches |
 |--------|------|------------------|
-| **~~chat** | Slack | Team channels, DMs, threads, editorial discussions |
+| **~~chat** | Google Chat | Team spaces, DMs, threads, editorial discussions |
 | **~~email** | Google Workspace (Gmail) | Advertiser correspondence, partner emails, internal comms |
 | **~~cloud storage** | Google Workspace (Drive) | Editorial guidelines, contracts, policies, reports |
 | **~~code repositories** | GitHub | api, frontend, integrations, product-database, deploy, about repos |
@@ -223,7 +223,7 @@ Note: [Source] is temporarily rate limited. Results below are from
 
 | Source | Rate Limit Notes |
 |--------|------------------|
-| Slack | Generally generous, watch for large channel scans |
+| Google Chat | Generally generous, watch for large space scans |
 | Google Workspace | Quota per API, per user |
 | GitHub | 5000 requests/hour authenticated, search API has stricter limits |
 | BigQuery | Query quotas, bytes scanned limits |
@@ -235,7 +235,7 @@ Track source availability during a session:
 
 ```
 Source Status:
-  ~~chat (Slack):        ✓ Available
+  ~~chat (Google Chat):   ✓ Available
   ~~email (Gmail):       ✓ Available
   ~~cloud storage (Drive): ✓ Available
   ~~code repositories (GitHub): ✓ Available

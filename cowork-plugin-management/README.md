@@ -11,7 +11,7 @@ This plugin is configured for **FashionUnited**, with knowledge of the FashionUn
 This plugin helps you customize generic plugins for your organization by:
 
 - **Finding customization points** — Identifies `~~`-prefixed placeholders that mark where organization-specific values should go
-- **Gathering context automatically** — Searches Slack, documents, and email for tool names, processes, and team conventions
+- **Gathering context automatically** — Searches Google Chat, documents, and email for tool names, processes, and team conventions
 - **Applying customizations** — Replaces placeholders with your actual tool names, workspace IDs, and team identifiers
 - **Connecting MCP servers** — Discovers and configures MCP servers for the tools identified during customization
 
@@ -25,13 +25,13 @@ Generic plugins use `~~` prefixes to mark customization points:
 | `~~data warehouse` | `BigQuery` |
 | `~~analytics` | `Plausible Analytics` |
 | `~~email marketing` | `Mailchimp` |
-| `~~chat` | `Slack` |
+| `~~chat` | `Google Chat` |
 | `~~project tracker` | `GitHub` |
 | `~~documents` | `Google Workspace` |
 
 When you customize a plugin, Claude:
 
-1. Searches your company's knowledge sources (Slack, docs, email) for relevant context
+1. Searches your company's knowledge sources (Google Chat, docs, email) for relevant context
 2. Creates a todo list of customization points found in the plugin
 3. Applies gathered context automatically, asking you only when unclear
 4. Searches for and connects MCP servers for identified tools
@@ -53,9 +53,9 @@ You: I want to customize the data plugin for our company
 Claude: I'll help you customize the data plugin. Let me first search your company's
 knowledge sources to learn about your tools and processes.
 
-[Searches Slack, documents, email for data tool mentions]
+[Searches Google Chat, documents, email for data tool mentions]
 
-From searching Slack:
+From searching Google Chat:
 - You use BigQuery for your data warehouse
 - Analytics queries go to the data-team channel
 
@@ -82,7 +82,7 @@ This plugin uses knowledge MCPs to gather context:
 
 | Source | What it finds |
 |--------|---------------|
-| **Slack/Chat** | Tool mentions, integrations, workflow discussions |
+| **Google Chat** | Tool mentions, integrations, workflow discussions |
 | **Documents** | Onboarding docs, tool guides, setup instructions |
 | **Email** | License notifications, admin emails, setup invitations |
 
@@ -116,7 +116,7 @@ When creating or customizing plugins for FashionUnited, use these standard tool 
 | Email Marketing | Mailchimp | `@anthropic/mailchimp-mcp` | Newsletter campaigns |
 | Social Media | Social Champ | `@anthropic/socialchamp-mcp` | Social scheduling |
 | Documents | Google Workspace | `@anthropic/google-workspace-mcp` | Docs, Sheets, Drive |
-| Chat | Slack | `@anthropic/slack-mcp` | Team communication |
+| Chat | Google Chat | `@anthropic/google-workspace-mcp` | Team communication (via Google Workspace) |
 | Code | GitHub | `@modelcontextprotocol/server-github` | Repositories, issues |
 | Search | Google Search Console | `@anthropic/searchconsole-mcp` | SEO data |
 

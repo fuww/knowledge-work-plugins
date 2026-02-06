@@ -10,7 +10,7 @@ Plugins are **tool-agnostic** — they describe workflows in terms of categories
 
 | Category | Placeholder | Configured server | Other options |
 |----------|-------------|-------------------|---------------|
-| Chat | `~~chat` | Slack | Microsoft Teams |
+| Chat | `~~chat` | Google Chat | Microsoft Teams |
 | Email | `~~email` | Google Workspace (Gmail) | Microsoft 365 |
 | Calendar | `~~calendar` | Google Workspace | Microsoft 365 |
 | Office suite | `~~office suite` | Google Workspace (Docs, Sheets, Slides) | Microsoft 365 |
@@ -31,7 +31,7 @@ This plugin is configured for FashionUnited's marketing and media partnerships w
 - **Google Search Console** provides SEO insights, search ranking data, and indexing status for fashionunited.com domains
 - **Google Workspace** provides document creation and collaboration for articles, editorial calendars, and marketing briefs
 - **Figma** provides access to brand assets, design files, and visual content templates
-- **Slack** provides team communication and editorial coordination
+- **Google Chat** provides team communication and editorial coordination
 
 ## Setup requirements
 
@@ -40,7 +40,7 @@ This plugin is configured for FashionUnited's marketing and media partnerships w
 3. **Social Champ**: Requires Zapier account for hosted MCP access
 4. **Plausible Analytics**: Requires Plausible API key and site ID
 5. **Figma**: Works with hosted MCP endpoint (no additional setup)
-6. **Slack**: Works with hosted MCP endpoint (no additional setup)
+6. **Google Chat**: Accessed via Google Workspace MCP (included in google-workspace configuration)
 
 ## FashionUnited marketing context
 

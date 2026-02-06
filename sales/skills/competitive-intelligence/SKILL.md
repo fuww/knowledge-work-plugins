@@ -60,7 +60,7 @@ If I already have your seller context from a previous session, I'll confirm and 
 |-----------|--------------|
 | **CRM** | Win/loss history against each competitor, deal-level competitor tracking |
 | **Docs** | Existing battlecards, product comparison docs, competitive playbooks |
-| **Chat** | Internal chat intel (e.g. Slack) — what your team is hearing from the field |
+| **Chat** | Internal chat intel (e.g. Google Chat) — what your team is hearing from the field |
 | **Transcripts** | Competitor mentions in customer calls, objections raised |
 
 > **No connectors?** Web research works great. I'll pull everything from public sources — product pages, pricing, blogs, release notes, reviews, job postings.

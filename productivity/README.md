@@ -9,7 +9,7 @@ This plugin is customized for FashionUnited's tool stack and workflows:
 - **GitHub** for issues, projects (Now-Next-Later roadmap), and code
 - **beads** for development issue tracking (`bd` CLI)
 - **Vtiger CRM** for sales tasks and client management
-- **Slack** for team communication
+- **Google Chat** for team communication
 
 ## Installation
 
@@ -93,7 +93,7 @@ No clarifying questions. No round trips.
 > If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](CONNECTORS.md).
 
 **Configured MCP connections:**
-- **Slack** for team context and message scanning
+- **Google Chat** for team context and message scanning
 - **Google Workspace** for email, calendar, and documents
 - **GitHub** for issues, projects, and code repository
 - **Vtiger CRM** for sales tasks and client management

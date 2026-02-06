@@ -16,15 +16,15 @@ We're open-sourcing 10 plugins built and inspired by our own work:
 
 | Plugin | How it helps | FashionUnited Connectors | MCP |
 |--------|-------------|--------------------------|-----|
-| **[productivity](./productivity)** | Manage tasks, calendars, daily workflows, and personal context for fashion industry professionals. | Slack, Google Workspace, GitHub, beads | ✓✓✓— |
-| **[sales](./sales)** | Research advertisers, prep for calls, manage B2B pipeline, draft outreach for fashion brands. | Slack, Vtiger CRM, Google Workspace | ✓✓✓ |
-| **[customer-support](./customer-support)** | Triage tickets from advertisers and employers, research account context, build FAQ content. | Slack, Vtiger CRM, Google Workspace | ✓✓✓ |
-| **[product-management](./product-management)** | Write specs, plan roadmaps, synthesize user research for fashion B2B products. | Slack, GitHub, Google Workspace, Figma, Plausible | ✓✓✓✓✓ |
-| **[marketing](./marketing)** | Draft fashion news, plan content campaigns, manage newsletters, track performance across markets. | Slack, Mailchimp, Social Champ, Plausible, Google Search Console, Figma | ✓✓✗✓✓✓ |
+| **[productivity](./productivity)** | Manage tasks, calendars, daily workflows, and personal context for fashion industry professionals. | Google Chat, Google Workspace, GitHub, beads | ✓✓✓— |
+| **[sales](./sales)** | Research advertisers, prep for calls, manage B2B pipeline, draft outreach for fashion brands. | Google Chat, Vtiger CRM, Google Workspace | ✓✓✓ |
+| **[customer-support](./customer-support)** | Triage tickets from advertisers and employers, research account context, build FAQ content. | Google Chat, Vtiger CRM, Google Workspace | ✓✓✓ |
+| **[product-management](./product-management)** | Write specs, plan roadmaps, synthesize user research for fashion B2B products. | Google Chat, GitHub, Google Workspace, Figma, Plausible | ✓✓✓✓✓ |
+| **[marketing](./marketing)** | Draft fashion news, plan content campaigns, manage newsletters, track performance across markets. | Google Chat, Mailchimp, Social Champ, Plausible, Google Search Console, Figma | ✓✓✗✓✓✓ |
 | **[legal](./legal)** | Review advertising agreements, media partnerships, GDPR compliance across 30+ markets. | Google Workspace | ✓ |
 | **[finance](./finance)** | Advertising revenue, subscription billing, multi-currency operations across markets. | BigQuery, Google Workspace, Vtiger CRM | ✓✓✓ |
 | **[data](./data)** | Query jobs, marketplace, editorial data — SQL templates for FashionUnited metrics. | BigQuery, Looker Studio, Plausible, Google Workspace | ✓✓✓✓ |
-| **[enterprise-search](./enterprise-search)** | Find anything across email, chat, docs, CRM, code — brand lookup, job history, editorial archives. | Slack, Google Workspace, GitHub, Vtiger CRM, BigQuery | ✓✓✓✓✓ |
+| **[enterprise-search](./enterprise-search)** | Find anything across email, chat, docs, CRM, code — brand lookup, job history, editorial archives. | Google Chat, Google Workspace, GitHub, Vtiger CRM, BigQuery | ✓✓✓✓✓ |
 | **[cowork-plugin-management](./cowork-plugin-management)** | Create new plugins or customize existing ones with FashionUnited tool stack and domain knowledge. | — | — |
 
 *MCP column shows support status per connector in order: ✓ = MCP server available, ✗ = no MCP available, — = not applicable*
@@ -85,7 +85,7 @@ All plugins are configured for FashionUnited's integrated tool stack:
 | Email Marketing | Mailchimp | Newsletter campaigns | ✓ [mailchimp-mcp](https://glama.ai/mcp/servers/@AgentX-ai/mailchimp-mcp) |
 | Social Media | Social Champ | Multi-platform scheduling | ✗ No MCP available |
 | Documents | Google Workspace | Docs, Sheets, Drive | ✓ [google_workspace_mcp](https://github.com/taylorwilsdon/google_workspace_mcp) |
-| Chat | Slack | Team communication | ✓ [slack-mcp-server](https://github.com/korotovsky/slack-mcp-server) |
+| Chat | Google Chat | Team communication | ✓ [google_workspace_mcp](https://github.com/taylorwilsdon/google_workspace_mcp) (Google Chat is part of Google Workspace) |
 | Code | GitHub | Repositories, issues, projects | ✓ [Official](https://github.com/modelcontextprotocol/servers) |
 | SEO | Google Search Console | Search rankings, keywords | ✓ [mcp-server-gsc](https://github.com/ahonn/mcp-server-gsc) |
 

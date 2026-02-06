@@ -94,7 +94,7 @@ Or we can stick with what we have and add context later.
 **If they choose comprehensive scan:**
 
 Gather data from available MCP sources:
-- **Slack:** Recent messages, channels (#editorial, #sales, #product, etc.)
+- **Google Chat:** Recent messages, spaces (#editorial, #sales, #product, etc.)
 - **Gmail:** Sent messages, recipients
 - **Google Drive:** Recent docs, collaborators
 - **Google Calendar:** Meetings, attendees

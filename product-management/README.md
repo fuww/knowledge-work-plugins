@@ -16,7 +16,7 @@ This plugin gives you an AI-powered product management partner that can help wit
 
 - **Feature Specs & PRDs** — Generate structured product requirements documents from a problem statement or feature idea. Includes FashionUnited-specific templates for news, jobs, marketplace, and directory features.
 - **Roadmap Planning** — Create, update, and reprioritize your product roadmap. Integrates with GitHub Projects (Now/Next/Later) and beads issue tracking.
-- **Stakeholder Updates** — Generate status updates tailored to your audience (leadership, engineering, sales, customers). Pulls context from GitHub, Slack, and Google Workspace.
+- **Stakeholder Updates** — Generate status updates tailored to your audience (leadership, engineering, sales, customers). Pulls context from GitHub, Google Chat, and Google Workspace.
 - **User Research Synthesis** — Turn interview notes, survey data, and support tickets into structured insights. Includes fashion industry stakeholder personas (publishers, recruiters, brands, job seekers, retailers).
 - **Competitive Analysis** — Research competitors and generate briefs with feature comparisons, positioning analysis, and strategic implications. Includes FashionUnited competitive landscape context.
 - **Metrics Review** — Analyze product metrics, identify trends, compare against targets. Includes FashionUnited product-specific metrics frameworks.
@@ -92,7 +92,7 @@ Claude: [Generates brief with FashionUnited differentiation strategy]
 This plugin is configured for FashionUnited's tool stack:
 
 **Included MCP connections:**
-- Chat (Slack) for team communication and stakeholder channels
+- Chat (Google Chat) for team communication and stakeholder spaces
 - Google Workspace for documents (specs, research), spreadsheets (metrics), presentations, and email
 - GitHub for project tracking (Issues + Projects), knowledge base (Wiki, Discussions), and code context
 - Vtiger CRM for customer context and feedback history

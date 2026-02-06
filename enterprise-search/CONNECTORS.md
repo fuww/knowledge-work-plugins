@@ -2,7 +2,7 @@
 
 ## How tool references work
 
-Plugin files use `~~category` as a placeholder for whatever tool the user connects in that category. For example, `~~chat` might mean Slack, Microsoft Teams, or any other chat tool with an MCP server.
+Plugin files use `~~category` as a placeholder for whatever tool the user connects in that category. For example, `~~chat` might mean Google Chat, Microsoft Teams, or any other chat tool with an MCP server.
 
 Plugins are **tool-agnostic** — they describe workflows in terms of categories (chat, email, cloud storage, etc.) rather than specific products. The `.mcp.json` pre-configures specific MCP servers, but any MCP server in that category works.
 
@@ -12,7 +12,7 @@ This plugin uses `~~category` references extensively as source labels in search 
 
 | Category | Placeholder | Configured server | Other options |
 |----------|-------------|-------------------|---------------|
-| Chat | `~~chat` | Slack | Microsoft Teams, Discord |
+| Chat | `~~chat` | Google Chat | Microsoft Teams, Discord |
 | Email | `~~email` | Google Workspace (Gmail) | Microsoft 365 |
 | Calendar | `~~calendar` | Google Workspace | Microsoft 365 |
 | Cloud storage | `~~cloud storage` | Google Workspace (Drive) | Microsoft 365, Dropbox |
@@ -145,4 +145,4 @@ Example queries:
 3. **BigQuery**: Requires Google Cloud Project with BigQuery API enabled and read access to FashionUnited datasets
 4. **FashionUnited GraphQL API**: Requires FashionUnited API key (`FASHIONUNITED_API_KEY` environment variable)
 5. **Vtiger CRM**: Requires Pipedream account for hosted MCP access
-6. **Slack**: Works with hosted MCP endpoint (no additional setup)
+6. **Google Chat**: Accessed via Google Workspace MCP (included in google-workspace configuration)

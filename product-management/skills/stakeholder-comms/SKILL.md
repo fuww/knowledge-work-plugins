@@ -270,17 +270,17 @@ FashionUnited has distinct internal and external stakeholder groups with differe
 
 | Stakeholder | Primary Interests | Preferred Format | Cadence |
 |-------------|------------------|------------------|---------|
-| Leadership | Strategic alignment, metrics, risks | Slack + brief doc | Weekly |
-| Engineering | Priorities, blockers, technical decisions | GitHub Issues/Projects, Slack | Daily/weekly |
-| Sales | Client-facing features, timelines, competitive context | Slack, Google Docs | As needed |
-| Customer Service | Feature changes affecting clients, known issues | Slack, email | Before launches |
-| Editorial | News platform features, publishing workflow | Slack, direct chat | As needed |
+| Leadership | Strategic alignment, metrics, risks | Google Chat + brief doc | Weekly |
+| Engineering | Priorities, blockers, technical decisions | GitHub Issues/Projects, Google Chat | Daily/weekly |
+| Sales | Client-facing features, timelines, competitive context | Google Chat, Google Docs | As needed |
+| Customer Service | Feature changes affecting clients, known issues | Google Chat, email | Before launches |
+| Editorial | News platform features, publishing workflow | Google Chat, direct chat | As needed |
 
 ### Communication Channels
 
 | Channel | Best For | Avoid For |
 |---------|----------|-----------|
-| Slack (#product) | Quick updates, questions, async discussion | Long documents, decisions needing record |
+| Google Chat (#product) | Quick updates, questions, async discussion | Long documents, decisions needing record |
 | Google Docs | Specs, analysis, decisions needing history | Quick questions, time-sensitive info |
 | GitHub Issues | Technical implementation, bug tracking | Non-technical stakeholders |
 | GitHub Projects | Roadmap visibility, status tracking | Detailed discussion |
@@ -305,7 +305,7 @@ FashionUnited has distinct internal and external stakeholder groups with differe
 
 ### FashionUnited Update Templates
 
-**Weekly Product Update (Internal Slack)**:
+**Weekly Product Update (Internal Google Chat)**:
 ```
 Product Update - Week of [Date]
 

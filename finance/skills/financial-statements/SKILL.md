@@ -410,7 +410,7 @@ TOTAL LIABILITIES AND EQUITY          EUR X,XXX
 
 | Report | Timing | Audience | Distribution |
 |--------|--------|----------|--------------|
-| Flash Revenue | Weekly (Monday AM) | Leadership | Slack + Email |
+| Flash Revenue | Weekly (Monday AM) | Leadership | Google Chat + Email |
 | Monthly P&L | T+5 | Leadership, Dept Heads | Email |
 | Cash Flow Forecast | Weekly | Finance Manager | Google Sheets |
 | AR Aging | Weekly | Finance, Sales | Google Sheets |

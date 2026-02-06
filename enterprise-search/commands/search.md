@@ -15,7 +15,7 @@ Search across all connected MCP sources in a single query. Decompose the user's 
 
 Before searching, determine which MCP sources are available. Attempt to identify connected tools from the available tool list. FashionUnited sources:
 
-- **~~chat** — Slack (team channels, editorial discussions)
+- **~~chat** — Google Chat (team spaces, editorial discussions)
 - **~~email** — Google Workspace Gmail (advertiser correspondence, partner emails)
 - **~~cloud storage** — Google Workspace Drive (documents, contracts, policies)
 - **~~code repositories** — GitHub (api, frontend, integrations, product-database, deploy, about repos)
@@ -26,9 +26,9 @@ Before searching, determine which MCP sources are available. Attempt to identify
 If no MCP sources are connected:
 ```
 To search across your tools, you'll need to connect at least one source.
-Check your MCP settings to add Slack, Google Workspace, GitHub, Vtiger, or BigQuery.
+Check your MCP settings to add Google Chat, Google Workspace, GitHub, Vtiger, or BigQuery.
 
-Supported sources: Slack, Gmail, Drive, GitHub, Vtiger CRM, BigQuery,
+Supported sources: Google Chat, Gmail, Drive, GitHub, Vtiger CRM, BigQuery,
 and any other MCP-connected service.
 ```
 
@@ -39,7 +39,7 @@ Analyze the search query to understand:
 - **Intent**: What is the user looking for? (a decision, a document, a person, a status update, a conversation, brand info, job data, editorial content, catalog data)
 - **Entities**: People, projects, teams, tools, brands, markets mentioned
 - **Time constraints**: Recency signals ("this week", "last month", specific dates)
-- **Source hints**: References to specific tools ("in Slack", "that email", "the doc", "in the CRM")
+- **Source hints**: References to specific tools ("in Google Chat", "that email", "the doc", "in the CRM")
 - **Filters**: Extract explicit filters from the query:
   - `from:` — Filter by sender/author
   - `in:` — Filter by channel, folder, or location
@@ -53,9 +53,9 @@ Analyze the search query to understand:
 
 For each available source, create a targeted sub-query using that source's native search syntax:
 
-**~~chat (Slack):**
-- Use available search and read tools for Slack
-- Translate filters: `from:` maps to sender, `in:` maps to channel, dates map to time range filters
+**~~chat (Google Chat):**
+- Use available search and read tools for Google Chat
+- Translate filters: `from:` maps to sender, `in:` maps to space, dates map to time range filters
 - Use natural language queries for semantic search when appropriate
 - Use keyword queries for exact matches
 
@@ -105,7 +105,7 @@ For each source:
 ### 5. Rank and Deduplicate Results
 
 **Deduplication:**
-- Identify the same information appearing across sources (e.g., a decision discussed in Slack AND confirmed via email)
+- Identify the same information appearing across sources (e.g., a decision discussed in Google Chat AND confirmed via email)
 - Group related results together rather than showing duplicates
 - Prefer the most authoritative or complete version
 
@@ -130,7 +130,7 @@ Format the response as a synthesized answer, not a raw list of results:
 [Direct answer to the question]
 
 Sources:
-- [Source 1: brief description] (Slack, #channel, date)
+- [Source 1: brief description] (Google Chat, #space, date)
 - [Source 2: brief description] (Gmail, from person, date)
 - [Source 3: brief description] (Drive, doc name, last modified)
 ```
@@ -160,7 +160,7 @@ Sources:
 [Synthesized summary combining information from all sources]
 
 Found across:
-- Slack: X relevant messages in Y channels
+- Google Chat: X relevant messages in Y spaces
 - Gmail: X relevant threads
 - Drive: X related documents
 - GitHub: X relevant files/issues

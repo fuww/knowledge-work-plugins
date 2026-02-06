@@ -11,7 +11,7 @@ Standard tool mappings for customizing plugins at FashionUnited.
 | Analytics | Plausible Analytics | `@alexanderop/plausible-mcp` | Privacy-focused web analytics |
 | Email marketing | Mailchimp | `@anthropic/mailchimp-mcp` | Newsletter campaigns |
 | Social scheduling | Social Champ | `@anthropic/socialchamp-mcp` | Multi-platform scheduling |
-| Chat | Slack | `@anthropic/slack-mcp` | Team communication |
+| Chat | Google Chat | `@anthropic/google-workspace-mcp` | Team communication |
 | Documents | Google Workspace | `@anthropic/google-workspace-mcp` | Docs, Sheets, Drive |
 | Project tracker | GitHub | `@modelcontextprotocol/server-github` | Issues, PRs, Projects |
 | Design | Figma | `@anthropic/figma-mcp` | Brand assets, visual content |
@@ -121,9 +121,9 @@ FashionUnited operates in 30+ markets with 9 language editions:
 | Pre-fall | Dec-Jan | Transitional collections |
 | Cruise/Resort | May-Jun | Vacation/travel collections |
 
-## Slack Channels
+## Google Chat Spaces
 
-Common FashionUnited Slack channels for context gathering:
+Common FashionUnited Google Chat spaces for context gathering:
 
 - `#editorial` — News coverage, content planning
 - `#sales` — Advertising, partnerships

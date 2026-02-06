@@ -244,7 +244,7 @@ FashionUnited operates multiple interconnected products. When planning, map depe
 - Sales/Customer Service: customer-facing features with timing
 
 **Formats for different audiences**:
-- Slack updates: brief bullet points on significant changes
+- Google Chat updates: brief bullet points on significant changes
 - Google Docs: detailed quarterly planning documents
 - GitHub Projects: live source of truth for execution
 

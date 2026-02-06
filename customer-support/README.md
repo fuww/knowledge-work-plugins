@@ -8,7 +8,7 @@ This plugin is customized for FashionUnited's customer service workflows:
 - **Vtiger CRM** for ticket management and client history
 - **Google Workspace** for jobs@fashionunited.com managed inbox
 - **GitHub** for bug reports and internal knowledge base
-- **Slack** for team communication and escalations
+- **Google Chat** for team communication and escalations
 
 **Client Types**: Fashion brands, retailers, recruitment agencies, trade fairs, federations
 
@@ -144,7 +144,7 @@ Every command and skill works without any integrations:
 | **Email** | Google Workspace (Gmail) | jobs@fashionunited.com inbox, correspondence history |
 | **Project Tracker** | GitHub | Bug reports, feature requests, internal issues |
 | **Knowledge Base** | GitHub (Wiki) | Internal documentation, runbooks, troubleshooting guides |
-| **Chat** | Slack | Team discussions, client escalation channels |
+| **Chat** | Google Chat | Team discussions, client escalation spaces |
 
 See [CONNECTORS.md](CONNECTORS.md) for setup requirements.
 

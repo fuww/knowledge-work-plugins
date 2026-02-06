@@ -28,7 +28,7 @@ User: "ask todd to do the PSR for oracle"
 ```
 
 Without memory, that request is meaningless. With memory, Claude knows:
-- **todd** → Todd Martinez, Finance lead, prefers Slack
+- **todd** → Todd Martinez, Finance lead, prefers Google Chat
 - **PSR** → Pipeline Status Report (weekly sales doc)
 - **oracle** → Oracle Systems deal, not the company
 
@@ -118,7 +118,7 @@ Use tables for compactness. Target ~50-80 lines total.
 
 ## Preferences
 - 25-min meetings with buffers
-- Async-first, Slack over email
+- Async-first, Google Chat over email
 - No meetings Friday afternoons
 ```
 
@@ -168,7 +168,7 @@ Workplace shorthand, acronyms, and internal language.
 **Reports to:** CFO (Michael Chen)
 
 ## Communication
-- Prefers Slack DM
+- Prefers Google Chat DM
 - Quick responses, very direct
 - Best time: mornings
 
@@ -208,7 +208,7 @@ $1.2M budget, 6-month timeline. Critical path for Horizon project.
 ## Tools & Systems
 | Tool | Used for | Internal name |
 |------|----------|---------------|
-| Slack | Communication | - |
+| Google Chat | Communication | - |
 | GitHub | Code, issues, roadmap | - |
 | Vtiger | CRM | "the CRM" |
 | Google Workspace | Docs, email, calendar | - |
@@ -334,7 +334,7 @@ When user asks "who is X" or "what does X mean":
 2. Dive into memory/ when you need full context for execution
 3. Example: drafting an email to todd about the PSR
    - CLAUDE.md tells you Todd = Todd Martinez, PSR = Pipeline Status Report
-   - memory/people/todd-martinez.md tells you he prefers Slack, is direct
+   - memory/people/todd-martinez.md tells you he prefers Google Chat, is direct
 
 ## Bootstrapping
 

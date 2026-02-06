@@ -30,7 +30,7 @@ Display Connect buttons to let users install/connect MCPs.
 |----------|-----------------|
 | `project-management` | `["asana", "jira", "linear", "monday", "tasks", "github issues"]` |
 | `software-coding` | `["github", "gitlab", "bitbucket", "code"]` |
-| `chat` | `["slack", "teams", "discord"]` |
+| `chat` | `["google chat", "teams", "discord"]` |
 | `documents` | `["google docs", "notion", "confluence", "google workspace"]` |
 | `calendar` | `["google calendar", "calendar"]` |
 | `email` | `["gmail", "outlook", "email"]` |
@@ -55,7 +55,7 @@ For FashionUnited customizations, use these standard mappings:
 | `~~analytics` | Plausible | `["plausible", "analytics"]` |
 | `~~email marketing` | Mailchimp | `["mailchimp", "email marketing"]` |
 | `~~social scheduling` | Social Champ | `["social champ", "social media"]` |
-| `~~chat` | Slack | `["slack", "chat"]` |
+| `~~chat` | Google Chat | `["google chat", "chat"]` |
 | `~~documents` | Google Workspace | `["google workspace", "documents"]` |
 | `~~project tracker` | GitHub | `["github", "issues"]` |
 | `~~design tool` | Figma | `["figma", "design"]` |

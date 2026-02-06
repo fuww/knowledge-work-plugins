@@ -51,7 +51,7 @@ Pull relevant information from each connected source:
 - Open action items from previous interactions
 - Relevant documents shared via email
 
-#### Chat (e.g., Slack, Teams)
+#### Chat (e.g., Google Chat, Teams)
 - Recent discussions about the meeting topic
 - Messages from or about meeting participants
 - Team discussions about related matters
@@ -366,7 +366,7 @@ When preparing briefings, pull context from these FashionUnited-specific sources
 | Vtiger CRM | Account records | Relationship history, prior deals, contacts |
 | Google Drive | Documents | Prior agreements, meeting notes, proposals |
 | Gmail | Email | Recent correspondence, negotiation threads |
-| Slack | Chat | Team discussions, quick decisions |
+| Google Chat | Chat | Team discussions, quick decisions |
 | GitHub Issues | Matter tracking | Open legal matters related to counterparty |
 | Google Calendar | Calendar | Prior meetings, related upcoming meetings |
 
@@ -377,7 +377,7 @@ After preparing a briefing:
 | Audience | Distribution Method | Timing |
 |----------|--------------------| -------|
 | Meeting participants | Email + shared Drive link | 24 hours before |
-| Internal legal team | Slack #legal channel | Same as above |
+| Internal legal team | Google Chat #legal space | Same as above |
 | Executive summary | Email to leadership (if significant) | As needed |
 | Post-meeting notes | Email + Drive filing | Within 24 hours |
 

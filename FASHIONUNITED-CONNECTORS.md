@@ -16,7 +16,7 @@ This reference defines the canonical mapping from generic `~~` placeholders to F
 | `~~product analytics` | Plausible Analytics | Self-hosted | Community MCP server |
 | `~~project tracker` | GitHub | Self-hosted | Official MCP server |
 | `~~knowledge base` | GitHub (Wiki/Discussions) | Self-hosted | Official MCP server |
-| `~~chat` | Slack | Hosted | Vendor HTTP endpoint |
+| `~~chat` | Google Chat | Self-hosted | Google Workspace MCP |
 | `~~social scheduling` | Social Champ | Third-party | Zapier MCP |
 | `~~design` | Figma | Hosted | Vendor HTTP endpoint |
 
@@ -239,7 +239,7 @@ These tools have existing hosted MCP endpoints and remain unchanged:
 
 | Tool | Placeholder | MCP Endpoint |
 |------|-------------|--------------|
-| Slack | `~~chat` | `https://mcp.slack.com/mcp` |
+| Google Chat | `~~chat` | `@anthropic/google-workspace-mcp` (part of Google Workspace) |
 | Figma | `~~design` | `https://mcp.figma.com/mcp` |
 | Notion | `~~knowledge base` (alt) | `https://mcp.notion.com/mcp` |
 | Canva | `~~design` (alt) | `https://mcp.canva.com/mcp` |
@@ -254,7 +254,7 @@ Complete list of `~~` placeholders used across plugins and their FashionUnited m
 |-------------|-------------------|-------|
 | `~~analytics` | Plausible Analytics | BI/analytics |
 | `~~calendar` | Google Calendar | Part of Workspace |
-| `~~chat` | Slack | Retained |
+| `~~chat` | Google Chat | Part of Workspace |
 | `~~cloud storage` | Google Drive | Part of Workspace |
 | `~~CLM` | *Not used* | Legal plugin - manual placeholder |
 | `~~conversation intelligence` | *Not used* | Consider Fireflies if needed |
@@ -292,7 +292,7 @@ Complete list of `~~` placeholders used across plugins and their FashionUnited m
   }
 }
 ```
-Used for: Slack, Figma, Notion, Canva, Pipedream-hosted tools
+Used for: Figma, Notion, Canva, Pipedream-hosted tools
 
 ### Pattern 2: Self-hosted stdio MCP
 ```json
@@ -327,6 +327,7 @@ Used for: Mailchimp, Social Champ, Vtiger (alternative)
 | Decision | Rationale |
 |----------|-----------|
 | Google Workspace over MS365 | FashionUnited uses Google Workspace organization-wide |
+| Google Chat over Slack | Google Chat is part of Google Workspace, consolidating on one platform |
 | Vtiger over HubSpot/Salesforce | Existing CRM in use at FashionUnited |
 | Mailchimp over Klaviyo | FashionUnited's email marketing platform |
 | Plausible over Amplitude | Privacy-focused analytics, already in use |
@@ -343,4 +344,4 @@ For each plugin refactor task:
 5. Replace `klaviyo` with `mailchimp`
 6. Add `social-champ` where social media scheduling is needed
 7. Update `CONNECTORS.md` with FashionUnited-specific examples
-8. Keep tools with hosted MCP endpoints (Slack, Figma, Notion)
+8. Keep tools with hosted MCP endpoints (Figma, Notion)

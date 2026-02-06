@@ -75,7 +75,7 @@ Connect your tools to supercharge this skill:
 |-----------|--------------|
 | **CRM** | Account details, contact history, open deals, recent activities |
 | **Email** | Recent threads with the company, open questions, attachments shared |
-| **Chat** | Internal chat discussions (e.g. Slack) about the account, colleague insights |
+| **Chat** | Internal chat discussions (e.g. Google Chat) about the account, colleague insights |
 | **Transcripts** | Prior call recordings, topics covered, competitor mentions |
 | **Calendar** | Auto-find the meeting, pull attendees and description |
 
@@ -165,7 +165,7 @@ Ask these to fill gaps in your understanding:
 
 ## Internal Notes
 
-[Any internal chat context (e.g. Slack), colleague insights, or competitive intel]
+[Any internal chat context (e.g. Google Chat), colleague insights, or competitive intel]
 
 ---
 

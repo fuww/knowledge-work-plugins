@@ -38,7 +38,7 @@ This plugin is configured for FashionUnited's finance operations as an internati
 - **Google Workspace** for spreadsheet-based financial management and document storage
 - **BigQuery** for financial data warehouse and revenue analytics
 - **Vtiger CRM** for billing, invoicing, and accounts receivable management
-- **Slack** for team communication and finance approval workflows
+- **Google Chat** for team communication and finance approval workflows
 
 ### FashionUnited Revenue Streams
 
@@ -103,7 +103,7 @@ Provides financial data warehouse for revenue analytics, multi-currency reportin
 
 Provides billing and invoicing workflows, customer/advertiser account management, revenue pipeline tracking, and accounts receivable management.
 
-### Slack
+### Google Chat
 
 Provides team communication, finance approval workflows, and close status coordination.
 
@@ -116,6 +116,6 @@ The `.mcp.json` in this plugin directory is pre-configured for FashionUnited's t
 - `google-workspace` — Google Workspace for spreadsheets, documents, and email
 - `bigquery` — BigQuery for financial data warehouse
 - `vtiger` — Vtiger CRM for billing and invoicing
-- `slack` — Slack for team communication
+- `google-chat` — Google Chat for team communication (via Google Workspace MCP)
 
 See [CONNECTORS.md](CONNECTORS.md) for detailed integration information and FashionUnited-specific finance context.

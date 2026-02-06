@@ -10,7 +10,7 @@ This plugin uses **user-level knowledge connections** rather than plugin-specifi
 
 | Category | What it searches | Examples |
 |----------|------------------|----------|
-| Chat | Tool mentions, integrations, workflow discussions | Slack, Microsoft Teams |
+| Chat | Tool mentions, integrations, workflow discussions | Google Chat, Microsoft Teams |
 | Documents | Onboarding docs, tool guides, setup instructions | Google Drive, Notion, Confluence |
 | Email | License notifications, admin emails, setup invitations | Gmail, Outlook |
 
@@ -51,7 +51,7 @@ When customizing plugins for FashionUnited, use these standard tool mappings:
 | `~~analytics` | Plausible Analytics | `@alexanderop/plausible-mcp` |
 | `~~email marketing` | Mailchimp | `@anthropic/mailchimp-mcp` |
 | `~~social scheduling` | Social Champ | `@anthropic/socialchamp-mcp` |
-| `~~chat` | Slack | `@anthropic/slack-mcp` |
+| `~~chat` | Google Chat | `@anthropic/google-workspace-mcp` |
 | `~~documents` | Google Workspace | `@anthropic/google-workspace-mcp` |
 | `~~project tracker` | GitHub | `@modelcontextprotocol/server-github` |
 | `~~design tool` | Figma | `@anthropic/figma-mcp` |
@@ -78,7 +78,7 @@ When customizing plugins, Claude searches these FashionUnited sources:
 
 | Source | What it finds |
 |--------|---------------|
-| Slack | Team discussions, tool mentions, #editorial, #sales, #product channels |
+| Google Chat | Team discussions, tool mentions, #editorial, #sales, #product channels |
 | Google Drive | Handbooks, process docs, style guides |
 | Gmail | Admin notifications, vendor communications |
 | GitHub | Code patterns, README files, documentation |

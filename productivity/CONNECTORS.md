@@ -10,7 +10,7 @@ Plugins are **tool-agnostic** — they describe workflows in terms of categories
 
 | Category | Placeholder | Configured server | Other options |
 |----------|-------------|-------------------|---------------|
-| Chat | `~~chat` | Slack | Microsoft Teams, Discord |
+| Chat | `~~chat` | Google Chat | Microsoft Teams, Discord |
 | Email | `~~email` | Google Workspace (Gmail) | Microsoft 365 |
 | Calendar | `~~calendar` | Google Workspace | Microsoft 365 |
 | Office suite | `~~office suite` | Google Workspace (Docs, Sheets, Slides) | Microsoft 365 |
@@ -26,11 +26,11 @@ This plugin is configured for FashionUnited's tool stack:
 - **Google Workspace** provides email, calendar, documents, and cloud storage
 - **GitHub** provides project tracking (Issues), roadmap management (Projects with Now-Next-Later columns), and knowledge base (Wiki, Discussions)
 - **Vtiger CRM** provides customer and contact management
-- **Slack** provides team chat and notifications
+- **Google Chat** provides team chat and notifications
 
 ## Setup requirements
 
 1. **Google Workspace**: Requires Google Cloud Project with OAuth 2.0 credentials and enabled APIs
 2. **GitHub**: Requires Personal Access Token with appropriate repo permissions
 3. **Vtiger**: Requires Pipedream account for hosted MCP access
-4. **Slack**: Works with hosted MCP endpoint (no additional setup)
+4. **Google Chat**: Accessed via Google Workspace MCP (included in google-workspace configuration)

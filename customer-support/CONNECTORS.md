@@ -10,7 +10,7 @@ Plugins are **tool-agnostic** — they describe workflows in terms of categories
 
 | Category | Placeholder | Configured server | Other options |
 |----------|-------------|-------------------|---------------|
-| Chat | `~~chat` | Slack | Microsoft Teams |
+| Chat | `~~chat` | Google Chat | Microsoft Teams |
 | Email | `~~email` | Google Workspace (Gmail) | Microsoft 365 |
 | Calendar | `~~calendar` | Google Workspace | Microsoft 365 |
 | CRM | `~~CRM` | Vtiger CRM | HubSpot, Salesforce |
@@ -24,14 +24,14 @@ This plugin is configured for FashionUnited Customer Service team workflows:
 - **Vtiger CRM** provides customer records, ticket history, and account context for job board clients
 - **Google Workspace** provides email (Gmail) for jobs@fashionunited.com managed inbox and calendar
 - **GitHub** provides issue tracking for bug reports and knowledge base for internal documentation
-- **Slack** provides team communication and client escalation channels
+- **Google Chat** provides team communication and client escalation channels
 
 ## Setup requirements
 
 1. **Vtiger CRM**: Requires Pipedream account for hosted MCP access
 2. **Google Workspace**: Requires Google Cloud Project with OAuth 2.0 credentials
 3. **GitHub**: Requires Personal Access Token with repo access
-4. **Slack**: Works with hosted MCP endpoint (no additional setup)
+4. **Google Chat**: Accessed via Google Workspace MCP (included in google-workspace configuration)
 
 ## FashionUnited customer service context
 
@@ -41,7 +41,7 @@ The customer-support plugin is optimized for FashionUnited's customer service op
 - **Employer branding**: Company page setup, content updates, branding asset management
 - **Advertising clients**: Banner campaigns, advertorials, campaign performance issues
 - **Client types**: Fashion brands, retailers, recruitment agencies, trade fairs, federations
-- **Communication channels**: jobs@fashionunited.com, Slack, Vtiger cases
+- **Communication channels**: jobs@fashionunited.com, Google Chat, Vtiger cases
 
 ## FashionUnited platform knowledge
 

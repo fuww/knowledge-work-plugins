@@ -52,7 +52,7 @@ Search for:
 - Redlines and drafts
 - Due diligence materials
 
-#### Chat (e.g., Slack, Teams) -- If Connected
+#### Chat (e.g., Google Chat, Teams) -- If Connected
 Search for recent mentions:
 - Contract requests involving this vendor
 - Legal questions about the vendor

@@ -51,7 +51,7 @@ Gather intelligence from these categories of sources:
 - **Social listening**: mentions, sentiment, share of voice across social platforms
 - **SEO tools**: keyword rankings, organic traffic estimates, content gaps
 - **Financial filings**: revenue, growth rate, investment areas (for public companies)
-- **Community forums**: community forums (e.g. Reddit, Discourse), industry chat groups (e.g. Slack communities) — user sentiment
+- **Community forums**: community forums (e.g. Reddit, Discourse), industry chat groups (e.g. Google Chat spaces) — user sentiment
 
 ### Research Process
 1. **Set scope**: define which competitors and what aspects to analyze

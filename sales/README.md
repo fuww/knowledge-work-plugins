@@ -8,7 +8,7 @@ This plugin is customized for FashionUnited's commercial workflows:
 - **Vtiger CRM** for pipeline management and account history
 - **Google Workspace** for email and calendar
 - **GitHub** for sales materials and knowledge base
-- **Slack** for team communication
+- **Google Chat** for team communication
 
 **Target Clients**: Fashion brands, retailers, trade fairs, federations, recruitment agencies
 
@@ -123,7 +123,7 @@ Every command and skill works without any integrations:
 | **CRM** | Vtiger CRM | Pipeline data, account history, contact records |
 | **Email/Calendar** | Google Workspace | Meeting scheduling, email follow-ups |
 | **Project Tracker** | GitHub | Sales materials, knowledge base |
-| **Chat** | Slack | Internal discussions, deal coordination |
+| **Chat** | Google Chat | Internal discussions, deal coordination |
 
 See [CONNECTORS.md](CONNECTORS.md) for setup requirements.
 

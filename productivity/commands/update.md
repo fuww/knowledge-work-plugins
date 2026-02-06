@@ -109,7 +109,7 @@ Everything in Default Mode, plus a deep scan of recent activity.
 ### Extra Step: Scan Activity Sources
 
 Gather data from available MCP sources:
-- **Slack:** Search recent messages, read active channels (#editorial, #sales, #product)
+- **Google Chat:** Search recent messages, read active spaces (#editorial, #sales, #product)
 - **Gmail:** Search sent messages
 - **Google Drive:** List recently touched docs
 - **Google Calendar:** List recent + upcoming events

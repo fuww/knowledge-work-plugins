@@ -10,7 +10,7 @@ Plugins are **tool-agnostic** — they describe workflows in terms of categories
 
 | Category | Placeholder | Configured server | Other options |
 |----------|-------------|-------------------|---------------|
-| Chat | `~~chat` | Slack | Microsoft Teams |
+| Chat | `~~chat` | Google Chat | Microsoft Teams |
 | Email | `~~email` | Google Workspace (Gmail) | Microsoft 365 |
 | Calendar | `~~calendar` | Google Workspace | Microsoft 365 |
 | Office suite | `~~office suite` | Google Workspace (Docs, Sheets, Slides) | Microsoft 365 |
@@ -28,14 +28,14 @@ This plugin is configured for FashionUnited's product management workflows:
 - **GitHub Issues + beads** provides issue tracking and task management (beads syncs with git for distributed workflow)
 - **Google Workspace** provides documents (specs, research), spreadsheets (metrics), and presentations (stakeholder updates)
 - **Vtiger CRM** provides customer context and feedback history
-- **Slack** provides team communication and stakeholder channels
+- **Google Chat** provides team communication and stakeholder channels
 
 ## Setup requirements
 
 1. **Google Workspace**: Requires Google Cloud Project with OAuth 2.0 credentials and enabled APIs
 2. **GitHub**: Requires Personal Access Token with appropriate repo permissions
 3. **Vtiger**: Requires Pipedream account for hosted MCP access
-4. **Slack**: Works with hosted MCP endpoint (no additional setup)
+4. **Google Chat**: Accessed via Google Workspace MCP (included in google-workspace configuration)
 5. **beads**: Install via `cargo install bd` (local CLI, no external dependencies)
 
 ## FashionUnited product context

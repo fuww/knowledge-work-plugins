@@ -46,7 +46,7 @@ Use company-internal knowledge MCPs to collect information. See `references/sear
 - Configuration values (workspace IDs, project names, team identifiers)
 
 **Sources to search:**
-1. **Chat/Slack MCPs** — tool mentions, integrations, workflow discussions
+1. **Chat/Google Chat MCPs** — tool mentions, integrations, workflow discussions
 2. **Document MCPs** — onboarding docs, tool guides, setup instructions
 3. **Email MCPs** — license notifications, admin emails, setup invitations
 
@@ -107,7 +107,7 @@ After all customizations are applied, package the plugin as a `.plugin` file for
 After customization, present the user with a summary of what was learned grouped by source. Always include the MCPs sections showing which MCPs were connected during setup and which ones the user should still connect:
 
 ```markdown
-## From searching Slack
+## From searching Google Chat
 - You use Asana for project management
 - Sprint cycles are 2 weeks
 
@@ -121,7 +121,7 @@ After customization, present the user with a summary of what was learned grouped
 Then present the MCPs that were connected during setup and any that the user should still connect, with instructions on how to connect them.
 
 If no knowledge MCPs were available in Phase 1, and the user had to answer at least one question manually, include a note at the end:
-> By the way, connecting sources like Slack or Microsoft Teams would let me find answers automatically next time you customize a plugin.
+> By the way, connecting sources like Google Chat or Microsoft Teams would let me find answers automatically next time you customize a plugin.
 
 ## Additional Resources
 

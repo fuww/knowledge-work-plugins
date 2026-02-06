@@ -119,12 +119,12 @@ Sources:
 
 ### Attribution Rules
 
-- Always name the source type (Slack, Gmail, Google Drive, Vtiger CRM, BigQuery, etc.)
+- Always name the source type (Google Chat, Gmail, Google Drive, Vtiger CRM, BigQuery, etc.)
 - Include the specific location (channel, folder, thread, dataset, repository)
 - Include the date or relative time
 - Include the author when relevant
 - Include document/thread titles when available
-- For Slack, note the channel name
+- For Google Chat, note the space name
 - For Gmail, note the subject line and sender
 - For Google Drive, note the document title
 - For Vtiger CRM, note the record type (Account, Contact, Opportunity)
@@ -169,7 +169,7 @@ For status queries, heavily weight freshness. For policy/factual queries, freshn
 | Job market data | BigQuery jobs > CRM > Integrations > Email |
 | Editorial content | BigQuery editorial > Drive > Chat |
 | Product/Catalog | BigQuery marketplace > product-database > CRM |
-| Technical/API | GitHub (api repo) > Slack #engineering > Email |
+| Technical/API | GitHub (api repo) > Google Chat #engineering > Email |
 | Company policy | GitHub (about repo) > Drive > Email > Chat |
 
 ### Expressing Confidence
@@ -187,7 +187,7 @@ The current status may have changed — recommend checking with the sales team.
 
 When confidence is low (old data, informal source, or conflicting signals):
 ```
-I found references to Gucci discussions from six months ago in Slack,
+I found references to Gucci discussions from six months ago in Google Chat,
 but couldn't find current account data in the CRM. The information
 may be outdated. You might want to check with the sales team for current status.
 ```

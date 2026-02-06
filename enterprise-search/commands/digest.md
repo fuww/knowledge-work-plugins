@@ -27,7 +27,7 @@ The user may also specify a custom range:
 
 Identify which MCP sources are connected. FashionUnited sources:
 
-- **~~chat** — Slack (channels, DMs, mentions)
+- **~~chat** — Google Chat (spaces, DMs, mentions)
 - **~~email** — Gmail (inbox, sent, threads)
 - **~~cloud storage** — Drive (recently modified docs shared with user)
 - **~~code repositories** — GitHub (commits, PRs, issues)
@@ -38,16 +38,16 @@ Identify which MCP sources are connected. FashionUnited sources:
 If no sources are connected, guide the user:
 ```
 To generate a digest, you'll need at least one source connected.
-Check your MCP settings to add Slack, Google Workspace, GitHub, Vtiger, or BigQuery.
+Check your MCP settings to add Google Chat, Google Workspace, GitHub, Vtiger, or BigQuery.
 ```
 
 ### 3. Gather Activity from Each Source
 
-**~~chat (Slack):**
+**~~chat (Google Chat):**
 - Search for messages mentioning the user (`to:me`)
 - Check channels the user is in for recent activity
 - Look for threads the user participated in
-- Identify new messages in key channels (#editorial, #sales, #engineering, #general)
+- Identify new messages in key spaces (#editorial, #sales, #engineering, #general)
 
 **~~email (Gmail):**
 - Search recent inbox messages
@@ -120,7 +120,7 @@ Organize the digest by topic, project, or theme rather than by source. Merge rel
 
 ```
 ## API Redesign Project
-- Slack: Design review thread concluded — team chose Option B (#engineering, Tuesday)
+- Google Chat: Design review thread concluded — team chose Option B (#engineering, Tuesday)
 - Gmail: Sarah sent updated spec incorporating feedback (Wednesday)
 - Drive: "API Design Doc v3" updated by Sarah (Wednesday)
 - GitHub: 3 PRs merged, 2 issues closed
@@ -128,12 +128,12 @@ Organize the digest by topic, project, or theme rather than by source. Merge rel
 ## Gucci Advertising Campaign
 - Vtiger: Opportunity moved to "Closed Won" — annual display package
 - Gmail: Contract signed, invoice sent (Monday)
-- Slack: Creative assets discussion in #sales (Tuesday)
+- Google Chat: Creative assets discussion in #sales (Tuesday)
 
 ## Editorial: Paris Fashion Week Coverage
 - BigQuery: 12 new articles published on PFW
 - Drive: Editorial calendar updated with remaining coverage schedule
-- Slack: Photo selection discussion in #editorial
+- Google Chat: Photo selection discussion in #editorial
 ```
 
 ### 6. Format the Digest
@@ -143,7 +143,7 @@ Structure the output clearly:
 ```
 # [Daily/Weekly] Digest — [Date or Date Range]
 
-Sources scanned: Slack, Gmail, Drive, GitHub, Vtiger, BigQuery
+Sources scanned: Google Chat, Gmail, Drive, GitHub, Vtiger, BigQuery
 
 ## Action Items (X items)
 - [ ] [Action item 1] — from [person], [source] ([date])
@@ -199,7 +199,7 @@ Across [N] sources · Covering [time range]
 
 Focus on editorial activity:
 - Articles published today
-- Editorial discussions in Slack
+- Editorial discussions in Google Chat
 - Content calendar updates
 - Traffic/engagement highlights
 ```
@@ -227,7 +227,7 @@ Full activity scan across all sources
 - Default to `--daily` if no flag is specified
 - Group by topic/project, not by source — users care about what happened, not where it happened
 - Action items should always be listed first — they are the most actionable part of a digest
-- Deduplicate cross-source activity (same decision in Slack and email = one entry)
+- Deduplicate cross-source activity (same decision in Google Chat and email = one entry)
 - For weekly digests, prioritize significance over completeness — highlight what matters, skip noise
 - Include FashionUnited-specific sections for editorial, jobs, and marketplace activity when relevant
 - If the user has a memory system (CLAUDE.md), use it to decode people names, brand names, and project references

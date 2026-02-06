@@ -10,7 +10,7 @@ Plugins are **tool-agnostic** — they describe workflows in terms of categories
 
 | Category | Placeholder | Configured server | Other options |
 |----------|-------------|-------------------|---------------|
-| Chat | `~~chat` | Slack | Microsoft Teams |
+| Chat | `~~chat` | Google Chat | Microsoft Teams |
 | Email | `~~email` | Google Workspace (Gmail) | Microsoft 365 |
 | Calendar | `~~calendar` | Google Workspace | Microsoft 365 |
 | Office suite | `~~office suite` | Google Workspace (Docs, Sheets, Slides) | Microsoft 365 |
@@ -26,14 +26,14 @@ This plugin is configured for FashionUnited's legal operations across media, adv
 - **Google Workspace** provides document management (contracts, templates, legal memos), email (legal inbox), and calendar for FashionUnited's legal workflows
 - **Vtiger CRM** provides partner and advertiser relationship context, contract history, and account information
 - **GitHub** provides matter tracking via Issues and legal knowledge base documentation
-- **Slack** provides team communication, contract request channels, and stakeholder coordination
+- **Google Chat** provides team communication, contract request channels, and stakeholder coordination
 
 ## Setup requirements
 
 1. **Google Workspace**: Requires Google Cloud Project with OAuth 2.0 credentials and enabled APIs (Gmail, Calendar, Drive, Docs, Sheets)
 2. **Vtiger CRM**: Requires Pipedream account for hosted MCP access
 3. **GitHub**: Requires Personal Access Token with repo access
-4. **Slack**: Works with hosted MCP endpoint (no additional setup)
+4. **Google Chat**: Accessed via Google Workspace MCP (included in google-workspace configuration)
 
 ## FashionUnited legal context
 
