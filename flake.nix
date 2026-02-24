@@ -13,6 +13,18 @@
   outputs = { self, nixpkgs, systems, prompts, ... }:
     let
       forEachSystem = nixpkgs.lib.genAttrs (import systems);
+
+      beadsRustVersion = "0.1.19";
+      beadsRustHashes = {
+        "x86_64-linux" = "sha256-61a0IeR+NI56GDJdIQlxeiQ3wqNneAe1gUPzAz5oTMw=";
+        "x86_64-darwin" = "sha256-98srAx9fRr7NDbzVjIs4za7KONicVgPkZEimSaZ85/w=";
+        "aarch64-darwin" = "sha256-p8cZ6+c4LUSMU1Cvz+lus6NfYYTWFilCD2Jt2G+PGSg=";
+      };
+      beadsRustTargets = {
+        "x86_64-linux" = "linux_amd64";
+        "x86_64-darwin" = "darwin_amd64";
+        "aarch64-darwin" = "darwin_arm64";
+      };
     in
     {
       devShells = forEachSystem
@@ -21,19 +33,40 @@
             pkgs = import nixpkgs {
               inherit system;
             };
+
+            beads-rust = pkgs.stdenv.mkDerivation {
+              pname = "beads-rust";
+              version = beadsRustVersion;
+              src = pkgs.fetchurl {
+                url = "https://github.com/Dicklesworthstone/beads_rust/releases/download/v${beadsRustVersion}/br-v${beadsRustVersion}-${beadsRustTargets.${system}}.tar.gz";
+                hash = beadsRustHashes.${system};
+              };
+              sourceRoot = ".";
+              installPhase = ''
+                mkdir -p $out/bin
+                cp br $out/bin/
+                chmod +x $out/bin/br
+              '';
+              meta = {
+                description = "AI-supervised issue tracker (Rust rewrite)";
+                homepage = "https://github.com/Dicklesworthstone/beads_rust";
+                license = pkgs.lib.licenses.mit;
+              };
+            };
           in
           {
             default = pkgs.mkShell {
-              packages = with pkgs; [
+              packages = [
+                beads-rust
+              ] ++ (with pkgs; [
                 git
-                go
                 gh
                 jujutsu
                 ripgrep
                 (python3.withPackages (ps: with ps; [
                   pip
                 ]))
-              ];
+              ]);
 
               shellHook = ''
                 # === Claude Loop Setup (ralph_wiggum) ===
@@ -54,11 +87,7 @@
                   fi
                 done
 
-                if ! command -v bd &> /dev/null; then
-                  echo "📿 Installing beads (bd) for AI agent task tracking..."
-                  go install github.com/steveyegge/beads/cmd/bd@v0.49.1
-                fi
-                echo "  Beads:       $(bd --version 2>/dev/null || echo 'run: go install github.com/steveyegge/beads/cmd/bd@v0.49.1')"
+                echo "  Beads:       $(br --version)"
                 echo ""
               '';
             };
