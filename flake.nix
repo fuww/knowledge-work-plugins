@@ -62,6 +62,7 @@
                 git
                 gh
                 jujutsu
+                prek
                 ripgrep
                 (python3.withPackages (ps: with ps; [
                   pip
@@ -69,6 +70,7 @@
               ]);
 
               shellHook = ''
+                prek install
                 # === Claude Loop Setup (ralph_wiggum) ===
                 _LOOP_SRC="${prompts}/ralph_wiggum"
 
