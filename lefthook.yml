@@ -1,0 +1,91 @@
+# Lefthook configuration — commit-msg and pre-push hooks
+# Pre-commit file checks are handled by prek (see prek.toml)
+
+commit-msg:
+  parallel: true
+  commands:
+    capitalized-subject:
+      run: |
+        first_line=$(head -1 {1})
+        first_char=$(echo "$first_line" | cut -c1)
+        if ! echo "$first_char" | grep -q '^[A-Z]$'; then
+          echo "Commit message subject should start with capital letter"
+          exit 1
+        fi
+
+    empty-message:
+      run: |
+        if [ ! -s {1} ]; then
+          echo "Commit message cannot be empty"
+          exit 1
+        fi
+
+    hard-tabs:
+      run: |
+        if grep -v ^# {1} | grep -q $'\t'; then
+          echo "Commit message contains hard tabs"
+          exit 1
+        fi
+
+    text-width:
+      run: |
+        first_line_length=$(head -1 {1} | wc -c | xargs -I {} expr {} - 1 )
+        if [ $first_line_length -gt 50 ]; then
+          echo "Commit subject should be 50 characters or less"
+          exit 1
+        fi
+        grep -v ^# {1} | tail -n +3  | while read -r line; do
+          if [ ${#line} -gt 72 ]; then
+            echo "Commit message body lines should be 72 characters or less"
+            exit 1
+          fi
+        done
+
+    trailing-period:
+      run: |
+        first_line=$(head -1 {1})
+        if echo "$first_line" | grep -q '\.$'; then
+          echo "Commit message subject should not end with period"
+          exit 1
+        fi
+
+    single-line-subject:
+      run: |
+        first_line=$(head -1 {1})
+        if [ "$(echo "$first_line" | wc -l)" -gt 1 ]; then
+          echo "Commit message subject should be a single line"
+          exit 1
+        fi
+
+    russian-novel:
+      run: |
+        total_chars=$(wc -c < {1})
+        if [ $total_chars -gt 500 ]; then
+          echo "Commit message is too long ($total_chars characters). Keep it under 500 characters."
+          exit 1
+        fi
+
+    github-issue:
+      run: |
+        first_line=$(head -1 {1})
+        if ! echo "$first_line" | grep -q '#[0-9]\+'; then
+          echo "No GitHub issue number found in commit message (e.g., #123)"
+          exit 1
+        fi
+
+pre-push:
+  parallel: true
+  commands:
+    protected-branch:
+      run: |
+        protected_branches=("main" "master" "development")
+        current_branch=$(git symbolic-ref HEAD | sed -e 's,.*/\(.*\),\1,')
+        found_protected_branch=0
+        for branch in "${protected_branches[@]}"; do
+          if [ "$current_branch" = "$branch" ]; then
+            echo "Direct push to protected branch '$branch' is not allowed"
+            echo "Please create a feature branch and submit a pull request"
+            found_protected_branch=1
+          fi
+        done
+        exit $found_protected_branch
