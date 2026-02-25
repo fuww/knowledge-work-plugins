@@ -16,7 +16,7 @@
 
       beadsRustVersion = "0.1.19";
       beadsRustHashes = {
-        "x86_64-linux" = "sha256-61a0IeR+NI56GDJdIQlxeiQ3wqNneAe1gUPzAz5oTMw=";
+        "x86_64-linux" = "sha256-rL0PabvZxOLr+iOmZfmpB2tgoCxc/CQLVDFB8NRWHYY=";
         "x86_64-darwin" = "sha256-98srAx9fRr7NDbzVjIs4za7KONicVgPkZEimSaZ85/w=";
         "aarch64-darwin" = "sha256-p8cZ6+c4LUSMU1Cvz+lus6NfYYTWFilCD2Jt2G+PGSg=";
       };
