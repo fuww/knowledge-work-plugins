@@ -205,8 +205,8 @@ Claude should produce a **2-page Risk Assessment Document**:
 | [Assumption 2] | Bio/Tech | 1-5 | X mo | [Rationale for score] |
 | ... | ... | ... | ... | ... |
 
-*Bio = Biological reality, Tech = Technical capability  
-†Risk: 1=very likely to 5=very unlikely  
+*Bio = Biological reality, Tech = Technical capability
+†Risk: 1=very likely to 5=very unlikely
 ‡Time to test in months
 
 #### Risk Profile Summary:

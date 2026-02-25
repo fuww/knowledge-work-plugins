@@ -501,4 +501,3 @@ Let's start with Skill 1. Are you ready to begin?
 ---
 
 *Remember: The highest-leverage work in science is choosing the right problem. This meta-framework ensures you spend your finite time wisely. The investment in systematic planning pays dividends for years.*
-

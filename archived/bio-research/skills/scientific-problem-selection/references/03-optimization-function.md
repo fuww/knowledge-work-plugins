@@ -54,12 +54,12 @@ Based on the answers, Claude should help identify the right optimization functio
 - **High Generality, Medium Learning:** Ribosome stalling complex
   - Updates understanding of translation (fundamental process)
   - Scores well because translation is universal
-  
+
 - **Medium Generality, High Learning:** Oxytricha germ-line nucleus
   - Genomic acrobatics may not be common to other organisms
   - BUT elegant mapping scores highly on how much we learned
   - May yield tools for genome editing (bonus)
-  
+
 - **High on Both Axes (Landmark):** RNA interference, biomolecular condensates
   - These are rare—don't expect every project to be here
   - But aim to score well on at least one axis
@@ -79,13 +79,13 @@ Based on the answers, Claude should help identify the right optimization functio
 - **Widely Used, Not Critical:** BLAST
   - Used in countless projects
   - Rarely THE critical tool, but enormous cumulative impact
-  
+
 - **Not Widely Used, Highly Critical:** Cryo-electron tomography
   - Too complicated for broad adoption
   - But generates stunning data that's impossible to get otherwise
   - When you need it, nothing else works
-  
-- **High on Both Axes (Game-Changing):** 
+
+- **High on Both Axes (Game-Changing):**
   - GFP, CRISPR, AlphaFold (the famous ones)
   - But also: lentiviral delivery, cell sorting, massively parallel sequencing
   - Technologies we cannot imagine living without
@@ -119,14 +119,14 @@ Based on the answers, Claude should help identify the right optimization functio
 Based on your Phase 1 responses, let me help you choose:
 
 **If you selected A (fundamental knowledge):** → Basic Science Framework
-**If you selected B (enable experiments):** → Technology Development Framework  
+**If you selected B (enable experiments):** → Technology Development Framework
 **If you selected C (solve practical problem):** → Invention Framework
 
 **Now, let's be explicit:**
 
 1. **State Your Framework:** "This project should be evaluated as [basic science/technology development/invention]."
 
-2. **Define Your Axes:** 
+2. **Define Your Axes:**
    - X-axis measures: [specific metric]
    - Y-axis measures: [specific metric]
 
@@ -134,7 +134,7 @@ Based on your Phase 1 responses, let me help you choose:
    - X-axis score (Low/Medium/High): [Your assessment + reasoning]
    - Y-axis score (Low/Medium/High): [Your assessment + reasoning]
 
-4. **Threshold Check:** 
+4. **Threshold Check:**
    - Do you score at least MEDIUM-HIGH on one axis?
    - If both are LOW-MEDIUM, you have a problem
 
@@ -338,7 +338,7 @@ Claude should produce a **2-page Impact Assessment Document**:
 #### Visual Framework:
 ```
          [Your Project Type]
-              
+
 Y-Axis    |           ★ Your Project
 [Metric]  |         /
           |       /
@@ -346,7 +346,7 @@ Y-Axis    |           ★ Your Project
           |   /
           |_________________
               X-Axis [Metric]
-              
+
 ★ = Your project
 Reference projects plotted for context
 ```

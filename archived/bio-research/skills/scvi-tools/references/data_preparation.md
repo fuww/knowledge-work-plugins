@@ -36,7 +36,7 @@ if hasattr(adata, 'raw') and adata.raw is not None:
     print("Found adata.raw")
     # Use raw counts
     adata = adata.raw.to_adata()
-    
+
 # Or check layers
 if 'counts' in adata.layers:
     print("Found counts layer")

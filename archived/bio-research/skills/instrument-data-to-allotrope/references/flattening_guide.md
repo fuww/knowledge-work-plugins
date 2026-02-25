@@ -29,11 +29,11 @@ ASM Hierarchy                    → Flat Column
 device-system-document.
   device-identifier              → instrument_serial_number
   model-number                   → instrument_model
-  
+
 measurement-aggregate-document.
   analyst                        → analyst
   measurement-time               → measurement_datetime
-  
+
 measurement-document[].
   sample-identifier              → sample_id
   viable-cell-density.value      → viable_cell_density
@@ -185,43 +185,43 @@ import pandas as pd
 def flatten_asm(asm_dict, technique="cell-counting"):
     """
     Flatten ASM JSON to pandas DataFrame.
-    
+
     Args:
         asm_dict: Parsed ASM JSON
         technique: ASM technique type
-        
+
     Returns:
         pandas DataFrame with one row per measurement
     """
     rows = []
-    
+
     # Get aggregate document
     agg_key = f"{technique}-aggregate-document"
     agg_doc = asm_dict.get(agg_key, {})
-    
+
     # Extract device info
     device = agg_doc.get("device-system-document", {})
     device_info = {
         "instrument_serial_number": device.get("device-identifier"),
         "instrument_model": device.get("model-number")
     }
-    
+
     # Get technique documents
     doc_key = f"{technique}-document"
     for doc in agg_doc.get(doc_key, []):
         meas_agg = doc.get("measurement-aggregate-document", {})
-        
+
         # Extract common metadata
         common = {
             "analyst": meas_agg.get("analyst"),
             "measurement_datetime": meas_agg.get("measurement-time"),
             **device_info
         }
-        
+
         # Extract each measurement
         for meas in meas_agg.get("measurement-document", []):
             row = {**common}
-            
+
             # Flatten measurement fields
             for key, value in meas.items():
                 if isinstance(value, dict) and "value" in value:
@@ -232,9 +232,9 @@ def flatten_asm(asm_dict, technique="cell-counting"):
                         row[f"{col}_unit"] = value["unit"]
                 else:
                     row[key.replace("-", "_")] = value
-            
+
             rows.append(row)
-    
+
     return pd.DataFrame(rows)
 
 # Usage

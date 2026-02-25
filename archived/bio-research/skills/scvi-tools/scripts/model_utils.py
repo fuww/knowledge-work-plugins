@@ -43,7 +43,7 @@ def prepare_adata(
 ):
     """
     Prepare AnnData for scvi-tools models.
-    
+
     Parameters
     ----------
     adata : AnnData
@@ -62,29 +62,29 @@ def prepare_adata(
         Minimum cells per gene
     copy : bool
         Return copy of data
-        
+
     Returns
     -------
     AnnData prepared for scvi-tools
     """
     if copy:
         adata = adata.copy()
-    
+
     # Calculate QC metrics
     adata.var['mt'] = get_mito_genes(adata)
     sc.pp.calculate_qc_metrics(adata, qc_vars=['mt'], inplace=True)
-    
+
     # Filter cells
     adata = adata[adata.obs['n_genes_by_counts'] >= min_genes].copy()
     adata = adata[adata.obs['n_genes_by_counts'] <= max_genes].copy()
     adata = adata[adata.obs['pct_counts_mt'] < max_mito_pct].copy()
-    
+
     # Filter genes
     sc.pp.filter_genes(adata, min_cells=min_cells)
-    
+
     # Store raw counts
     adata.layers["counts"] = adata.X.copy()
-    
+
     # HVG selection
     if batch_key and batch_key in adata.obs.columns:
         sc.pp.highly_variable_genes(
@@ -101,14 +101,14 @@ def prepare_adata(
         sc.pp.highly_variable_genes(adata, n_top_genes=n_top_genes)
         # Restore counts to X
         adata.X = adata.layers["counts"].copy()
-    
+
     # Subset to HVGs
     adata = adata[:, adata.var['highly_variable']].copy()
-    
+
     print(f"Prepared AnnData: {adata.shape}")
     if batch_key:
         print(f"Batches: {adata.obs[batch_key].nunique()}")
-    
+
     return adata
 
 
@@ -124,7 +124,7 @@ def train_scvi(
 ):
     """
     Train scVI or scANVI model.
-    
+
     Parameters
     ----------
     adata : AnnData
@@ -143,20 +143,20 @@ def train_scvi(
         Use early stopping
     use_gpu : bool
         Use GPU if available
-        
+
     Returns
     -------
     Trained model
     """
     import scvi
-    
+
     # Setup AnnData
     scvi.model.SCVI.setup_anndata(
         adata,
         layer="counts",
         batch_key=batch_key
     )
-    
+
     if labels_key and labels_key in adata.obs.columns:
         # Train scVI first
         scvi_model = scvi.model.SCVI(
@@ -168,7 +168,7 @@ def train_scvi(
             max_epochs=max_epochs,
             early_stopping=early_stopping
         )
-        
+
         # Initialize scANVI
         model = scvi.model.SCANVI.from_scvi_model(
             scvi_model,
@@ -176,7 +176,7 @@ def train_scvi(
             unlabeled_category="Unknown"
         )
         model.train(max_epochs=max_epochs // 4)
-        
+
         # Store representation
         adata.obsm["X_scANVI"] = model.get_latent_representation()
     else:
@@ -190,10 +190,10 @@ def train_scvi(
             max_epochs=max_epochs,
             early_stopping=early_stopping
         )
-        
+
         # Store representation
         adata.obsm["X_scVI"] = model.get_latent_representation()
-    
+
     return model
 
 
@@ -205,7 +205,7 @@ def evaluate_integration(
 ) -> Dict[str, float]:
     """
     Evaluate integration quality using basic metrics.
-    
+
     Parameters
     ----------
     adata : AnnData
@@ -216,46 +216,46 @@ def evaluate_integration(
         Cell type column
     embedding_key : str
         Key in obsm for embedding
-        
+
     Returns
     -------
     Dictionary of metrics
     """
     from sklearn.metrics import silhouette_score
     from sklearn.neighbors import NearestNeighbors
-    
+
     X = adata.obsm[embedding_key]
     batch = adata.obs[batch_key].values
     labels = adata.obs[label_key].values
-    
+
     metrics = {}
-    
+
     # Silhouette scores
     try:
         # Cell type silhouette (higher = better separation)
         metrics["silhouette_label"] = silhouette_score(X, labels)
-        
+
         # Batch silhouette (lower = better mixing)
         metrics["silhouette_batch"] = silhouette_score(X, batch)
     except Exception as e:
         warnings.warn(f"Silhouette calculation failed: {e}")
-    
+
     # Batch mixing in neighbors
     try:
         nn = NearestNeighbors(n_neighbors=50)
         nn.fit(X)
         distances, indices = nn.kneighbors(X)
-        
+
         batch_mixing = []
         for i in range(len(X)):
             neighbor_batches = batch[indices[i]]
             unique_batches = len(np.unique(neighbor_batches))
             batch_mixing.append(unique_batches / len(np.unique(batch)))
-        
+
         metrics["batch_mixing"] = np.mean(batch_mixing)
     except Exception as e:
         warnings.warn(f"Batch mixing calculation failed: {e}")
-    
+
     return metrics
 
 
@@ -267,7 +267,7 @@ def get_marker_genes(
 ) -> Dict[str, List[str]]:
     """
     Get marker genes using scVI differential expression.
-    
+
     Parameters
     ----------
     model : scvi model
@@ -278,36 +278,36 @@ def get_marker_genes(
         Column to group cells by
     n_genes : int
         Number of top markers per group
-        
+
     Returns
     -------
     Dictionary of {group: [marker_genes]}
     """
     markers = {}
     groups = adata.obs[groupby].unique()
-    
+
     for group in groups:
         # Get DE results for this group vs rest
         de_results = model.differential_expression(
             groupby=groupby,
             group1=group
         )
-        
+
         # Filter and sort
         de_sig = de_results[
             (de_results["is_de_fdr_0.05"] == True) &
             (de_results["lfc_mean"] > 0.5)
         ].sort_values("lfc_mean", ascending=False)
-        
+
         markers[group] = de_sig.index[:n_genes].tolist()
-    
+
     return markers
 
 
 def plot_training_history(model, save_path: Optional[str] = None):
     """
     Plot model training history.
-    
+
     Parameters
     ----------
     model : scvi model
@@ -316,9 +316,9 @@ def plot_training_history(model, save_path: Optional[str] = None):
         Path to save figure
     """
     import matplotlib.pyplot as plt
-    
+
     fig, axes = plt.subplots(1, 2, figsize=(12, 4))
-    
+
     # ELBO
     if "elbo_train" in model.history:
         axes[0].plot(model.history["elbo_train"], label="Train")
@@ -328,7 +328,7 @@ def plot_training_history(model, save_path: Optional[str] = None):
     axes[0].set_ylabel("ELBO")
     axes[0].legend()
     axes[0].set_title("Training Loss")
-    
+
     # Reconstruction
     if "reconstruction_loss_train" in model.history:
         axes[1].plot(model.history["reconstruction_loss_train"], label="Train")
@@ -338,12 +338,12 @@ def plot_training_history(model, save_path: Optional[str] = None):
     axes[1].set_ylabel("Reconstruction Loss")
     axes[1].legend()
     axes[1].set_title("Reconstruction Loss")
-    
+
     plt.tight_layout()
-    
+
     if save_path:
         plt.savefig(save_path, dpi=150, bbox_inches="tight")
-    
+
     return fig
 
 

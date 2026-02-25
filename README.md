@@ -96,3 +96,10 @@ Plugins are just markdown files. Fork the repo, make your changes, and submit a 
 ## License
 
 This fork is licensed under Apache 2.0, same as the [original Anthropic repository](https://github.com/anthropics/knowledge-work-plugins). See [LICENSE](LICENSE) for details.
+
+## Development Environment
+
+```bash
+nix develop                              # Enter dev shell with all tools
+nix develop --command prek run --all-files  # Run pre-commit checks
+```
