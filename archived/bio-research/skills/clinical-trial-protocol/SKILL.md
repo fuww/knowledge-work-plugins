@@ -21,7 +21,7 @@ description: Generate clinical trial protocols for medical devices or drugs. Thi
 
 ## Overview
 
-This skill generates clinical trial protocols for **medical devices or drugs** using a **modular, waypoint-based architecture** 
+This skill generates clinical trial protocols for **medical devices or drugs** using a **modular, waypoint-based architecture**
 
 ## What This Skill Does
 
@@ -504,5 +504,3 @@ When this skill is invoked:
    - **Research Only:** Display research summary location and offer to continue with full protocol
    - **Full Protocol:** Congratulate user, display protocol location and next steps
    - Remind user of disclaimers
-
-

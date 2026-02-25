@@ -93,4 +93,3 @@ All content is markdown and JSON — edit directly, no build step required. When
 ```bash
 nix develop --command prek run --all-files  # Run all pre-commit checks
 ```
-

@@ -12,7 +12,7 @@ Research advances generally fall into one of these categories, each with two dim
 - *Logic*: Novel ways to manipulate biological systems (e.g., using CRISPR for deep mutational scanning)
 - *Technology*: New tools for manipulation (e.g., developing base editors, creating whole-genome CRISPR libraries)
 
-**MEASUREMENT**  
+**MEASUREMENT**
 - *Logic*: Novel applications of existing measurement tools (e.g., using tissue clearing to study liver fibrosis)
 - *Technology*: New measurement capabilities (e.g., developing tissue-clearing techniques, super-resolution microscopy)
 
@@ -133,7 +133,7 @@ After generating ideas, we must evaluate them critically. Here are the most comm
 #### Trap #1: The Truffle Hound
 **Warning:** Don't become so good at one system or technique that you fail to ask questions of biological import.
 
-**Bad:** "What is the role of p190 RhoGAP in wing development?"  
+**Bad:** "What is the role of p190 RhoGAP in wing development?"
 **Better:** "How do signaling pathways and cytoskeleton coordinate to control wing development?"
 
 **Self-Check:** Is the question driven by biological curiosity or by what the user is technically capable of?

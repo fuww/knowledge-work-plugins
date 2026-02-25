@@ -332,7 +332,7 @@ def integrate_datasets(
 ):
     """
     Integrate multiple scRNA-seq datasets.
-    
+
     Parameters
     ----------
     adatas : dict
@@ -345,23 +345,23 @@ def integrate_datasets(
         Number of HVGs
     n_latent : int
         Latent dimensions
-        
+
     Returns
     -------
     AnnData with integrated representation
     """
     import scvi
     import scanpy as sc
-    
+
     # Add batch labels and concatenate
     for batch_name, adata in adatas.items():
         adata.obs[batch_key] = batch_name
-    
+
     adata = sc.concat(list(adatas.values()), label=batch_key)
-    
+
     # Store counts
     adata.layers["counts"] = adata.X.copy()
-    
+
     # HVG selection
     sc.pp.highly_variable_genes(
         adata,
@@ -371,14 +371,14 @@ def integrate_datasets(
         layer="counts"
     )
     adata = adata[:, adata.var["highly_variable"]].copy()
-    
+
     # Train model
     if labels_key and labels_key in adata.obs.columns:
         # Use scANVI
         scvi.model.SCVI.setup_anndata(adata, layer="counts", batch_key=batch_key)
         scvi_model = scvi.model.SCVI(adata, n_latent=n_latent)
         scvi_model.train(max_epochs=200)
-        
+
         model = scvi.model.SCANVI.from_scvi_model(
             scvi_model,
             labels_key=labels_key,
@@ -392,15 +392,15 @@ def integrate_datasets(
         model = scvi.model.SCVI(adata, n_latent=n_latent)
         model.train(max_epochs=200)
         rep_key = "X_scVI"
-    
+
     # Add representation
     adata.obsm[rep_key] = model.get_latent_representation()
-    
+
     # Compute neighbors and UMAP
     sc.pp.neighbors(adata, use_rep=rep_key)
     sc.tl.umap(adata)
     sc.tl.leiden(adata)
-    
+
     return adata, model
 
 # Usage

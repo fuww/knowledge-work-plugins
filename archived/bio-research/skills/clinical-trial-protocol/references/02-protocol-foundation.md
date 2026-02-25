@@ -250,11 +250,11 @@ STATEMENT OF COMPLIANCE
 **Content to Generate:**
 
 STATEMENT OF COMPLIANCE
-Provide a statement that the trial will be conducted in compliance with the protocol, International Conference on Harmonisation Good Clinical Practice (ICH GCP) and applicable state, local and federal regulatory requirements. Each engaged institution must have a current Federal-Wide Assurance (FWA) issued by the Office for Human Research Protections (OHRP) and must provide this protocol and the associated informed consent documents and recruitment materials for review and approval by an appropriate Institutional Review Board (IRB) or Ethics Committee (EC) registered with OHRP. Any amendments to the protocol or consent materials must also be approved before implementation. Select one of the two statements below: 
+Provide a statement that the trial will be conducted in compliance with the protocol, International Conference on Harmonisation Good Clinical Practice (ICH GCP) and applicable state, local and federal regulatory requirements. Each engaged institution must have a current Federal-Wide Assurance (FWA) issued by the Office for Human Research Protections (OHRP) and must provide this protocol and the associated informed consent documents and recruitment materials for review and approval by an appropriate Institutional Review Board (IRB) or Ethics Committee (EC) registered with OHRP. Any amendments to the protocol or consent materials must also be approved before implementation. Select one of the two statements below:
 
-(1)	[The trial will be carried out in accordance with International Conference on Harmonisation Good Clinical Practice (ICH GCP) and the following: 
+(1)	[The trial will be carried out in accordance with International Conference on Harmonisation Good Clinical Practice (ICH GCP) and the following:
 
-•	United States (US) Code of Federal Regulations (CFR) applicable to clinical studies (45 CFR Part 46, 21 CFR Part 50, 21 CFR Part 56, 21 CFR Part 312, and/or 21 CFR Part 812) 
+•	United States (US) Code of Federal Regulations (CFR) applicable to clinical studies (45 CFR Part 46, 21 CFR Part 50, 21 CFR Part 56, 21 CFR Part 312, and/or 21 CFR Part 812)
 
 National Institutes of Health (NIH)-funded investigators and clinical trial site staff who are responsible for the conduct, management, or oversight of NIH-funded clinical trials have completed Human Subjects Protection and ICH GCP Training.
 
@@ -341,7 +341,7 @@ This section contains three major components. Generate each with appropriate det
 
 #### Section 1.2: Schema (30 lines)
 
-**Generate a text-based flow diagram** showing study progression. 
+**Generate a text-based flow diagram** showing study progression.
 
 **Required Elements:**
 - **Screening Period:** Show duration (e.g., "Within 28 days") and key activities (eligibility assessment)

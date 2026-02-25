@@ -49,7 +49,7 @@ For each category, indicate if it's **FIXED** (must stay) or **FLOATING** (could
 **Question 3: Why are they fixed?**
 For each fixed parameter, is it because:
 A. Your expertise/passion
-B. Lab resources/capabilities  
+B. Lab resources/capabilities
 C. Advisor requirements
 D. You think it's the "best" solution
 E. Historical accident (you started this way)
@@ -197,7 +197,7 @@ For each fixed parameter, let's plan what happens if it becomes untenable:
 - **Alternative project:** [If you fixed something else]
 
 **Fixed Parameter 2: [Name it]**
-- **Why it's fixed:** [Your reason]  
+- **Why it's fixed:** [Your reason]
 - **Risk if this fails:** [What breaks]
 - **Contingency:** [What could you float instead]
 - **Alternative project:** [If you fixed something else]

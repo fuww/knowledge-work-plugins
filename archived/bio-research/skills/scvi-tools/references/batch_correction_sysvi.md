@@ -253,7 +253,7 @@ batch_lisi = lisi.ilisi_graph(
 # Cell type LISI (lower = better preservation)
 ct_lisi = lisi.clisi_graph(
     adata,
-    label_key="cell_type", 
+    label_key="cell_type",
     use_rep="X_integrated"
 )
 
@@ -315,7 +315,7 @@ def integrate_cross_system(
 ):
     """
     Integrate datasets from different technological systems.
-    
+
     Parameters
     ----------
     adatas : dict
@@ -330,33 +330,33 @@ def integrate_cross_system(
         Number of HVGs
     n_latent : int
         Latent dimensions
-        
+
     Returns
     -------
     Integrated AnnData with model
     """
     import scvi
     import scanpy as sc
-    
+
     # Add system labels and concatenate
     for system_name, adata in adatas.items():
         adata.obs[system_key] = system_name
-    
+
     adata = sc.concat(list(adatas.values()))
-    
+
     # Find common genes
     for name, ad in adatas.items():
         if name == list(adatas.keys())[0]:
             common_genes = set(ad.var_names)
         else:
             common_genes = common_genes.intersection(ad.var_names)
-    
+
     adata = adata[:, list(common_genes)].copy()
     print(f"Common genes: {len(common_genes)}")
-    
+
     # Store counts
     adata.layers["counts"] = adata.X.copy()
-    
+
     # HVG selection
     sc.pp.highly_variable_genes(
         adata,
@@ -366,7 +366,7 @@ def integrate_cross_system(
         layer="counts"
     )
     adata = adata[:, adata.var["highly_variable"]].copy()
-    
+
     # Setup with system as covariate
     scvi.model.SCVI.setup_anndata(
         adata,
@@ -374,19 +374,19 @@ def integrate_cross_system(
         batch_key=batch_key if batch_key in adata.obs else None,
         categorical_covariate_keys=[system_key]
     )
-    
+
     # Train
     model = scvi.model.SCVI(adata, n_latent=n_latent, n_layers=2)
     model.train(max_epochs=300, early_stopping=True)
-    
+
     # Get representation
     adata.obsm["X_integrated"] = model.get_latent_representation()
-    
+
     # Clustering
     sc.pp.neighbors(adata, use_rep="X_integrated")
     sc.tl.umap(adata)
     sc.tl.leiden(adata)
-    
+
     return adata, model
 
 # Usage

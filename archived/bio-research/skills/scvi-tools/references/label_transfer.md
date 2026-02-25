@@ -100,10 +100,10 @@ if missing_genes:
     # Add missing genes with zero expression
     import numpy as np
     from scipy.sparse import csr_matrix
-    
+
     zero_matrix = csr_matrix((adata_query.n_obs, len(missing_genes)))
     # ... concat and reorder to match reference
-    
+
 # Store counts
 adata_query.layers["counts"] = adata_query.X.copy()
 ```
@@ -275,7 +275,7 @@ def transfer_labels(
 ):
     """
     Transfer cell type labels from reference to query.
-    
+
     Parameters
     ----------
     adata_ref : AnnData
@@ -290,18 +290,18 @@ def transfer_labels(
         Number of HVGs
     confidence_threshold : float
         Minimum confidence for predictions
-        
+
     Returns
     -------
     AnnData with predictions
     """
     import scvi
     import scanpy as sc
-    
+
     # Prepare reference
     adata_ref = adata_ref.copy()
     adata_ref.layers["counts"] = adata_ref.X.copy()
-    
+
     sc.pp.highly_variable_genes(
         adata_ref,
         n_top_genes=n_top_genes,
@@ -310,39 +310,39 @@ def transfer_labels(
         layer="counts"
     )
     adata_ref = adata_ref[:, adata_ref.var["highly_variable"]].copy()
-    
+
     # Train reference model
     scvi.model.SCVI.setup_anndata(adata_ref, layer="counts", batch_key=batch_key)
     scvi_ref = scvi.model.SCVI(adata_ref, n_latent=30)
     scvi_ref.train(max_epochs=200)
-    
+
     scanvi_ref = scvi.model.SCANVI.from_scvi_model(
         scvi_ref,
         labels_key=cell_type_key,
         unlabeled_category="Unknown"
     )
     scanvi_ref.train(max_epochs=50)
-    
+
     # Prepare query
     adata_query = adata_query[:, adata_ref.var_names].copy()
     adata_query.layers["counts"] = adata_query.X.copy()
-    
+
     # Map query
     scvi.model.SCANVI.prepare_query_anndata(adata_query, scanvi_ref)
     scanvi_query = scvi.model.SCANVI.load_query_data(adata_query, scanvi_ref)
     scanvi_query.train(max_epochs=100, plan_kwargs={"weight_decay": 0.0})
-    
+
     # Get predictions
     adata_query.obs["predicted_cell_type"] = scanvi_query.predict()
     soft = scanvi_query.predict(soft=True)
     adata_query.obs["prediction_score"] = soft.max(axis=1)
-    
+
     # Mark low confidence
     adata_query.obs["confident_prediction"] = adata_query.obs["prediction_score"] >= confidence_threshold
-    
+
     # Add latent representation
     adata_query.obsm["X_scANVI"] = scanvi_query.get_latent_representation()
-    
+
     return adata_query, scanvi_ref, scanvi_query
 
 # Usage

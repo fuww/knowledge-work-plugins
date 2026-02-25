@@ -103,4 +103,3 @@ This fork is licensed under Apache 2.0, same as the [original Anthropic reposito
 nix develop                              # Enter dev shell with all tools
 nix develop --command prek run --all-files  # Run pre-commit checks
 ```
-
